@@ -4,5 +4,8 @@
   },
   "about.qmd": {
     "about.html": "afa0e5cf"
+  },
+  "calc1/derivative_rules.qmd": {
+    "derivative_rules.html": "fc8b9313"
   }
 }

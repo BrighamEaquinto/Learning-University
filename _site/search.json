@@ -40,5 +40,19 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "calc1/derivative_rules.html",
+    "href": "calc1/derivative_rules.html",
+    "title": "Derivative Rules:",
+    "section": "",
+    "text": "Contant Rule: Taking the derivative of a constant is \\(0\\)\n\\[\nf(x) = c\n\\] \\[\nf'(x) = 0\n\\]\nPower Rule: \\[\nf(x) = x^{n}\n\\] \\[\nf'(x) = nx^{n-1}\n\\]\nSum & Difference Rules: Taking the derivative of the sum or difference of \\(g(x)\\) and \\(f(x)\\) is the same as the derivative of \\(g(x)\\) plus or minus the derivative of \\(f(x)\\) \\[\n\\frac{\\text{d}}{\\text{dx}}(f(x) \\pm g(x))\n\\text{ } = \\text{ }\n\\frac{\\text{d}}{\\text{dx}}(f(x)) \\pm \\frac{\\text{d}}{\\text{dx}}(g(x))\n\\]\nConstant Multiple Rules: Taking the derivative of a constant times a derivative is the same as the constant multiplied by the derivative \\[\n\\frac{\\text{d}}{\\text{dx}}(kf(c))\n\\text{ } = \\text{ }\nk\\frac{\\text{d}}{\\text{dx}}(f(x))\n\\]\nProduct Rule: Taking the derivative of a function times a function \\[\n\\frac{\\text{d}}{\\text{dx}}(f(x)g(x))\n\\text{ } = \\text{ }\nf'(x)g(x) + g'(x)f(x)\n\\]\nQuotient Rule: Taking the derivative of a function divided by a function \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(\\frac{f(x)}{g(x)}\\right)\n\\text{ } = \\text{ }\n\\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^{2}}\n\\]\nChain Rule: to allow us to differentiate composite funtions\n\\[h(x) = (f \\circ g)(x) = f(g(x))\\] \\[h'(x) = f'(g(x))g'(x)\\]\nChain Rule with a Polynomial Function: \\[\nh(x) = (g(x))^{n}\n\\] \\[\nh'(x) = n(g(x))^{n-1}g'(x)\n\\]"
+  },
+  {
+    "objectID": "calc1/derivative_rules.html#section",
+    "href": "calc1/derivative_rules.html#section",
+    "title": "Derivative Rules:",
+    "section": "",
+    "text": "In Latex:\nDouble $$ is used for displaying math in the middle of the page in it’s own peditsool. I think that is best used for displaying equations. Maybe it can be used to show the steps of multiple equations\nIt also allows you to view the code output. Single $ is for inline math and I think this should be used most of the time."
   }
 ]
