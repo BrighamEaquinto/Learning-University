@@ -1,0 +1,84 @@
+---
+title: "Derivative Rules:"
+format: html
+toc: false
+page-layout: full
+---
+ 
+__Contant Rule__: Taking the derivative of a constant is $0$
+
+$$
+f(x) = c
+$$
+$$
+f'(x) = 0
+$$
+
+__Power Rule__: 
+$$
+f(x) = x^{n}
+$$
+$$
+f'(x) = nx^{n-1}
+$$
+
+__Sum & Difference Rules__: Taking the derivative of the sum or difference of $g(x)$ and $f(x)$ is the same as the derivative of $g(x)$ plus or minus the derivative of $f(x)$
+$$
+\frac{\text{d}}{\text{dx}}(f(x) \pm g(x)) 
+\text{ } = \text{ } 
+\frac{\text{d}}{\text{dx}}(f(x)) \pm \frac{\text{d}}{\text{dx}}(g(x))
+$$
+
+__Constant Multiple Rules__: Taking the derivative of a constant times a derivative is the same as the constant multiplied by the derivative
+$$
+\frac{\text{d}}{\text{dx}}(kf(c)) 
+\text{ } = \text{ } 
+k\frac{\text{d}}{\text{dx}}(f(x))
+$$
+
+__Product Rule__: Taking the derivative of a function times a function
+$$
+\frac{\text{d}}{\text{dx}}(f(x)g(x)) 
+\text{ } = \text{ } 
+f'(x)g(x) + g'(x)f(x)
+$$
+
+__Quotient Rule__: Taking the derivative of a function divided by a function
+$$
+\frac{\text{d}}{\text{dx}} \left(\frac{f(x)}{g(x)}\right) 
+\text{ } = \text{ } 
+\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^{2}}
+$$
+
+__Chain Rule__: to allow us to differentiate composite funtions
+
+$$h(x) = (f \circ g)(x) = f(g(x))$$
+$$h'(x) = f'(g(x))g'(x)$$
+
+__Chain Rule with a Polynomial Function__:
+$$
+h(x) = (g(x))^{n}
+$$
+$$
+h'(x) = n(g(x))^{n-1}g'(x)
+$$
+
+<details>
+<summary>Example</summary>
+
+> $$
+> \text{Find }\frac{\text{dy}}{\text{dx}} \text{ if } y = (2-x^{2})^{-5}
+> $$
+> $$
+>\text{Answer: } -5(2-x^{2})^{-6}(-2x)
+> $$
+
+</details>
+
+<br><br>
+----
+In Latex: 
+
+Double $$ is used for displaying math in the middle of the page in it's own peditsool. I think that is best used for displaying equations. Maybe it can be used to show the steps of multiple equations
+
+It also allows you to view the code output. Single $ is for inline math and I think this should be used most of the time. 
