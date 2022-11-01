@@ -26,13 +26,72 @@ An Open Letter to Graduate Schools:
 
 ```{r}
 library(tidyverse)
+library(plotly)
+```
+
+
+```{r}
+gg_graph <- ggplot(data = data.frame(x = 0), mapping = aes(x = x))+
+                  stat_function(fun = function(x) 2*x + x)+ 
+                  geom
+                  xlim(-10, 10)+
+                  ylim(-6, 6)
 
 ```
 
 ```{r}
-fun.1 <- function(x) x^2 + x
+ggplotly(gg_graph)
+```
 
-p <- ggplot(data = data.frame(x = 0), mapping = aes(x = x))
+
+```{r}
+gg1 <- ggplot(cars, aes(x = speed, y = dist)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y~x, se = FALSE, size = 2, color = "orange",
+  linetype = "dashed")
+gg1
+```
+
+```{r}
+ggplotly(gg1)
+```
+
+
+
+```{r}
+fun.1 <- function(x) 2*x + x
+
+data.frame(fun.1)
+```
+
+```{r}
+
+bob <- function(x) {
+      y <- sin(x)
+      return(y)
+}
+
+x <- seq(0, 20, 1)
+
+data1 <- data.frame(
+      x = x, 
+      y = bob(x)
+)
+
+data1 %>% head()
+# ggplot(aes(x,y))+ 
+#       geom_point()+
+#       geom_smooth(formula = bob(x))
+
+```
+
+
+
+```{r}
+fun.1 <- function(x) 2*x + x
+
+p <- ggplot(data.frame(x = 0), aes(x = x))
+
 ```
 
 
