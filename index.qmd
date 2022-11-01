@@ -5,3 +5,81 @@ title: "calculus1_eaquinto"
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+
+Intresting paradigm. Employers want experience. Graduate schools want grades. Competing interests... But they both ultimately want money. 
+
+
+What's the point of education? Portfolio projects or mastery of subject? 
+
+<br><br>
+
+An Open Letter to Graduate Schools: 
+----
+- Dash dashboards
+- Quarto Websites 
+- coding word documents
+- writing r packages to do calculus
+- Quarto Revealjs for presentations (free, animations, speaker timer, speaker notes...)
+- character & chapter summarising in readings
+
+
+```{r}
+library(tidyverse)
+
+```
+
+```{r}
+fun.1 <- function(x) x^2 + x
+
+p <- ggplot(data = data.frame(x = 0), mapping = aes(x = x))
+```
+
+
+```{r}
+p + stat_function(fun = fun.1) + xlim(-5,5)
+```
+
+```{r}
+p + layer(geom = "path",        # Default. Can be omitted.
+          stat = "function",
+          fun = fun.1,          # Give function
+          mapping = aes(color = "fun.1") # Give a meaningful name to color
+          ) +
+    scale_x_continuous(limits = c(-5,5)) +
+    scale_color_manual(name = "Function", values = c("blue"))
+```
+
+```{r}
+fun.2 <- function(x) -1 * x + 10
+fun.3 <- function(x) 3 * x + 2
+```
+
+```{r}
+ggplot(data = data.frame(x = 0), mapping = aes(x = x))+ 
+    layer(stat = "function",
+          fun = fun.1,
+          mapping = aes(color = fun.1)
+          ) +
+    layer(stat = "function",
+          fun = fun.2,
+          mapping = aes(color = fun.2)
+          ) +
+    layer(stat = "function",
+          fun = fun.3,
+          mapping = aes(color = fun.3)
+          ) 
+    # scale_x_continuous(limits = c(-5, 5)) +
+    # scale_color_manual(name = "Functions",
+    #                    values = c("blue", "red", "green"), # Color specification
+    #                    labels = c("X^2 + X", "-X + 10", "3X + 2"))
+```
+
+
+
+```{r}
+x <- 1:10
+df <- data.frame(x)
+ggplot(df, aes(x))+
+    stat_function(fun=function(x) log(x)/(x-3))
+```

@@ -54,5 +54,19 @@
     "title": "Derivative Rules:",
     "section": "",
     "text": "In Latex:\nDouble $$ is used for displaying math in the middle of the page in it’s own peditsool. I think that is best used for displaying equations. Maybe it can be used to show the steps of multiple equations\nIt also allows you to view the code output. Single $ is for inline math and I think this should be used most of the time."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "calculus1_eaquinto",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\nIntresting paradigm. Employers want experience. Graduate schools want grades. Competing interests… But they both ultimately want money.\nWhat’s the point of education? Portfolio projects or mastery of subject?"
+  },
+  {
+    "objectID": "index.html#an-open-letter-to-graduate-schools",
+    "href": "index.html#an-open-letter-to-graduate-schools",
+    "title": "calculus1_eaquinto",
+    "section": "An Open Letter to Graduate Schools:",
+    "text": "An Open Letter to Graduate Schools:\n\nDash dashboards\nQuarto Websites\ncoding word documents\nwriting r packages to do calculus\nQuarto Revealjs for presentations (free, animations, speaker timer, speaker notes…)\ncharacter & chapter summarising in readings"
   }
 ]

@@ -7,5 +7,11 @@
   },
   "calc1/derivative_rules.qmd": {
     "derivative_rules.html": "fc8b9313"
+  },
+  "calc1/limit_rules.qmd": {
+    "limit_rules.html": "cbac114f"
+  },
+  "index.qmd": {
+    "index.html": "72bfcafb"
   }
 }

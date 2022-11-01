@@ -2,7 +2,6 @@
 title: "Derivative Rules:"
 format: html
 toc: false
-page-layout: full
 ---
  
 __Contant Rule__: Taking the derivative of a constant is $0$
