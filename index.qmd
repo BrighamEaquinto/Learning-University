@@ -1,5 +1,7 @@
 ---
 title: "calculus1_eaquinto"
+eval: false
+include: false
 ---
 
 This is a Quarto website.
@@ -33,7 +35,6 @@ library(plotly)
 ```{r}
 gg_graph <- ggplot(data = data.frame(x = 0), mapping = aes(x = x))+
                   stat_function(fun = function(x) 2*x + x)+ 
-                  geom
                   xlim(-10, 10)+
                   ylim(-6, 6)
 
