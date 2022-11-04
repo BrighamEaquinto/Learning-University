@@ -13,5 +13,13 @@
   },
   "index.qmd": {
     "index.html": "72bfcafb"
+  },
+  "calc1/word_test.qmd": {
+    "word_test.docx": "1be21945",
+    "word_test.html": "2b5cfd7f",
+    "word_test.md": "42ad1504"
+  },
+  "calc1/Tyndale.qmd": {
+    "Tyndale.html": "d61e9197"
   }
 }

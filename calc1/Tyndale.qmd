@@ -1,0 +1,37 @@
+---
+title: "William Tyndale: First Translator of the New Testament to English"
+subtitle: "Not John Wycliff"
+format: 
+  html:
+    toc: true
+    number-sections: true
+    highlight-style: github
+---
+
+__Biography__: 
+
+- from present day west of London and south of Birmingham called Yorkshire which sits just at the tip of the Bristol Channel (https://www.christianitytoday.com/history/people/scholarsandscientists/william-tyndale.html)
+- Studied at the University of Oxford
+- Became an instructor at the University of Cambridge
+- He began his first translation of New Testament in 1523 (from Greek to English) completing it in 1525 (https://www.britannica.com/biography/William-Tyndale) 
+- The English authorities gave him trouble so he continued his work in Germany in 1524. 
+- He completed his first translation of New Testament in July of 1525 (https://www.christianitytoday.com/history/people/scholarsandscientists/william-tyndale.html)
+- His book _The Obedience of a Christian Man_ (full name _The Obedience of a Christen man, and how Christen rulers ought to govern, wherein also (if thou mark diligently) thou shalt find eyes to perceive the crafty convience of all iugglers_), is published in 1528
+  - "and is best known for advocating that the king of a country was the head of that country's church, rather than the pope". Gerard Wegemer, Thomas More: Portrait of Courage (Scepter, 1998), 131
+  - book was officialy banned
+  - mentioned in the works of Shakespere
+- Arested in 1534 by the Roman Catholic Authorities in Antwerp
+- Strangled to death in October 6th, 1536 after being "condemned as a heretic" the month prior. His last words were, "Lord, open the King of England's eyes!" 
+
+__Efforts and Contributions__:
+
+- The Engllish can now haev a personal relationship with God
+- He spent grewling hours over the span of two years translating the New Testament from Greek to English. 
+
+__Why They Matter__:
+
+He translated the New Testament from Greek and Hebrew into English. This laid the ground work for us to enjoy such wide spread access of the Holy Bible. King James of Scotland's name is the most common bible in circulation. When he commissioned his version of the Bible, almost the entirity of it is made up of Tyndale's work. This shows that the Restoration of the Church of Jesus Christ depends on William Tyndale. 
+
+He gave the people of England access to the Holy Bible. This was common place in other-Europe, but not the case for the people of England, as the church would have it. This fed the fire of the ongoing Reformation which started eight years prior in 1517 when Martin Luther famously nailed his 95 theses on the walls of the church. 
+
+Social order disrupted due to his book and his translation not in the hands of the public
