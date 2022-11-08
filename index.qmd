@@ -1,23 +1,15 @@
 ---
-title: "calculus1_eaquinto"
 eval: false
 include: false
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
+## An Open Letter to Graduate Schools: 
 
 Intresting paradigm. Employers want experience. Graduate schools want grades. Competing interests... But they both ultimately want money. 
 
-
 What's the point of education? Portfolio projects or mastery of subject? 
 
-<br><br>
 
-An Open Letter to Graduate Schools: 
-----
 - Dash dashboards
 - Quarto Websites 
 - coding word documents
@@ -41,6 +33,7 @@ gg_graph <- ggplot(data = data.frame(x = 0), mapping = aes(x = x))+
 ```
 
 ```{r}
+gg_graph
 ggplotly(gg_graph)
 ```
 
@@ -60,6 +53,8 @@ ggplotly(gg1)
 
 
 ```{r}
+#| eval: false
+
 fun.1 <- function(x) 2*x + x
 
 data.frame(fun.1)

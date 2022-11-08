@@ -21,5 +21,29 @@
   },
   "calc1/Tyndale.qmd": {
     "Tyndale.html": "d61e9197"
+  },
+  "calc1/formulas.qmd": {
+    "formulas.html": "6f5a946b"
+  },
+  "calc1/common_errors.qmd": {
+    "common_errors.html": "3d7c7d46"
+  },
+  "calc1/integrals.qmd": {
+    "integrals.html": "288454b6"
+  },
+  "other_subjects/Tyndale.qmd": {
+    "Tyndale.html": "1349ccc3"
+  },
+  "calc1/test_rjs_pres.qmd": {
+    "test_rjs_pres.html": "a415c51f"
+  },
+  "other_subjects/rel_presentation_notes.qmd": {
+    "rel_presentation_notes.html": "32c2bf02"
+  },
+  "other_subjects/test_rjs_pres.qmd": {
+    "test_rjs_pres.html": "f49abdc0"
+  },
+  "other_subjects/thoughts.qmd": {
+    "thoughts.html": "8a705833"
   }
 }

@@ -1,20 +1,26 @@
 project:
   type: website
   output-dir: docs
+  preview: 
+    port: 3141
 
 website:
-  title: "calculus1_eaquinto"
+  title: "Learning University"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - href: calc1/formulas.qmd
+        text: "Formulas"
+      - href: calc1/common_errors.qmd
+        text: "Common Errors"
+      - href: calc1/limit_rules.qmd
+        text: "Limit Rules"
+      - href: calc1/derivative_rules.qmd
+        text: "Derivative Rules"
+      - href: calc1/integrals.qmd
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
-
-
 

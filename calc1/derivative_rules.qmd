@@ -13,6 +13,8 @@ $$
 f'(x) = 0
 $$
 
+----
+
 __Power Rule__: 
 $$
 f(x) = x^{n}
@@ -21,6 +23,8 @@ $$
 f'(x) = nx^{n-1}
 $$
 
+----
+
 __Sum & Difference Rules__: Taking the derivative of the sum or difference of $g(x)$ and $f(x)$ is the same as the derivative of $g(x)$ plus or minus the derivative of $f(x)$
 $$
 \frac{\text{d}}{\text{dx}}(f(x) \pm g(x)) 
@@ -28,12 +32,31 @@ $$
 \frac{\text{d}}{\text{dx}}(f(x)) \pm \frac{\text{d}}{\text{dx}}(g(x))
 $$
 
+----
+
 __Constant Multiple Rules__: Taking the derivative of a constant times a derivative is the same as the constant multiplied by the derivative
 $$
-\frac{\text{d}}{\text{dx}}(kf(c)) 
+\frac{\text{d}}{\text{dx}}(kf(x)) 
 \text{ } = \text{ } 
 k\frac{\text{d}}{\text{dx}}(f(x))
 $$
+
+<details>
+<summary>Example</summary>
+
+$$
+\frac{\text{d}}{\text{dx}}\left(\frac{3x}{2}\right)
+\text{ } \rightarrow \text{ }
+\frac{3}{2}\frac{\text{d}}{\text{dx}}\left(x\right)
+\text{ } \rightarrow \text{ }
+\frac{3}{2}\left(x^{1-1}\right)
+\text{ } \rightarrow \text{ }
+\frac{3}{2}
+$$
+
+</details>
+
+---- 
 
 __Product Rule__: Taking the derivative of a function times a function
 $$
@@ -42,6 +65,8 @@ $$
 f'(x)g(x) + g'(x)f(x)
 $$
 
+----
+
 __Quotient Rule__: Taking the derivative of a function divided by a function
 $$
 \frac{\text{d}}{\text{dx}} \left(\frac{f(x)}{g(x)}\right) 
@@ -49,12 +74,18 @@ $$
 \frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^{2}}
 $$
 
+24+2 x (-25+6 x (2+x)) 
+
+----
+
 __Chain Rule__: to allow us to differentiate composite funtions
 
 $$h(x) = (f \circ g)(x) = f(g(x))$$
 $$h'(x) = f'(g(x))g'(x)$$
 
-__Chain Rule with a Polynomial Function__:
+----
+
+__Chain and Power Rules Combined__:
 $$
 h(x) = (g(x))^{n}
 $$
@@ -65,19 +96,84 @@ $$
 <details>
 <summary>Example</summary>
 
-> $$
-> \text{Find }\frac{\text{dy}}{\text{dx}} \text{ if } y = (2-x^{2})^{-5}
-> $$
-> $$
->\text{Answer: } -5(2-x^{2})^{-6}(-2x)
-> $$
+$$
+\textbf{Find }\frac{\text{dy}}{\text{dx}} \text{ if } y = (2-x^{2})^{-5}
+$$
+$$
+\textbf{Answer: } -5(2-x^{2})^{-6}(-2x)
+$$
+
+</details>
+
+
+## Common Errors/Notes
+
+- Remember that the denominator of the quotient rule is $(g(x))^{2}$, not $(g'(x))^{2}$
+- When given $k(x) = x\left(2x+\frac{1}{x+3}\right)$ to find $k'(x)$, first distribute $x$, then take the derivative from there. 
+
+## Other Examples: 
+
+<details>
+<summary>Example</summary>
+
+Find $k'(x)$
+$$
+k(x) = -2x\left(h(x) + 2x^{2}g(x))\right)
+$$
+From here, distribute the $-2x$
+$$
+k(x) = -2x\left(h(x) + 2x^{2}g(x))\right)
+$$
+Now take the derivative of each side
+$$
+\frac{\text{d}}{\text{dx}} \left(k(x)\right) 
+\text{ } = \text{ } 
+\frac{\text{d}}{\text{dx}} \left( -2x\left(h(x) + 2x^{2}g(x))\right) \right)
+$$
+Notice the double chain rule
+$$
+\frac{\text{d}}{\text{dx}} \left(k(x)\right) 
+\text{ } = \text{ } 
+\frac{\text{d}}{\text{dx}} \left(-2x * h(x) \right) + \frac{\text{d}}{\text{dx}} \left(-4x^{3} * g(x) \right)
+$$
+Derivative on the right
+$$
+\frac{\text{d}}{\text{dx}} \left(-2x * h(x) \right) 
+\rightarrow 
+-2*h(x) - 2x * h'(x)
+$$
+Derivative on the left
+$$
+\frac{\text{d}}{\text{dx}} \left(-4x^{3} * g(x) \right) 
+\rightarrow 
+-12x^{2} * g(x) - 4x^{3} * g'(x)
+$$
+Now combine everything
+$$
+k'(x) = \left(-2*h(x) - 2x * h'(x)\right) + \left(-12x^{2} * g(x) - 4x^{3} * g'(x)\right)
+$$
+Now substitute the values given and use algebra to simplify it
 
 </details>
 
 <br><br>
-----
-In Latex: 
 
-Double $$ is used for displaying math in the middle of the page in it's own peditsool. I think that is best used for displaying equations. Maybe it can be used to show the steps of multiple equations
 
-It also allows you to view the code output. Single $ is for inline math and I think this should be used most of the time. 
+## Second Derivative Section
+
+This is about: 
+- taking the derivative a second time
+- local maximun and minimum
+- first and second derivative tests
+
+- decreasing in polynomial each time a derivative is taken
+
+
+
+
+
+
+<br><br>
+
+
+<!-- <iframe src="quarto.org" title="W3Schools Free Online Web Tutorials" width="100%" height="300" style="border:1px solid black;"></iframe> -->

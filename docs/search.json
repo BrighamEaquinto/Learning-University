@@ -1,0 +1,198 @@
+[
+  {
+    "objectID": "calc1/derivative_rules.html",
+    "href": "calc1/derivative_rules.html",
+    "title": "Derivative Rules:",
+    "section": "",
+    "text": "Contant Rule: Taking the derivative of a constant is \\(0\\)\n\\[\nf(x) = c\n\\] \\[\nf'(x) = 0\n\\]\nPower Rule: \\[\nf(x) = x^{n}\n\\] \\[\nf'(x) = nx^{n-1}\n\\]\nSum & Difference Rules: Taking the derivative of the sum or difference of \\(g(x)\\) and \\(f(x)\\) is the same as the derivative of \\(g(x)\\) plus or minus the derivative of \\(f(x)\\) \\[\n\\frac{\\text{d}}{\\text{dx}}(f(x) \\pm g(x))\n\\text{ } = \\text{ }\n\\frac{\\text{d}}{\\text{dx}}(f(x)) \\pm \\frac{\\text{d}}{\\text{dx}}(g(x))\n\\]\nConstant Multiple Rules: Taking the derivative of a constant times a derivative is the same as the constant multiplied by the derivative \\[\n\\frac{\\text{d}}{\\text{dx}}(kf(x))\n\\text{ } = \\text{ }\nk\\frac{\\text{d}}{\\text{dx}}(f(x))\n\\]\nProduct Rule: Taking the derivative of a function times a function \\[\n\\frac{\\text{d}}{\\text{dx}}(f(x)g(x))\n\\text{ } = \\text{ }\nf'(x)g(x) + g'(x)f(x)\n\\]\nQuotient Rule: Taking the derivative of a function divided by a function \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(\\frac{f(x)}{g(x)}\\right)\n\\text{ } = \\text{ }\n\\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^{2}}\n\\]\n24+2 x (-25+6 x (2+x))\nChain Rule: to allow us to differentiate composite funtions\n\\[h(x) = (f \\circ g)(x) = f(g(x))\\] \\[h'(x) = f'(g(x))g'(x)\\]\nChain and Power Rules Combined: \\[\nh(x) = (g(x))^{n}\n\\] \\[\nh'(x) = n(g(x))^{n-1}g'(x)\n\\]"
+  },
+  {
+    "objectID": "calc1/derivative_rules.html#section",
+    "href": "calc1/derivative_rules.html#section",
+    "title": "Derivative Rules:",
+    "section": "",
+    "text": "In Latex:\nDouble $$ is used for displaying math in the middle of the page in it’s own peditsool. I think that is best used for displaying equations. Maybe it can be used to show the steps of multiple equations\nIt also allows you to view the code output. Single $ is for inline math and I think this should be used most of the time."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "calc1/Tyndale.html",
+    "href": "calc1/Tyndale.html",
+    "title": "William Tyndale: First Translator of the New Testament to English",
+    "section": "",
+    "text": "Biography:\n\nfrom present day west of London and south of Birmingham called Yorkshire which sits just at the tip of the Bristol Channel (https://www.christianitytoday.com/history/people/scholarsandscientists/william-tyndale.html)\nStudied at the University of Oxford\nBecame an instructor at the University of Cambridge\nHe began his first translation of New Testament in 1523 (from Greek to English) completing it in 1525 (https://www.britannica.com/biography/William-Tyndale)\nThe English authorities gave him trouble so he continued his work in Germany in 1524.\nHe completed his first translation of New Testament in July of 1525 (https://www.christianitytoday.com/history/people/scholarsandscientists/william-tyndale.html)\nHis book The Obedience of a Christian Man (full name The Obedience of a Christen man, and how Christen rulers ought to govern, wherein also (if thou mark diligently) thou shalt find eyes to perceive the crafty convience of all iugglers), is published in 1528\n\n“and is best known for advocating that the king of a country was the head of that country’s church, rather than the pope”. Gerard Wegemer, Thomas More: Portrait of Courage (Scepter, 1998), 131\nbook was officialy banned\nmentioned in the works of Shakespere\n\nArested in 1534 by the Roman Catholic Authorities in Antwerp\nStrangled to death in October 6th, 1536 after being “condemned as a heretic” the month prior. His last words were, “Lord, open the King of England’s eyes!”\n\nEfforts and Contributions:\n\nThe Engllish can now haev a personal relationship with God\nHe spent grewling hours over the span of two years translating the New Testament from Greek to English.\n\nWhy They Matter:\nHe translated the New Testament from Greek and Hebrew into English. This laid the ground work for us to enjoy such wide spread access of the Holy Bible. King James of Scotland’s name is the most common bible in circulation. When he commissioned his version of the Bible, almost the entirity of it is made up of Tyndale’s work. This shows that the Restoration of the Church of Jesus Christ depends on William Tyndale.\nHe gave the people of England access to the Holy Bible. This was common place in other-Europe, but not the case for the people of England, as the church would have it. This fed the fire of the ongoing Reformation which started eight years prior in 1517 when Martin Luther famously nailed his 95 theses on the walls of the church.\nSocial order disrupted due to his book and his translation not in the hands of the public"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Learning University",
+    "section": "",
+    "text": "Intresting paradigm. Employers want experience. Graduate schools want grades. Competing interests… But they both ultimately want money.\nWhat’s the point of education? Portfolio projects or mastery of subject?\n\nDash dashboards\nQuarto Websites\ncoding word documents\nwriting r packages to do calculus\nQuarto Revealjs for presentations (free, animations, speaker timer, speaker notes…)\ncharacter & chapter summarising in readings"
+  },
+  {
+    "objectID": "index.html#an-open-letter-to-graduate-schools",
+    "href": "index.html#an-open-letter-to-graduate-schools",
+    "title": "Learning University",
+    "section": "An Open Letter to Graduate Schools:",
+    "text": "An Open Letter to Graduate Schools:\nIntresting paradigm. Employers want experience. Graduate schools want grades. Competing interests… But they both ultimately want money.\nWhat’s the point of education? Portfolio projects or mastery of subject?\n\nDash dashboards\nQuarto Websites\ncoding word documents\nwriting r packages to do calculus\nQuarto Revealjs for presentations (free, animations, speaker timer, speaker notes…)\ncharacter & chapter summarising in readings"
+  },
+  {
+    "objectID": "calc1/formulas.html",
+    "href": "calc1/formulas.html",
+    "title": "Formula",
+    "section": "",
+    "text": "Slope-Intercept:\n\\[\ny\n\\text{ } = \\text{ }\nmx + b\n\\]\n\\[ y = \\text{y coordinate} \\] \\[m = \\text{slope}\\] \\[ x = \\text{x coordinate} \\] \\[b = \\text{y intercept}\\]\n\nPoint-Slope:\n\\[\ny - y_{1}\n\\text{ } = \\text{ }\nm(x-x_{1})\n\\]\n\\[ y = \\text{y coordinate of second point} \\] \\[ y_{1} = \\text{y coordinate of point one} \\] \\[m = \\text{slope}\\] \\[ x = \\text{x coordinate of second point} \\] \\[ x_{1} = \\text{x coordinate of point one} \\]\n\n\nLimit Definition\n\\[\nf'(x)\n\\text{ } = \\text{ }\n\\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}\n\\]"
+  },
+  {
+    "objectID": "calc1/common_errors.html",
+    "href": "calc1/common_errors.html",
+    "title": "Common Errors",
+    "section": "",
+    "text": "\\[\nx^{0} = 1\n\\]\n\n\\[\n\\sqrt{x+15} + \\sqrt{x+15} = 2\\sqrt{x+15}\n\\] \\[\n\\sqrt{x+15} + \\sqrt{x+15}\n\\text{ } \\neq \\text{ }\n(\\sqrt{x+15})^{2}\n\\]"
+  },
+  {
+    "objectID": "other_subjects/Tyndale.html",
+    "href": "other_subjects/Tyndale.html",
+    "title": "William Tyndale: First Translator of the New Testament to English",
+    "section": "",
+    "text": "Biography:\n\nfrom present day west of London and south of Birmingham called Yorkshire which sits just at the tip of the Bristol Channel (https://www.christianitytoday.com/history/people/scholarsandscientists/william-tyndale.html)\nStudied at the University of Oxford\nBecame an instructor at the University of Cambridge\nHe began his first translation of New Testament in 1523 (from Greek to English) completing it in 1525 (https://www.britannica.com/biography/William-Tyndale)\nThe English authorities gave him trouble so he continued his work in Germany in 1524.\nHe completed his first translation of New Testament in July of 1525 (https://www.christianitytoday.com/history/people/scholarsandscientists/william-tyndale.html)\nHis book The Obedience of a Christian Man (full name The Obedience of a Christen man, and how Christen rulers ought to govern, wherein also (if thou mark diligently) thou shalt find eyes to perceive the crafty convience of all iugglers), is published in 1528\n\n“and is best known for advocating that the king of a country was the head of that country’s church, rather than the pope”. Gerard Wegemer, Thomas More: Portrait of Courage (Scepter, 1998), 131\nbook was officialy banned\nmentioned in the works of Shakespere\n\nArested in 1534 by the Roman Catholic Authorities in Antwerp\nStrangled to death in October 6th, 1536 after being “condemned as a heretic” the month prior. His last words were, “Lord, open the King of England’s eyes!”\n\nEfforts and Contributions:\n\nThe Engllish can now haev a personal relationship with God\nHe spent grewling hours over the span of two years translating the New Testament from Greek to English.\n\nWhy They Matter:\nHe translated the New Testament from Greek and Hebrew into English. This laid the ground work for us to enjoy such wide spread access of the Holy Bible. King James of Scotland’s name is the most common bible in circulation. When he commissioned his version of the Bible, almost the entirity of it is made up of Tyndale’s work. This shows that the Restoration of the Church of Jesus Christ depends on William Tyndale.\nHe gave the people of England access to the Holy Bible. This was common place in other-Europe, but not the case for the people of England, as the church would have it. This fed the fire of the ongoing Reformation which started eight years prior in 1517 when Martin Luther famously nailed his 95 theses on the walls of the church.\nSocial order disrupted due to his book and his translation not in the hands of the public"
+  },
+  {
+    "objectID": "calc1/derivative_rules.html#other-examples",
+    "href": "calc1/derivative_rules.html#other-examples",
+    "title": "Derivative Rules:",
+    "section": "Other Examples:",
+    "text": "Other Examples:\n\n\nExample\n\nFind \\(k'(x)\\) \\[\nk(x) = -2x\\left(h(x) + 2x^{2}g(x))\\right)\n\\] From here, distribute the \\(-2x\\) \\[\nk(x) = -2x\\left(h(x) + 2x^{2}g(x))\\right)\n\\] Now take the derivative of each side \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(k(x)\\right)\n\\text{ } = \\text{ }\n\\frac{\\text{d}}{\\text{dx}} \\left( -2x\\left(h(x) + 2x^{2}g(x))\\right) \\right)\n\\] Notice the double chain rule \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(k(x)\\right)\n\\text{ } = \\text{ }\n\\frac{\\text{d}}{\\text{dx}} \\left(-2x * h(x) \\right) + \\frac{\\text{d}}{\\text{dx}} \\left(-4x^{3} * g(x) \\right)\n\\] Derivative on the right \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(-2x * h(x) \\right)\n\\rightarrow\n-2*h(x) - 2x * h'(x)\n\\] Derivative on the left \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(-4x^{3} * g(x) \\right)\n\\rightarrow\n-12x^{2} * g(x) - 4x^{3} * g'(x)\n\\] Now combine everything \\[\nk'(x) = \\left(-2*h(x) - 2x * h'(x)\\right) + \\left(-12x^{2} * g(x) - 4x^{3} * g'(x)\\right)\n\\] Now substitute the values given and use algebra to simplify it"
+  },
+  {
+    "objectID": "calc1/derivative_rules.html#common-errorsnotes",
+    "href": "calc1/derivative_rules.html#common-errorsnotes",
+    "title": "Derivative Rules:",
+    "section": "Common Errors/Notes",
+    "text": "Common Errors/Notes\n\nRemember that the denominator of the quotient rule is \\((g(x))^{2}\\), not \\((g'(x))^{2}\\)\nWhen given \\(k(x) = x\\left(2x+\\frac{1}{x+3}\\right)\\) to find \\(k'(x)\\), first distribute \\(x\\), then take the derivative from there."
+  },
+  {
+    "objectID": "calc1/derivative_rules.html#second-derivative-section",
+    "href": "calc1/derivative_rules.html#second-derivative-section",
+    "title": "Derivative Rules:",
+    "section": "Second Derivative Section",
+    "text": "Second Derivative Section\nThis is about: - taking the derivative a second time - local maximun and minimum - first and second derivative tests\n\ndecreasing in polynomial each time a derivative is taken"
+  },
+  {
+    "objectID": "calc1/test_rjs_pres.html#hello-there",
+    "href": "calc1/test_rjs_pres.html#hello-there",
+    "title": "Test RJS Presentation",
+    "section": "Hello, There",
+    "text": "Hello, There\nThis presentation will show you examples of what you can do with Quarto and Reveal.js, including:\n\nPresenting code and LaTeX equations\nIncluding computations in slide output\nImage, video, and iframe backgrounds\nFancy transitions and animations\nPrinting to PDF\n\n…and much more\n\nSpeaker notes go here.\nRemember to say this\nthis is the code print(\"Hello World\")"
+  },
+  {
+    "objectID": "calc1/test_rjs_pres.html#pretty-code",
+    "href": "calc1/test_rjs_pres.html#pretty-code",
+    "title": "Test RJS Presentation",
+    "section": "Pretty Code",
+    "text": "Pretty Code\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot <- renderPlot({\n    # Render a barplot\n  })\n}\n\nLearn more: Syntax Highlighting"
+  },
+  {
+    "objectID": "calc1/test_rjs_pres.html#code-animations",
+    "href": "calc1/test_rjs_pres.html#code-animations",
+    "title": "Test RJS Presentation",
+    "section": "Code Animations",
+    "text": "Code Animations\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot <- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}\n\nLearn more: Code Animations"
+  },
+  {
+    "objectID": "calc1/test_rjs_pres.html#line-highlighting",
+    "href": "calc1/test_rjs_pres.html#line-highlighting",
+    "title": "Test RJS Presentation",
+    "section": "Line Highlighting",
+    "text": "Line Highlighting\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\nLearn more: Line Highlighting"
+  },
+  {
+    "objectID": "calc1/test_rjs_pres.html#executable-code",
+    "href": "calc1/test_rjs_pres.html#executable-code",
+    "title": "Test RJS Presentation",
+    "section": "Executable Code",
+    "text": "Executable Code\n\nlibrary(ggplot2)\nggplot(mtcars, aes(hp, mpg, color = am)) +\n  geom_point() +\n  geom_smooth(formula = y ~ x, method = \"loess\")\n\n\n\nLearn more: Executable Code"
+  },
+  {
+    "objectID": "calc1/test_rjs_pres.html#latex-equations",
+    "href": "calc1/test_rjs_pres.html#latex-equations",
+    "title": "Test RJS Presentation",
+    "section": "LaTeX Equations",
+    "text": "LaTeX Equations\nMathJax rendering of equations to HTML\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]\n\n\n\nLearn more: LaTeX Equations"
+  },
+  {
+    "objectID": "other_subjects/rel_presentation_notes.html",
+    "href": "other_subjects/rel_presentation_notes.html",
+    "title": "34 In Quest of Reformation Part 1",
+    "section": "",
+    "text": "Two popes at the time: Gregory XII the Roman Pope, and the Pisan Pope John XXIII\nthe thinking was that a council would determine who was the legitimate Pope\nHow should we conviene this council? It wouldn’t be put on by one side, they would choose their Pope. To fix this, the cardinals of both parties worked together to gather in Pisa in 1409\n\ninsert picture of leaning tower of pisa\n\nboth parties tried to thwart each other’s claim\nWhat was the result of this concil? It was decided that both of the popes were unworthy to be Pope.\nthis council had the backing of each side as well as the courts in Europe.\nThe next issue the council moved onto was that of simony and other issues in the church.\n\nthis is\n\nAlexander V was elected by the council to be the new pope\nThe council thought this would bring about a productive ending, but it only made the schism worse.\nEurope mostly accepted Alexander to be the pope, but the other two had a big enough base of supporters to cause issues. Also, Alexander died less than a year after becoming Pope.\nJohn XXIII was elected to take his place by the cardinals.\nAnother council gathered at Constance in 1414. There was political termoil and John was sentanced to prison for the rest of his life and Gregory abdicated."
+  },
+  {
+    "objectID": "other_subjects/rel_presentation_notes.html#john-wycliffe",
+    "href": "other_subjects/rel_presentation_notes.html#john-wycliffe",
+    "title": "34 In Quest of Reformation Part 1",
+    "section": "John Wycliffe",
+    "text": "John Wycliffe"
+  },
+  {
+    "objectID": "other_subjects/rel_presentation_notes.html#john-huss",
+    "href": "other_subjects/rel_presentation_notes.html#john-huss",
+    "title": "34 In Quest of Reformation Part 1",
+    "section": "John Huss",
+    "text": "John Huss\n\nfrom the Czech Republic (1362-1415)\nlots going on in his country about to many Germans there.\nMy 3 favorite things from Huss:\n\n“He thus came to the conclusion that the Bible is the final authority by which the pope as well as any Christian is to be judged. A pope who does not obey the Bible is not to be obeyed.”\nHuss, who had bought an indulgence twenty years earlier, by then had come to the conclusion that only God could grant forgiveness, and that to sell what comes only from God is usurping God’s power\nWas against the sending of Christians to fight in crusaides\n\nExcomunicated more than once\nHe eventually left the public scene and lived in the country side. He continued his writings of the need for reformation whist living there.\nHe was invited to attend a Great Council in Constance from Sigismund. This council was supposed to be a fresh start for the church, so he was ega to attend.\nHe was promised safety there but he was turned on. He was condemed as a heratic and sentance to the slammer.\nIn pleading his cause, he said, “I appeal to Jesus Christ, the only judge who is almighty and completely just. In his hands I place my cause, since he will judge each, not on the basis of false witnesses and erring councils, but on truth and justice.”\nThe Bohemians were indignant after hearing of his myrtr, and almost unanimously repudiated the council. Four hundred and fifty-two noblemen gathered in solemn assembly and announced their agreement with Huss, that an unworthy pope ought not be obeyed. The council countered by ordering that the University of Prague be dissolved\nFour articles came of his death as the Bohemian’s resisted the church.\nThe church rejected them at first but after failed crusaides, they compromised with them. Very sad"
+  },
+  {
+    "objectID": "other_subjects/test_rjs_pres.html",
+    "href": "other_subjects/test_rjs_pres.html",
+    "title": "Test RJS Presentation",
+    "section": "",
+    "text": "This presentation will show you examples of what you can do with Quarto and Reveal.js, including:\n\nPresenting code and LaTeX equations\nIncluding computations in slide output\nImage, video, and iframe backgrounds\nFancy transitions and animations\nPrinting to PDF\n\n…and much more\n\nSpeaker notes go here.\nRemember to say this\nthis is the code print(\"Hello World\")"
+  },
+  {
+    "objectID": "other_subjects/test_rjs_pres.html#pretty-code",
+    "href": "other_subjects/test_rjs_pres.html#pretty-code",
+    "title": "Test RJS Presentation",
+    "section": "Pretty Code",
+    "text": "Pretty Code\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot <- renderPlot({\n    # Render a barplot\n  })\n}\n\nLearn more: Syntax Highlighting"
+  },
+  {
+    "objectID": "other_subjects/test_rjs_pres.html#code-animations",
+    "href": "other_subjects/test_rjs_pres.html#code-animations",
+    "title": "Test RJS Presentation",
+    "section": "Code Animations",
+    "text": "Code Animations\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot <- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}\n\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot <- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}\n\n\n\nLearn more: Code Animations"
+  },
+  {
+    "objectID": "other_subjects/test_rjs_pres.html#line-highlighting",
+    "href": "other_subjects/test_rjs_pres.html#line-highlighting",
+    "title": "Test RJS Presentation",
+    "section": "Line Highlighting",
+    "text": "Line Highlighting\n\nHighlight specific lines for emphasis\nIncrementally highlight additional lines\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\nLearn more: Line Highlighting"
+  },
+  {
+    "objectID": "other_subjects/test_rjs_pres.html#executable-code",
+    "href": "other_subjects/test_rjs_pres.html#executable-code",
+    "title": "Test RJS Presentation",
+    "section": "Executable Code",
+    "text": "Executable Code\n\nlibrary(ggplot2)\nggplot(mtcars, aes(hp, mpg, color = am)) +\n  geom_point() +\n  geom_smooth(formula = y ~ x, method = \"loess\")\n\n\n\n\n\nLearn more: Executable Code"
+  },
+  {
+    "objectID": "other_subjects/test_rjs_pres.html#latex-equations",
+    "href": "other_subjects/test_rjs_pres.html#latex-equations",
+    "title": "Test RJS Presentation",
+    "section": "LaTeX Equations",
+    "text": "LaTeX Equations\nMathJax rendering of equations to HTML\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]\n\n\n\nLearn more: LaTeX Equations"
+  },
+  {
+    "objectID": "other_subjects/thoughts.html",
+    "href": "other_subjects/thoughts.html",
+    "title": "Thoughts",
+    "section": "",
+    "text": "Top of page have the slide show\n\n\nmeant for introducing new concepts and high level exposure mostly\n\n\nTop right corner have a video like the 221 site\n\n\nthis could be me going through the slide show\nI think it’ll be good for visual/audio learners\nhow can I make my own video\n\nMovieFlame to make documentaries of scriptual videos\nlike 365DataScience videos\n\n\n\nArticle as the main\n\n\nthis has instrution (like OpenStacks)\nhas practice problems at the bottom of this section\n\n\nBottom of page have “additional resources”\n\n\nLike “honorable mention” resources that did not make it into the article part\n\n\nWhere does the money in higher education institutions go??\n“General Eds” of: - physical fitness/proper eating\nRelevant Topics: - video production\nOne big thing that there should be is: - Mastery of topics - Continuation of education/ “forever learning”"
+  }
+]

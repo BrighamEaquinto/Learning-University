@@ -1,0 +1,39 @@
+---
+title: "Thoughts"
+format: html
+---
+
+
+
+1. Top of page have the slide show
+- meant for introducing new concepts and high level exposure mostly
+
+2. Top right corner have a video like the 221 site
+- this could be me going through the slide show 
+- I think it'll be good for visual/audio learners
+- how can I make my own video
+    - MovieFlame to make documentaries of scriptual videos
+    - like 365DataScience  videos
+
+3. Article as the main
+- this has instrution (like OpenStacks)
+- has practice problems at the bottom of this section
+
+4. Bottom of page have "additional resources"
+- Like "honorable mention" resources that did not make it into the article part 
+
+
+
+----
+
+Where does the money in higher education institutions go??
+
+"General Eds" of: 
+- physical fitness/proper eating
+
+Relevant Topics: 
+- video production
+
+One big thing that there should be is: 
+- Mastery of topics
+- Continuation of education/ "forever learning"

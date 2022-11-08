@@ -1,0 +1,44 @@
+---
+title: Formula
+---
+
+__Slope-Intercept__:
+
+$$
+y
+\text{ } = \text{ } 
+mx + b
+$$
+
+$$ y = \text{y coordinate} $$
+$$m = \text{slope}$$
+$$ x = \text{x coordinate} $$
+$$b = \text{y intercept}$$
+
+
+----
+
+__Point-Slope__: 
+
+$$
+y - y_{1} 
+\text{ } = \text{ } 
+m(x-x_{1})
+$$
+
+
+$$ y = \text{y coordinate of second point} $$
+$$ y_{1} = \text{y coordinate of point one} $$
+$$m = \text{slope}$$
+$$ x = \text{x coordinate of second point} $$
+$$ x_{1} = \text{x coordinate of point one} $$
+
+----
+
+### Limit Definition
+
+$$
+f'(x) 
+\text{ } = \text{ }
+\lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+$$
