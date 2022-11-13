@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Learning University - Formula</title>
+<title>Learning University - Derivatives</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Limits</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../calc1/derivatives.html">
+    <a class="nav-link active" href="../calc1/derivatives.html" aria-current="page">
  <span class="menu-text">Derivatives</span></a>
   </li>  
   <li class="nav-item">
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Integrals</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../calc1/formulas.html" aria-current="page">
+    <a class="nav-link" href="../calc1/formulas.html">
  <span class="menu-text">Common Formulas</span></a>
   </li>  
   <li class="nav-item">
@@ -110,21 +110,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#limit-definition" id="toc-limit-definition" class="nav-link active" data-scroll-target="#limit-definition">Limit Definition</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Formula</h1>
+<h1 class="title">Derivatives</h1>
 </div>
 
 
@@ -139,29 +131,123 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><strong>Slope-Intercept</strong>:</p>
+<p><strong>Contant Rule</strong>: Taking the derivative of a constant is <span class="math inline">\(0\)</span></p>
 <p><span class="math display">\[
-y
-\text{ } = \text{ }
-mx + b
+f(x) = c
+\]</span> <span class="math display">\[
+f'(x) = 0
 \]</span></p>
-<p><span class="math display">\[ y = \text{y coordinate} \]</span> <span class="math display">\[m = \text{slope}\]</span> <span class="math display">\[ x = \text{x coordinate} \]</span> <span class="math display">\[b = \text{y intercept}\]</span></p>
 <hr>
-<p><strong>Point-Slope</strong>:</p>
-<p><span class="math display">\[
-y - y_{1}
-\text{ } = \text{ }
-m(x-x_{1})
+<p><strong>Power Rule</strong>: <span class="math display">\[
+f(x) = x^{n}
+\]</span> <span class="math display">\[
+f'(x) = nx^{n-1}
 \]</span></p>
-<p><span class="math display">\[ y = \text{y coordinate of second point} \]</span> <span class="math display">\[ y_{1} = \text{y coordinate of point one} \]</span> <span class="math display">\[m = \text{slope}\]</span> <span class="math display">\[ x = \text{x coordinate of second point} \]</span> <span class="math display">\[ x_{1} = \text{x coordinate of point one} \]</span></p>
 <hr>
-<section id="limit-definition" class="level3">
-<h3 class="anchored" data-anchor-id="limit-definition">Limit Definition</h3>
-<p><span class="math display">\[
-f'(x)
+<p><strong>Sum &amp; Difference Rules</strong>: Taking the derivative of the sum or difference of <span class="math inline">\(g(x)\)</span> and <span class="math inline">\(f(x)\)</span> is the same as the derivative of <span class="math inline">\(g(x)\)</span> plus or minus the derivative of <span class="math inline">\(f(x)\)</span> <span class="math display">\[
+\frac{\text{d}}{\text{dx}}(f(x) \pm g(x))
 \text{ } = \text{ }
-\lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\frac{\text{d}}{\text{dx}}(f(x)) \pm \frac{\text{d}}{\text{dx}}(g(x))
 \]</span></p>
+<hr>
+<p><strong>Constant Multiple Rules</strong>: Taking the derivative of a constant times a derivative is the same as the constant multiplied by the derivative <span class="math display">\[
+\frac{\text{d}}{\text{dx}}(kf(x))
+\text{ } = \text{ }
+k\frac{\text{d}}{\text{dx}}(f(x))
+\]</span></p>
+<details>
+<summary>
+Example
+</summary>
+<p><span class="math display">\[
+\frac{\text{d}}{\text{dx}}\left(\frac{3x}{2}\right)
+\text{ } \rightarrow \text{ }
+\frac{3}{2}\frac{\text{d}}{\text{dx}}\left(x\right)
+\text{ } \rightarrow \text{ }
+\frac{3}{2}\left(x^{1-1}\right)
+\text{ } \rightarrow \text{ }
+\frac{3}{2}
+\]</span></p>
+</details>
+<hr>
+<p><strong>Product Rule</strong>: Taking the derivative of a function times a function <span class="math display">\[
+\frac{\text{d}}{\text{dx}}(f(x)g(x))
+\text{ } = \text{ }
+f'(x)g(x) + g'(x)f(x)
+\]</span></p>
+<hr>
+<p><strong>Quotient Rule</strong>: Taking the derivative of a function divided by a function <span class="math display">\[
+\frac{\text{d}}{\text{dx}} \left(\frac{f(x)}{g(x)}\right)
+\text{ } = \text{ }
+\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^{2}}
+\]</span></p>
+<p>24+2 x (-25+6 x (2+x))</p>
+<hr>
+<p><strong>Chain Rule</strong>: to allow us to differentiate composite funtions</p>
+<p><span class="math display">\[h(x) = (f \circ g)(x) = f(g(x))\]</span> <span class="math display">\[h'(x) = f'(g(x))g'(x)\]</span></p>
+<hr>
+<p><strong>Chain and Power Rules Combined</strong>: <span class="math display">\[
+h(x) = (g(x))^{n}
+\]</span> <span class="math display">\[
+h'(x) = n(g(x))^{n-1}g'(x)
+\]</span></p>
+<details>
+<summary>
+Example
+</summary>
+<p><span class="math display">\[
+\textbf{Find }\frac{\text{dy}}{\text{dx}} \text{ if } y = (2-x^{2})^{-5}
+\]</span> <span class="math display">\[
+\textbf{Answer: } -5(2-x^{2})^{-6}(-2x)
+\]</span></p>
+</details>
+<section id="common-errorsnotes" class="level2">
+<h2 class="anchored" data-anchor-id="common-errorsnotes">Common Errors/Notes</h2>
+<ul>
+<li>Remember that the denominator of the quotient rule is <span class="math inline">\((g(x))^{2}\)</span>, not <span class="math inline">\((g'(x))^{2}\)</span></li>
+<li>When given <span class="math inline">\(k(x) = x\left(2x+\frac{1}{x+3}\right)\)</span> to find <span class="math inline">\(k'(x)\)</span>, first distribute <span class="math inline">\(x\)</span>, then take the derivative from there.</li>
+</ul>
+</section>
+<section id="other-examples" class="level2">
+<h2 class="anchored" data-anchor-id="other-examples">Other Examples:</h2>
+<details>
+<summary>
+Example
+</summary>
+<p>Find <span class="math inline">\(k'(x)\)</span> <span class="math display">\[
+k(x) = -2x\left(h(x) + 2x^{2}g(x))\right)
+\]</span> From here, distribute the <span class="math inline">\(-2x\)</span> <span class="math display">\[
+k(x) = -2x\left(h(x) + 2x^{2}g(x))\right)
+\]</span> Now take the derivative of each side <span class="math display">\[
+\frac{\text{d}}{\text{dx}} \left(k(x)\right)
+\text{ } = \text{ }
+\frac{\text{d}}{\text{dx}} \left( -2x\left(h(x) + 2x^{2}g(x))\right) \right)
+\]</span> Notice the double chain rule <span class="math display">\[
+\frac{\text{d}}{\text{dx}} \left(k(x)\right)
+\text{ } = \text{ }
+\frac{\text{d}}{\text{dx}} \left(-2x * h(x) \right) + \frac{\text{d}}{\text{dx}} \left(-4x^{3} * g(x) \right)
+\]</span> Derivative on the right <span class="math display">\[
+\frac{\text{d}}{\text{dx}} \left(-2x * h(x) \right)
+\rightarrow
+-2*h(x) - 2x * h'(x)
+\]</span> Derivative on the left <span class="math display">\[
+\frac{\text{d}}{\text{dx}} \left(-4x^{3} * g(x) \right)
+\rightarrow
+-12x^{2} * g(x) - 4x^{3} * g'(x)
+\]</span> Now combine everything <span class="math display">\[
+k'(x) = \left(-2*h(x) - 2x * h'(x)\right) + \left(-12x^{2} * g(x) - 4x^{3} * g'(x)\right)
+\]</span> Now substitute the values given and use algebra to simplify it</p>
+</details>
+<p><br><br></p>
+</section>
+<section id="second-derivative-section" class="level2">
+<h2 class="anchored" data-anchor-id="second-derivative-section">Second Derivative Section</h2>
+<p>This is about: - taking the derivative a second time - local maximun and minimum - first and second derivative tests</p>
+<ul>
+<li>decreasing in polynomial each time a derivative is taken</li>
+</ul>
+<p><br><br></p>
+<!-- <iframe src="quarto.org" title="W3Schools Free Online Web Tutorials" width="100%" height="300" style="border:1px solid black;"></iframe> -->
 
 
 </section>

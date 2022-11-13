@@ -3,3 +3,46 @@ title: "Integrals"
 format: html
 toc: false
 ---
+
+## W08 Homework The Antiderivative
+
+[Homework Assigment](https://www.knewton.com/learn/course/3fcb683e-c7e2-40eb-8221-e47c03f1e6f9/assignment/43023b94-0800-4c73-9823-f67e628f68ef/cover)
+
+This is about going from derivative to back to the function. This is called the antiderivative
+
+$f'(x)$ is the notation for the derivative
+
+$F'(x)$ is the notation for the antiderivative
+
+
+:::{.callout-note}
+# Example
+
+Finding Antiderivatives 
+
+Derivative $f'(x) = 1$, then antiderivative $f(x) = x + c$
+
+
+$f(x) = 2x \quad \Rightarrow \quad F(x) = x^{2}$
+:::
+
+:::{.callout-note}
+# Notation
+
+$F'(x)$ is the process of finding $f(x)$ by starting with a derivative and getting to $f(x)$
+:::
+
+### Summation Notation
+$$ 
+{\sum _{i=1} ^{n} {a_i} }
+$$
+
+$a_i$ describes the terms to be added and the $i$ is called the *index*
+
+
+
+<br>
+
+## W08 Homework The Indefinite Integral
+
+[Homework Assignment](https://www.knewton.com/learn/course/3fcb683e-c7e2-40eb-8221-e47c03f1e6f9/assignment/43b00aca-b034-4ed3-a332-a156eda8ae43/cover)

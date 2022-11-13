@@ -8,15 +8,16 @@ website:
   title: "Learning University"
   navbar:
     left:
-      - href: calc1/limit_rules.qmd
-        text: "Limit Rules"
-      - href: calc1/derivative_rules.qmd
-        text: "Derivative Rules"
-      - href: calc1/integrals.qmd
-      - href: calc1/formulas.qmd
-        text: "Formulas"
-      - href: calc1/common_errors.qmd
-        text: "Common Errors"
+      - text: "Limits"
+        href: calc1/limits.qmd
+      - text: "Derivatives"
+        href: calc1/derivatives.qmd
+      - text: "Integrals"
+        href: calc1/integrals.qmd
+      - text: "Common Formulas"
+        href: calc1/formulas.qmd
+      - text: "Common Errors"
+        href: calc1/common_errors.qmd
 
 format:
   html:

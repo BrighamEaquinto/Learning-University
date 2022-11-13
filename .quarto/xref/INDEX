@@ -51,5 +51,14 @@
   },
   "calc1/chap4_derivative_applications.qmd": {
     "chap4_derivative_applications.html": "a14f6890"
+  },
+  "py_examples/qmd.qmd": {
+    "qmd.html": "ea56bd66"
+  },
+  "calc1/limits.qmd": {
+    "limits.html": "45f7ad66"
+  },
+  "calc1/derivatives.qmd": {
+    "derivatives.html": "52fca374"
   }
 }

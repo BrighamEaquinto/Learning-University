@@ -1,5 +1,5 @@
 ---
-title: "Derivative Rules:"
+title: "Derivatives"
 format: html
 toc: false
 ---

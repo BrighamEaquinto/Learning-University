@@ -207,6 +207,55 @@
     "href": "other_subjects/ds_tools.html",
     "title": "Data Science Tools",
     "section": "",
-    "text": "Subjects\nIDE\nWrangling\nVisualization\nML\nDashboard\nReports\nScript\nConsole\n\n\n\nR\nVSCode, RStudio\ndplyr\nggplot2\nTidymodels\nShiny\nRMD, QMD\n.r\nterminal\n\n\n\nPython\nVSCode, RStudio\npandas\nplotly\nPyTorch, Tensorflow/Keras, Sklearn\nDash\nipynd, QMD\n.py\njupyter interactive console"
+    "text": "Subjects\nIDE\nWrangling\nVisualization\nML\nDashboard\nReports\nScript\nConsole\n\n\n\nR\nVSCode, RStudio\ndplyr\nggplot2\nTidymodels\nShiny\nRMD, QMD\n.r\nterminal\n\n\n\nPython\nVSCode, RStudio\npandas\nplotly\nPyTorch, Tensorflow/Keras, Sklearn\nDash\nipynd, QMD\n.py\njupyter interactive console\n\n\n\nhttps://www.tidymodels.org/ https://www.tidymodels.org/start/ https://www.tidymodels.org/learn/ vs.  https://modelr.tidyverse.org/ https://r4ds.had.co.nz/model-intro.html"
+  },
+  {
+    "objectID": "calc1/integrals.html",
+    "href": "calc1/integrals.html",
+    "title": "Integrals",
+    "section": "",
+    "text": "Homework Assigment\nThis is about going from derivative to back to the function. This is called the antiderivative\n\\(f'(x)\\) is the notation for the derivative\n\\(F'(x)\\) is the notation for the antiderivative\n\n\n\n\n\n\nExample\n\n\n\nFinding Antiderivatives\nDerivative \\(f'(x) = 1\\), then antiderivative \\(f(x) = x + c\\)\n\\(f(x) = 2x \\quad \\Rightarrow \\quad F(x) = x^{2}\\)\n\n\n\n\n\n\n\n\nNotation\n\n\n\n\\(F'(x)\\) is the process of finding \\(f(x)\\) by starting with a derivative and getting to \\(f(x)\\)\n\n\n\n\n\\[\n{\\sum _{i=1} ^{n} {a_i} }\n\\]\n\\(a_i\\) describes the terms to be added and the \\(i\\) is called the index"
+  },
+  {
+    "objectID": "calc1/integrals.html#w08-homework-the-indefinite-integral",
+    "href": "calc1/integrals.html#w08-homework-the-indefinite-integral",
+    "title": "Integrals",
+    "section": "W08 Homework The Indefinite Integral",
+    "text": "W08 Homework The Indefinite Integral\nHomework Assignment"
+  },
+  {
+    "objectID": "py_examples/qmd.html",
+    "href": "py_examples/qmd.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "import pandas as pd\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")\n\ndat\n\n\n\n\n\n  \n    \n      \n      age\n      sex\n      bmi\n      children\n      smoker\n      region\n      charges\n    \n  \n  \n    \n      0\n      19\n      female\n      27.900\n      0\n      yes\n      southwest\n      16884.92400\n    \n    \n      1\n      18\n      male\n      33.770\n      1\n      no\n      southeast\n      1725.55230\n    \n    \n      2\n      28\n      male\n      33.000\n      3\n      no\n      southeast\n      4449.46200\n    \n    \n      3\n      33\n      male\n      22.705\n      0\n      no\n      northwest\n      21984.47061\n    \n    \n      4\n      32\n      male\n      28.880\n      0\n      no\n      northwest\n      3866.85520\n    \n    \n      ...\n      ...\n      ...\n      ...\n      ...\n      ...\n      ...\n      ...\n    \n    \n      1333\n      50\n      male\n      30.970\n      3\n      no\n      northwest\n      10600.54830\n    \n    \n      1334\n      18\n      female\n      31.920\n      0\n      no\n      northeast\n      2205.98080\n    \n    \n      1335\n      18\n      female\n      36.850\n      0\n      no\n      southeast\n      1629.83350\n    \n    \n      1336\n      21\n      female\n      25.800\n      0\n      no\n      southwest\n      2007.94500\n    \n    \n      1337\n      61\n      female\n      29.070\n      0\n      yes\n      northwest\n      29141.36030\n    \n  \n\n1338 rows × 7 columns\n\n\n\n\nimport plotly.express as px\n\nfig = px.bar(dat, x = 'sex')\n\n\nfig.show(renderer=\"png\")"
+  },
+  {
+    "objectID": "calc1/derivatives.html",
+    "href": "calc1/derivatives.html",
+    "title": "Derivatives",
+    "section": "",
+    "text": "Contant Rule: Taking the derivative of a constant is \\(0\\)\n\\[\nf(x) = c\n\\] \\[\nf'(x) = 0\n\\]\nPower Rule: \\[\nf(x) = x^{n}\n\\] \\[\nf'(x) = nx^{n-1}\n\\]\nSum & Difference Rules: Taking the derivative of the sum or difference of \\(g(x)\\) and \\(f(x)\\) is the same as the derivative of \\(g(x)\\) plus or minus the derivative of \\(f(x)\\) \\[\n\\frac{\\text{d}}{\\text{dx}}(f(x) \\pm g(x))\n\\text{ } = \\text{ }\n\\frac{\\text{d}}{\\text{dx}}(f(x)) \\pm \\frac{\\text{d}}{\\text{dx}}(g(x))\n\\]\nConstant Multiple Rules: Taking the derivative of a constant times a derivative is the same as the constant multiplied by the derivative \\[\n\\frac{\\text{d}}{\\text{dx}}(kf(x))\n\\text{ } = \\text{ }\nk\\frac{\\text{d}}{\\text{dx}}(f(x))\n\\]\nProduct Rule: Taking the derivative of a function times a function \\[\n\\frac{\\text{d}}{\\text{dx}}(f(x)g(x))\n\\text{ } = \\text{ }\nf'(x)g(x) + g'(x)f(x)\n\\]\nQuotient Rule: Taking the derivative of a function divided by a function \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(\\frac{f(x)}{g(x)}\\right)\n\\text{ } = \\text{ }\n\\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^{2}}\n\\]\n24+2 x (-25+6 x (2+x))\nChain Rule: to allow us to differentiate composite funtions\n\\[h(x) = (f \\circ g)(x) = f(g(x))\\] \\[h'(x) = f'(g(x))g'(x)\\]\nChain and Power Rules Combined: \\[\nh(x) = (g(x))^{n}\n\\] \\[\nh'(x) = n(g(x))^{n-1}g'(x)\n\\]"
+  },
+  {
+    "objectID": "calc1/derivatives.html#common-errorsnotes",
+    "href": "calc1/derivatives.html#common-errorsnotes",
+    "title": "Derivatives",
+    "section": "Common Errors/Notes",
+    "text": "Common Errors/Notes\n\nRemember that the denominator of the quotient rule is \\((g(x))^{2}\\), not \\((g'(x))^{2}\\)\nWhen given \\(k(x) = x\\left(2x+\\frac{1}{x+3}\\right)\\) to find \\(k'(x)\\), first distribute \\(x\\), then take the derivative from there."
+  },
+  {
+    "objectID": "calc1/derivatives.html#other-examples",
+    "href": "calc1/derivatives.html#other-examples",
+    "title": "Derivatives",
+    "section": "Other Examples:",
+    "text": "Other Examples:\n\n\nExample\n\nFind \\(k'(x)\\) \\[\nk(x) = -2x\\left(h(x) + 2x^{2}g(x))\\right)\n\\] From here, distribute the \\(-2x\\) \\[\nk(x) = -2x\\left(h(x) + 2x^{2}g(x))\\right)\n\\] Now take the derivative of each side \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(k(x)\\right)\n\\text{ } = \\text{ }\n\\frac{\\text{d}}{\\text{dx}} \\left( -2x\\left(h(x) + 2x^{2}g(x))\\right) \\right)\n\\] Notice the double chain rule \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(k(x)\\right)\n\\text{ } = \\text{ }\n\\frac{\\text{d}}{\\text{dx}} \\left(-2x * h(x) \\right) + \\frac{\\text{d}}{\\text{dx}} \\left(-4x^{3} * g(x) \\right)\n\\] Derivative on the right \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(-2x * h(x) \\right)\n\\rightarrow\n-2*h(x) - 2x * h'(x)\n\\] Derivative on the left \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(-4x^{3} * g(x) \\right)\n\\rightarrow\n-12x^{2} * g(x) - 4x^{3} * g'(x)\n\\] Now combine everything \\[\nk'(x) = \\left(-2*h(x) - 2x * h'(x)\\right) + \\left(-12x^{2} * g(x) - 4x^{3} * g'(x)\\right)\n\\] Now substitute the values given and use algebra to simplify it"
+  },
+  {
+    "objectID": "calc1/derivatives.html#second-derivative-section",
+    "href": "calc1/derivatives.html#second-derivative-section",
+    "title": "Derivatives",
+    "section": "Second Derivative Section",
+    "text": "Second Derivative Section\nThis is about: - taking the derivative a second time - local maximun and minimum - first and second derivative tests\n\ndecreasing in polynomial each time a derivative is taken"
   }
 ]
