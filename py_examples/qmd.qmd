@@ -1,0 +1,24 @@
+---
+title: "Untitled"
+format: html
+---
+
+
+```{python}
+import pandas as pd
+
+dat = pd.read_csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv")
+
+dat
+```
+
+```{python}
+import plotly.express as px
+
+fig = px.bar(dat, x = 'sex')
+```
+
+
+```{python}
+fig.show(renderer="png")
+```

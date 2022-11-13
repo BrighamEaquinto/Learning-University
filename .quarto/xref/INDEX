@@ -45,5 +45,11 @@
   },
   "other_subjects/thoughts.qmd": {
     "thoughts.html": "8a705833"
+  },
+  "other_subjects/ds_tools.qmd": {
+    "ds_tools.html": "fb4aa546"
+  },
+  "calc1/chap4_derivative_applications.qmd": {
+    "chap4_derivative_applications.html": "a14f6890"
   }
 }

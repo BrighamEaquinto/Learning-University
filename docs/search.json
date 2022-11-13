@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "Learning University",
     "section": "",
-    "text": "Intresting paradigm. Employers want experience. Graduate schools want grades. Competing interests… But they both ultimately want money.\nWhat’s the point of education? Portfolio projects or mastery of subject?\n\nDash dashboards\nQuarto Websites\ncoding word documents\nwriting r packages to do calculus\nQuarto Revealjs for presentations (free, animations, speaker timer, speaker notes…)\ncharacter & chapter summarising in readings"
+    "text": "Intresting paradigm. Employers want experience. Graduate schools want grades. Competing interests… But they both ultimately want money.\nWhat’s the point of education? Portfolio projects or mastery of subject?\n\nDash dashboards\nQuarto Websites\ncoding word documents\nwriting r packages to do calculus\nQuarto Revealjs for presentations (free, animations, speaker timer, speaker notes…)\ncharacter & chapter summarising in readings\n\nWhat about pages like these?: - https://www.datacamp.com/tutorial/facets-ggplot-r - https://www.datacamp.com/tutorial/tidyverse-tutorial-r"
   },
   {
     "objectID": "index.html#an-open-letter-to-graduate-schools",
@@ -165,7 +165,7 @@
     "href": "other_subjects/test_rjs_pres.html#code-animations",
     "title": "Test RJS Presentation",
     "section": "Code Animations",
-    "text": "Code Animations\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot <- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}\n\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot <- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}\n\n\n\nLearn more: Code Animations"
+    "text": "Code Animations\n\nOver 20 syntax highlighting themes available\nDefault theme optimized for accessibility\n\nR Code\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot <- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}\n\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot <- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}\n\n\nPython Code\n\nimport pandas as pd\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")\n\ndat.head()\n\n\nLearn more: Code Animations"
   },
   {
     "objectID": "other_subjects/test_rjs_pres.html#line-highlighting",
@@ -194,5 +194,19 @@
     "title": "Thoughts",
     "section": "",
     "text": "Top of page have the slide show\n\n\nmeant for introducing new concepts and high level exposure mostly\n\n\nTop right corner have a video like the 221 site\n\n\nthis could be me going through the slide show\nI think it’ll be good for visual/audio learners\nhow can I make my own video\n\nMovieFlame to make documentaries of scriptual videos\nlike 365DataScience videos\n\n\n\nArticle as the main\n\n\nthis has instrution (like OpenStacks)\nhas practice problems at the bottom of this section\n\n\nBottom of page have “additional resources”\n\n\nLike “honorable mention” resources that did not make it into the article part\n\n\nWhere does the money in higher education institutions go??\n“General Eds” of: - physical fitness/proper eating\nRelevant Topics: - video production\nOne big thing that there should be is: - Mastery of topics - Continuation of education/ “forever learning”"
+  },
+  {
+    "objectID": "other_subjects/test_rjs_pres.html#hello-there",
+    "href": "other_subjects/test_rjs_pres.html#hello-there",
+    "title": "Test RJS Presentation",
+    "section": "Hello, There",
+    "text": "Hello, There\nThis presentation will show you examples of what you can do with Quarto and Reveal.js, including:\n\nPresenting code and LaTeX equations\nIncluding computations in slide output\nImage, video, and iframe backgrounds\nFancy transitions and animations\nPrinting to PDF\n\n…and much more\n\nSpeaker notes go here.\nRemember to say this\nthis is the code print(\"Hello World\")"
+  },
+  {
+    "objectID": "other_subjects/ds_tools.html",
+    "href": "other_subjects/ds_tools.html",
+    "title": "Data Science Tools",
+    "section": "",
+    "text": "Subjects\nIDE\nWrangling\nVisualization\nML\nDashboard\nReports\nScript\nConsole\n\n\n\nR\nVSCode, RStudio\ndplyr\nggplot2\nTidymodels\nShiny\nRMD, QMD\n.r\nterminal\n\n\n\nPython\nVSCode, RStudio\npandas\nplotly\nPyTorch, Tensorflow/Keras, Sklearn\nDash\nipynd, QMD\n.py\njupyter interactive console"
   }
 ]

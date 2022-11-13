@@ -8,15 +8,15 @@ website:
   title: "Learning University"
   navbar:
     left:
-      - href: calc1/formulas.qmd
-        text: "Formulas"
-      - href: calc1/common_errors.qmd
-        text: "Common Errors"
       - href: calc1/limit_rules.qmd
         text: "Limit Rules"
       - href: calc1/derivative_rules.qmd
         text: "Derivative Rules"
       - href: calc1/integrals.qmd
+      - href: calc1/formulas.qmd
+        text: "Formulas"
+      - href: calc1/common_errors.qmd
+        text: "Common Errors"
 
 format:
   html:

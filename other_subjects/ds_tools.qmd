@@ -1,0 +1,73 @@
+---
+title: "Data Science Tools"
+format: html
+toc: true
+---
+
+::: columns
+::: {.column width="20%"}
+#### Subjects
+
+**IDE**
+
+**Wrangling**
+
+**Visualization**
+
+**ML**
+
+**Dashboard**
+
+**Reports**
+
+**Script** 
+
+**Console**
+
+:::
+::: {.column width="40%"}
+#### R
+
+VSCode, RStudio
+
+dplyr
+
+ggplot2
+
+Tidymodels
+
+Shiny
+
+RMD, QMD
+
+.r
+
+terminal 
+:::
+::: {.column width="40%"}
+#### Python
+
+VSCode, RStudio
+
+pandas
+
+plotly
+
+PyTorch, Tensorflow/Keras, Sklearn
+
+Dash
+
+ipynd, QMD
+
+.py
+
+jupyter interactive console
+:::
+:::
+
+https://www.tidymodels.org/
+https://www.tidymodels.org/start/
+https://www.tidymodels.org/learn/
+vs. 
+https://modelr.tidyverse.org/
+https://r4ds.had.co.nz/model-intro.html
