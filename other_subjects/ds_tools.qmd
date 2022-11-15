@@ -4,9 +4,12 @@ format: html
 toc: true
 ---
 
+
+<a href="THE_BOOK_OF_MORMON.txt" download>Click to download</a>
+
 ::: columns
 ::: {.column width="20%"}
-#### Subjects
+## Subjects
 
 **IDE**
 
@@ -26,7 +29,7 @@ toc: true
 
 :::
 ::: {.column width="40%"}
-#### R
+## R
 
 VSCode, RStudio
 
@@ -45,7 +48,7 @@ RMD, QMD
 terminal 
 :::
 ::: {.column width="40%"}
-#### Python
+## Python
 
 VSCode, RStudio
 
@@ -65,9 +68,15 @@ jupyter interactive console
 :::
 :::
 
-https://www.tidymodels.org/
-https://www.tidymodels.org/start/
-https://www.tidymodels.org/learn/
+<br> 
+
+::: {layout-ncol=3}
+- https://www.tidymodels.org/
+- https://www.tidymodels.org/start/
+- https://www.tidymodels.org/learn/
+
 vs. 
-https://modelr.tidyverse.org/
-https://r4ds.had.co.nz/model-intro.html
+
+- https://modelr.tidyverse.org/
+- https://r4ds.had.co.nz/model-intro.html
+:::

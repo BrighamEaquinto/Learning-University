@@ -18,6 +18,8 @@ website:
         href: calc1/formulas.qmd
       - text: "Common Errors"
         href: calc1/common_errors.qmd
+      - text: "Other"
+        href: other_subjects\1through4.qmd
 
 format:
   html:
