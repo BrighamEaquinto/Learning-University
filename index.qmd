@@ -18,7 +18,8 @@ What's the point of education? Portfolio projects or mastery of subject?
 - character & chapter summarising in readings
 
 
-What about pages like these?: 
+What about pages like these?:
+
 - https://www.datacamp.com/tutorial/facets-ggplot-r
 - https://www.datacamp.com/tutorial/tidyverse-tutorial-r 
 

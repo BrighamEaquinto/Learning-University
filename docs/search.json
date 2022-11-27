@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "Learning University",
     "section": "",
-    "text": "Intresting paradigm. Employers want experience. Graduate schools want grades. Competing interests… But they both ultimately want money.\nWhat’s the point of education? Portfolio projects or mastery of subject?\n\nDash dashboards\nQuarto Websites\ncoding word documents\nwriting r packages to do calculus\nQuarto Revealjs for presentations (free, animations, speaker timer, speaker notes…)\ncharacter & chapter summarising in readings\n\nWhat about pages like these?: - https://www.datacamp.com/tutorial/facets-ggplot-r - https://www.datacamp.com/tutorial/tidyverse-tutorial-r"
+    "text": "Intresting paradigm. Employers want experience. Graduate schools want grades. Competing interests… But they both ultimately want money.\nWhat’s the point of education? Portfolio projects or mastery of subject?\n\nDash dashboards\nQuarto Websites\ncoding word documents\nwriting r packages to do calculus\nQuarto Revealjs for presentations (free, animations, speaker timer, speaker notes…)\ncharacter & chapter summarising in readings\n\nWhat about pages like these?:\n\nhttps://www.datacamp.com/tutorial/facets-ggplot-r\nhttps://www.datacamp.com/tutorial/tidyverse-tutorial-r"
   },
   {
     "objectID": "index.html#an-open-letter-to-graduate-schools",
@@ -256,7 +256,7 @@
     "href": "calc1/derivatives.html#second-derivative-section",
     "title": "Derivatives",
     "section": "Second Derivative Section",
-    "text": "Second Derivative Section\nThis is about: - taking the derivative a second time - local maximun and minimum - first and second derivative tests\n\ndecreasing in polynomial each time a derivative is taken"
+    "text": "Second Derivative Section\nThis is about: - taking the derivative a second time - local maximun and minimum - first and second derivative tests\n\ndecreasing in polynomial each time a derivative is taken\n\n\n\nd/dx == d*f(x)/dx Find the derivative of f(x) in terms of x"
   },
   {
     "objectID": "other_subjects/ds_tools.html#subjects",
@@ -299,5 +299,187 @@
     "title": "Learning University",
     "section": "Explanations",
     "text": "Explanations\nensamble\n\nRandom Forest Model"
+  },
+  {
+    "objectID": "other_subjects/ml.html#sklearn",
+    "href": "other_subjects/ml.html#sklearn",
+    "title": "Learning University",
+    "section": "Sklearn",
+    "text": "Sklearn\nCode here\n\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split"
+  },
+  {
+    "objectID": "other_subjects/ml.html#tidymodels",
+    "href": "other_subjects/ml.html#tidymodels",
+    "title": "Learning University",
+    "section": "Tidymodels",
+    "text": "Tidymodels\nCode here\n\nlibrary(tidyverse)\nlibrary(tidymodels)"
+  },
+  {
+    "objectID": "other_subjects/ml.html#data-work",
+    "href": "other_subjects/ml.html#data-work",
+    "title": "Learning University",
+    "section": "Data Work",
+    "text": "Data Work\n\nreading in data\ntidying/wrangling\n\n“massaging data”\nscale/normalizing\nunder/oversampling\nimputing\n\nsplitting data"
+  },
+  {
+    "objectID": "other_subjects/ml.html#modeling-p1",
+    "href": "other_subjects/ml.html#modeling-p1",
+    "title": "Learning University",
+    "section": "Modeling P1",
+    "text": "Modeling P1\n\ninitialize model\npredictions"
+  },
+  {
+    "objectID": "other_subjects/ml.html#modeling-p2",
+    "href": "other_subjects/ml.html#modeling-p2",
+    "title": "Learning University",
+    "section": "Modeling P2",
+    "text": "Modeling P2\n\nhypertune model\n\ngrid search\n\nfeature engineering\n\nstat tools\nencoding"
+  },
+  {
+    "objectID": "other_subjects/ml.html#testing",
+    "href": "other_subjects/ml.html#testing",
+    "title": "Learning University",
+    "section": "Testing",
+    "text": "Testing\n\naccuracy\nrecall & precision\nf1 & roc_auc\nhold out set"
+  },
+  {
+    "objectID": "other_subjects/ml.html#plotting",
+    "href": "other_subjects/ml.html#plotting",
+    "title": "Learning University",
+    "section": "Plotting",
+    "text": "Plotting\n\nPairs plot\nconfusion matrix\nauc"
+  },
+  {
+    "objectID": "other_subjects/ml.html#others",
+    "href": "other_subjects/ml.html#others",
+    "title": "Learning University",
+    "section": "Others",
+    "text": "Others\n\nbalancing data\nscaling data\nother transformers\nmetrics\npreprocessing & normalization\nestimators\nwhat about making a loop/function that goes through all the preprocessors/transformers/scalers/estimators\nmake a general wrangling function to apply to test and hold out data"
+  },
+  {
+    "objectID": "other_subjects/ml_py.html",
+    "href": "other_subjects/ml_py.html",
+    "title": "Regression Model",
+    "section": "",
+    "text": "Libraries\n\nimport numpy as np\nimport pandas as pd\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn import tree\n\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.pipeline import make_pipeline\n\nfrom sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error\n\nimport seaborn as sns\n\n\n\nData & Preprocessing\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CarPrices.csv\")\n\ndat = pd.get_dummies(dat)\n\n\n\nSplitting\n\ny = dat.filter(['Price'], axis = 1)\nX = dat.drop('Price', axis = 1)\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)\n\n\n\nModeling\n\nmodel = tree.DecisionTreeRegressor()\nmodel = model.fit(X_train, y_train)\ny_pred1 = model.predict(X_test)\n\n\nmake_pipeline(StandardScaler(), GaussianNB(priors=None))\n\n\n\nMetrics\n\nr2 = r2_score(y_test, y_pred1).round(3)\nmae = mean_absolute_error(y_test, y_pred1).round(3)\nmse = mean_squared_error(y_test, y_pred1, squared=False).round(3)\nme = mean_squared_error(y_test, y_pred1, squared=True).round(3)\nprint(f'R2 = {r2}\\nMAE = {mae}\\nMSE = {mse}\\nME = {me}')\n\n\n\nFeature Examination\n\nfeatures_importances = (\n    pd.DataFrame({'Columns': np.array(X.columns),\n                  'Features': np.array(model.feature_importances_)})\n    .sort_values(by = 'Features', ascending = False)\n                     )\n# features_importances.to_csv(\"feature_importances.csv\")\n\n\nsns.barplot(y = 'Columns', x = 'Features', data = features_importances.head(10), color = \"lightblue\") \n\n\n\n\nCode Graveyard"
+  },
+  {
+    "objectID": "other_subjects/Classification Model.html",
+    "href": "other_subjects/Classification Model.html",
+    "title": "Classification Model",
+    "section": "",
+    "text": "Libraries\n\nimport numpy as np\nimport pandas as pd\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn import tree\n\nfrom sklearn.preprocessing import StandardScaler, LabelEncoder\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.pipeline import make_pipeline\n\nfrom sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, classification_report, confusion_matrix\n\nimport seaborn as sns\n\n\n\nData & Preprocessing\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CarPrices.csv\")\n\n# dat = pd.get_dummies(dat)\ndat = pd.factorize(dat.select_dtypes(include='object'))\n\n\ndf1 = dat.filter([\"Type\"], axis = 1)\ndf1['Type_1'] = LabelEncoder().fit_transform(dat['Type'])\n\n\n\nSplitting\n\ny = dat.filter(['Type'], axis = 1)\nX = dat.drop('Type', axis = 1)\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)\n\n\n\nModeling\n\nmodel = tree.DecisionTreeClassifier()\nmodel = model.fit(X_train, y_train)\ny_pred1 = model.predict(X_test)\n\n\nmake_pipeline(StandardScaler(), GaussianNB(priors=None))\n\n\n\nMetrics\n\nr2 = r2_score(y_test, y_pred1).round(3)\nmae = mean_absolute_error(y_test, y_pred1).round(3)\nmse = mean_squared_error(y_test, y_pred1, squared=False).round(3)\nme = mean_squared_error(y_test, y_pred1, squared=True).round(3)\nprint(f'R2 = {r2}\\nMAE = {mae}\\nMSE = {mse}\\nME = {me}')\n\n\n\nFeature Examination\n\nfeatures_importances = (\n    pd.DataFrame({'Columns': np.array(X.columns),\n                  'Features': np.array(model.feature_importances_)})\n    .sort_values(by = 'Features', ascending = False)\n                     )\n# features_importances.to_csv(\"feature_importances.csv\")\n\n\nsns.barplot(y = 'Columns', x = 'Features', data = features_importances.head(10), color = \"lightblue\") \n\n\n\n\nCode Graveyard"
+  },
+  {
+    "objectID": "other_DS/Classification Model.html",
+    "href": "other_DS/Classification Model.html",
+    "title": "Classification Model",
+    "section": "",
+    "text": "Libraries\n\nimport numpy as np\nimport pandas as pd\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn import tree\n\nfrom sklearn.preprocessing import StandardScaler, LabelEncoder\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.pipeline import make_pipeline\n\nfrom sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, classification_report, confusion_matrix\n\nimport seaborn as sns\n\n\n\nData & Preprocessing\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CarPrices.csv\")\n\n# dat = pd.get_dummies(dat)\ndat = pd.factorize(dat.select_dtypes(include='object'))\n\n\ndf1 = dat.filter([\"Type\"], axis = 1)\ndf1['Type_1'] = LabelEncoder().fit_transform(dat['Type'])\n\n\n\nSplitting\n\ny = dat.filter(['Type'], axis = 1)\nX = dat.drop('Type', axis = 1)\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)\n\n\n\nModeling\n\nmodel = tree.DecisionTreeClassifier()\nmodel = model.fit(X_train, y_train)\ny_pred1 = model.predict(X_test)\n\n\nmake_pipeline(StandardScaler(), GaussianNB(priors=None))\n\n\n\nMetrics\n\nr2 = r2_score(y_test, y_pred1).round(3)\nmae = mean_absolute_error(y_test, y_pred1).round(3)\nmse = mean_squared_error(y_test, y_pred1, squared=False).round(3)\nme = mean_squared_error(y_test, y_pred1, squared=True).round(3)\nprint(f'R2 = {r2}\\nMAE = {mae}\\nMSE = {mse}\\nME = {me}')\n\n\n\nFeature Examination\n\nfeatures_importances = (\n    pd.DataFrame({'Columns': np.array(X.columns),\n                  'Features': np.array(model.feature_importances_)})\n    .sort_values(by = 'Features', ascending = False)\n                     )\n# features_importances.to_csv(\"feature_importances.csv\")\n\n\nsns.barplot(y = 'Columns', x = 'Features', data = features_importances.head(10), color = \"lightblue\") \n\n\n\n\nCode Graveyard"
+  },
+  {
+    "objectID": "other_DS/ds_tools.html",
+    "href": "other_DS/ds_tools.html",
+    "title": "Data Science Tools",
+    "section": "",
+    "text": "Click to download"
+  },
+  {
+    "objectID": "other_DS/ds_tools.html#subjects",
+    "href": "other_DS/ds_tools.html#subjects",
+    "title": "Data Science Tools",
+    "section": "Subjects",
+    "text": "Subjects\nIDE\nWrangling\nVisualization\nML\nDashboard\nReports\nScript\nConsole"
+  },
+  {
+    "objectID": "other_DS/ds_tools.html#r",
+    "href": "other_DS/ds_tools.html#r",
+    "title": "Data Science Tools",
+    "section": "R",
+    "text": "R\nVSCode, RStudio\ndplyr\nggplot2\nTidymodels\nShiny\nRMD, QMD\n.r\nterminal"
+  },
+  {
+    "objectID": "other_DS/ds_tools.html#python",
+    "href": "other_DS/ds_tools.html#python",
+    "title": "Data Science Tools",
+    "section": "Python",
+    "text": "Python\nVSCode, RStudio\npandas\nplotly\nPyTorch, Tensorflow/Keras, Sklearn\nDash\nipynd, QMD\n.py\njupyter interactive console"
+  },
+  {
+    "objectID": "other_DS/ml.html",
+    "href": "other_DS/ml.html",
+    "title": "Learning University",
+    "section": "",
+    "text": "What I’m learning is that machine learning models are the same underlying method and math, but the way they’re implemented are either through r or python??\nsklearn = tidymodels\npytorch = torch"
+  },
+  {
+    "objectID": "other_DS/ml.html#explanations",
+    "href": "other_DS/ml.html#explanations",
+    "title": "Learning University",
+    "section": "Explanations",
+    "text": "Explanations\nensamble\n\nRandom Forest Model"
+  },
+  {
+    "objectID": "other_DS/ml.html#sklearn",
+    "href": "other_DS/ml.html#sklearn",
+    "title": "Learning University",
+    "section": "Sklearn",
+    "text": "Sklearn\nCode here\n\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split"
+  },
+  {
+    "objectID": "other_DS/ml.html#tidymodels",
+    "href": "other_DS/ml.html#tidymodels",
+    "title": "Learning University",
+    "section": "Tidymodels",
+    "text": "Tidymodels\nCode here\n\nlibrary(tidyverse)\nlibrary(tidymodels)"
+  },
+  {
+    "objectID": "other_DS/ml.html#data-work",
+    "href": "other_DS/ml.html#data-work",
+    "title": "Learning University",
+    "section": "Data Work",
+    "text": "Data Work\n\nreading in data\ntidying/wrangling\n\n“massaging data”\nscale/normalizing\nunder/oversampling\nimputing\n\nsplitting data"
+  },
+  {
+    "objectID": "other_DS/ml.html#modeling-p1",
+    "href": "other_DS/ml.html#modeling-p1",
+    "title": "Learning University",
+    "section": "Modeling P1",
+    "text": "Modeling P1\n\ninitialize model\npredictions"
+  },
+  {
+    "objectID": "other_DS/ml.html#modeling-p2",
+    "href": "other_DS/ml.html#modeling-p2",
+    "title": "Learning University",
+    "section": "Modeling P2",
+    "text": "Modeling P2\n\nhypertune model\n\ngrid search\n\nfeature engineering\n\nstat tools\nencoding"
+  },
+  {
+    "objectID": "other_DS/ml.html#testing",
+    "href": "other_DS/ml.html#testing",
+    "title": "Learning University",
+    "section": "Testing",
+    "text": "Testing\n\naccuracy\nrecall & precision\nf1 & roc_auc\nhold out set"
+  },
+  {
+    "objectID": "other_DS/ml.html#plotting",
+    "href": "other_DS/ml.html#plotting",
+    "title": "Learning University",
+    "section": "Plotting",
+    "text": "Plotting\n\nPairs plot\nconfusion matrix\nauc"
+  },
+  {
+    "objectID": "other_DS/ml.html#others",
+    "href": "other_DS/ml.html#others",
+    "title": "Learning University",
+    "section": "Others",
+    "text": "Others\n\nbalancing data\nscaling data\nother transformers\nmetrics\npreprocessing & normalization\nestimators\nwhat about making a loop/function that goes through all the preprocessors/transformers/scalers/estimators\nmake a general wrangling function to apply to test and hold out data"
+  },
+  {
+    "objectID": "other_DS/ml_py.html",
+    "href": "other_DS/ml_py.html",
+    "title": "Regression Model",
+    "section": "",
+    "text": "Libraries\n\nimport numpy as np\nimport pandas as pd\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn import tree\n\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.pipeline import make_pipeline\n\nfrom sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error\n\nimport seaborn as sns\n\n\n\nData & Preprocessing\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CarPrices.csv\")\n\ndat = pd.get_dummies(dat)\n\n\n\nSplitting\n\ny = dat.filter(['Price'], axis = 1)\nX = dat.drop('Price', axis = 1)\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)\n\n\n\nModeling\n\nmodel = tree.DecisionTreeRegressor()\nmodel = model.fit(X_train, y_train)\ny_pred1 = model.predict(X_test)\n\n\nmake_pipeline(StandardScaler(), GaussianNB(priors=None))\n\n\n\nMetrics\n\nr2 = r2_score(y_test, y_pred1).round(3)\nmae = mean_absolute_error(y_test, y_pred1).round(3)\nmse = mean_squared_error(y_test, y_pred1, squared=False).round(3)\nme = mean_squared_error(y_test, y_pred1, squared=True).round(3)\nprint(f'R2 = {r2}\\nMAE = {mae}\\nMSE = {mse}\\nME = {me}')\n\n\n\nFeature Examination\n\nfeatures_importances = (\n    pd.DataFrame({'Columns': np.array(X.columns),\n                  'Features': np.array(model.feature_importances_)})\n    .sort_values(by = 'Features', ascending = False)\n                     )\n# features_importances.to_csv(\"feature_importances.csv\")\n\n\nsns.barplot(y = 'Columns', x = 'Features', data = features_importances.head(10), color = \"lightblue\") \n\n\n\n\nCode Graveyard"
   }
 ]

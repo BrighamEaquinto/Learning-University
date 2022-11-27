@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Learning University – ml</title>
+<title>Learning University - Classification Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -181,142 +181,116 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#explanations" id="toc-explanations" class="nav-link active" data-scroll-target="#explanations">Explanations</a>
-  <ul class="collapse">
-  <li><a href="#random-forest-model" id="toc-random-forest-model" class="nav-link" data-scroll-target="#random-forest-model">Random Forest Model</a></li>
-  </ul></li>
-  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">Topics</a></li>
-  <li><a href="#ml-process" id="toc-ml-process" class="nav-link" data-scroll-target="#ml-process">ML Process</a>
-  <ul class="collapse">
-  <li><a href="#data-work" id="toc-data-work" class="nav-link" data-scroll-target="#data-work">Data Work</a></li>
-  <li><a href="#modeling-p1" id="toc-modeling-p1" class="nav-link" data-scroll-target="#modeling-p1">Modeling P1</a></li>
-  <li><a href="#modeling-p2" id="toc-modeling-p2" class="nav-link" data-scroll-target="#modeling-p2">Modeling P2</a></li>
-  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
-  <li><a href="#plotting" id="toc-plotting" class="nav-link" data-scroll-target="#plotting">Plotting</a></li>
-  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others">Others</a></li>
-  </ul></li>
+  <li><a href="#libraries" id="toc-libraries" class="nav-link active" data-scroll-target="#libraries">Libraries</a></li>
+  <li><a href="#data-preprocessing" id="toc-data-preprocessing" class="nav-link" data-scroll-target="#data-preprocessing">Data &amp; Preprocessing</a></li>
+  <li><a href="#splitting" id="toc-splitting" class="nav-link" data-scroll-target="#splitting">Splitting</a></li>
+  <li><a href="#modeling" id="toc-modeling" class="nav-link" data-scroll-target="#modeling">Modeling</a></li>
+  <li><a href="#metrics" id="toc-metrics" class="nav-link" data-scroll-target="#metrics">Metrics</a></li>
+  <li><a href="#feature-examination" id="toc-feature-examination" class="nav-link" data-scroll-target="#feature-examination">Feature Examination</a></li>
+  <li><a href="#code-graveyard" id="toc-code-graveyard" class="nav-link" data-scroll-target="#code-graveyard">Code Graveyard</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Classification Model</h1>
+</div>
 
 
-<p>What I’m learning is that machine learning models are the same underlying method and math, but the way they’re implemented are either through r or python??</p>
-<p>sklearn = tidymodels</p>
-<p>pytorch = torch</p>
-<section id="explanations" class="level2">
-<h2 class="anchored" data-anchor-id="explanations">Explanations</h2>
-<p>ensamble</p>
-<section id="random-forest-model" class="level3">
-<h3 class="anchored" data-anchor-id="random-forest-model">Random Forest Model</h3>
-</section>
-</section>
-<section id="topics" class="level1">
-<h1>Topics</h1>
-<ul>
-<li>train_test_split</li>
-<li>holdout/validation</li>
-<li>precision and recall</li>
-<li>f1/roc_auc</li>
-<li>balanced target and features</li>
-<li>encoding data</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:47.2%;">
-<section id="sklearn" class="level2">
-<h2 class="anchored" data-anchor-id="sklearn">Sklearn</h2>
-<p>Code here</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="libraries" class="level3">
+<h3 class="anchored" data-anchor-id="libraries">Libraries</h3>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> tree</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler, LabelEncoder</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> make_pipeline</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, classification_report, confusion_matrix</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:47.2%;">
-<section id="tidymodels" class="level2">
-<h2 class="anchored" data-anchor-id="tidymodels">Tidymodels</h2>
-<p>Code here</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="data-preprocessing" class="level3">
+<h3 class="anchored" data-anchor-id="data-preprocessing">Data &amp; Preprocessing</h3>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dat <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CarPrices.csv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># dat = pd.get_dummies(dat)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>dat <span class="op">=</span> pd.factorize(dat.select_dtypes(include<span class="op">=</span><span class="st">'object'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="op">=</span> dat.<span class="bu">filter</span>([<span class="st">"Type"</span>], axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df1[<span class="st">'Type_1'</span>] <span class="op">=</span> LabelEncoder().fit_transform(dat[<span class="st">'Type'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="splitting" class="level3">
+<h3 class="anchored" data-anchor-id="splitting">Splitting</h3>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> dat.<span class="bu">filter</span>([<span class="st">'Type'</span>], axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> dat.drop(<span class="st">'Type'</span>, axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.33</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="modeling" class="level3">
+<h3 class="anchored" data-anchor-id="modeling">Modeling</h3>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> tree.DecisionTreeClassifier()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> model.fit(X_train, y_train)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>y_pred1 <span class="op">=</span> model.predict(X_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>make_pipeline(StandardScaler(), GaussianNB(priors<span class="op">=</span><span class="va">None</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="ml-process" class="level1">
-<h1>ML Process</h1>
-<section id="data-work" class="level2">
-<h2 class="anchored" data-anchor-id="data-work">Data Work</h2>
-<ul>
-<li>reading in data</li>
-<li>tidying/wrangling
-<ul>
-<li>“massaging data”</li>
-<li>scale/normalizing</li>
-<li>under/oversampling</li>
-<li>imputing</li>
-</ul></li>
-<li>splitting data</li>
-</ul>
+<section id="metrics" class="level3">
+<h3 class="anchored" data-anchor-id="metrics">Metrics</h3>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>r2 <span class="op">=</span> r2_score(y_test, y_pred1).<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>mae <span class="op">=</span> mean_absolute_error(y_test, y_pred1).<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>mse <span class="op">=</span> mean_squared_error(y_test, y_pred1, squared<span class="op">=</span><span class="va">False</span>).<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>me <span class="op">=</span> mean_squared_error(y_test, y_pred1, squared<span class="op">=</span><span class="va">True</span>).<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'R2 = </span><span class="sc">{</span>r2<span class="sc">}</span><span class="ch">\n</span><span class="ss">MAE = </span><span class="sc">{</span>mae<span class="sc">}</span><span class="ch">\n</span><span class="ss">MSE = </span><span class="sc">{</span>mse<span class="sc">}</span><span class="ch">\n</span><span class="ss">ME = </span><span class="sc">{</span>me<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="modeling-p1" class="level2">
-<h2 class="anchored" data-anchor-id="modeling-p1">Modeling P1</h2>
-<ul>
-<li>initialize model</li>
-<li>predictions</li>
-</ul>
+<section id="feature-examination" class="level3">
+<h3 class="anchored" data-anchor-id="feature-examination">Feature Examination</h3>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>features_importances <span class="op">=</span> (</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    pd.DataFrame({<span class="st">'Columns'</span>: np.array(X.columns),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'Features'</span>: np.array(model.feature_importances_)})</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    .sort_values(by <span class="op">=</span> <span class="st">'Features'</span>, ascending <span class="op">=</span> <span class="va">False</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>                     )</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># features_importances.to_csv("feature_importances.csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(y <span class="op">=</span> <span class="st">'Columns'</span>, x <span class="op">=</span> <span class="st">'Features'</span>, data <span class="op">=</span> features_importances.head(<span class="dv">10</span>), color <span class="op">=</span> <span class="st">"lightblue"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br><br><br></p>
 </section>
-<section id="modeling-p2" class="level2">
-<h2 class="anchored" data-anchor-id="modeling-p2">Modeling P2</h2>
-<ul>
-<li>hypertune model
-<ul>
-<li>grid search</li>
-</ul></li>
-<li>feature engineering
-<ul>
-<li>stat tools</li>
-<li>encoding</li>
-</ul></li>
-</ul>
-</section>
-<section id="testing" class="level2">
-<h2 class="anchored" data-anchor-id="testing">Testing</h2>
-<ul>
-<li>accuracy</li>
-<li>recall &amp; precision</li>
-<li>f1 &amp; roc_auc</li>
-<li>hold out set</li>
-</ul>
-</section>
-<section id="plotting" class="level2">
-<h2 class="anchored" data-anchor-id="plotting">Plotting</h2>
-<ul>
-<li>Pairs plot</li>
-<li>confusion matrix</li>
-<li>auc</li>
-<li></li>
-</ul>
-</section>
-<section id="others" class="level2">
-<h2 class="anchored" data-anchor-id="others">Others</h2>
-<ul>
-<li><p>balancing data</p></li>
-<li><p>scaling data</p></li>
-<li><p>other transformers</p></li>
-<li><p>metrics</p></li>
-<li><p>preprocessing &amp; normalization</p></li>
-<li><p>estimators</p></li>
-<li><p>what about making a loop/function that goes through all the preprocessors/transformers/scalers/estimators</p></li>
-<li><p>make a general wrangling function to apply to test and hold out data</p></li>
-</ul>
+<section id="code-graveyard" class="level1">
+<h1>Code Graveyard</h1>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

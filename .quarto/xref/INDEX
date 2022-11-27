@@ -66,5 +66,23 @@
   },
   "other_subjects/ml.qmd": {
     "ml.html": "84935b72"
+  },
+  "other_subjects/ml_py.qmd": {
+    "ml_py.html": "b2637c38"
+  },
+  "other_subjects/Classification Model.qmd": {
+    "Classification Model.html": "f0b85610"
+  },
+  "other_DS/Classification Model.qmd": {
+    "Classification Model.html": "262f518f"
+  },
+  "other_DS/ds_tools.qmd": {
+    "ds_tools.html": "2fce3145"
+  },
+  "other_DS/ml.qmd": {
+    "ml.html": "26b1c778"
+  },
+  "other_DS/ml_py.qmd": {
+    "ml_py.html": "37bc348f"
   }
 }

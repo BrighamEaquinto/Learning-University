@@ -1,0 +1,117 @@
+---
+code-line-numbers: false
+code-overflow: wrap
+eval: false
+---
+
+What I'm learning is that machine learning models are the same underlying method and math, but the way they're implemented are either through r or python?? 
+
+sklearn = tidymodels
+
+pytorch = torch
+
+
+
+## Explanations 
+
+ensamble
+
+### Random Forest Model
+
+
+
+
+
+# Topics
+
+- train_test_split
+- holdout/validation
+- precision and recall
+- f1/roc_auc
+- balanced target and features 
+- encoding data
+
+
+
+::: columns
+::: {.column width="47.2%"}
+## Sklearn
+
+Code here 
+
+```{python}
+#| eval: false
+import pandas as pd
+from sklearn.model_selection import train_test_split 
+```
+
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="47.2%"}
+## Tidymodels
+
+Code here
+
+```{r}
+#| eval: false
+library(tidyverse)
+library(tidymodels)
+```
+
+
+:::
+:::
+
+
+# ML Process 
+## Data Work
+
+- reading in data
+- tidying/wrangling
+    - "massaging data"
+    - scale/normalizing
+    - under/oversampling
+    - imputing
+- splitting data 
+
+
+## Modeling P1
+
+- initialize model
+- predictions 
+
+## Modeling P2
+
+- hypertune model
+    - grid search
+- feature engineering
+    - stat tools
+    - encoding 
+
+## Testing
+
+- accuracy
+- recall & precision
+- f1 & roc_auc
+- hold out set
+
+## Plotting
+
+- Pairs plot
+- confusion matrix
+- auc 
+- 
+
+## Others
+
+- balancing data 
+- scaling data
+- other transformers
+- metrics
+- preprocessing & normalization
+- estimators
+
+- what about making a loop/function that goes through all the preprocessors/transformers/scalers/estimators
+- make a general wrangling function to apply to test and hold out data
+
