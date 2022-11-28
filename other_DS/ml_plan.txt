@@ -1,0 +1,16 @@
+All Code
+
+read in data 
+train test split
+pipeline
+    - estimators
+    - transformers
+gridsearch
+fit model on train set using the best parameters and model
+predict of test set
+metrics of success
+
+
+
+Pickle the model
+deploy it later
