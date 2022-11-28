@@ -11,21 +11,15 @@ website:
     - text: Math
       menu: 
         - text: Limits
-          href: calc1/limits.qmd
+          href: Math/limits.qmd
         - text: "Derivatives"
-          href: calc1/derivatives.qmd
+          href: Math/derivatives.qmd
         - text: "Integrals"
-          href: calc1/integrals.qmd
+          href: Math/integrals.qmd
         - text: Common Formulas
-          href: calc1/formulas.qmd
+          href: Math/formulas.qmd
         - text: "Common Errors"
-          href: calc1/common_errors.qmd
-    - text: DS 
-      menu: 
-        - href: other_DS/*.qmd
-    - text: Other
-      menu: 
-        - href: other_subjects/*.qmd
+          href: Math/common_errors.qmd
 
 format:
   html:

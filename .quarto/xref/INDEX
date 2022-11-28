@@ -84,5 +84,23 @@
   },
   "other_DS/ml_py.qmd": {
     "ml_py.html": "37bc348f"
+  },
+  "Math/common_errors.qmd": {
+    "common_errors.html": "f81eeaa4"
+  },
+  "Math/chap4_derivative_applications.qmd": {
+    "chap4_derivative_applications.html": "2aee9aa5"
+  },
+  "Math/derivatives.qmd": {
+    "derivatives.html": "eb096bb9"
+  },
+  "Math/formulas.qmd": {
+    "formulas.html": "0bbaf2c8"
+  },
+  "Math/integrals.qmd": {
+    "integrals.html": "824b845a"
+  },
+  "Math/limits.qmd": {
+    "limits.html": "4f22e2d1"
   }
 }

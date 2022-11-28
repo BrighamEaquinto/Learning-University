@@ -481,5 +481,89 @@
     "title": "Regression Model",
     "section": "",
     "text": "Libraries\n\nimport numpy as np\nimport pandas as pd\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn import tree\n\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.pipeline import make_pipeline\n\nfrom sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error\n\nimport seaborn as sns\n\n\n\nData & Preprocessing\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CarPrices.csv\")\n\ndat = pd.get_dummies(dat)\n\n\n\nSplitting\n\ny = dat.filter(['Price'], axis = 1)\nX = dat.drop('Price', axis = 1)\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)\n\n\n\nModeling\n\nmodel = tree.DecisionTreeRegressor()\nmodel = model.fit(X_train, y_train)\ny_pred1 = model.predict(X_test)\n\n\nmake_pipeline(StandardScaler(), GaussianNB(priors=None))\n\n\n\nMetrics\n\nr2 = r2_score(y_test, y_pred1).round(3)\nmae = mean_absolute_error(y_test, y_pred1).round(3)\nmse = mean_squared_error(y_test, y_pred1, squared=False).round(3)\nme = mean_squared_error(y_test, y_pred1, squared=True).round(3)\nprint(f'R2 = {r2}\\nMAE = {mae}\\nMSE = {mse}\\nME = {me}')\n\n\n\nFeature Examination\n\nfeatures_importances = (\n    pd.DataFrame({'Columns': np.array(X.columns),\n                  'Features': np.array(model.feature_importances_)})\n    .sort_values(by = 'Features', ascending = False)\n                     )\n# features_importances.to_csv(\"feature_importances.csv\")\n\n\nsns.barplot(y = 'Columns', x = 'Features', data = features_importances.head(10), color = \"lightblue\") \n\n\n\n\nCode Graveyard"
+  },
+  {
+    "objectID": "Math/common_errors.html",
+    "href": "Math/common_errors.html",
+    "title": "Learning University",
+    "section": "",
+    "text": "\\[\n\\sqrt{x+15} + \\sqrt{x+15} = 2\\sqrt{x+15}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\n\\sqrt{x+15} + \\sqrt{x+15}\n\\text{ } \\neq \\text{ }\n(\\sqrt{x+15})^{2}\n\\]"
+  },
+  {
+    "objectID": "Math/derivatives.html",
+    "href": "Math/derivatives.html",
+    "title": "Derivatives",
+    "section": "",
+    "text": "Contant Rule: Taking the derivative of a constant is \\(0\\)\n\\[\nf(x) = c\n\\] \\[\nf'(x) = 0\n\\]\nPower Rule: \\[\nf(x) = x^{n}\n\\] \\[\nf'(x) = nx^{n-1}\n\\]\nSum & Difference Rules: Taking the derivative of the sum or difference of \\(g(x)\\) and \\(f(x)\\) is the same as the derivative of \\(g(x)\\) plus or minus the derivative of \\(f(x)\\) \\[\n\\frac{\\text{d}}{\\text{dx}}(f(x) \\pm g(x))\n\\text{ } = \\text{ }\n\\frac{\\text{d}}{\\text{dx}}(f(x)) \\pm \\frac{\\text{d}}{\\text{dx}}(g(x))\n\\]\nConstant Multiple Rules: Taking the derivative of a constant times a derivative is the same as the constant multiplied by the derivative \\[\n\\frac{\\text{d}}{\\text{dx}}(kf(x))\n\\text{ } = \\text{ }\nk\\frac{\\text{d}}{\\text{dx}}(f(x))\n\\]\nProduct Rule: Taking the derivative of a function times a function \\[\n\\frac{\\text{d}}{\\text{dx}}(f(x)g(x))\n\\text{ } = \\text{ }\nf'(x)g(x) + g'(x)f(x)\n\\]\nQuotient Rule: Taking the derivative of a function divided by a function \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(\\frac{f(x)}{g(x)}\\right)\n\\text{ } = \\text{ }\n\\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^{2}}\n\\]\n24+2 x (-25+6 x (2+x))\nChain Rule: to allow us to differentiate composite funtions\n\\[h(x) = (f \\circ g)(x) = f(g(x))\\] \\[h'(x) = f'(g(x))g'(x)\\]\nChain and Power Rules Combined: \\[\nh(x) = (g(x))^{n}\n\\] \\[\nh'(x) = n(g(x))^{n-1}g'(x)\n\\]"
+  },
+  {
+    "objectID": "Math/derivatives.html#common-errorsnotes",
+    "href": "Math/derivatives.html#common-errorsnotes",
+    "title": "Derivatives",
+    "section": "Common Errors/Notes",
+    "text": "Common Errors/Notes\n\nRemember that the denominator of the quotient rule is \\((g(x))^{2}\\), not \\((g'(x))^{2}\\)\nWhen given \\(k(x) = x\\left(2x+\\frac{1}{x+3}\\right)\\) to find \\(k'(x)\\), first distribute \\(x\\), then take the derivative from there."
+  },
+  {
+    "objectID": "Math/derivatives.html#other-examples",
+    "href": "Math/derivatives.html#other-examples",
+    "title": "Derivatives",
+    "section": "Other Examples:",
+    "text": "Other Examples:\n\n\nExample\n\nFind \\(k'(x)\\) \\[\nk(x) = -2x\\left(h(x) + 2x^{2}g(x))\\right)\n\\] From here, distribute the \\(-2x\\) \\[\nk(x) = -2x\\left(h(x) + 2x^{2}g(x))\\right)\n\\] Now take the derivative of each side \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(k(x)\\right)\n\\text{ } = \\text{ }\n\\frac{\\text{d}}{\\text{dx}} \\left( -2x\\left(h(x) + 2x^{2}g(x))\\right) \\right)\n\\] Notice the double chain rule \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(k(x)\\right)\n\\text{ } = \\text{ }\n\\frac{\\text{d}}{\\text{dx}} \\left(-2x * h(x) \\right) + \\frac{\\text{d}}{\\text{dx}} \\left(-4x^{3} * g(x) \\right)\n\\] Derivative on the right \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(-2x * h(x) \\right)\n\\rightarrow\n-2*h(x) - 2x * h'(x)\n\\] Derivative on the left \\[\n\\frac{\\text{d}}{\\text{dx}} \\left(-4x^{3} * g(x) \\right)\n\\rightarrow\n-12x^{2} * g(x) - 4x^{3} * g'(x)\n\\] Now combine everything \\[\nk'(x) = \\left(-2*h(x) - 2x * h'(x)\\right) + \\left(-12x^{2} * g(x) - 4x^{3} * g'(x)\\right)\n\\] Now substitute the values given and use algebra to simplify it"
+  },
+  {
+    "objectID": "Math/derivatives.html#second-derivative-section",
+    "href": "Math/derivatives.html#second-derivative-section",
+    "title": "Derivatives",
+    "section": "Second Derivative Section",
+    "text": "Second Derivative Section\nThis is about: - taking the derivative a second time - local maximun and minimum - first and second derivative tests\n\ndecreasing in polynomial each time a derivative is taken\n\n\n\nd/dx == d*f(x)/dx Find the derivative of f(x) in terms of x"
+  },
+  {
+    "objectID": "Math/formulas.html",
+    "href": "Math/formulas.html",
+    "title": "Formula",
+    "section": "",
+    "text": "Slope-Intercept:\n\\[\ny\n\\text{ } = \\text{ }\nmx + b\n\\]\n\\[ y = \\text{y coordinate} \\] \\[m = \\text{slope}\\] \\[ x = \\text{x coordinate} \\] \\[b = \\text{y intercept}\\]\n\nPoint-Slope:\n\\[\ny - y_{1}\n\\text{ } = \\text{ }\nm(x-x_{1})\n\\]\n\\[ y = \\text{y coordinate of second point} \\] \\[ y_{1} = \\text{y coordinate of point one} \\] \\[m = \\text{slope}\\] \\[ x = \\text{x coordinate of second point} \\] \\[ x_{1} = \\text{x coordinate of point one} \\]\n\n\nLimit Definition\n\\[\nf'(x)\n\\text{ } = \\text{ }\n\\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}\n\\]"
+  },
+  {
+    "objectID": "Math/integrals.html",
+    "href": "Math/integrals.html",
+    "title": "Integrals",
+    "section": "",
+    "text": "Homework Assigment\nThis is about going from derivative to back to the function. This is called the antiderivative\n\\(f'(x)\\) is the notation for the derivative\n\\(F'(x)\\) is the notation for the antiderivative\n\n\n\n\n\n\nExample\n\n\n\nFinding Antiderivatives\nDerivative \\(f'(x) = 1\\), then antiderivative \\(f(x) = x + c\\)\n\\(f(x) = 2x \\quad \\Rightarrow \\quad F(x) = x^{2}\\)\n\n\n\n\n\n\n\n\nNotation\n\n\n\n\\(F'(x)\\) is the process of finding \\(f(x)\\) by starting with a derivative and getting to \\(f(x)\\)\n\n\n\n\n\\[\n{\\sum _{i=1} ^{n} {a_i} }\n\\]\n\\(a_i\\) describes the terms to be added and the \\(i\\) is called the index"
+  },
+  {
+    "objectID": "Math/integrals.html#w08-homework-the-indefinite-integral",
+    "href": "Math/integrals.html#w08-homework-the-indefinite-integral",
+    "title": "Integrals",
+    "section": "W08 Homework The Indefinite Integral",
+    "text": "W08 Homework The Indefinite Integral\nHomework Assignment"
+  },
+  {
+    "objectID": "Math/common_errors.html#correct",
+    "href": "Math/common_errors.html#correct",
+    "title": "Common Errors",
+    "section": "Correct",
+    "text": "Correct\n\\[\n\\sqrt{x+15} + \\sqrt{x+15} = 2\\sqrt{x+15}\n\\]"
+  },
+  {
+    "objectID": "Math/common_errors.html#incorrect",
+    "href": "Math/common_errors.html#incorrect",
+    "title": "Common Errors",
+    "section": "Incorrect",
+    "text": "Incorrect\n\\[\n\\sqrt{x+15} + \\sqrt{x+15}\n\\text{ } \\neq \\text{ }\n(\\sqrt{x+15})^{2}\n\\]"
+  },
+  {
+    "objectID": "Math/common_errors.html#exponents-to-the-zero-power",
+    "href": "Math/common_errors.html#exponents-to-the-zero-power",
+    "title": "Learning University",
+    "section": "Exponents to the Zero Power",
+    "text": "Exponents to the Zero Power\n\\[\nn^{0} = 1\n\\]"
+  },
+  {
+    "objectID": "Math/common_errors.html#exponents-as-the-zero-power",
+    "href": "Math/common_errors.html#exponents-as-the-zero-power",
+    "title": "Learning University",
+    "section": "Exponents as the Zero Power",
+    "text": "Exponents as the Zero Power\n\n\n\n\n\n\n\n\n\\[\nn^{0} = 1\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\nn^{0} \\neq 0\n\\]"
   }
 ]

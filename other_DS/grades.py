@@ -69,9 +69,10 @@ First_Nephi = (pd.DataFrame(
 .filter(['Book', 'Chapters', 'Place', 'People', 'Doctrines', 'References to Christ'])
 )
 #%%
-new_columns = columns.append('hey')zip
+new_columns = columns.append('hey')
 print(new_columns)                      
 #%%
 scripture_BOM.loc['1 Nephi', 'Place'] = ['Jerusalem', 'Lehi\'s House']
 #%% 
-scripture_BOM
+scripture_BOM_json = scripture_BOM.to_json()
+print(scripture_BOM_json)
