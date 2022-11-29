@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Learning University – common_errors</title>
+<title>Learning University – ml</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -59,7 +122,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -133,8 +195,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#adding-square-roots" id="toc-adding-square-roots" class="nav-link active" data-scroll-target="#adding-square-roots">Adding Square Roots</a></li>
-  <li><a href="#exponents-as-the-zero-power" id="toc-exponents-as-the-zero-power" class="nav-link" data-scroll-target="#exponents-as-the-zero-power">Exponents as the Zero Power</a></li>
+  <li><a href="#explanations" id="toc-explanations" class="nav-link active" data-scroll-target="#explanations">Explanations</a>
+  <ul class="collapse">
+  <li><a href="#random-forest-model" id="toc-random-forest-model" class="nav-link" data-scroll-target="#random-forest-model">Random Forest Model</a></li>
+  </ul></li>
+  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">Topics</a></li>
+  <li><a href="#ml-process" id="toc-ml-process" class="nav-link" data-scroll-target="#ml-process">ML Process</a>
+  <ul class="collapse">
+  <li><a href="#data-work" id="toc-data-work" class="nav-link" data-scroll-target="#data-work">Data Work</a></li>
+  <li><a href="#modeling-p1" id="toc-modeling-p1" class="nav-link" data-scroll-target="#modeling-p1">Modeling P1</a></li>
+  <li><a href="#modeling-p2" id="toc-modeling-p2" class="nav-link" data-scroll-target="#modeling-p2">Modeling P2</a></li>
+  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
+  <li><a href="#plotting" id="toc-plotting" class="nav-link" data-scroll-target="#plotting">Plotting</a></li>
+  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others">Others</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -143,93 +217,120 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="adding-square-roots" class="level2">
-<h2 class="anchored" data-anchor-id="adding-square-roots">Adding Square Roots</h2>
+<p>What I’m learning is that machine learning models are the same underlying method and math, but the way they’re implemented are either through r or python??</p>
+<p>sklearn = tidymodels</p>
+<p>pytorch = torch</p>
+<section id="explanations" class="level2">
+<h2 class="anchored" data-anchor-id="explanations">Explanations</h2>
+<p>ensamble</p>
+<section id="random-forest-model" class="level3">
+<h3 class="anchored" data-anchor-id="random-forest-model">Random Forest Model</h3>
+</section>
+</section>
+<section id="topics" class="level1">
+<h1>Topics</h1>
+<ul>
+<li>train_test_split</li>
+<li>holdout/validation</li>
+<li>precision and recall</li>
+<li>f1/roc_auc</li>
+<li>balanced target and features</li>
+<li>encoding data</li>
+</ul>
 <div class="columns">
-<div class="column" style="width:45%;">
-<div class="callout-tip callout callout-style-simple no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<div class="column" style="width:47.2%;">
+<section id="sklearn" class="level2">
+<h2 class="anchored" data-anchor-id="sklearn">Sklearn</h2>
+<p>Code here</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-body-container">
-<p><span class="math display">\[
-\sqrt{x+15} + \sqrt{x+15} = 2\sqrt{x+15}
-\]</span></p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:10%;">
+</section>
+</div><div class="column" style="width:5%;">
 
-</div><div class="column" style="width:45%;">
-<div class="callout-important callout callout-style-simple no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+</div><div class="column" style="width:47.2%;">
+<section id="tidymodels" class="level2">
+<h2 class="anchored" data-anchor-id="tidymodels">Tidymodels</h2>
+<p>Code here</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-body-container">
-<p><span class="math display">\[
-\sqrt{x+15} + \sqrt{x+15}
-\text{ } \neq \text{ }
-(\sqrt{x+15})^{2}
-\]</span></p>
-</div>
-</div>
-</div>
+</section>
 </div>
 </div>
 </section>
-<section id="exponents-as-the-zero-power" class="level2">
-<h2 class="anchored" data-anchor-id="exponents-as-the-zero-power">Exponents as the Zero Power</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<div class="callout-tip callout callout-style-simple no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><span class="math display">\[
-n^{0} = 1
-\]</span></p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:10%;">
+<section id="ml-process" class="level1">
+<h1>ML Process</h1>
+<section id="data-work" class="level2">
+<h2 class="anchored" data-anchor-id="data-work">Data Work</h2>
+<ul>
+<li>reading in data</li>
+<li>tidying/wrangling
+<ul>
+<li>“massaging data”</li>
+<li>scale/normalizing</li>
+<li>under/oversampling</li>
+<li>imputing</li>
+</ul></li>
+<li>splitting data</li>
+</ul>
+</section>
+<section id="modeling-p1" class="level2">
+<h2 class="anchored" data-anchor-id="modeling-p1">Modeling P1</h2>
+<ul>
+<li>initialize model</li>
+<li>predictions</li>
+</ul>
+</section>
+<section id="modeling-p2" class="level2">
+<h2 class="anchored" data-anchor-id="modeling-p2">Modeling P2</h2>
+<ul>
+<li>hypertune model
+<ul>
+<li>grid search</li>
+</ul></li>
+<li>feature engineering
+<ul>
+<li>stat tools</li>
+<li>encoding</li>
+</ul></li>
+</ul>
+</section>
+<section id="testing" class="level2">
+<h2 class="anchored" data-anchor-id="testing">Testing</h2>
+<ul>
+<li>accuracy</li>
+<li>recall &amp; precision</li>
+<li>f1 &amp; roc_auc</li>
+<li>hold out set</li>
+</ul>
+</section>
+<section id="plotting" class="level2">
+<h2 class="anchored" data-anchor-id="plotting">Plotting</h2>
+<ul>
+<li>Pairs plot</li>
+<li>confusion matrix</li>
+<li>auc</li>
+<li></li>
+</ul>
+</section>
+<section id="others" class="level2">
+<h2 class="anchored" data-anchor-id="others">Others</h2>
+<ul>
+<li><p>balancing data</p></li>
+<li><p>scaling data</p></li>
+<li><p>other transformers</p></li>
+<li><p>metrics</p></li>
+<li><p>preprocessing &amp; normalization</p></li>
+<li><p>estimators</p></li>
+<li><p>what about making a loop/function that goes through all the preprocessors/transformers/scalers/estimators</p></li>
+<li><p>make a general wrangling function to apply to test and hold out data</p></li>
+</ul>
 
-</div><div class="column" style="width:45%;">
-<div class="callout-important callout callout-style-simple no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><span class="math display">\[
-n^{0} \neq 0
-\]</span></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- 
-::: columns
-::: {.column width="45%"}
-::: {.callout-tip}
 
-:::
-:::
-::: {.column width="10%"}
-:::
-::: {.column width="45%"}
-::: {.callout-important}
-
-:::
-:::
-::: 
--->
-
-
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -102,5 +102,29 @@
   },
   "Math/limits.qmd": {
     "limits.html": "4f22e2d1"
+  },
+  "Data Science/Classification Model.qmd": {
+    "Classification Model.html": "c541ce74"
+  },
+  "Data Science/dax/dax.qmd": {
+    "dax.html": "8b3d7bfc"
+  },
+  "Data Science/ds_tools.qmd": {
+    "ds_tools.html": "9331be04"
+  },
+  "Data Science/ml.qmd": {
+    "ml.html": "b12c910b"
+  },
+  "Data Science/ml_py.qmd": {
+    "ml_py.html": "9dde3b90"
+  },
+  "Data Science/notes.md": {
+    "notes.html": "38de8295"
+  },
+  "Data Science/PySpark.qmd": {
+    "PySpark.html": "311c27e4"
+  },
+  "Data Science/py_examples/qmd.qmd": {
+    "qmd.html": "0a235d67"
   }
 }

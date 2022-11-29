@@ -20,6 +20,10 @@ website:
           href: Math/formulas.qmd
         - text: "Common Errors"
           href: Math/common_errors.qmd
+    - text: Data Science
+      menu: 
+        - text: DAX 
+          href: Data Science/dax/dax.qmd
 
 format:
   html:
