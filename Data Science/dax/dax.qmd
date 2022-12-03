@@ -6,7 +6,7 @@ code-line-numbers: true
 code-fold: true
 code-tools: true
 eval: false
-# toc: true
+toc: true
 ---
 
 
@@ -58,7 +58,17 @@ SUBSTITUTE(
 
 
 
-----
+
+#### Counting Gender
+
+```{python}
+#| code-summary: "Example 1"
+count_female = 
+COUNTROWS(FILTER(Query1, Query1[gender] == "Female"))
+```
+
+
+<br>
 
 
 

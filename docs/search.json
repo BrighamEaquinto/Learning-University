@@ -11,7 +11,7 @@
     "href": "Data Science/dax/dax.html",
     "title": "DAX Reference",
     "section": "",
-    "text": "CALENDAR(StartDate, EndDate)\n\nDescription: Returns a table with one column of all dates between StartDate and EndDate.\nParameters:\n\nStartDate: The start date in datetime format\nEndDate: The end date in datetime format\n\n\n\n\nExample 1\nDim_DeliveryDate = \nCALENDAR(\n    MIN(Fact_Sales[Delivery Date Key]), \n    MAX(Fact_Sales[Delivery Date Key])\n    )\n\n\n\n\nExample 2\n# Code for another example here\n\n\n\n\nMAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )"
+    "text": "CALENDAR(StartDate, EndDate)\n\nDescription: Returns a table with one column of all dates between StartDate and EndDate.\nParameters:\n\nStartDate: The start date in datetime format\nEndDate: The end date in datetime format\n\n\n\n\nExample 1\nDim_DeliveryDate = \nCALENDAR(\n    MIN(Fact_Sales[Delivery Date Key]), \n    MAX(Fact_Sales[Delivery Date Key])\n    )\n\n\n\n\nExample 2\n# Code for another example here\n\n\n\n\nMAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )\n\n\n\n\nCounting Gender\n\n\nExample 1\ncount_female = \nCOUNTROWS(FILTER(Query1, Query1[gender] == \"Female\"))"
   },
   {
     "objectID": "Data Science/ds_tools.html",
@@ -172,7 +172,7 @@
     "href": "Math/derivatives.html#common-errorsnotes",
     "title": "Derivatives",
     "section": "Common Errors/Notes",
-    "text": "Common Errors/Notes\n\nRemember that the denominator of the quotient rule is \\((g(x))^{2}\\), not \\((g'(x))^{2}\\)\nWhen given \\(k(x) = x\\left(2x+\\frac{1}{x+3}\\right)\\) to find \\(k'(x)\\), first distribute \\(x\\), then take the derivative from there."
+    "text": "Common Errors/Notes\n\nRemember that the denominator of the quotient rule is \\((g(x))^{2}\\), not \\((g'(x))^{2}\\)"
   },
   {
     "objectID": "Math/derivatives.html#other-examples",
@@ -285,5 +285,82 @@
     "title": "William Tyndale: First Translator of the New Testament to English",
     "section": "",
     "text": "Biography:\n\nfrom present day west of London and south of Birmingham called Yorkshire which sits just at the tip of the Bristol Channel (https://www.christianitytoday.com/history/people/scholarsandscientists/william-tyndale.html)\nStudied at the University of Oxford\nBecame an instructor at the University of Cambridge\nHe began his first translation of New Testament in 1523 (from Greek to English) completing it in 1525 (https://www.britannica.com/biography/William-Tyndale)\nThe English authorities gave him trouble so he continued his work in Germany in 1524.\nHe completed his first translation of New Testament in July of 1525 (https://www.christianitytoday.com/history/people/scholarsandscientists/william-tyndale.html)\nHis book The Obedience of a Christian Man (full name The Obedience of a Christen man, and how Christen rulers ought to govern, wherein also (if thou mark diligently) thou shalt find eyes to perceive the crafty convience of all iugglers), is published in 1528\n\n“and is best known for advocating that the king of a country was the head of that country’s church, rather than the pope”. Gerard Wegemer, Thomas More: Portrait of Courage (Scepter, 1998), 131\nbook was officialy banned\nmentioned in the works of Shakespere\n\nArested in 1534 by the Roman Catholic Authorities in Antwerp\nStrangled to death in October 6th, 1536 after being “condemned as a heretic” the month prior. His last words were, “Lord, open the King of England’s eyes!”\n\nEfforts and Contributions:\n\nThe Engllish can now haev a personal relationship with God\nHe spent grewling hours over the span of two years translating the New Testament from Greek to English.\n\nWhy They Matter:\nHe translated the New Testament from Greek and Hebrew into English. This laid the ground work for us to enjoy such wide spread access of the Holy Bible. King James of Scotland’s name is the most common bible in circulation. When he commissioned his version of the Bible, almost the entirity of it is made up of Tyndale’s work. This shows that the Restoration of the Church of Jesus Christ depends on William Tyndale.\nHe gave the people of England access to the Holy Bible. This was common place in other-Europe, but not the case for the people of England, as the church would have it. This fed the fire of the ongoing Reformation which started eight years prior in 1517 when Martin Luther famously nailed his 95 theses on the walls of the church.\nSocial order disrupted due to his book and his translation not in the hands of the public"
+  },
+  {
+    "objectID": "Math/derivatives.html#st",
+    "href": "Math/derivatives.html#st",
+    "title": "Derivatives",
+    "section": "1st",
+    "text": "1st\n\\[\nb^{e} = n \\text{ is the same as } \\log_{b}n = e\n\\]\n\\[\n\\log(x) = \\log_{10}(x)\n\\] \\[\n\\log_{e}(x) = \\ln(x)\n\\]"
+  },
+  {
+    "objectID": "Math/derivatives.html#nd",
+    "href": "Math/derivatives.html#nd",
+    "title": "Derivatives",
+    "section": "\\(2^{nd}\\)",
+    "text": "\\(2^{nd}\\)"
+  },
+  {
+    "objectID": "Math/derivatives.html#section",
+    "href": "Math/derivatives.html#section",
+    "title": "Derivatives",
+    "section": "6?",
+    "text": "6?\nWhen given \\(k(x) = x\\left(2x+\\frac{1}{x+3}\\right)\\) to find \\(k'(x)\\), there are two ways. Either:\n\npreform the product rule from here\n\nor\n\ndistribute the \\(x\\), then take the derivative from there (which will include either a quotient rule or a chain & product rule)"
+  },
+  {
+    "objectID": "Math/derivatives.html#textnd",
+    "href": "Math/derivatives.html#textnd",
+    "title": "Derivatives",
+    "section": "\\(2^{\\text{nd}}\\)",
+    "text": "\\(2^{\\text{nd}}\\)\n\nDerivative of \\(e\\) & \\(e^{u}\\)\nDerivative of \\(e^{x} = e^{x}\\)\nDerivative of \\(e^{u} = e^{u}u'\\)\n\n\n\n\n\n\nExample\n\n\n\n\\(e^{x^{2}} = 2e\\)"
+  },
+  {
+    "objectID": "Math/derivatives.html#textst",
+    "href": "Math/derivatives.html#textst",
+    "title": "Derivatives",
+    "section": "\\(1^{\\text{st}}\\)",
+    "text": "\\(1^{\\text{st}}\\)\n\nLogarithms\n\\[\nb^{e} = n \\text{ is the same as } \\log_{b}n = e\n\\]\n\\[\n\\log(x) = \\log_{10}(x)\n\\] \\[\n\\log_{e}(x) = \\ln(x)\n\\]"
+  },
+  {
+    "objectID": "Math/derivatives.html#derivative-of-e-eu",
+    "href": "Math/derivatives.html#derivative-of-e-eu",
+    "title": "Derivatives",
+    "section": "2) Derivative of \\(e\\) & \\(e^{u}\\)",
+    "text": "2) Derivative of \\(e\\) & \\(e^{u}\\)\nDerivative of \\(e^{x} = e^{x}\\)\n\nThis is because the derivative of the function is the function\n\nDerivative of \\(e^{u} = e^{u}u'\\)\n\n\n\n\n\n\nExample:\n\n\n\n\\[\ne^{x^{2}} = 2e^{x^{2}}\n\\]"
+  },
+  {
+    "objectID": "Math/derivatives.html#logarithms",
+    "href": "Math/derivatives.html#logarithms",
+    "title": "Derivatives",
+    "section": "1) Logarithms",
+    "text": "1) Logarithms\n\\[\nb^{e} = n \\text{ is the same as } \\log_{b}n = e\n\\]\n\\[\n\\log(x) = \\log_{10}(x)\n\\] \\[\n\\log_{e}(x) = \\ln(x)\n\\]"
+  },
+  {
+    "objectID": "Math/derivatives.html#derivative-of-a-natural-log",
+    "href": "Math/derivatives.html#derivative-of-a-natural-log",
+    "title": "Derivatives",
+    "section": "3) Derivative of a Natural Log",
+    "text": "3) Derivative of a Natural Log\n\\[\n\\frac{d}{dx}(\\ln x) = \\frac{x'}{x}\n\\]\nApparently there is a way to do this using the chain rule, but she does not reccomend that method, but rather this rule."
+  },
+  {
+    "objectID": "Math/derivatives.html#order-of-operations",
+    "href": "Math/derivatives.html#order-of-operations",
+    "title": "Derivatives",
+    "section": "4) Order of Operations",
+    "text": "4) Order of Operations\n\\(-1(x+5)^{-2}\\), the correct order of PEMDAS is to do the \\(-2\\) exponent first, the the multiplication of \\(-1\\) times the base.\nThink of it like this, \\(-1 * (x+5)^{-2}\\)\nP E M D A S\nExponents come before multiplication"
+  },
+  {
+    "objectID": "Math/derivatives.html#see-when-to-use-the-chain-rule",
+    "href": "Math/derivatives.html#see-when-to-use-the-chain-rule",
+    "title": "Derivatives",
+    "section": "5) See when to use the Chain Rule",
+    "text": "5) See when to use the Chain Rule\nTaking that problem above a step to the side,\nThe derivative of \\(-1(x+5)^{-2}\\) is\n$$\n$$"
+  },
+  {
+    "objectID": "Math/derivatives.html#chain-rule-examples",
+    "href": "Math/derivatives.html#chain-rule-examples",
+    "title": "Derivatives",
+    "section": "Chain Rule Examples",
+    "text": "Chain Rule Examples\n\n\n\n\n\n\nExample:\n\n\n\n\\(h(x) = 4\\sin^{11}(x)\\), find \\(h'(x)\\)\nThis one confused me. I guess it is a chain rule. Here’s my work:\n\\(h(x) = 4\\sin^{11}(x) \\rightarrow 4(\\sin(x))^{11}\\)\n\n\\(f(x) = 4(\\sin(x))^{11}\\)\n\\(f'(x) = 44(u)^{10} \\rightarrow 44(\\sin(x))^{10}\\)\n\\(g(x) = \\sin(x)\\)\n\\(g'(x) = \\cos(x)\\)\n\nFormula: \\(h'(x) = f'(g(x)) * g'(x)\\)\n\\(h'(x) = 44(\\sin(x))^{10} * \\cos(x)\\)\nI think the \\(4\\) is getting in my way of seeing that \\(\\sin^{11}(x)\\) is a chain rule. We treat the \\(4\\) with the constant multiple rule. \\(\\sin^{11}(x)\\) can be better seen as a chain rule when written as \\((\\sin(x))^{11}\\). \\(\\sin(x) = u\\); \\((\\sin(x))^{11} = u^{11}\\)"
   }
 ]

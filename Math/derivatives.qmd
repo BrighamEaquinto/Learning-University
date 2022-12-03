@@ -106,10 +106,39 @@ $$
 </details>
 
 
+<br>
+
+:::{.callout-tip collapse="true"}
+# Product and Quotient Rules Practice 1
+
+These problems...
+
+![](deriv_graph_problem.png)
+
+They say $h(x) = f(x)*g(x)$
+
+They want us to find $h'(x)$
+
+The *product rule* applies here because two functions are being multiplied together 
+
+The tricky part is to remember how to find $f(x)$, $f'(x)$, $g(x)$, and $g'(x)$
+
+To find functions, just plug in the $X$ and there there's the $Y$. 
+
+The derivatives of functions are the slope at that point. Here we see that the slope of $f(x)$ at 5 is $2$ and the slope of $g(x)$ at 5 is $1$
+
+
+<br>
+
+:::
+
+
+<br></br>
+
 ## Common Errors/Notes
 
 - Remember that the denominator of the quotient rule is $(g(x))^{2}$, not $(g'(x))^{2}$
-- When given $k(x) = x\left(2x+\frac{1}{x+3}\right)$ to find $k'(x)$, first distribute $x$, then take the derivative from there. 
+
 
 ## Other Examples: 
 
@@ -213,3 +242,112 @@ $$
 $$
 e = 2.718\text{...}
 $$
+
+
+
+
+----
+
+# Notes from Hawanay's Dec 2nd Tutoring Appointment
+
+## 1) Logarithms
+
+$$
+b^{e} = n \text{ is the same as } \log_{b}n = e
+$$
+
+$$
+\log(x) = \log_{10}(x)
+$$
+$$
+\log_{e}(x) = \ln(x) 
+$$
+
+## 2) Derivative of $e$ & $e^{u}$
+
+Derivative of $e^{x} = e^{x}$
+
+- This is because the derivative of the function is the function
+
+Derivative of $e^{u} = e^{u}u'$
+
+:::{.callout-tip appearance="minimal"}
+# Example:
+$$
+e^{x^{2}} = 2e^{x^{2}}
+$$
+:::
+
+
+## 3) Derivative of a Natural Log 
+
+$$
+\frac{d}{dx}(\ln x) = \frac{x'}{x}
+$$
+
+Apparently there is a way to do this using the chain rule, but she does not reccomend that method, but rather this rule. 
+
+## 4) Order of Operations
+
+$-1(x+5)^{-2}$, the correct order of PEMDAS is to do the $-2$ exponent first, the the multiplication of $-1$ times the base. 
+
+Think of it like this, $-1 * (x+5)^{-2}$
+
+P
+**E**
+**M**
+D
+A
+S
+
+
+Exponents come before multiplication
+
+
+## 5) See when to use the Chain Rule
+
+Taking that problem above a step to the side, 
+
+The derivative of $-1(x+5)^{-2}$ is 
+
+$$
+
+$$
+
+## 6?
+
+When given $k(x) = x\left(2x+\frac{1}{x+3}\right)$ to find $k'(x)$, there are two ways. Either: 
+
+- preform the product rule from here 
+
+or 
+
+- distribute the $x$, then take the derivative from there (which will include either a quotient rule or a chain & product rule)
+
+---- 
+
+## Chain Rule Examples
+
+:::{.callout-tip appearance="minimal"}
+# Example:
+
+$h(x) = 4\sin^{11}(x)$, find $h'(x)$
+
+This one confused me. I guess it is a chain rule. Here's my work:
+
+$h(x) = 4\sin^{11}(x) \rightarrow 4(\sin(x))^{11}$
+
+- $f(x) = 4(\sin(x))^{11}$
+
+- $f'(x) = 44(u)^{10} \rightarrow 44(\sin(x))^{10}$
+
+- $g(x) = \sin(x)$
+
+- $g'(x) = \cos(x)$
+
+Formula: $h'(x) = f'(g(x)) * g'(x)$
+
+$h'(x) = 44(\sin(x))^{10} * \cos(x)$
+
+I think the $4$ is getting in my way of seeing that $\sin^{11}(x)$ is a chain rule. We treat the $4$ with the *constant multiple rule*. $\sin^{11}(x)$ can be better seen as a chain rule when written as $(\sin(x))^{11}$. $\sin(x) = u$; $(\sin(x))^{11} = u^{11}$
+:::
