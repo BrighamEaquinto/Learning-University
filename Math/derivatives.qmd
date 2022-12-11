@@ -285,6 +285,9 @@ $$
 \frac{d}{dx}(\ln x) = \frac{x'}{x}
 $$
 
+Or... is it $\frac{d}{dx}(\ln x) = \frac{1}{x}$? I learned the method above in tutoring and on the tutoring center's math sheet, but I see on Knewton that the other fraction is used. 
+
+
 Apparently there is a way to do this using the chain rule, but she does not reccomend that method, but rather this rule. 
 
 ## 4) Order of Operations

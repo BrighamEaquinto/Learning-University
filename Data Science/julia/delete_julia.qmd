@@ -1,0 +1,69 @@
+---
+title: "Why Julia?"
+format: html
+---
+
+- Christian History
+- Poster
+- IF presentation
+- Design Thinking assignments 
+- math (tutoring?)
+
+
+
+Data Science is:
+
+- Data Collection 
+- cleaning 
+- munging
+- stats/modeling
+- visualization
+- dashboard/reporting/communication
+- deployment 
+
+- NLP 
+- tabular data
+- audio, video
+- spatial analysis
+
+- robotics? 
+
+
+
+
+
+- Downloding Language
+- IDE
+- Installing Packages 
+- Calling package
+- reading in data 
+- cleaning (na's)
+- wrangling (6 verbs)
+- model (statistical or ML)
+- visualization
+- reporting/deplyment (html, dashboard, word, pdf)
+
+
+
+::: columns
+::: {.column width="33%"}
+# R 
+
+## Downloding R
+## Installing Packages 
+
+:::
+::: {.column width="33%"}
+# Python 
+## Downloading Python
+## Installing Python 
+
+:::
+::: {.column width="34%"}
+# Julia 
+## Downloading Julia
+## Installing Packages
+
+:::
+:::
+

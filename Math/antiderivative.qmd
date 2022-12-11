@@ -1,0 +1,61 @@
+
+Definition: A function $F$ is an antiderivative of the function $f$ if $F'(x) = f(x)$ for all $x$ in the domain of $f$.
+
+
+
+::: columns
+::: {.column width="45%"}
+
+<center> <h2> Derivative </h2> </center> 
+
+<P align="right"> addition & subtraction </P>
+
+<P align="right"> product & quotient </P>
+
+<P align="right"> power </P>
+
+<P align="right"> chain </P>
+
+<P align="right"> constant multiple </P> 
+
+<P align="right"> constant </P>
+
+<P align="right"> $\frac{d}{dx}e^{u} = e^{u}u'$ </P>
+
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="45%"}
+
+<center> <h2> Integral </h2> </center> 
+
+addition & subtraction 
+
+integration by parts or u-substutition
+
+opposite of power rule
+
+foil to simplify or u-substutition
+
+constant multiple 
+
+opposite of constant multiple
+
+$\int{e^{u}}dx = \frac{e^{u}}{u'}$
+
+
+:::
+:::
+
+
+|  | Derivitives | Integrals |
+| :---: | :---: | :---: |
+| **Sums & Differences** <br> $f(x) \pm g(x)$ | $\frac{d}{dx}(f(x) \pm g(x) )$ <br> $\frac{d}{dx}(f(x)) \pm \frac{d}{dx}(g(x))$ <br> $f'(x) \pm g'(x)$ | $\int(f(x) \pm g(x) )$ <br> $\int(f(x)) \pm \int(g(x))$ <br> $F(x) \pm G(x) + C$ | 
+| **Quotient** <br> $\frac{f(x)}{g(x)}$ | $\frac{\text{d}}{\text{dx}} \left(\frac{f(x)}{g(x)}\right)$ <br> $\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^{2}}$ |  | 
+| **Product** <br> $f(x) \times g(x)$ | <br> $\frac{\text{d}}{dx}(f(x)g(x))$ <br><br> $f'(x)g(x) + g'(x)f(x)$ |  |
+| **Power Rule** <br> $x^{n}$ | $\frac{d}{dx}x^{n} = nx^{n-1}$ | $\int{x^{n}dx} = \frac{x^{n+1}}{n+1}+C$ |
+| **Composite Function** <br> $f(g(x))$ or $f \circ g$ <br> | <br> $\frac{d}{dx}(f(g(x))$ <br> $f'(g(x))g'(x)$ | u-substutition or foil |
+| **Constant Multiple** <br> $kf(x)$| <br> $\frac{d}{dx}(kf(x))$ <br><br> $k\frac{d}{dx}(f(x))$ <br><br> $kf'(x)$ | <br> $\int(kf(x))$ <br><br> $k\int{(f(x))}$ <br><br> $kF(x)$ | 
+| **Constant** <br> $c$| $\frac{d}{dx}(c) = \frac{d}{dx}(c^{1}) = c^{1-1} = c^{0} = 0$ | $\int{c}$ = $\frac{c^{n+1}}{n+1}$ | 
+| $e$ | **Derivative of $e$** <br> $\frac{d}{dx}e^{u} = e^{u}u'$ | **Integral of $e$** <br> $\int{e^{u}}dx = \frac{e^{u}}{u'}$ |
+

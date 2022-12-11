@@ -126,5 +126,11 @@
   },
   "Data Science/py_examples/qmd.qmd": {
     "qmd.html": "0a235d67"
+  },
+  "Math/antiderivative.qmd": {
+    "antiderivative.html": "06569ca6"
+  },
+  "Data Science/julia/delete_julia.qmd": {
+    "delete_julia.html": "0cae3b87"
   }
 }
