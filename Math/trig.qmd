@@ -1,0 +1,42 @@
+# Trig
+
+Function | Right Triangle Definition | Circular Function Definition | Basic Identity | Domain | Range |  
+| :---: | :---: | :---: | :---: |  :---: | :---: |
+| $\cos{}$ | $\cos{(\theta)} = \frac{\text{adj}}{\text{hyp}}$ | $\cos{(\theta)} = \frac{x}{r}$ | $\cos{(x)} = \frac{1}{\sec{(x)}}$ | $(-\infty, +\infty)$ | $[-1,+1]$ |
+| $\sin{}$ | $\sin{(\theta)} = \frac{\text{opp}}{\text{hyp}}$ | $\sin{(\theta)} = \frac{y}{r}$ | $\sin{(x)} = \frac{1}{\csc{(x)}}$ |  |  |
+| $\tan{}$ | $\tan{(\theta)} = \frac{\text{adj}}{\text{hyp}}$ | $\tan{(\theta)} = \frac{y}{x}$ | $\tan{(x)} = \frac{\sin{(x)}}{\cos{(x)}} = \frac{1}{\cot{(x)}}$ |  |  |
+| $\sec{}$ | $\sec{(\theta)} = \frac{\text{hyp}}{\text{adj}}$ | $\sec{(\theta)} = \frac{r}{x}$ | $\sec{(x)} = \frac{1}{\cos{(x)}}$ |  |  |
+| $\csc{}$ | $\csc{(\theta)} = \frac{\text{hyp}}{\text{opp}}$ | $\csc{(\theta)} = \frac{r}{y}$ | $\csc{(x)} = \frac{1}{\sin{(x)}}$ |  |  |
+| $\cot{}$ | $\cot{(\theta)} = \frac{\text{adj}}{\text{opp}}$ | $\cot{(\theta)} = \frac{x}{y}$ | $\cot{(x)} = \frac{\cos{(x)}}{\sin{(x)}} = \frac{1}{\tan{(x)}}$ |  |  |
+
+
+
+# Inverse Trig
+
+Function | Right Triangle Definition | Circular Function Definition | Basic Identity | 
+| :---: | :---: | :---: | :---: |
+| $\arccos{}$ |  |  |  | 
+| $\arcsin{}$ |  |  |  |
+| $\arctan{}$ |  |  |  |
+| $\text{arcsec}{}$ |  |  |  |
+| $\text{arccsc}{}$ |  |  |  |
+| $\text{arccot}{}$ |  |  |  |
+
+
+:::{.callout-important}
+Remember that domains and ranges switch when going from a trig function to an arctrig function and vice-versa
+:::
+
+## Other
+$$ 
+    \text{trig}(\theta) = x  
+$$
+
+$$
+    \text{arctrig}(x) = \theta
+$$
+
+:::{.callout-note}
+- $x$ means coordinate
+- $\theta$ means angle
+:::

@@ -1,61 +1,91 @@
-
 Definition: A function $F$ is an antiderivative of the function $f$ if $F'(x) = f(x)$ for all $x$ in the domain of $f$.
 
 
 
-::: columns
-::: {.column width="45%"}
 
-<center> <h2> Derivative </h2> </center> 
-
-<P align="right"> addition & subtraction </P>
-
-<P align="right"> product & quotient </P>
-
-<P align="right"> power </P>
-
-<P align="right"> chain </P>
-
-<P align="right"> constant multiple </P> 
-
-<P align="right"> constant </P>
-
-<P align="right"> $\frac{d}{dx}e^{u} = e^{u}u'$ </P>
-
-:::
-::: {.column width="10%"}
-:::
-::: {.column width="45%"}
-
-<center> <h2> Integral </h2> </center> 
-
-addition & subtraction 
-
-integration by parts or u-substutition
-
-opposite of power rule
-
-foil to simplify or u-substutition
-
-constant multiple 
-
-opposite of constant multiple
-
-$\int{e^{u}}dx = \frac{e^{u}}{u'}$
-
-
-:::
-:::
-
-
-|  | Derivitives | Integrals |
+|  | Derivitive | Integral |
 | :---: | :---: | :---: |
+| **Constant** <br> $c$| $\frac{d}{dx}(c) = \frac{d}{dx}(c^{1}) = c^{1-1} = c^{0} = 0$ | $\int{c}$ = $\frac{c^{n+1}}{n+1}$ | 
+| **Constant Multiple** <br> $kf(x)$| <br> $\frac{d}{dx}(kf(x))$ <br><br> $k\frac{d}{dx}(f(x))$ <br><br> $kf'(x)$ | <br> $\int(kf(x))$ <br><br> $k\int{(f(x))}$ <br><br> $kF(x)$ | 
 | **Sums & Differences** <br> $f(x) \pm g(x)$ | $\frac{d}{dx}(f(x) \pm g(x) )$ <br> $\frac{d}{dx}(f(x)) \pm \frac{d}{dx}(g(x))$ <br> $f'(x) \pm g'(x)$ | $\int(f(x) \pm g(x) )$ <br> $\int(f(x)) \pm \int(g(x))$ <br> $F(x) \pm G(x) + C$ | 
 | **Quotient** <br> $\frac{f(x)}{g(x)}$ | $\frac{\text{d}}{\text{dx}} \left(\frac{f(x)}{g(x)}\right)$ <br> $\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^{2}}$ |  | 
 | **Product** <br> $f(x) \times g(x)$ | <br> $\frac{\text{d}}{dx}(f(x)g(x))$ <br><br> $f'(x)g(x) + g'(x)f(x)$ |  |
 | **Power Rule** <br> $x^{n}$ | $\frac{d}{dx}x^{n} = nx^{n-1}$ | $\int{x^{n}dx} = \frac{x^{n+1}}{n+1}+C$ |
 | **Composite Function** <br> $f(g(x))$ or $f \circ g$ <br> | <br> $\frac{d}{dx}(f(g(x))$ <br> $f'(g(x))g'(x)$ | u-substutition or foil |
-| **Constant Multiple** <br> $kf(x)$| <br> $\frac{d}{dx}(kf(x))$ <br><br> $k\frac{d}{dx}(f(x))$ <br><br> $kf'(x)$ | <br> $\int(kf(x))$ <br><br> $k\int{(f(x))}$ <br><br> $kF(x)$ | 
-| **Constant** <br> $c$| $\frac{d}{dx}(c) = \frac{d}{dx}(c^{1}) = c^{1-1} = c^{0} = 0$ | $\int{c}$ = $\frac{c^{n+1}}{n+1}$ | 
 | $e$ | **Derivative of $e$** <br> $\frac{d}{dx}e^{u} = e^{u}u'$ | **Integral of $e$** <br> $\int{e^{u}}dx = \frac{e^{u}}{u'}$ |
 
+
+<!-- ## U Substitution
+
+$\int{f(g(x))dx}$
+
+Then let $u = g(x)$ 
+
+Now take the derivative of each side $du = g(x)dx$
+
+$du = g'(u)$
+
+$\frac{du}{g'(x)} = \frac{g'(x)dx}{g'(x)}$
+
+Now we have $dx = \frac{du}{g'(x)}$ Put this in for $dx$, like this: 
+
+$$
+\int{\frac{f(u)du}{g'(x)}}
+$$ -->
+
+
+
+## U-Sub 2 Col
+:::{layout-ncol="2" layout-nrow="4"}
+
+1.) $F(x) = \int{\cos{(2x)}dx}$
+
+2.) Let $u = 2x$
+
+3.) $F(x) = \int{\cos{(u)}dx}$
+
+4.) Take the derivative of each side $\frac{d}{dx}(u) = \frac{d}{dx}(2x)$
+
+<br> 
+
+5.) Now we have $du = 2dx$
+
+<br>
+
+6.) Solve for $dx \rightarrow$ $dx = \frac{du}{2}$
+
+7.) $F(x) = \int{\cos{(u)} \times \frac{du}{2}}$
+
+<br> 
+
+8.) $F(x) = \frac{\sin{(u)}}{2}$
+
+:::
+
+<br> 
+
+Step 1. 
+$$
+F(x) = \int{\cos{(2x)}dx}
+$$
+
+Step 2. Let $u = 2x$
+
+Step 3. $F(x) = \int{\cos{(u)}dx}$
+
+Step 4. Take the derivative of each side 
+
+$$
+\frac{d}{dx}(u) = \frac{d}{dx}(2x)
+$$
+
+Step 5. Now we have $du = 2dx$
+
+Step 6. Solve for $dx \rightarrow$ $dx = \frac{du}{2}$
+
+Step 7. $F(x) = \int{\cos{(u)} \times \frac{du}{2}}$
+
+Step 8. $F(x) = \frac{\sin{(u)}}{2}$
+
+----
+$\int{x^{-1}}=\int{\frac{1}{x}}=\ln{|x|}$

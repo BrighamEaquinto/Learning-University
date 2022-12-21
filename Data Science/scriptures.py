@@ -1,48 +1,36 @@
 # %% 
 import pandas as pd
+import numpy as np
+
 # %%
-scripture_BOM = pd.DataFrame(
-        index = ['1 Nephi', '2 Nephi', 'Jacob', 'Enos', 'Jarom', 'Omni', 'Words of Mormon', 'Mosiah', 'Alma', 'Helaman', '3 Nephi', '4 Nephi', 'Mormon', 'Ether', 'Moroni'], 
-        columns = ['Place', 'People', 'Doctrines', 'References to Christ']
-        ).reset_index(names="Book")
-scripture_BOM
-#%%
-columns = ['Place', 'People', 'Doctrines', 'References to Christ']
+First_Nephi = pd.DataFrame(data = {'Book': "1 Nephi", 'Chapter': range(1, 23)})
+Second_Nephi = pd.DataFrame(data = {'Book': "2 Nephi", 'Chapter': range(1, 34)})
+Jacob = pd.DataFrame(data = {'Book': "Jacob", 'Chapter': range(1, 8)})
+Enos = pd.DataFrame(data = {'Book': "Enos", 'Chapter': range(1, 2)})
+Jarom = pd.DataFrame(data = {'Book': "Jarom", 'Chapter': range(1, 2)})
+Omni = pd.DataFrame(data = {'Book': "Omni", 'Chapter': range(1, 2)})
+Words_of_Mormon = pd.DataFrame(data = {'Book': "Words of Mormon", 'Chapter': range(1, 2)})
+Mosiah = pd.DataFrame(data = {'Book': "Mosiah", 'Chapter': range(1, 30)})
+Alma = pd.DataFrame(data = {'Book': "Alma", 'Chapter': range(1, 64)})
+Helaman = pd.DataFrame(data = {'Book': "Helaman", 'Chapter': range(1, 17)})
+Third_Nephi = pd.DataFrame(data = {'Book': "Third Nephi", 'Chapter': range(1, 31)})
+Fourth_Nephi = pd.DataFrame(data = {'Book': "Fourth Nephi", 'Chapter': range(1, 2)})
+Mormon = pd.DataFrame(data = {'Book': "Mormon", 'Chapter': range(1, 10)})
+Ether = pd.DataFrame(data = {'Book': "Ether", 'Chapter': range(1, 16)})
+Moroni = pd.DataFrame(data = {'Book': "Moroni", 'Chapter': range(1, 11)})
 
-First_Nephi = (pd.DataFrame(
-    index = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,31], 
-    columns = columns)
-.assign(
-    Book = '1 Nephi', 
-    Chapters = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,31])
+BOM = (
+    pd.concat([First_Nephi, Second_Nephi, Jacob, Enos, Jarom, Omni, Words_of_Mormon, Mosiah, Alma, Helaman, Third_Nephi, Fourth_Nephi, Mormon, Ether, Moroni], axis = 0)
+    .assign(
+        Place = np.nan,
+        People = np.nan,
+        Doctrine = np.nan, 
+        References_to_Christ = np.nan, 
+        )
 )
-First_Nephi
 
-#%% 
-Second_Nephi = (pd.DataFrame(
-    index = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33], 
-    columns = columns)
-.assign(
-    Book = '2 Nephi', 
-    Chapters = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33])
-)
-Second_Nephi
-#%% 
-BOM = pd.concat([First_Nephi, Second_Nephi], ignore_index=True).filter(['Book', 'Chapter', 'Doctrines', 'Place', 'People', 'References to Christ']).reset_index(drop=True)
-BOM
+BOM.head()
+# BOM.to_csv("Book_of_Mormon.csv")
 
-#%% 
-
-book = {'Book':['1 Nephi 1', 'Ether 1']}
-
-
-pd.DataFrame(columns = book)
-
-#%%
-scripture_BOM.loc['1 Nephi', 'Place'] = ['Jerusalem', 'Lehi\'s House']
-#%% 
-# scripture_BOM
-type(scripture_BOM.loc['1 Nephi', 'Place'])
 # %%
 scriptures = pd.read_csv("C:\\Users\\Bethany\\Downloads\\Scriptures.csv")
-# %%

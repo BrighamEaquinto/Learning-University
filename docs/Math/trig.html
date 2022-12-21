@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Learning University – antiderivative</title>
+<title>Learning University – trig</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -133,7 +133,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#u-sub-2-col" id="toc-u-sub-2-col" class="nav-link active" data-scroll-target="#u-sub-2-col">U-Sub 2 Col</a></li>
+  <li><a href="#trig" id="toc-trig" class="nav-link active" data-scroll-target="#trig">Trig</a></li>
+  <li><a href="#inverse-trig" id="toc-inverse-trig" class="nav-link" data-scroll-target="#inverse-trig">Inverse Trig</a>
+  <ul class="collapse">
+  <li><a href="#other" id="toc-other" class="nav-link" data-scroll-target="#other">Other</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -142,147 +146,175 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Definition: A function <span class="math inline">\(F\)</span> is an antiderivative of the function <span class="math inline">\(f\)</span> if <span class="math inline">\(F'(x) = f(x)\)</span> for all <span class="math inline">\(x\)</span> in the domain of <span class="math inline">\(f\)</span>.</p>
+<section id="trig" class="level1">
+<h1>Trig</h1>
 <table class="table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;">Derivitive</th>
-<th style="text-align: center;">Integral</th>
+<th style="text-align: center;">Function</th>
+<th style="text-align: center;">Right Triangle Definition</th>
+<th style="text-align: center;">Circular Function Definition</th>
+<th style="text-align: center;">Basic Identity</th>
+<th style="text-align: center;">Domain</th>
+<th style="text-align: center;">Range</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><strong>Constant</strong> <br> <span class="math inline">\(c\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{d}{dx}(c) = \frac{d}{dx}(c^{1}) = c^{1-1} = c^{0} = 0\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\int{c}\)</span> = <span class="math inline">\(\frac{c^{n+1}}{n+1}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\cos{}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\cos{(\theta)} = \frac{\text{adj}}{\text{hyp}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\cos{(\theta)} = \frac{x}{r}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\cos{(x)} = \frac{1}{\sec{(x)}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((-\infty, +\infty)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([-1,+1]\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><strong>Constant Multiple</strong> <br> <span class="math inline">\(kf(x)\)</span></td>
-<td style="text-align: center;"><br> <span class="math inline">\(\frac{d}{dx}(kf(x))\)</span> <br><br> <span class="math inline">\(k\frac{d}{dx}(f(x))\)</span> <br><br> <span class="math inline">\(kf'(x)\)</span></td>
-<td style="text-align: center;"><br> <span class="math inline">\(\int(kf(x))\)</span> <br><br> <span class="math inline">\(k\int{(f(x))}\)</span> <br><br> <span class="math inline">\(kF(x)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><strong>Sums &amp; Differences</strong> <br> <span class="math inline">\(f(x) \pm g(x)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{d}{dx}(f(x) \pm g(x) )\)</span> <br> <span class="math inline">\(\frac{d}{dx}(f(x)) \pm \frac{d}{dx}(g(x))\)</span> <br> <span class="math inline">\(f'(x) \pm g'(x)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\int(f(x) \pm g(x) )\)</span> <br> <span class="math inline">\(\int(f(x)) \pm \int(g(x))\)</span> <br> <span class="math inline">\(F(x) \pm G(x) + C\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>Quotient</strong> <br> <span class="math inline">\(\frac{f(x)}{g(x)}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{\text{d}}{\text{dx}} \left(\frac{f(x)}{g(x)}\right)\)</span> <br> <span class="math inline">\(\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^{2}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sin{}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sin{(\theta)} = \frac{\text{opp}}{\text{hyp}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sin{(\theta)} = \frac{y}{r}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sin{(x)} = \frac{1}{\csc{(x)}}\)</span></td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><strong>Product</strong> <br> <span class="math inline">\(f(x) \times g(x)\)</span></td>
-<td style="text-align: center;"><br> <span class="math inline">\(\frac{\text{d}}{dx}(f(x)g(x))\)</span> <br><br> <span class="math inline">\(f'(x)g(x) + g'(x)f(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\tan{}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\tan{(\theta)} = \frac{\text{adj}}{\text{hyp}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\tan{(\theta)} = \frac{y}{x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\tan{(x)} = \frac{\sin{(x)}}{\cos{(x)}} = \frac{1}{\cot{(x)}}\)</span></td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><strong>Power Rule</strong> <br> <span class="math inline">\(x^{n}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{d}{dx}x^{n} = nx^{n-1}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\int{x^{n}dx} = \frac{x^{n+1}}{n+1}+C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sec{}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sec{(\theta)} = \frac{\text{hyp}}{\text{adj}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sec{(\theta)} = \frac{r}{x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sec{(x)} = \frac{1}{\cos{(x)}}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><strong>Composite Function</strong> <br> <span class="math inline">\(f(g(x))\)</span> or <span class="math inline">\(f \circ g\)</span> <br></td>
-<td style="text-align: center;"><br> <span class="math inline">\(\frac{d}{dx}(f(g(x))\)</span> <br> <span class="math inline">\(f'(g(x))g'(x)\)</span></td>
-<td style="text-align: center;">u-substutition or foil</td>
+<td style="text-align: center;"><span class="math inline">\(\csc{}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\csc{(\theta)} = \frac{\text{hyp}}{\text{opp}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\csc{(\theta)} = \frac{r}{y}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\csc{(x)} = \frac{1}{\sin{(x)}}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span class="math inline">\(e\)</span></td>
-<td style="text-align: center;"><strong>Derivative of <span class="math inline">\(e\)</span></strong> <br> <span class="math inline">\(\frac{d}{dx}e^{u} = e^{u}u'\)</span></td>
-<td style="text-align: center;"><strong>Integral of <span class="math inline">\(e\)</span></strong> <br> <span class="math inline">\(\int{e^{u}}dx = \frac{e^{u}}{u'}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\cot{}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\cot{(\theta)} = \frac{\text{adj}}{\text{opp}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\cot{(\theta)} = \frac{x}{y}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\cot{(x)} = \frac{\cos{(x)}}{\sin{(x)}} = \frac{1}{\tan{(x)}}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
-<!-- ## U Substitution
-
-$\int{f(g(x))dx}$
-
-Then let $u = g(x)$ 
-
-Now take the derivative of each side $du = g(x)dx$
-
-$du = g'(u)$
-
-$\frac{du}{g'(x)} = \frac{g'(x)dx}{g'(x)}$
-
-Now we have $dx = \frac{du}{g'(x)}$ Put this in for $dx$, like this: 
-
-$$
-\int{\frac{f(u)du}{g'(x)}}
-$$ -->
-<section id="u-sub-2-col" class="level2">
-<h2 class="anchored" data-anchor-id="u-sub-2-col">U-Sub 2 Col</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p>1.) <span class="math inline">\(F(x) = \int{\cos{(2x)}dx}\)</span></p>
+</section>
+<section id="inverse-trig" class="level1">
+<h1>Inverse Trig</h1>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Function</th>
+<th style="text-align: center;">Right Triangle Definition</th>
+<th style="text-align: center;">Circular Function Definition</th>
+<th style="text-align: center;">Basic Identity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\arccos{}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\arcsin{}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\arctan{}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\text{arcsec}{}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\text{arccsc}{}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\text{arccot}{}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p>2.) Let <span class="math inline">\(u = 2x\)</span></p>
+<div class="callout-caption-container flex-fill">
+Important
 </div>
 </div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p>3.) <span class="math inline">\(F(x) = \int{\cos{(u)}dx}\)</span></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p>4.) Take the derivative of each side <span class="math inline">\(\frac{d}{dx}(u) = \frac{d}{dx}(2x)\)</span></p>
+<div class="callout-body-container callout-body">
+<p>Remember that domains and ranges switch when going from a trig function to an arctrig function and vice-versa</p>
 </div>
 </div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><br></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p>5.) Now we have <span class="math inline">\(du = 2dx\)</span></p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><br></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p>6.) Solve for <span class="math inline">\(dx \rightarrow\)</span> <span class="math inline">\(dx = \frac{du}{2}\)</span></p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p>7.) <span class="math inline">\(F(x) = \int{\cos{(u)} \times \frac{du}{2}}\)</span></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><br></p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p>8.) <span class="math inline">\(F(x) = \frac{\sin{(u)}}{2}\)</span></p>
-</div>
-</div>
-</div>
-<p><br></p>
-<p>Step 1. <span class="math display">\[
-F(x) = \int{\cos{(2x)}dx}
-\]</span></p>
-<p>Step 2. Let <span class="math inline">\(u = 2x\)</span></p>
-<p>Step 3. <span class="math inline">\(F(x) = \int{\cos{(u)}dx}\)</span></p>
-<p>Step 4. Take the derivative of each side</p>
+<section id="other" class="level2">
+<h2 class="anchored" data-anchor-id="other">Other</h2>
 <p><span class="math display">\[
-\frac{d}{dx}(u) = \frac{d}{dx}(2x)
+    \text{trig}(\theta) = x  
 \]</span></p>
-<p>Step 5. Now we have <span class="math inline">\(du = 2dx\)</span></p>
-<p>Step 6. Solve for <span class="math inline">\(dx \rightarrow\)</span> <span class="math inline">\(dx = \frac{du}{2}\)</span></p>
-<p>Step 7. <span class="math inline">\(F(x) = \int{\cos{(u)} \times \frac{du}{2}}\)</span></p>
-<p>Step 8. <span class="math inline">\(F(x) = \frac{\sin{(u)}}{2}\)</span></p>
-<hr>
-<p><span class="math inline">\(\int{x^{-1}}=\int{\frac{1}{x}}=\ln{|x|}\)</span></p>
+<p><span class="math display">\[
+    \text{arctrig}(x) = \theta
+\]</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><span class="math inline">\(x\)</span> means coordinate</li>
+<li><span class="math inline">\(\theta\)</span> means angle</li>
+</ul>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

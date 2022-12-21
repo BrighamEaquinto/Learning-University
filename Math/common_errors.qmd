@@ -27,6 +27,11 @@ $$
 :::
 
 
+$$
+\sqrt{10-10x^{2}} = \sqrt{10(1-x^{2})} = \sqrt{10}\times{}\sqrt{1-x^{2}}
+$$
+
+
 ## Exponents as the Zero Power
 
 ::: columns

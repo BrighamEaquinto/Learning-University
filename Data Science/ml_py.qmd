@@ -40,24 +40,17 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random
 
 ### Modeling
 ```{python}
-model = tree.DecisionTreeRegressor()
-model = model.fit(X_train, y_train)
+model = tree.DecisionTreeRegressor().fit(X_train, y_train)
 y_pred1 = model.predict(X_test)
 ```
-
-```{python}
-make_pipeline(StandardScaler(), GaussianNB(priors=None))
-```
-
 
 
 ### Metrics
 ```{python}
 r2 = r2_score(y_test, y_pred1).round(3)
-mae = mean_absolute_error(y_test, y_pred1).round(3)
 mse = mean_squared_error(y_test, y_pred1, squared=False).round(3)
-me = mean_squared_error(y_test, y_pred1, squared=True).round(3)
-print(f'R2 = {r2}\nMAE = {mae}\nMSE = {mse}\nME = {me}')
+
+print(f'R2 = {r2}\nMSE = {mse}')
 ```
 
 ### Feature Examination 
@@ -74,6 +67,10 @@ features_importances = (
 sns.barplot(y = 'Columns', x = 'Features', data = features_importances.head(10), color = "lightblue") 
 ```
 
+
+
+
+
 <br><br><br>
 
 # Code Graveyard
@@ -82,4 +79,17 @@ sns.barplot(y = 'Columns', x = 'Features', data = features_importances.head(10),
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 314)
 
 X_val, X_test, y_val, y_test = train_test_split(X_test, y_test, test_size = 0.5, random_state = 314)
+```
+
+
+```{python}
+#| include: false
+make_pipeline(StandardScaler(), GaussianNB(priors=None))
+```
+
+
+```{python}
+#| include: false
+mae = mean_absolute_error(y_test, y_pred1).round(3)
+me = mean_squared_error(y_test, y_pred1, squared=True).round(3)
 ```

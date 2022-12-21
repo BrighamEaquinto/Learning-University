@@ -132,5 +132,20 @@
   },
   "Data Science/julia/delete_julia.qmd": {
     "delete_julia.html": "0cae3b87"
+  },
+  "Math/trig.qmd": {
+    "trig.html": "2c38a406"
+  },
+  "Data Science/DataCamp Courses/Developing R Packages.qmd": {
+    "Developing R Packages.html": "2515b463"
+  },
+  "Data Science/DataCamp Courses/developing_r_packages.qmd": {
+    "developing_r_packages.html": "6a0f12e8"
+  },
+  "Data Camp Courses/rpackages.qmd": {
+    "rpackages.html": "2ab5082f"
+  },
+  "Math/rpackages.qmd": {
+    "rpackages.html": "2990f656"
   }
 }
