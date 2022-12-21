@@ -213,9 +213,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#adding-examples-code-practice" id="toc-adding-examples-code-practice" class="nav-link" data-scroll-target="#adding-examples-code-practice">Adding examples: Code Practice</a></li>
   <li><a href="#documenting-function-return-values-code-practice" id="toc-documenting-function-return-values-code-practice" class="nav-link" data-scroll-target="#documenting-function-return-values-code-practice">Documenting function return values: Code Practice</a></li>
   <li><a href="#additional-documentation-code-practice" id="toc-additional-documentation-code-practice" class="nav-link" data-scroll-target="#additional-documentation-code-practice">Additional documentation: Code Practice</a></li>
+  <li><a href="#minimum-level-of-documentation-quiz" id="toc-minimum-level-of-documentation-quiz" class="nav-link" data-scroll-target="#minimum-level-of-documentation-quiz">Minimum level of documentation: Quiz</a></li>
+  <li><a href="#documenting-a-package-video" id="toc-documenting-a-package-video" class="nav-link" data-scroll-target="#documenting-a-package-video">Documenting a package: Video</a></li>
+  <li><a href="#adding-package-documentation-code-practice" id="toc-adding-package-documentation-code-practice" class="nav-link" data-scroll-target="#adding-package-documentation-code-practice">Adding package documentation: Code Practice</a></li>
+  <li><a href="#documenting-data-objects-code-exercise" id="toc-documenting-data-objects-code-exercise" class="nav-link" data-scroll-target="#documenting-data-objects-code-exercise">Documenting data objects: Code Exercise</a></li>
+  <li><a href="#creating-man-files-code-practice" id="toc-creating-man-files-code-practice" class="nav-link" data-scroll-target="#creating-man-files-code-practice">Creating man files: Code Practice</a></li>
   </ul></li>
-  <li><a href="#chapter-3" id="toc-chapter-3" class="nav-link" data-scroll-target="#chapter-3">Chapter 3:</a></li>
-  <li><a href="#chapter-4" id="toc-chapter-4" class="nav-link" data-scroll-target="#chapter-4">Chapter 4:</a></li>
+  <li><a href="#chapter-3-checking-and-building-r-packages" id="toc-chapter-3-checking-and-building-r-packages" class="nav-link" data-scroll-target="#chapter-3-checking-and-building-r-packages">Chapter 3: Checking and Building R Packages</a>
+  <ul class="collapse">
+  <li><a href="#why-check-an-r-package" id="toc-why-check-an-r-package" class="nav-link" data-scroll-target="#why-check-an-r-package">Why check an R package?</a></li>
+  <li><a href="#running-a-check-quiz" id="toc-running-a-check-quiz" class="nav-link" data-scroll-target="#running-a-check-quiz">Running a check: Quiz</a></li>
+  <li><a href="#errors-warnings-and-notes" id="toc-errors-warnings-and-notes" class="nav-link" data-scroll-target="#errors-warnings-and-notes">Errors, warnings and notes</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -759,17 +768,248 @@ Code
 </div>
 </div>
 </div>
+</section>
+<section id="minimum-level-of-documentation-quiz" class="level3">
+<h3 class="anchored" data-anchor-id="minimum-level-of-documentation-quiz">Minimum level of documentation: Quiz</h3>
+<ul>
+<li>When producing documentation for a function, they say the function title and documentation of all function arguments are required but documentation of the return value, although it ca be useful to the user</li>
+</ul>
+</section>
+<section id="documenting-a-package-video" class="level3">
+<h3 class="anchored" data-anchor-id="documenting-a-package-video">Documenting a package: Video</h3>
+<ul>
+<li>Whereas before we were documenting functions, now we’re on package</li>
+<li>What are the similarities and differences of devtools and ryxogen?</li>
+</ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Transcript
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Documenting a package You’ve just learned how to document <em>functions</em> using roxygen headers. Now you’re going to take a look at how you can document <em>other components</em> of your package.</p></li>
+<li><p>Package level documentation You can also generate the documentation for the package itself using roxygen2. For package documentation, you need to include the tags “<span class="citation" data-cites="docType">@docType</span>” and “<span class="citation" data-cites="name">@name</span>”. The header itself needs to be followed by the package keyword because all roxygen headers need to be followed by some form of R code. Whilst this header can go in any file, a good practice is to create a separate R script which takes the package name that contains this header. This is how this might look in the simutils package. You’d save it in a file called “simutils(dot)R” in the R directory.</p></li>
+<li><p>Minimum level of documentation In the previous section of the course, you learned numerous aspects of a function that can be documented, but what is the absolute minimum level of documentation for a function? As a minimum, documentation for each function in your package should include the function title, the function description, the names and descriptions for all of the arguments, and if necessary, an export tag. The other components of documentation aren’t necessarily needed, but you should include them if you think they’re going to be useful to the end user of your package.</p></li>
+<li><p>Documenting data objects Many packages include data that are used in examples or for reference in functions within the package. Data that you want any user of the package to see can be included in the data directory. The data needs to be appropriately compressed and this, as well as the package structure, will be handled for you by the “use_data()” function in devtools. Here’s an example of how you’d take a DataFrame in your current environment, in this case, a DataFrame called “sim_dat”, and then compress it and put the compressed file in the data directory, all with just a single function call.</p></li>
+<li><p>Documenting data objects As with any object that is visible to the end user you need to provide some corresponding documentation for your datasets. You can also do this using roxygen2 but using alternative tags format and source to describe the format of the data and the original source - where you got it from. Here’s an example of how to document the “sim_dat” dataset to be included in the simutils package.</p></li>
+<li><p>Creating man files Once you have created function headers and the package help file you can create the “(dot)Rd” files for the package, which go in the man directory, using the document function in devtools. The primary argument to this function is the file path to the top level of the package. This will perform the task of creating or updating all of the “(dot)Rd” files as well as the NAMESPACE file.</p></li>
+<li><p>Let’s practice! OK, so now it’s your turn to document your package!</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-package-documentation-code-practice" class="level3">
+<h3 class="anchored" data-anchor-id="adding-package-documentation-code-practice">Adding package documentation: Code Practice</h3>
+<ul>
+<li></li>
+</ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In addition to the individual functions you can also document the whole package.</p>
+<p>When you document a package you can use all of the same tags as for functions but the problem that you have is that there is no R code to document. Instead you put the keyword “_PACKAGE” underneath your package header.</p>
+<p>You should also use the <span class="citation" data-cites="docType">@docType</span> and <span class="citation" data-cites="name">@name</span> tags to indicate that this is package level documentation, and specify your package name.</p>
+<p>You should then save the package documentation in the R directory in a file ending with .R with the same name as the package.</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Code
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' datasummary: Custom Data Summaries</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' Easily generate custom data frame summaries</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#' @docType package</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#' @name datasummary</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="st">"_PACKAGE"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="documenting-data-objects-code-exercise" class="level3">
+<h3 class="anchored" data-anchor-id="documenting-data-objects-code-exercise">Documenting data objects: Code Exercise</h3>
+<ul>
+<li></li>
+</ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you include a data set in your package you must also provide documentation for it. As with package level documentation, you should include a title and description.</p>
+<p>With a data set, once again, there is no function object to document. You instead give the name of the dataset as a character string, for instance “airquality”. Additionally there are two tags that you need to use:</p>
+<ul>
+<li><code>@format</code> to describe the format of the data. This is often used with the describe format.</li>
+<li><code>@source</code> to identify where the data came from. You should then save the package documentation in the R directory with a suitable name (in the above case, either airquality.R or data.R).</li>
+</ul>
+<p>The weather dataset is available in your workspace. Run <code>print(weather)</code> to view it.</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Code
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Random Weather Data</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' A dataset containing randomly generated weather data.</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#' @format A data frame of 7 rows and 3 columns</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#' \describe{</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#'  \item{Day}{Numeric values giving day of the week, 1 = Monday, 7 = Sunday}</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">#'  \item{Temp}{}</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">#'  \item{Weather}{}</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">#' }</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">#' @source Randomly generated data </span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="st">"weather"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-man-files-code-practice" class="level3">
+<h3 class="anchored" data-anchor-id="creating-man-files-code-practice">Creating man files: Code Practice</h3>
+<ul>
+<li><code>document()</code> builds all documentation for a package</li>
+<li>it seems like all the devtools packages take their arguments in quotation marks.</li>
+<li><code>help()</code> is the devtools version of <code>?</code> and <code>??</code></li>
+</ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Once you’ve created your documentation using roxygen headers, you need to build your documentation. You can use the document() function from the devtools package to generate your documentation, supplying the path to the package as the first argument. The generated documentation will appear in the man directory. Once you’ve documented your package, you can view the help files just like you can with any of your existing packages.</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Code
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-overflow-scroll code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate package documentation</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">document</span>(<span class="st">"datasummary"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Examine the contents of the man directory</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dir</span>(<span class="st">"datasummary/man"</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># View the documentation for the data_summary function</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"data_summary"</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co"># View the documentation for the weather dataset</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"weather"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 <p><br></p>
 </section>
 </section>
-<section id="chapter-3" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-3">Chapter 3:</h2>
-<p><br></p>
+<section id="chapter-3-checking-and-building-r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="chapter-3-checking-and-building-r-packages">Chapter 3: Checking and Building R Packages</h2>
+<section id="why-check-an-r-package" class="level3">
+<h3 class="anchored" data-anchor-id="why-check-an-r-package">Why check an R package?</h3>
+<ul>
+<li>Checking a package (<code>package(".")</code>) makes sure vignettes can be built, unit tests in the package pass, and all function arguments have been documented.</li>
+</ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Transcript
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Why check an R package? You have now done everything that you need to do, as a minimum, to turn your directory structure into a package that you can share with other people. Hopefully, you have done everything exactly as you should have done but sometimes we miss things, put information in the wrong place or forget to include something really important like documentation. So before you build the package it’s good practice to check it.</p></li>
+<li><p>What should you check? There is a very long list of checks that should be performed regardless of how you are sharing your code, and in fact, must be performed for submission to CRAN. You can think of this as a basic quality check to make sure that you haven’t forgotten to add documentation for a function and that you have listed all of the dependencies correctly. But you should note that these checks will not check that your code does what you think it is doing. That’s for you to do and unit testing that you will see later can help you out here. If you have included tests, it will ensure that they all pass and if you have included a vignette it will ensure that it can be built. In total there are over 50 checks that need to be performed.</p></li>
+<li><p>Running a check The good news is that you don’t have to do this manually. There is a system level tool that is provided with R that runs all of these checks and to make it even easier, devtools includes a check function that accesses this tool for you. By default, this function will even re-run the document function for you, just in case you forgot after making changes. It will also by default run with the same settings used by CRAN. Whilst you can turn this off you might as well leave it set as it does mean that your package is CRAN compatible should you decide to share it that way. There are a number of other options that you can set and checks that you can turn off but most of the time you will simply run with the defaults.</p></li>
+<li><p>Errors, warnings, and notes Once all of the checks have run the output will give you a summary of each of the checks and the status of that check. All being well everything will simply say OK. At some point though you will get an error, warning or note as the result of a check. An error is something that you must fix. It means there is a problem with your package that will cause problems for the end user. A warning is less problematic but you should still try fixing them. They typically highlight something that means it’s likely that the package can be used without issue but may cause a problem. This could relate to dependencies, documentation or elements of the code. Notes are the least problematic. Whilst you don’t have to fix all notes, especially if you are not submitting to CRAN, it is still recommended that you do try. Some notes, such as an unconventional license file, can’t be solved. This is fine, even if submitting to CRAN, but you will be expected to explain why you should be allowed this exception.</p></li>
+<li><p>Let’s practice! Let’s practice this by checking the package that you have been creating and trying to resolve some common check issues.</p></li>
+</ol>
+</div>
+</div>
+</div>
 </section>
-<section id="chapter-4" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-4">Chapter 4:</h2>
+<section id="running-a-check-quiz" class="level3">
+<h3 class="anchored" data-anchor-id="running-a-check-quiz">Running a check: Quiz</h3>
+</section>
+<section id="errors-warnings-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="errors-warnings-and-notes">Errors, warnings and notes</h3>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Transcript
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Errors, warnings and notes With over 50 checks to be performed, there are a large number of possible errors, warnings and notes that could be returned. The good news is that if you have used devtools, it’s likely that you will only encounter a small number of the most common issues.</p></li>
+<li><p>Package dependencies Some of the most common check issues relate to package dependencies. When you run your check, all of the dependencies of your package must be available. If they are not then the checks can’t be run and you will get an error. In the case of building a package using continuous integration, if you include a package that is not available on the system you are building on, you will also get an error.</p></li>
+<li><p>Documentation You will often find that you see issues in your check relating to documentation, even if you are using roxygen as we saw in the last chapter. Common issues here relate to undocumented function arguments. If you have added an argument to a function or changed its name and not remembered to add the new argument to the function header, then you will see a check issue. The check will also let you know if you have forgotten to document a function entirely.</p></li>
+<li><p>Documentation Another common documentation issue relates to the examples. As we said in the last chapter, your examples must run. Any example that fails for any reason will cause a check error. The most common cause of this is making changes to the function itself but not updating the example. If you want to include an example that deliberately fails then you need to use the “” functionality. The “runExample()” function can be helpful for checking just the examples in your help files, rather than waiting to run the whole check to find out if there is a problem.</p></li>
+<li><p>PDF documentation When it comes to the PDF documentation, problems here relate to Latex. The first thing to make sure is that you have Latex installed and that R can find it.</p></li>
+<li><p>Tests You haven’t seen unit tests yet but once you have included them they all need to pass for your check to pass. You will see more on this later so there is no need to worry about it right now.</p></li>
+<li><p>Let’s practice! Time to put this into practice.</p></li>
+</ol>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
