@@ -24,6 +24,8 @@ website:
       menu: 
         - text: DAX 
           href: Data Science/dax/dax.qmd
+        - text: RPackages 
+          href: Math/rpackages.qmd
 
 format:
   html:
