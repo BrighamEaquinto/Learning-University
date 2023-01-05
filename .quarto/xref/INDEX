@@ -147,5 +147,8 @@
   },
   "Math/rpackages.qmd": {
     "rpackages.html": "2990f656"
+  },
+  "Math/linear_algebra.qmd": {
+    "linear_algebra.html": "f2b34adc"
   }
 }
