@@ -150,5 +150,68 @@
   },
   "Math/linear_algebra.qmd": {
     "linear_algebra.html": "f2b34adc"
+  },
+  "Math/Linear Algebra/HW 1.1.qmd": {
+    "HW 1.1.html": "f9144454"
+  },
+  "Math/Linear Algebra/linear_algebra.qmd": {
+    "linear_algebra.html": "6a09ee8e"
+  },
+  "Math/Linear Algebra/HW_1.qmd": {
+    "HW_1.html": "703315fb"
+  },
+  "Math/Linear_Algebra/HW_1.qmd": {
+    "HW_1.html": "f8247f91"
+  },
+  "Math/Linear_Algebra/linear_algebra.qmd": {
+    "linear_algebra.html": "bc2fa170"
+  },
+  "Math/Linear_Algebra/HW 1.1.qmd": {
+    "HW 1.1.html": "923cd215"
+  },
+  "Math/Linear_Algebra/HW_1.1.qmd": {
+    "HW_1.1.html": "0b105b7c"
+  },
+  "Data Science/rpackages.qmd": {
+    "rpackages.html": "c3af45b6"
+  },
+  "Math/Calculus_1/antiderivative.qmd": {
+    "antiderivative.html": "a68be962"
+  },
+  "Math/Calculus_1/chap4_derivative_applications.qmd": {
+    "chap4_derivative_applications.html": "35be7428"
+  },
+  "Math/Calculus_1/common_errors.qmd": {
+    "common_errors.html": "187e887a"
+  },
+  "Math/Calculus_1/derivatives.qmd": {
+    "derivatives.html": "11ee5d95"
+  },
+  "Math/Calculus_1/formulas.qmd": {
+    "formulas.html": "a093c806"
+  },
+  "Math/Calculus_1/integrals.qmd": {
+    "integrals.html": "baa489ce"
+  },
+  "Math/Calculus_1/limits.qmd": {
+    "limits.html": "1a30463e"
+  },
+  "Math/Calculus_1/trig.qmd": {
+    "trig.html": "48a228a5"
+  },
+  "other/thoughts.qmd": {
+    "thoughts.html": "4883a0f9"
+  },
+  "other_subjects/Christan_History/rel_presentation_notes.qmd": {
+    "rel_presentation_notes.html": "2a87ca94"
+  },
+  "other_subjects/Christan_History/test_rjs_pres.qmd": {
+    "test_rjs_pres.html": "275ce8a2"
+  },
+  "other_subjects/Christan_History/Tyndale.qmd": {
+    "Tyndale.html": "54c31be6"
+  },
+  "Math/Linear_Algebra/Master_Notes.qmd": {
+    "Master_Notes.html": "1f2768db"
   }
 }
