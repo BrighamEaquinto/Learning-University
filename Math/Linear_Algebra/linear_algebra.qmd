@@ -14,6 +14,7 @@ eval: false
 ## Chapter 1 Linear Equatons in Linear Algebra 
 </center>
 
+
 Summary of this chapter:
 
 - 1.1 Systems of Linear Equations
@@ -210,7 +211,7 @@ A.rref()
 # 1.4
 
 <center>
-## Section 1.4 
+## Section 1.4 The Matrix Equation $Ax=b$
 </center>
 
 
@@ -218,7 +219,7 @@ A.rref()
 # 1.5
 
 <center>
-## Section 1.5
+## Section 1.5 Solution Sets of Linear Systems
 </center>
 
 
@@ -226,14 +227,14 @@ A.rref()
 # 1.6
 
 <center>
-## Section 1.6 
+## Section 1.6 Applications of Linear Systems 
 </center>
 
 
 # 1.7
 
 <center>
-## Section 1.7 
+## Section 1.7 Linear Independence
 </center>
 
 
@@ -241,7 +242,7 @@ A.rref()
 # 1.8
 
 <center>
-## Section 1.8 
+## Section 1.8 Introduction to Linear Transformations
 </center>
 
 
@@ -249,7 +250,7 @@ A.rref()
 # 1.9
 
 <center>
-## Section 1.9 
+## Section 1.9 The Matrix of a Linear Transformation
 </center>
 
 
@@ -258,24 +259,56 @@ A.rref()
 
 # Chapter 2
 
+<center>
+## Chapter 2 Matrix Algebra
+</center>
+
+Summary of chapter: 
+
+- 2.1 Matrix Operations 
+- 2.2 The Inverse of a Matrix
+- 2.3 Characterizations of Inversible Matrices
+- 2.4 Partitioned Matrices
+- 2.7 Applications to Computer Graphics
+
 ::: {.panel-tabset}
 # Section 2.1
+
+<center>
+## Section 2.1 Matrix Operations
+</center>
 
 
 
 # Section 2.2
 
+<center>
+## Section 2.2 The Inverse of a Matrix
+</center>
+
 
 
 # Section 2.3
+
+<center>
+## Section 2.3 Characterizations of Inversible Matrices
+</center>
 
 
 
 # Section 2.4
 
+<center>
+## Section 2.4 Partitioned Matrices
+</center>
+
 
 
 # Section 2.7
+
+<center>
+## Section 2.7 Applications to Computer Graphics
+</center>
 
 
 
@@ -283,12 +316,29 @@ A.rref()
 
 # Chapter 3 
 
+<center>
+## Chapter 3 Determinants
+</center>
+
+Summary of chapter: 
+
+- 3.1 Introduction to Determinants
+- 3.2 Properties of Determinants
+
 ::: {.panel-tabset}
 # Section 3.1
+
+<center>
+## Section 3.1 Introduction to Determinants
+</center>
 
 
 
 # Section 3.2 
+
+<center>
+## Section 3.2 Properties of Determinants
+</center>
 
 
 
@@ -296,32 +346,74 @@ A.rref()
 
 # Chapter 4
 
+<center>
+## Chapter 4 Vector Spaces
+</center>
+
+Summary of Chapter 
+
+- 4.1 Vector Spaces and Subspaces
+- 4.2 Null Spaces, Column Spaces, and Linear Transformations
+- 4.3 Linearly Independent Sets; Bases
+- 4.4 Coordinate Systems
+- 4.5 The Dimension of a Vector Space
+- 4.6 Rank
+- 4.9 Applications to Markov Chains 
+
 ::: {.panel-tabset}
 # Section 4.1
+
+<center>
+## Section 4.1 Vector Spaces and Subspaces
+</center>
 
 
 
 # Section 4.2 
 
+<center>
+## Section 4.2 Null Spaces, Column Spaces, and Linear Transformations
+</center>
+
 
 
 # Section 4.3
+
+<center>
+## Section 4.3 Linearly Independent Sets; Bases
+</center>
 
 
 
 # Section 4.4
 
+<center>
+## Section 4.4 Coordinate Systems
+</center>
+
 
 
 # Section 4.5
+
+<center>
+## Section 4.5 The Dimension of a Vector Space
+</center>
 
 
 
 # Section 4.6
 
+<center>
+## Section 4.6 Rank
+</center>
+
 
 
 # Section 4.9
+
+<center>
+## Section 4.9 Applications to Markov Chains 
+</center>
 
 
 
@@ -330,16 +422,41 @@ A.rref()
 
 # Chapter 5 
 
+<center>
+## Chapter 5 Eigenvalues and Eigenvectors 
+</center>
+
+- 5.1 Eigenvalues and Eigenvectors
+- 5.2 The Characteristic Equation
+- 5.3 Diagonalization 
+
+Summary of chapter: 
+
+<br> 
+
+
 ::: {.panel-tabset}
-# Section 5.1
+# Section 5.1 
+
+<center>
+## Section 5.1 Eigenvalues and Eigenvectors
+</center>
 
 
 
 # Section 5.2
 
+<center>
+## Section 5.2 The Characteristic Equation 
+</center>
+
 
 
 # Section 5.3
+
+<center>
+## Section 5.3 Diagonalization 
+</center>
 
 
 
@@ -348,28 +465,63 @@ A.rref()
 
 # Chapter 6
 
+<center>
+## Chapter 6 Orthogonality and Least Squares  
+</center>
+
+- 6.1 Inner Product, Length, and Orthogonality 
+- 6.2 Orthogonal Sets
+- 6.3 Orthogonal Projections 
+- 6.4 The Gram-Schmidt Process
+- 6.5 Least-Squares Problems  
+- 6.7 Inner Product Spaces 
+
 ::: {.panel-tabset}
 # Section 6.1
+
+<center>
+## Section 6.1 Inner Product, Length, and Orthogonality 
+</center>
 
 
 
 # Section 6.2
 
+<center>
+## Section 6.2 Orthogonal Sets 
+</center>
+
 
 
 # Section 6.3 
+
+<center>
+## Section 6.3 Orthogonal Projections 
+</center>
 
 
 
 # Section 6.4 
 
+<center>
+## Section 6.4 The Gram-Schmidt Process
+</center>
+
 
 
 # Section 6.5 
 
+<center>
+## Section 6.5 Least-Squares Problems  
+</center>
+
 
 
 # Section 6.7 
+
+<center>
+## Section 6.7 Inner Product Spaces 
+</center>
 
 
 

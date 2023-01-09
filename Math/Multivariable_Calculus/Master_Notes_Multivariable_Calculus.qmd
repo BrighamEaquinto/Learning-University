@@ -1,0 +1,85 @@
+---
+title: Master Notes 
+subtitle: Multivariable Calculus
+subject: Multivariable Calculus
+format: html
+---
+
+<!-- 
+OpenStax Textbook
+- Parametric Equations and Polar Coordiates
+- Vectors in Space
+- Vector-Valued Functions
+- Differentiation of Functions of Several Variables
+- Multiple Integration
+- Vector Calculus
+- Second-Order Differential Equations 
+-->
+
+
+- 11 Parametric Equations and Polar Coordiates
+    - 11.1 Parametric Plane Curves
+    - 11.2 Calculus on Parametric Curves
+    - 11.3 Polar Coordinates
+    - 11.4 Graphing in Polar Coordinates
+    - 11.5 Lengths and Areas in Polar Coordinates
+    - 11.6 Conic Sections
+- 12 Vectors and the Geometry of Space
+    - 12.1 3D Coodinate Systems
+    - 12.2 Vectors
+    - 12.3 The Dot Product
+    - 12.4 The Cross Product
+    - 12.5 Vector Applications
+    - 12.6 Cylinders and Quadric Surfaces
+- 13 Vector-Valued Functions and Motion in Space
+    - 13.1 Curves in Space and Their Tangents
+    - 13.2 Parametric Curves from Velocity/Acceleration/Project Motion
+    - 13.3 Arc Length
+    - 13.4 Curvature and the Unit Normal
+- 14 Partial Derivatives
+    - 14.1 Functions of Several Variables
+    - 14.3 Calculating Partials
+    - 14.4 Chain Rule
+    - 14.5 Gradients and Directional Derivatives
+    - 14.6 Tangent Planes and Differentials
+    - 14.7 Extreme Values and Saddle Points
+    - 14.8 Lagrange Multipliers
+- 15 Multiple Integrals
+    - 15.1/15.2 Double Integral Applications
+    - 15.3/15.6 Transformations Polar and General
+    - 15.5 Triple Integrals
+    - 15.6 Triple Integral Applications
+    - 15.7/15.8 Change of Variables
+- 16 Integrals and Vector Fields
+    - 16.1 Line Integrals
+    - 16.2 Work/Flow/Flux/Gradients/Vector Fields
+    - 16.3 Conservative Fields and Potentials
+    - 16.4 Green's Theorem
+    - 16.5 Surface Integrals
+    - 16.6 Flux Surface Integrals
+    - 16.7 Stokes' Theorem
+    - 16.8 Divergence Theorem
+
+
+[Textbook](https://openstax.org/details/books/calculus-volume-3)
+
+<!-- <iframe scr=https://openstax.org/details/books/calculus-volume-3 width="100%" height=400></iframe> -->
+
+
+
+## 11.1
+
+Question 1: 
+
+- $t$ represents time. The *third* variable (think 3-D)
+- Solve for $t$ using either the $x$ or the $y$ equations given. Then pug in $t$ to the other equation to find the graph. 
+- That equation we solved for $t$ comes in later when we tell which way the graph goes (left-to-right or right-to-left)
+
+
+Question 2: 
+
+- Something like $\array{x=2\cos{2t}\\y=2\sin{2t}}$ is a basic formula for a circle
+- To graph this in Desmos, put it like this: $\left(2\cos\left(2t\right),\ 2\sin\left(2t\right)\right)$
+    - Remember to put the parameter bounds
+- This equation will be of use at some time, I think: $\frac{(x-h)^{2}}{a^{2}} + \frac{(y-2)^{2}}{b^2} = 1$. If $a$ and $b$ are the same, its a circle, if not, its an elipses. 
+- This is an interesting thing! $x$'s and $y$'s. Pay attention to them. Plug them in and check uper carefully. 

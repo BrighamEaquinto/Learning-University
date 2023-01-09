@@ -1,0 +1,23 @@
+- uniquely qualified 
+- understand the comany culture
+
+
+Prompt: Tell me a little about yourself
+- 2 years of experience in analytics as:
+    - Data Analyst on campus
+    - TA for 460 Big Data Programming
+    - Volunteer Analytics Teacher
+    - RBDC Consultant
+- Senior; bachelors of science in Data Science
+- Passionate about renuable energy & education
+- Work Experience & Education consists of:
+    - SQL
+        - Query data
+    - R & Python & PowerBI
+        - Machine Learning
+        - Data Wrangling & Visualization
+    - Audience of College Deans, University Vice-Presidents, Institutional Research Team, & School District Superintendent
+
+INL - impressed with your work and goals
+
+ID 91: KPIs like test scores, attendance, building progress, school libraries, among other things

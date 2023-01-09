@@ -213,5 +213,14 @@
   },
   "Math/Linear_Algebra/Master_Notes.qmd": {
     "Master_Notes.html": "1f2768db"
+  },
+  "Math/Multivariable_Calculus/OpenStax_Calculus_Books.qmd": {
+    "OpenStax_Calculus_Books.html": "ed4c7b78"
+  },
+  "Math/Multivariable_Calculus/Master_Notes_Multivariable_Calculus.qmd": {
+    "Master_Notes_Multivariable_Calculus.html": "3f99a4a8"
+  },
+  "other_subjects/Adv_Writing_in_Pro_Contexts/digital_interview.qmd": {
+    "digital_interview.html": "6a0f79f1"
   }
 }

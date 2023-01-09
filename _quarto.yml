@@ -8,18 +8,28 @@ website:
   title: "Learning University"
   navbar:
     left:
-    - text: Math
-      menu: 
+    - text: Calculus 1 
+      menu:
+        - text: Antiderivative
+          href: Math/Calculus_1/antiderivative.qmd
+        - text: Chap 4 Derivative Applications
+          href: Math/Calculus_1/chap4_derivative_applications.qmd
+        - text: Derivatives
+          href: Math/Calculus_1/derivatives.qmd
+        - text: Formulas
+          href: Math/Calculus_1/formulas.qmd
+        - text: Integrals
+          href: Math/Calculus_1/integrals.qmd
         - text: Limits
-          href: Math/limits.qmd
-        - text: "Derivatives"
-          href: Math/derivatives.qmd
-        - text: "Integrals"
-          href: Math/integrals.qmd
-        - text: Common Formulas
-          href: Math/formulas.qmd
-        - text: "Common Errors"
-          href: Math/common_errors.qmd
+          href: Math/Calculus_1/limits.qmd
+        - text: Trig
+          href: Math/Calculus_1/trig.qmd
+    - text: Multivariable Calculus 
+      menu: 
+        - text: Calculus 1-3
+          href: Math\Multivariable_Calculus\OpenStax_Calculus_Books.qmd
+    - text: Linear Algebra 
+      href: Math\Linear_Algebra\linear_algebra.qmd
     - text: Data Science
       menu: 
         - text: DAX 
