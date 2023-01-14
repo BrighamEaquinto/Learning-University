@@ -1,0 +1,33 @@
+---
+title: 1.4 The Matrix Equation $Ax = b$
+format: html
+---
+
+<center>
+
+## Section 1.4 The Matrix Equation $Ax=b$
+
+</center>
+
+
+Definition 
+
+Theorem 3
+
+### Existence of Solutions 
+
+
+Theorem 4 
+
+
+### Computation of $A\textbf{x}$
+
+
+
+### Properties of the Matrix-Vector Product $A\textbf{x}$
+
+
+Theorem 5 
+
+
+### 

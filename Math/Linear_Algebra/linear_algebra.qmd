@@ -1,7 +1,5 @@
 ---
 title: Master Notes 1
-subtitle: Master Notes 2
-subject: Linear Algebra
 format: html
 eval: false
 ---
@@ -11,11 +9,10 @@ eval: false
 # Chapter 1 
 
 <center>
+
 ## Chapter 1 Linear Equatons in Linear Algebra 
 </center>
 
-
-Summary of this chapter:
 
 - 1.1 Systems of Linear Equations
 - 1.2 Reduced Row Echelon Form
@@ -32,189 +29,40 @@ Summary of this chapter:
 ::: {.panel-tabset}
 #  1.1 
 
-<center>
-
-## Section 1.1 Systems of Linear Equations 
-
-</center>
-
-### 1/4/23 Week 1 Monday Notes
-
--   Systems of linear equations
-
--   Is_Linear when Scalar $\times$ variable $=$ variable
-
--   Linear: $2x_{1}-3x_{2}+5x_{3}=9$
-
--   Non-Linear: $2\sqrt{x_{1}}+3x_{2}=5$
-
--   Non-Linear: $x_{1}^{2}+x_{2}^{2}=3$
-
--   Linear: $ex_{1}+\pi{}x_{2}=\sqrt{2}$
-
-Linear when scalar times variable only. Not variable times variable.
-
--   Linear. System of equations:
-
-    -   $x_{1}+x_{2}+x_{3}=1$
-    -   $2x_{1}-3x_{2}+2$
-
-Augmented means it has a solution? An equal sign? an \| ?
-
-<br>
-
-### Solving Outcome Possibiblities
-
-Options are either: $0$, $1$, or $\inf{}$
-
-**Existence**: Does there exist a solution?
-
-**Uniqueness**: Is there only one solution?
-
-Remember those rules we learned in Pre-Algebra? Those are coming into play right now. 
-
-- **Replacement**: Replace one row by the sum of itself and a multiple of another row
-    - Example: $R_{2} \rightarrow R_{2}+-2R_{1}$
-- **Interchange**: Interchange two rows
-- **Scaling**: Multiply all the entries in arow by a nonzero constant
-    - Example: $R_{2} \rightarrow \frac{-1}{5}R_{2}$
-
-
-<br>
-
-Vocab:
-
-- Reduced Row Echelon Form
-
+{{< include 1.1.qmd >}}
 
 :::{.callout-note collapse="true"}
-# HW 1.1
-{{< include HW_1.1.qmd >}}
+# HW 1.2
+{{< include hw1.1.qmd >}}
 :::
-
-
-
-
-Echelon Form
-: steplike
-
-Reduced Row Echelon Form
-: steplike and only 1's and 0's left of the answers
-
-Theorem 1: Uniqueness of the Reduced Echelon Form
-: Each matrix is row equivalent to one and only one reduced echelon matrix
-
-Pivot Positions
-: in a matrix *A* is a location in *A* that corresponds to a leading 1 in the reduced echelon form of *A*. 
-
-Pivot Column
-: is a column of *A* that contains leading 1's in the reduced echelon form
-
-Theorem 2: Existence and Uniqueness Theorem
-: A linear system is consistent if and only if the rightmost column of the augmented matrix is *not* a pivot column-that is, if and only if an echelon form of the augmented matrix has *no* row of the form $___stuff here___$. 
-If a linear system is consistent, then the solution set contains either (i) a unique solution, when there are no free variables, or (ii) infinitely many solutions, when there is at least one free variable.
-
-
-
-### 1/6/23 Friday Week 1
-
-`~` is used to say the rows are equivalent
-
-- Only way it's inconsistent is if one of the rows is like this 
-$\matrix{0 & 0 & 0 &\bigm| & 3 \\ 0 & 0 & 0 &\bigm| & 4}$
-
-
-Look at this matrix $\begin{bmatrix} 1 & 0 & 0 & 0 &\bigm| & 0 \\ 0 & 1 & 0 & 0 &\bigm| & 5 \\ 0 & 0 & 1 & 0 &\bigm| & -4 \\ 0 & 0 & 0 & 1 &\bigm| & -2 \end{bmatrix}$. I think this is cool.
-
-
-- Augmented means the right most column is an answer
-- Pivots are used to eliminate variables and get 0's. The left most non zero entry in rref
-    - if less rows then columns, will there always be a free variable?: 
-    - maximum nuber of pivots is the min of the number of row and columns
-    - columns without a pivot are free variables
-
-\begin{bmatrix}
-  a & b & 1  &  4 \\
-  c & d & -2 & -3
-\end{bmatrix}
-
-
-$$
-\left[
-\matrix{
-  1 & 2 & 1 &\bigm| & 4 \\ 
-  1 & 2 & -2 &\bigm| &-3}
-\right]
-$$
-
-$$
-\left[
-\matrix{
-  1 & 2 & 1 & | & 4 \\ 
-  1 & 2 & -2 & | &-3}
-\right]
-$$
-
-$$
-\left[
-\matrix{
-  1 & 2 & 1  |  4 \\ 
-  1 & 2 & -2  | -3}
-\right]
-$$
-
-
-
-```{tex}
-x+4
-```
-
-
-- coefficient matrix is just
-- pivots are non-zeros
-
-```{python}
-import sympy as sp
-from sympy import randMatrix
-```
-
-
-```{python}
-A=sp.Matrix([
-    [1,1,1,4],
-    [5,1,2,3], 
-    [4,-1,6,2]
-])
-sp.pprint(A)
-```
-
-```{python}
-A.rref()
-```
 
 # 1.2 
 
-<center>
-## Section 1.2 Reduced Row Echelon Form
-</center>
+{{< include 1.2.qmd >}}
+
+:::{.callout-note collapse="true"}
+# HW 1.2
+{{< include hw1.2.qmd >}}
+:::
 
 
+# 1.3 Vector Equations
 
-# 1.3
+{{< include 1.3.qmd >}}
 
-<center>
-## Section 1.3 Vector Equations
-</center>
+:::{.callout-note collapse="true"}
+# HW 1.3
+{{< include hw1.3.qmd >}}
+:::
 
+# 1.4 The Matrix Equation $Ax = b$
 
+{{< include 1.4.qmd >}}
 
-# 1.4
-
-<center>
-## Section 1.4 The Matrix Equation $Ax=b$
-</center>
-
-
+:::{.callout-note collapse="true"}
+# HW 1.4
+{{< include hw1.4.qmd >}}
+:::
 
 # 1.5
 

@@ -1,0 +1,38 @@
+---
+title: 1.2 Row Reduction and Echelon Forms
+format: html
+---
+
+<center>
+
+## Section 1.2 Reduced Row Echelon Form
+
+</center>
+
+
+<!-- 1/9/23 Monday -->
+
+Linear Combination 
+: Scale vectors and add them together
+
+- adding and scaling vectors
+- weights or scalers are about the same. the $x_{1}$ and $x_{2}$
+- vector addition is associative 
+- a vector equation is a system of linear equations
+- what is the *Span* of a linear vector?
+  - the set of all linear combinations of that vector?
+  - the span if all linear combinations of the vector. Scaling here lengthens or shortens the line
+
+Two Vectors
+
+- $\text{Span}\left( \left[ \matrix{1 \\ 0 \\ 1} \right], \left[ \matrix{1 \\ 1 \\ 2} \right] \right)$ 
+  - finding scalers. Finding x that makes this true
+  - has to stay in the plane. Think 3D. 
+  - the span geometrically, it is a plane as long as neither vector is a multiple (scale multiple) of the other
+    - if not, we learn that is called *linear independence* 
+  - A question could be: "Is $\left[ \matrix{1 \\ 1 \\ 1} \right]$ in the span of that matrix?"
+    - as we saw on geogebra, it is not. Its outside of the plane. 
+
+[ ] Look at theorem 4
+
+- how does everyone know how many pivots there are?! 

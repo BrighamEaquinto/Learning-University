@@ -6,6 +6,7 @@ format: html
 ---
 
 <!-- 
+
 OpenStax Textbook
 - Parametric Equations and Polar Coordiates
 - Vectors in Space
@@ -14,23 +15,277 @@ OpenStax Textbook
 - Multiple Integration
 - Vector Calculus
 - Second-Order Differential Equations 
+
+-->
+
+- This may be better refered to as *multidimensional calculus*
+- three dimentional 
+- two inputs, one output
+- two inputs, two outputs
+
+
+## Chapter 11 Parametric Equations and Polar Coordiates
+
+::: {.panel-tabset}
+# Contents
+
+- 11.1 Parametric Plane Curves
+- 11.2 Calculus on Parametric Curves
+- 11.3 Polar Coordinates
+- 11.4 Graphing in Polar Coordinates
+- 11.5 Lengths and Areas in Polar Coordinates
+- 11.6 Conic Sections
+
+# 11.1 
+
+## Parametric Equations
+
+- if there is a supposed function that fails the vertical line test, it is possible that it is legit by being defined by two continuous functions.
+- when this is the case we also are given the path of the particle $(x, y) = (f(t), g(t))$ at any time ($t$)
+- I assume this is like linear algebra where this is three dimentions, but maybe they're visualizing it in two dimentions for some reason.
+- We are learning about **parametric curves**
+    - If $x$ and $y$ are given as functions $x=f(t)$ and $y=g(t)$ over an interval $I$ of $t$-values, then the set of points $(x, y) = (f(t), g(t))$ defined my these equations is a parametric curve. 
+    - If $I$ is a closed interval, $a \le t \le b$, the point $(f(a)), g(a))$ is the $\textbf{initial point}$
+        - What are the exact definitions of $a$ and $b$?
+    
+- I learned from MathisPower4u that paranetric equations are when x and y are defined in terms of t. From what I currently understand, this is not quite three dimentional. A new thing that comes into play with parametric equations is that movement of the particle is implied from one way to another. This means lines to make up the plot are correct, but *arrows* are more accurate for this situation. 
+- T is what is made to define x and y, and it often meant as *time*. 
+- This can get into physics concepts but this is not what we will focus on. x y charts are often used to show that y is a result of x. In this new concept, again to emphasise, (we're in multivariable--multidimentional calculus) x and y are results of t. 
+
+::: columns
+::: {.column width="40%"}
+Rather than using xy tables like this: 
+
+Say our equation given is $y = 2x + 1$
+
+| $X$ | $Y$ | 
+|:---:|:---:|
+|-2|-3|
+|-1|-1|
+|0|1|
+|1|3|
+|2|5| 
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="55%"}
+We will be using t-input/xy-output charts: 
+
+Now we have $x(t) = 3x$ and $y(t) = x + 1$
+
+| $T$ | $X$ | $Y$ |
+|:---:|:---:|:---:|
+|-2|-6|-1|
+|-1|-3|0|
+|0|0|1| 
+|1|3|2|
+|2|6|3|
+:::
+:::
+
+
+<center>
+
+\~\~\~\~\~\~\~ ***Now entering multidimentional calculus*** \~\~\~\~\~\~\~
+</center>
+
+As Kang said, "We've crossed the threshold."
+
+
+I guess *normal* xy tables/equations/graphs in single variable calculus are refered to as rectangular equations, whereas now we are at parametric equations. <br> Also, at least in this beginning stages of calculus, we can turn parametric equations into a rectangular equation. This is refered to as *eliminating the parameter*. <br> Example: 
+
+:::{.callout-note}
+# Converting Parametric Equations into a Rectangular Equation
+
+General How-To Steps: 
+
+1. Solve for $t$ in one of the equations
+2. Substitute that into the second equation
+3. Simplify
+
+- If the equation involves trigonometric functions, trig identities may be needed.
+- The domain may need to be adjusted upon the original parametric equation
+
+**Prompt**: Write the parametric equations as a rectangular equation and state the domain, then graph. <br>
+**$x(t)$**: $x = 4t + 4$ <br>
+**$y(t)$**: $y = t + 2$ <br>
+
+Step 1. Solve for $t$ in one of the equations
+
+&nbsp;&nbsp;&nbsp;&nbsp; $x = 4t + 4$ and $y = t + 2$, let's solve for $y$ for $t$. We get $t = y - 2$. 
+
+Step 2. Now we'll substitute this into the other equation we have, the $x$ equation. 
+
+&nbsp;&nbsp;&nbsp;&nbsp; We get $x = 4(y-2) + 4$. 
+
+Step 3. Simplify
+
+&nbsp;&nbsp;&nbsp;&nbsp; If we simplify this for $y$, we get our *rectangular equation*. That is $y = \frac{1}{4}x + 1$
+
+:::
+
+```{r}
+#| fig.height: 3
+#| fig.width: 5
+#| message: false
+#| warning: false
+#| echo: false
+#| fig.align: center
+
+library(tidyverse)
+
+parametric_function_x <- function(t){ 4*t + 4 }
+parametric_function_y <- function(t){ t + 2 }
+rectangular_equation <- function(t){ (1/4)*t + 1 } 
+
+my_data <- data.frame(t = seq(from=-3, to=3, by=0.1)) |>
+  mutate(parametric_function_x = parametric_function_x(t),
+         parametric_function_y = parametric_function_y(t), 
+         rectangular_equation = rectangular_equation(t))  
+
+# head(my_data, 3)
+
+ggplot(my_data)+ 
+  geom_line(aes(parametric_function_x, parametric_function_y, color = t), size = 2)+
+  geom_line(aes(t, rectangular_equation), size = 2, color = "firebrick")+
+  labs(x = "X", y = "Y")+
+#   scale_fill_gradient(low = "red", high = "green")+
+  theme_minimal()
+
+```
+
+<!-- 
+```{r}
+ggplot(data.frame(x=c(-30, 30)), aes(x=x)) + 
+  stat_function(fun=function(x){2 * (x^3) + 5})
+``` 
 -->
 
 
-- 11 Parametric Equations and Polar Coordiates
-    - 11.1 Parametric Plane Curves
-    - 11.2 Calculus on Parametric Curves
-    - 11.3 Polar Coordinates
-    - 11.4 Graphing in Polar Coordinates
-    - 11.5 Lengths and Areas in Polar Coordinates
-    - 11.6 Conic Sections
-- 12 Vectors and the Geometry of Space
-    - 12.1 3D Coodinate Systems
-    - 12.2 Vectors
-    - 12.3 The Dot Product
-    - 12.4 The Cross Product
-    - 12.5 Vector Applications
-    - 12.6 Cylinders and Quadric Surfaces
+<!-- 
+https://matplotlib.org/stable/gallery/mplot3d/lines3d.html
+https://www.youtube.com/watch?v=OoVLt_2wJlk
+https://krajit.github.io/sympy/parametricPlot/parametricPlot.html
+ -->
+
+## Cycloids 
+
+I think this is just a shape or a path
+
+**ChatGPT** <br>
+A cycloid is a specific type of curve that is generated by a point on the circumference of a circle as it rolls along a straight line. The path traced by the point is called the cycloid curve.<br>
+The shape of the cycloid curve is determined by the radius of the rolling circle and the distance between the point and the center of the circle. The curve is made up of a series of cusps, or "humps", with the number and size of the cusps depending on the radius of the circle. <br>
+In addition, Cycloids have some interesting geometric properties, such as the length of the cycloid is 3 times the diameter of the circle that generates it and the area enclosed by a cycloid is 3 times the area of the rolling circle.<br>
+Cycloids are also related to other mathematical objects, such as the epicycloid and the hypocycloid, which are generated by a point on the circumference of a circle that rolls along the inside or outside of another circle, respectively.<br>
+
+## Brachistochrones and Tautochrones
+
+**Summary**: Brachistochrones are the shortest path between two points while Tautochrones are the fastest path between two points, both for an object moving under the influence of gravity and both have cycloids as solutions.
+
+**Deets**:
+The Brachistochrone problem and the Tautochrone problem are related mathematical problems that deal with the shortest time or the fastest time taken by an object sliding without friction to travel between two points.
+
+Brachistochrone is a curve that is the **shortest path** between two points for an object. It is a path that minimizes the time for an object to travel from one point to another.
+
+Tautochrone is a curve that is the **fastest path** between two points for an object. It is a path that minimizes the time for an object to travel from one point to another.
+
+<br> 
+
+:::{.callout-note collapse="true"}
+## Homework
+
+Question 1: 
+
+- $t$ represents time. The *third* variable (think 3-D)
+- Solve for $t$ using either the $x$ or the $y$ equations given. Then pug in $t$ to the other equation to find the graph. 
+- That equation we solved for $t$ comes in later when we tell which way the graph goes (left-to-right or right-to-left)
+
+
+Question 2: 
+
+- Something like $\array{x=2\cos{2t}\\y=2\sin{2t}}$ is a basic formula for a circle
+- To graph this in Desmos, put it like this: $\left(2\cos\left(2t\right),\ 2\sin\left(2t\right)\right)$
+    - Remember to put the parameter bounds
+- This equation will be of use at some time, I think: $\frac{(x-h)^{2}}{a^{2}} + \frac{(y-2)^{2}}{b^2} = 1$. If $a$ and $b$ are the same, its a circle, if not, its an elipses. 
+- This is an interesting thing! $x$'s and $y$'s. Pay attention to them. Plug them in and check uper carefully. 
+:::
+
+# 11.2
+
+From Khan Academy: 
+
+- With 3D surfaces, ultimately we get surfaces
+- $z = f(x, y)$
+- With surfaces being such a thing, I can see how integrals will be used to find the AUC. 
+- contour plots (where we find contour lines) take three dimentional plots and allow us to visualize them in two dimentional plots
+    - They can sometimes mark where z is equal to 0
+- 
+
+
+## Tangents and Areas
+
+Differentiation Refresher: 
+
+- the rate of change of a function at a given point
+- the instantaneous rate of change
+- this section is finding derivatives of composite functions (or polar functions?)
+
+
+
+## Length of a Parametrically Defined Curve
+
+
+
+## Length of a Curve $y=f(x)$
+
+
+
+## The Arc Length Differential 
+
+
+
+## Areas of Surfaces of Revolution
+
+
+
+
+# 11.3 
+
+# 11.4 
+
+# 11.5 
+
+# 11.6 
+
+:::
+
+
+
+
+
+<center>
+
+## Chapter 12 Vectors and the Geometry of Space
+</center>
+
+
+::: {.panel-tabset}
+
+## 12.1 3D Coodinate Systems
+
+## 12.2 Vectors
+
+## 12.3 The Dot Product
+
+## 12.4 The Cross Product
+
+## 12.5 Vector Applications
+
+## 12.6 Cylinders and Quadric Surfaces
+
+:::
+
+<!-- 
 - 13 Vector-Valued Functions and Motion in Space
     - 13.1 Curves in Space and Their Tangents
     - 13.2 Parametric Curves from Velocity/Acceleration/Project Motion
@@ -59,27 +314,9 @@ OpenStax Textbook
     - 16.6 Flux Surface Integrals
     - 16.7 Stokes' Theorem
     - 16.8 Divergence Theorem
+-->
 
 
-[Textbook](https://openstax.org/details/books/calculus-volume-3)
+<!-- [Textbook](https://openstax.org/details/books/calculus-volume-3) -->
 
 <!-- <iframe scr=https://openstax.org/details/books/calculus-volume-3 width="100%" height=400></iframe> -->
-
-
-
-## 11.1
-
-Question 1: 
-
-- $t$ represents time. The *third* variable (think 3-D)
-- Solve for $t$ using either the $x$ or the $y$ equations given. Then pug in $t$ to the other equation to find the graph. 
-- That equation we solved for $t$ comes in later when we tell which way the graph goes (left-to-right or right-to-left)
-
-
-Question 2: 
-
-- Something like $\array{x=2\cos{2t}\\y=2\sin{2t}}$ is a basic formula for a circle
-- To graph this in Desmos, put it like this: $\left(2\cos\left(2t\right),\ 2\sin\left(2t\right)\right)$
-    - Remember to put the parameter bounds
-- This equation will be of use at some time, I think: $\frac{(x-h)^{2}}{a^{2}} + \frac{(y-2)^{2}}{b^2} = 1$. If $a$ and $b$ are the same, its a circle, if not, its an elipses. 
-- This is an interesting thing! $x$'s and $y$'s. Pay attention to them. Plug them in and check uper carefully. 

@@ -1,0 +1,73 @@
+---
+title: Homework 1.3
+format: html
+---
+
+Assigned Problems:  3, 5, 8, 9, 12, 13, 17, 19, 23, 24, 25
+
+Optional Problems: 7, 15, 32
+
+## Exercises 
+
+In Exercises 3 and 4, display the following vectors using arrows
+on an xy-graph: u, v, -v, -2v, u + v, u - v, and u - 2v. Notice
+that u - v is the vertex of a parallelogram whose other vertices are
+u, 0, and -v. 
+
+
+
+### Q3 
+
+
+
+### Q5 
+
+
+
+### Q7: Optional
+
+
+
+### Q8
+
+
+
+### Q9
+
+
+
+### Q12
+
+
+
+### Q13
+
+
+
+### Q15: Optional
+
+
+
+### Q17
+
+
+
+### Q19
+
+
+
+### Q23
+
+
+
+### Q24
+
+
+
+### Q25
+
+
+
+### Q32: Optional
+
+

@@ -222,5 +222,44 @@
   },
   "other_subjects/Adv_Writing_in_Pro_Contexts/digital_interview.qmd": {
     "digital_interview.html": "6a0f79f1"
+  },
+  "Math/Linear_Algebra/hw_1.2.qmd": {
+    "hw_1.2.html": "8d0ca790"
+  },
+  "Data Science/observable_tests.qmd": {
+    "observable_tests.html": "e56bea5f"
+  },
+  "other_subjects/Adv_Writing_in_Pro_Contexts/NoRedInk.qmd": {
+    "NoRedInk.html": "aeeb09da"
+  },
+  "Math/Linear_Algebra/1.3.qmd": {
+    "1.3.html": "88a3c1d2"
+  },
+  "Math/Linear_Algebra/1.4.qmd": {
+    "1.4.html": "41451d3d"
+  },
+  "Math/Linear_Algebra/1.1.qmd": {
+    "1.1.html": "4873a3c1"
+  },
+  "Math/Linear_Algebra/1.2.qmd": {
+    "1.2.html": "8cde8731"
+  },
+  "Math/Linear_Algebra/hw_1.1.qmd": {
+    "hw_1.1.html": "1341e188"
+  },
+  "Math/Linear_Algebra/hw1.1.qmd": {
+    "hw1.1.html": "fb2a9084"
+  },
+  "Math/Linear_Algebra/hw1.2.qmd": {
+    "hw1.2.html": "63a4cd85"
+  },
+  "Math/Linear_Algebra/hw1.3.qmd": {
+    "hw1.3.html": "638c503b"
+  },
+  "Math/Linear_Algebra/hw1.4.qmd": {
+    "hw1.4.html": "921c4fa0"
+  },
+  "Math/OpenStax_Calculus_Books.qmd": {
+    "OpenStax_Calculus_Books.html": "c6a90754"
   }
 }
