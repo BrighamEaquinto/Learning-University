@@ -18,7 +18,7 @@ OpenStax Textbook
 
 -->
 
-- This may be better refered to as *multidimensional calculus*
+- This may be better refered to as *multidimensional* calculus
 - three dimentional 
 - two inputs, one output
 - two inputs, two outputs
@@ -219,7 +219,39 @@ From Khan Academy:
 - With surfaces being such a thing, I can see how integrals will be used to find the AUC. 
 - contour plots (where we find contour lines) take three dimentional plots and allow us to visualize them in two dimentional plots
     - They can sometimes mark where z is equal to 0
-- 
+- **Vector** definition from Despicable Me: 
+    - "A quantity represented by an arrow with both direction and magnitude"
+- **Vector** definition from ChatGPT: 
+    - a mathematical object that has both magnitude (size) and direction
+    - Common notation for vector is a letter with an arrow above it like $\vec{u}$  
+    - They can also be used to represent geometric shapes, such as points and lines, in a mathematical form.
+- A donut shape is known as a torus in mathematics
+- 3D vectors are a thing *insert mind-blown emoji here*
+- Are vectors $\left[ \matrix{y \\ x \\ z} \right]$ or $\left[ \matrix{x \\ y \\ z} \right]$ 
+- Why would we go beyond the third dimention? I'm thinking in terms of Saunders linear regression and we represent them as on/off switches, right?
+- Are multivariable functions and parametric functions the same?
+- Multiple outputs $\sim$  "vector-valued functions"
+- **Former (less correct) Way of thinking**: Functions take in a number and spit out a number
+- **Current (more comprehensive) way of thinking**: In multivariable calculus, functions can take in any *thing* and spit out any *thing*. That thing can be a list of numbers (meaning a vector?? `c()`)
+
+
+<center> <h3> <b> Example of different types of functions </b> </h3> </center> 
+
+| | Single-number input | Multiple-number inputs | Visualization Method | 
+| :- | :- | :- | :-: |
+|<b>Single-number output</b>| $f(x)=x^{2}$ | $f(x, y) = x^{2} + y^{3}$ | Number line |
+|<b>Multiple-number output</b>| $f(t)=(\cos{t}, \sin{t})$ | $f(u, v) = (u^{2}-v, v^{2}+u)$ | 2-D XY plane |
+|<b>Three Dimentional</b> |  |  | 3-D XYZ Plane |
+
+- A multivariable function is just a function whose input and/or output is made up of multiple numbers. 
+- In contrast, a function with single-number inputs and  single-number outputs is called a single-variable function
+- $\left[ \matrix{2 \\ 5} \right] \text{ is the same as } 2\hat{\textbf{j}} + 5\hat{\textbf{j}}$
+- Vectors are more so arrows rather than lines
+- Functions whose output is a vector are called **vector-valued functions**
+- Functions with a single number as their output are called either **scalar-valued** or **real-valued**
+- thanks to that chart I just saw about time and location, I now see y+ as north, y- as south, x+ as east, and x- as west, and now I understand why z+ is elevation upwards and z- is elevation downwards. 
+- **Derivatives** are the study of the rate of change of a function as you tweak its input
+- **Integrals** are the study of how to add together infinitely many infinitesimal quantities that make up a function's output
 
 
 ## Tangents and Areas
@@ -234,6 +266,8 @@ Differentiation Refresher:
 
 ## Length of a Parametrically Defined Curve
 
+- I think this is a bogus way of finding the length, similar to using n rectangles to find the area under the curve 
+- 
 
 
 ## Length of a Curve $y=f(x)$
@@ -246,16 +280,54 @@ Differentiation Refresher:
 
 ## Areas of Surfaces of Revolution
 
+Finding the AUC of 3D surfaces?
 
 
 
-# 11.3 
+# 11.3 Polar Coordinates
+
+## Definition of Polar Coordinates 
+## Polar Equations and Graphs
+
+Polar coordinates are often represented by the ordered pair $(r, \theta)$, where $r$ is the distance from the origin to the point, and θ is the angle measured in radians, counterclockwise from the positive x-axis.
+
+## Relating Polar and Cartesian Coordinates
 
 # 11.4 
 
 # 11.5 
 
-# 11.6 
+# 11.6 Conic Sections
+
+## Parabolas
+
+- textbook
+- openstaxs
+- chatgpt
+- khan academy
+- josh tutor
+
+- Email INL
+- Insurance and car
+- Josh tutor
+
+
+
+## Solution
+
+
+
+
+## Ellipses
+
+
+
+
+## Hyperbola
+
+
+
+
 
 :::
 

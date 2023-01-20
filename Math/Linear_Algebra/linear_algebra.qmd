@@ -87,19 +87,20 @@ eval: false
 
 
 
-# 1.8
+# 1.8 Introduction to Linear Transformations
 
-<center>
-## Section 1.8 Introduction to Linear Transformations
-</center>
+{{< include 1.8.qmd >}}
+
+:::{.callout-note collapse="true"}
+# HW 1.8
+{{< include hw1.8.qmd >}}
+:::
 
 
 
 # 1.9
 
-<center>
-## Section 1.9 The Matrix of a Linear Transformation
-</center>
+<center> ## Section 1.9 The Matrix of a Linear Transformation </center>
 
 
 

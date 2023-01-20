@@ -261,5 +261,14 @@
   },
   "Math/OpenStax_Calculus_Books.qmd": {
     "OpenStax_Calculus_Books.html": "c6a90754"
+  },
+  "Math/Linear_Algebra/hw1.8.qmd": {
+    "hw1.8.html": "e0be9992"
+  },
+  "Data Science/Deep Learning by Francois Chollet/textbook.qmd": {
+    "textbook.html": "e3ff99c3"
+  },
+  "Math/Linear_Algebra/1.8.qmd": {
+    "1.8.html": "74a5d99a"
   }
 }

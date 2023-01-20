@@ -1,0 +1,77 @@
+---
+title: 1.8 Introduction to Linear Transformations
+format: html
+---
+
+<center>
+
+## Section 1.8 Introduction to Linear Transformations
+
+</center>
+
+## Notes from Sorcerer Josh
+
+Domain of $T$
+: ($\mathbb{R}^{n}$); All real numbers that make the equation possible
+
+Codomain of $T$
+: ($\mathbb{R}^{m}$); (of a transformation $T$: $\mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$): The set $\mathbb{R}^{n}$ that contains the range $T$. In general if $T$ maps a vector space $V$ into a vector space $W$, then $W$ is called the codomain of $T$.
+
+- $\mathbb{R}^{n}$ refers to the number of rows, not the number of dimensions
+- $\mathbb{R}^{n}$ means all real numbers defined by $n$ amount of rows
+- $A$ = Matrix
+- $\vec{x}$ = Vector
+- $A\vec{x}=\vec{b}$
+- $\mathbb{R}^{n}$ is the domain
+- $\mathbb{R}^{m}$ is the codomain
+- Multiplication rule is if the innerds are the same, the result is outers for the dimensions
+- $x^{2}$ is not linear...
+
+
+## Study Notes
+
+- $\left[ \matrix{\hat{i} & \hat{j}} \right] = \left[ \matrix{3 & 2 \\ -2 & 1} \right] \text{ when } \hat{i} = \left[\matrix{3 \\ -2}\right] \text{ and } \hat{j} = \left[\matrix{2 \\ 1}\right]$
+- $\hat{i}$ is the symbol used to represent a unit vector pointing along the x-axis. I can be used to represent any other vector by scaling and adding. 
+- $\hat{j}$ is the symbol used to represent a unit vector pointing along the y-axis. I can be used to represent any other vector by scaling and adding. 
+- $\left[ \matrix{ \color{ForestGreen}{a} & \color{Orange}{b} \\ \color{ForestGreen}{c} & \color{Orange}{d} } \right] \left[ \matrix{x \\ y} \right] = x \left[ \matrix{ \color{ForestGreen}{a} \\ \color{ForestGreen}{c} } \right] + y \left[ \matrix{ \color{Orange}{b} \\ \color{Orange}{d} } \right] = \left[ \matrix{\color{ForestGreen}{a}x + \color{Orange}{b}y \\ \color{Orange}{c}x + dy} \right]$
+
+
+## Class Notes
+
+- Functions, transoformation, mapping == same
+- $T:\mathbb{R}^{2} \rightarrow \mathbb{R}^{3}$
+    - t is transformation (Functions, transoformation, mapping)
+    - R^2 set of domain (inputs)
+    - R^3 set of codomain (outputs)
+- codomain contains the set of range values (but there are other things included too)
+- **Types of Transformations**:
+    - Range of T is always a subset of the codomain (T is the 'rule' of assigning something in the domain into the codomain)
+    - $T(\overbrace{ x_{1}, x_{2} }^{\text{inputs} } ) = (x_{1} + x_{2}, x_{2} + 3, x_{1} - 2)$
+        - $T: \mathbb{R}^{2} \rightarrow \mathbb{R}^{3}$
+        - Find a vector in the domain whose *image* is the zero vector?
+            - The zero vector is not in the range of $T$, but it is in the codomain. 
+            - This is a **transformation** from $\mathbb{R}^{2}$ to $\mathbb{R}^{3}$}, not a matrix transformation
+    - Matrix transformation: 
+        - Given $A$ and $m \times n$ matrix, define $T: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ as $T(\vec{x}) = A\vec{x}$
+        - If $T$ is defined this way, we say $T$ is a **matrix transformation**
+    - Linear Transformation: 
+        - $T(x_{1}, x_{2}) = (x_{1}+x_{2}, x_{1}-x_{2}, 2x_{1})$)
+            - $T: \mathbb{R}^{2} \rightarrow \mathbb{R}^{3}$
+            - $\left[ \matrix{x_{1} \\ x_{2}} \right] \rightarrow \left[ \matrix{x_{1} + x_{2} \\ x_{1} + x_{2} \\ 2x_{1}} \right] = \left[ \matrix{ x_{1} \\ x_{1} \\ 2x_{1} } \right] + \left[ \matrix{ x_{2} \\ -x_{2} \\ 0} \right] = x_{1} \left[ \matrix{1 \\ 1 \\ 2} \right] + x_{2} \left[ \matrix{1 \\ -1 \\ 0} \right]$
+        - It's a matrix times vector x
+- **Linearity (What is means to be linear)**:
+    - a transformation from $\overbrace{\text{r^n to r^m}}^{T: \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}}$ is linear if for all $\hat{u}$, $\hat{v}$ is in $\mathbb{R}^{n} and $c$ in $\mathbb{R}$ 
+        - $T(\hat{u} + \hat{v}) = T(\hat{u}) + T(\hat{v})$
+        - $T(c\hat{u}) = cT(\hat{u})$
+- Every matrix transformation is a linear transformation
+    - One is stronger than the other
+    - Let $T$ be a linear transformation from $\mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ so there is a matrix A ($m \times n$) such that $T(\vec{x}) = A\vec{x}$. Let $\hat{u}$, $\hat{v}$ be vectors in $\mathbb{R}^{n}$ and $c$ be in $\mathbb{R}$ 
+    - (i) 
+    - (ii)
+- Is every linear combination a matrix combination? No. 
+    - $\frac{d}{dx}(f+g) = \frac{d}{dx}(f) + \frac{d}{dx}(g)$
+    - $\frac{d}{dx}(cf) = c\frac{d}{dx}(f)$
+    - If $T$ is a matrix transformation, then the range of $T$ is the span of the columns of the matrix. 
+
+
+This is the last section that will be on our first exam. 

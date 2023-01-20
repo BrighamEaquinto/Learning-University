@@ -33,4 +33,4 @@ BOM.head()
 # BOM.to_csv("Book_of_Mormon.csv")
 
 # %%
-scriptures = pd.read_csv("C:\\Users\\Bethany\\Downloads\\Scriptures.csv")
+scriptures = pd.read_csv("Scriptures.csv")

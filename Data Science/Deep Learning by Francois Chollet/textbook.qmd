@@ -1,0 +1,15 @@
+---
+format: html
+--- 
+
+Libraries: 
+- typical libraries are not used like they were intended
+    - they have onderful resources but the public does not take advantage of them like we could
+    - school libraries are mostly used as quiet work places
+- what about a subscription to O'Reilly? 
+    - that's a vast library that I would pay for 
+
+
+*Programed* (rule based, linear-natural laws discovery, if statements, all controlled environment, "Software Development") vs. *trained* (glorified high-dimensional curve fitting, )
+
+- "... systematically searching for different sets of automatic generated representations of the data and rules based on them, identifying good ones by using as feedback the percentage of digits being correctly classified in some developmental dataset? We would then be doing machine learning. *Learning*, in the context of machine learning describes an automatic search process for data transformations that produce useful representations of data, guided by some feedback signal--representations that are amenable to simpler rules solving the task at hand."
