@@ -79,12 +79,14 @@ eval: false
 </center>
 
 
-# 1.7
+# 1.7 Linear Independence
 
-<center>
-## Section 1.7 Linear Independence
-</center>
+{{< include 1.7.qmd >}}
 
+:::{.callout-note collapse="true"}
+# HW 1.7
+{{< include hw1.7.qmd >}}
+:::
 
 
 # 1.8 Introduction to Linear Transformations

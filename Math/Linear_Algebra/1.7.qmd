@@ -1,0 +1,53 @@
+---
+title: 1.7 Linear Independence
+format: html
+---
+
+<center><h2> Section 1.7 Linear Independence </h2></center>
+
+:::{.callout-tip}
+### Definition
+
+An index set of vectors $\{ v_{1} , \cdots, v_{p} \}$ in $\mathbb{R}^{n}$ is said to be **linearly independent** if the vector equation 
+$$
+x_{1} v_{1} + x_{2} v_{2} + \cdots + x_{p} v_{p} = 0
+$$ 
+has only the trivial solution. The set 
+$$
+\{ v_{1} , \cdots, v_{p} \}
+$$ 
+is said to be **linearly dependent** if there exist weights $c_{1}, \cdots, c_{p},$ not all zero, such that $c_{1} v_{1} + c_{2} v_{2} + \cdots + c_{p} v_{p} = 0$
+:::
+
+**In English**: They are trying to say that there are two ways we can end up getting zero; one where it is **linearly independent** and one where it is **linearly dependent**... so don't mess up. They made the scalers (weights) $x_{1,2,...p}$ and $c_{1,2,...p}$ to emphasize the scalers are different in these scenarios but they *both* render us zero. 
+
+$x$'s and $c$'s are scalers <br>
+$v$'s are vectors
+
+This is also called a <b>linear dependence relation</b> among $v_{1}, \cdots, v_{p}$ when the weights are not all zero. 
+
+
+
+### Linear Independence of Matrix Columns 
+
+
+
+### Sets of One or Two Vectors
+
+
+
+### Sets of Two or More Vectors
+
+
+
+### Theorem 7 
+
+
+
+### Theorem 8 
+
+
+
+### Theorem 9 
+
+

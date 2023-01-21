@@ -8,6 +8,7 @@ website:
   title: "Learning University"
   navbar:
     left:
+
     - text: Calculus 1 
       menu:
         - text: Antiderivative
@@ -24,20 +25,23 @@ website:
           href: Math/Calculus_1/limits.qmd
         - text: Trig
           href: Math/Calculus_1/trig.qmd
+
     - text: Multivariable Calculus 
       menu: 
-        - text: Calculus 1-3
-          href: Math\Multivariable_Calculus\OpenStax_Calculus_Books.qmd
+        # - text: Calculus 1-3
+        #   href: Math\Multivariable_Calculus\OpenStax_Calculus_Books.qmd
         - text: Master Notes
           href: Math/Multivariable_Calculus/Master_Notes_Multivariable_Calculus.qmd
+
     - text: Linear Algebra 
       href: Math\Linear_Algebra\linear_algebra.qmd
+
     - text: Data Science
       menu: 
         - text: DAX 
           href: Data Science/dax/dax.qmd
         - text: RPackages 
-          href: Math/rpackages.qmd
+          href: Data Science/rpackages.qmd
 
 format:
   html:

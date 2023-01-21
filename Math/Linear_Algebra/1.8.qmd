@@ -34,7 +34,7 @@ Codomain of $T$
 - $\hat{i}$ is the symbol used to represent a unit vector pointing along the x-axis. I can be used to represent any other vector by scaling and adding. 
 - $\hat{j}$ is the symbol used to represent a unit vector pointing along the y-axis. I can be used to represent any other vector by scaling and adding. 
 - $\left[ \matrix{ \color{ForestGreen}{a} & \color{Orange}{b} \\ \color{ForestGreen}{c} & \color{Orange}{d} } \right] \left[ \matrix{x \\ y} \right] = x \left[ \matrix{ \color{ForestGreen}{a} \\ \color{ForestGreen}{c} } \right] + y \left[ \matrix{ \color{Orange}{b} \\ \color{Orange}{d} } \right] = \left[ \matrix{\color{ForestGreen}{a}x + \color{Orange}{b}y \\ \color{Orange}{c}x + dy} \right]$
-
+- matrices are transformations of space
 
 ## Class Notes
 

@@ -270,5 +270,11 @@
   },
   "Math/Linear_Algebra/1.8.qmd": {
     "1.8.html": "74a5d99a"
+  },
+  "Math/Linear_Algebra/1.7.qmd": {
+    "1.7.html": "abfe67b9"
+  },
+  "Math/Linear_Algebra/hw1.7.qmd": {
+    "hw1.7.html": "401819d9"
   }
 }
