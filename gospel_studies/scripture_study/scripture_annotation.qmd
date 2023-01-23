@@ -1,0 +1,137 @@
+---
+title: Testing Scripture Annotating
+output: html
+message: false
+warning: false
+echo: false
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+## Old Testament 
+
+## New Testament
+
+```{r}
+#| eval: false
+library(rvest)
+
+# Start by reading a HTML page with read_html():
+starwars <- read_html("https://rvest.tidyverse.org/articles/starwars.html")
+
+# Then find elements that match a css selector or XPath expression
+# using html_elements(). In this example, each <section> corresponds
+# to a different film
+films <- starwars %>% html_elements("section")
+films
+
+# Then use html_element() to extract one element per film. Here
+# we the title is given by the text inside <h2>
+title <- films %>% 
+  html_element("h2") %>% 
+  html_text2()
+title
+
+# Or use html_attr() to get data out of attributes. html_attr() always
+# returns a string so we convert it to an integer using a readr function
+episode <- films %>% 
+  html_element("h2") %>% 
+  html_attr("data-id") %>% 
+  readr::parse_integer()
+episode
+```
+
+```{r}
+#| eval: false
+john1 <- read_html("https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng")
+
+
+standard_work <- john1 |> html_nodes(".bookTitle-XO2nM") |> html_text()
+standard_work
+
+book <- john1 |> html_nodes("#title1 .study-note-ref") |> html_text2()
+book
+
+chapter <- john1 |> html_nodes(".title-number") |> html_text2()
+chapter
+
+verses <- john1 |> html_nodes(".verse") |> html_text()
+verses[[1]]
+
+
+john1 |> html_nodes("p") |> html_text() %>% .[1:10]
+
+
+
+# print(paste0("Standard Work is ", standard_work, ". Book is ", book, ". Chapter is ", chapter, ". Verses are: ", verses[[1]]))
+```
+
+## Book of Mormon
+
+## Doctrine & Covenants
+
+## Pearl of Great Price
+
+
+
+Am I going to use markdown, latex, or HTML?
+
+
+
+https://www.churchofjesuschrist.org/study/scriptures/ot/gen/3
+
+
+
+```{r}
+#| eval: false
+baseURL <- "https://www.churchofjesuschrist.org/study/scriptures/"
+
+standard_work <- list("ot", "nt", "bofm", "dc-testament", "pgp")
+standard_work[1]
+
+book <- ""
+
+chapter <- ""
+```
+
+
+## Example of Making a Data Frame
+
+```{r}
+#| eval: false
+
+data.frame(
+  name = characters %>% html_element("b") %>% html_text2(),
+  species = characters %>% html_element("i") %>% html_text2(),
+  weight = characters %>% html_element(".weight") %>% html_text2()
+)
+```
+
+
+```{r}
+library(scriptuRs)
+lds_scriptures() |> 
+    mutate(
+        locations = NA, 
+        geography = NA,
+        individuals = NA, 
+        groups_of_people = NA, 
+        number_of_references_to_Savior = NA, 
+        references_to_Savior = NA, #dictionary? nested?
+        doctrinal_concepts = NA, 
+        priesthood_lineage_in_play = NA, 
+        speakers = NA, 
+        writers = NA, 
+        Mormon_commentary = NA, 
+        Moroni_commentary = NA, 
+        plates_origin = NA, #what set of plates this came from 
+        whowouldhavehadaccesstothisbookinthepast = NA, #list of individuals/groups of people
+    ) |> 
+    filter(book_title == "John") |> 
+    # select(locations, individuals, verse_title, text) |> 
+    head() |> 
+    knitr::kable()
+```

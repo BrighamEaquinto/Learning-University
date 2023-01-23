@@ -1,0 +1,152 @@
+---
+title: No Red Ink
+output: html 
+toc: true
+---
+
+## W02 Capitalization Quiz
+
+- Capitalize names of places 
+    - Cities, states, countries, and bodies of water have their own names (Paris, Michigan, Japan, Lake Superior). Words that name specific people, places, things, or ideas are capitalized. We call these **proper nouns**
+    - Examples: 
+        - "Alonso saw a boat with apurple sail in the middle of the **P**acific **O**cean." 
+        - "David had a hard time finding **N**ew **Y**ork **C**ity on a map."
+        - "Dave's family will visit **L**ake **M**ichigan this winter."
+    - The words "city", "ocean", "lake", and "sea" are not capitalized on their own because they are general words, not specific names. We call general words **common nouns**. 
+    - Examples: 
+        - Miriam went fishing in a **l**ake during her vacation, but she didn't catch anything. 
+
+    |   | People | Places | Things | Ideas | 
+    | :-: | :-: | :-: | :-: | :-: | 
+    | **Proper nouns** <br> (specific names) | **E**ric | **M**aple **S**treet | **O**reo | **C**histianity | 
+    | **Common nouns** <br> (general words) | **f**riend | **s**treet | **c**ookie | **r**eligion | 
+
+## W03 Commonly Confused Words Practice
+
+### 'It's' vs. 'Its'
+
+- $\colorbox{lightgreen}{It's}$ means "it is."
+- $\colorbox{lightgreen}{Its}$ shows ownership or belongingness
+
+### 'A' vs. 'An'
+
+- $\colorbox{lightblue}{A}$ comes before words that begin with a consonant sound.
+- $\colorbox{lightblue}{An}$ comes before words that begin with a vowel sound.
+
+### 'To' vs. 'Too' vs. 'Two'
+
+- $\colorbox{lightyellow}{To}$ is a preposition that usually expresses motion or direction. 
+- $\colorbox{lightpink}{Too}$ is an adverb that means “in addition,” “in excess,” “more than should be,” or “also.”
+- $\colorbox{lightblue}{Two}$ is the number between one and three.
+
+### 'Know' vs. 'No'
+
+- $\colorbox{lightyellow}{Know}$ means "to understand."
+- $\colorbox{lightblue}{No}$ means the opposite of yes.
+
+### 'A lot' vs. 'Alot'
+
+- $\colorbox{lightyellow}{A lot}$ is two words, not one.
+- So does that mean **alot** isn't a word?
+
+### "Their" vs. "There" vs. 'They\'re'
+
+- $\colorbox{lightyellow}{Their}$ is a possessive pronoun; it shows that something belongs to multiple people.
+- $\colorbox{lightpink}{There}$ refers to a particular place or specific instance.
+- $\colorbox{lightblue}{They’re}$ is a contraction for “they are.” The apostrophe replaces the “a” in “are.”
+- What about **there are**?
+
+<br>
+
+Is there a difference between an apostrophe and a single single quotation mark?<br>
+Is there a difference between when I should use single quotation marks versus double quotation marks??
+
+<br>
+
+### 'Knot' vs. "Not"
+
+- $\colorbox{lightyellow}{Knot}$ refers to a fastening made by tying a piece of string or rope.
+- $\colorbox{lightblue}{Not}$ expresses negation, denial, or refusal.
+
+### 'Who\'s' vs. 'Whose'
+
+- $\color{#4783B8}{\text{Who's}}$ means “who is.”
+- $\color{#B87C47}{\text{Whose}}$ shows ownership or belongingness.
+
+
+### "Into" vs. "In to"
+
+- $\color{#fee798}{\text{Into}}$ is a preposition that indicates movement toward the inside of a place.
+- $\color{#9bfff4}{\text{In to}}$ is just the combination of the individual words “in” and “to” and does not indicate movement inside.
+
+
+### "Principal" vs. "Principle"
+
+- $\colorbox{#fee798}{Principal}$
+- $\colorbox{#9bfff4}{Principle}$ 
+
+### "Who's" vs. "Whom"
+
+- $\color{#4783B8}{\text{Who's}}$ means “who is.”
+- $\color{#B87C47}{\text{Whom}}$ 
+
+### "Good" vs. "Well"
+
+- $\color{#4783B8}{\text{Good}}$
+- $\color{#B87C47}{\text{Well}}$ 
+
+### "Everyone" vs. "Every one"
+
+- $\color{#4783B8}{\text{Everyone}}$
+- $\color{#B87C47}{\text{Every one}}$ 
+
+### "Anyone" vs. "Any one"
+
+- $\color{#4783B8}{\text{Anyone}}$
+- $\color{#B87C47}{\text{Any one}}$ 
+
+### "Affect" vs. "Effect"
+
+- $\color{#4783B8}{\text{Affect}}$
+- $\color{#B87C47}{\text{Effect}}$ 
+
+### "Accept" vs. "Except"
+
+- $\color{#4783B8}{\text{Accept}}$
+- $\color{#B87C47}{\text{Except}}$ 
+
+### "Farther" vs. "Further"
+
+- $\color{#4783B8}{\text{Farther}}$
+- $\color{#B87C47}{\text{Further}}$ 
+
+### "Anyway" vs. "Anyways"
+
+- $\color{#4783B8}{\text{Anyway}}$
+- $\color{#B87C47}{\text{Anyways}}$ 
+
+### "Altogether" vs. "All together"
+
+- $\color{#4783B8}{\text{Altogether}}$
+- $\color{#B87C47}{\text{All together}}$ 
+
+### "Prejudice" vs. "Prejudiced"
+
+- $\color{#4783B8}{\text{Prejudice}}$
+- $\color{#B87C47}{\text{Prejudiced}}$ 
+
+### "Later" vs. "Latter"
+
+- $\color{#4783B8}{\text{Later}}$
+- $\color{#B87C47}{\text{Latter}}$ 
+
+### "Biased" vs. "Bais"
+
+- $\color{#4783B8}{\text{Biased}}$
+- $\color{#B87C47}{\text{Bais}}$ 
+
+### "Altar" vs. "Alter"
+
+- $\color{#4783B8}{\text{Altar}}$
+- $\color{#B87C47}{\text{Alter}}$ 
+

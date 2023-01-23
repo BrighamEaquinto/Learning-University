@@ -276,5 +276,50 @@
   },
   "Math/Linear_Algebra/hw1.7.qmd": {
     "hw1.7.html": "401819d9"
+  },
+  "Data Science/rvest.qmd": {
+    "rvest.html": "13638ef0"
+  },
+  "gospel_studies/scripture_study/scripture_annotation.qmd": {
+    "scripture_annotation.html": "fdaed8f8"
+  },
+  "data_science/rvest.qmd": {
+    "rvest.html": "65f5355f"
+  },
+  "data_science/Classification Model.qmd": {
+    "Classification Model.html": "e8bcd11b"
+  },
+  "data_science/dax/dax.qmd": {
+    "dax.html": "60837e73"
+  },
+  "data_science/Deep Learning by Francois Chollet/textbook.qmd": {
+    "textbook.html": "7831eef0"
+  },
+  "data_science/ds_tools.qmd": {
+    "ds_tools.html": "a7a972ae"
+  },
+  "data_science/julia/delete_julia.qmd": {
+    "delete_julia.html": "6476f2f2"
+  },
+  "data_science/ml.qmd": {
+    "ml.html": "af40acc9"
+  },
+  "data_science/ml_py.qmd": {
+    "ml_py.html": "b19508ff"
+  },
+  "data_science/notes.md": {
+    "notes.html": "34a491fc"
+  },
+  "data_science/observable_tests.qmd": {
+    "observable_tests.html": "2b5766af"
+  },
+  "data_science/PySpark.qmd": {
+    "PySpark.html": "7e29ae96"
+  },
+  "data_science/py_examples/qmd.qmd": {
+    "qmd.html": "9e678a75"
+  },
+  "data_science/rpackages.qmd": {
+    "rpackages.html": "5b6c9fc0"
   }
 }

@@ -1,0 +1,42 @@
+---
+title: Uhh
+format: html
+eval: true
+---
+
+`rvest::read_html()`
+: Grabs the HTML code from the link | Creates an HTML document from a URL 
+
+`rvest::html_nodes()`
+: Selects parts of a document using CSS selectors
+
+`rvest::html_text()`
+: Extracts text from selected nodes
+
+`rvest::html_text2()`
+: Def 
+
+`rvest::html_element()` 
+: Def
+
+`rvest::html_elements()` 
+: Def
+
+
+
+
+
+
+```{r}
+#| message: false
+#| echo: false
+
+library(tidyverse)
+library(scriptuRs)
+
+lds_scriptures() |> 
+    filter(book_title == "John") |> 
+    select(verse_title, text) |> 
+    head(20) |>  #View()
+    knitr::kable()
+```

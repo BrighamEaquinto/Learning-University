@@ -23,20 +23,11 @@ OpenStax Textbook
 - two inputs, one output
 - two inputs, two outputs
 
-
-## Chapter 11 Parametric Equations and Polar Coordiates
+<center><h2>Chapter 11 Parametric Equations and Polar Coordiates</h2><center>
 
 ::: {.panel-tabset}
-# Contents
 
-- 11.1 Parametric Plane Curves
-- 11.2 Calculus on Parametric Curves
-- 11.3 Polar Coordinates
-- 11.4 Graphing in Polar Coordinates
-- 11.5 Lengths and Areas in Polar Coordinates
-- 11.6 Conic Sections
-
-# 11.1 
+# 11.1 Parametric Plane Curves
 
 ## Parametric Equations
 
@@ -210,7 +201,7 @@ Question 2:
 - This is an interesting thing! $x$'s and $y$'s. Pay attention to them. Plug them in and check uper carefully. 
 :::
 
-# 11.2
+# 11.2 Calculus on Parametric Curves
 
 From Khan Academy: 
 
@@ -293,9 +284,9 @@ Polar coordinates are often represented by the ordered pair $(r, \theta)$, where
 
 ## Relating Polar and Cartesian Coordinates
 
-# 11.4 
+# 11.4 Graphing in Polar Coordinates
 
-# 11.5 
+# 11.5 Lengths and Areas in Polar Coordinates
 
 # 11.6 Conic Sections
 
@@ -335,10 +326,7 @@ Polar coordinates are often represented by the ordered pair $(r, \theta)$, where
 
 
 
-<center>
-
-## Chapter 12 Vectors and the Geometry of Space
-</center>
+<center><h2> Chapter 12 Vectors and the Geometry of Space</h2></center>
 
 
 ::: {.panel-tabset}

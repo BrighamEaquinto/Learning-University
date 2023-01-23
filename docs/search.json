@@ -1,227 +1,276 @@
 [
   {
-    "objectID": "Data Science/Classification Model.html",
-    "href": "Data Science/Classification Model.html",
+    "objectID": "data_science/Classification Model.html",
+    "href": "data_science/Classification Model.html",
     "title": "Classification Model",
     "section": "",
     "text": "Libraries\n\nimport numpy as np\nimport pandas as pd\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn import tree\n\nfrom sklearn.preprocessing import StandardScaler, LabelEncoder\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.pipeline import make_pipeline\n\nfrom sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, classification_report, confusion_matrix\n\nimport seaborn as sns\n\n\n\nData & Preprocessing\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CarPrices.csv\")\n\n# dat = pd.get_dummies(dat)\ndat = pd.factorize(dat.select_dtypes(include='object'))\n\n\ndf1 = dat.filter([\"Type\"], axis = 1)\ndf1['Type_1'] = LabelEncoder().fit_transform(dat['Type'])\n\n\n\nSplitting\n\ny = dat.filter(['Type'], axis = 1)\nX = dat.drop('Type', axis = 1)\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)\n\n\n\nModeling\n\nmodel = tree.DecisionTreeClassifier()\nmodel = model.fit(X_train, y_train)\ny_pred1 = model.predict(X_test)\n\n\nmake_pipeline(StandardScaler(), GaussianNB(priors=None))\n\n\n\nMetrics\n\nr2 = r2_score(y_test, y_pred1).round(3)\nmae = mean_absolute_error(y_test, y_pred1).round(3)\nmse = mean_squared_error(y_test, y_pred1, squared=False).round(3)\nme = mean_squared_error(y_test, y_pred1, squared=True).round(3)\nprint(f'R2 = {r2}\\nMAE = {mae}\\nMSE = {mse}\\nME = {me}')\n\n\n\nFeature Examination\n\nfeatures_importances = (\n    pd.DataFrame({'Columns': np.array(X.columns),\n                  'Features': np.array(model.feature_importances_)})\n    .sort_values(by = 'Features', ascending = False)\n                     )\n# features_importances.to_csv(\"feature_importances.csv\")\n\n\nsns.barplot(y = 'Columns', x = 'Features', data = features_importances.head(10), color = \"lightblue\") \n\n\n\n\nCode Graveyard"
   },
   {
-    "objectID": "Data Science/dax/dax.html",
-    "href": "Data Science/dax/dax.html",
+    "objectID": "data_science/dax/dax.html",
+    "href": "data_science/dax/dax.html",
     "title": "DAX Reference",
     "section": "",
     "text": "CALENDAR(StartDate, EndDate)\n\nDescription: Returns a table with one column of all dates between StartDate and EndDate.\nParameters:\n\nStartDate: The start date in datetime format\nEndDate: The end date in datetime format\n\n\n\n\nExample 1\nDim_DeliveryDate = \nCALENDAR(\n    MIN(Fact_Sales[Delivery Date Key]), \n    MAX(Fact_Sales[Delivery Date Key])\n    )\n\n\n\n\nExample 2\n# Code for another example here\n\n\n\n\nMAX()\nSee CALENDAR() function reference, example 1.\n\n\nMIN()\nSee CALENDAR() function reference, example 1.\n\n\nSUBSTITUTE(text, oldtext, newtext)\n\nDescription: This is similar to regex and Power Query Editor’s “Replace Values”\nParameters:\n\ntext: The text to manipulate. Can be a column.\noldtext: The piece of text to replace.\nnewtext: The text we want to insert. This can just be two quotation marks to do a blank.\n\n\n\n\nExample 1\nRetail Price Clean = \nSUBSTITUTE(\n    Dim_StockItem[Recommended Retail Price], \n    \"? \", \n    \"\"\n    )\n\n\n\n\nCounting Gender\n\n\nExample 1\ncount_female = \nCOUNTROWS(FILTER(Query1, Query1[gender] == \"Female\"))"
   },
   {
-    "objectID": "Data Science/Deep Learning by Francois Chollet/textbook.html",
-    "href": "Data Science/Deep Learning by Francois Chollet/textbook.html",
+    "objectID": "data_science/Deep Learning by Francois Chollet/textbook.html",
+    "href": "data_science/Deep Learning by Francois Chollet/textbook.html",
     "title": "Learning University",
     "section": "",
     "text": "Libraries: - typical libraries are not used like they were intended - they have onderful resources but the public does not take advantage of them like we could - school libraries are mostly used as quiet work places - what about a subscription to O’Reilly? - that’s a vast library that I would pay for\nProgramed (rule based, linear-natural laws discovery, if statements, all controlled environment, “Software Development”) vs. trained (glorified high-dimensional curve fitting, )\n\n“… systematically searching for different sets of automatic generated representations of the data and rules based on them, identifying good ones by using as feedback the percentage of digits being correctly classified in some developmental dataset? We would then be doing machine learning. Learning, in the context of machine learning describes an automatic search process for data transformations that produce useful representations of data, guided by some feedback signal–representations that are amenable to simpler rules solving the task at hand.”"
   },
   {
-    "objectID": "Data Science/ds_tools.html",
-    "href": "Data Science/ds_tools.html",
+    "objectID": "data_science/ds_tools.html",
+    "href": "data_science/ds_tools.html",
     "title": "Data Science Tools",
     "section": "",
     "text": "Click to download"
   },
   {
-    "objectID": "Data Science/ds_tools.html#subjects",
-    "href": "Data Science/ds_tools.html#subjects",
+    "objectID": "data_science/ds_tools.html#subjects",
+    "href": "data_science/ds_tools.html#subjects",
     "title": "Data Science Tools",
     "section": "Subjects",
     "text": "Subjects\nIDE\nWrangling\nVisualization\nML\nDashboard\nReports\nScript\nConsole"
   },
   {
-    "objectID": "Data Science/ds_tools.html#r",
-    "href": "Data Science/ds_tools.html#r",
+    "objectID": "data_science/ds_tools.html#r",
+    "href": "data_science/ds_tools.html#r",
     "title": "Data Science Tools",
     "section": "R",
     "text": "R\nVSCode, RStudio\ndplyr\nggplot2\nTidymodels\nShiny\nRMD, QMD\n.r\nterminal"
   },
   {
-    "objectID": "Data Science/ds_tools.html#python",
-    "href": "Data Science/ds_tools.html#python",
+    "objectID": "data_science/ds_tools.html#python",
+    "href": "data_science/ds_tools.html#python",
     "title": "Data Science Tools",
     "section": "Python",
     "text": "Python\nVSCode, RStudio\npandas\nplotly\nPyTorch, Tensorflow/Keras, Sklearn\nDash\nipynd, QMD\n.py\njupyter interactive console"
   },
   {
-    "objectID": "Data Science/julia/delete_julia.html",
-    "href": "Data Science/julia/delete_julia.html",
+    "objectID": "data_science/julia/delete_julia.html",
+    "href": "data_science/julia/delete_julia.html",
     "title": "Why Julia?",
     "section": "",
     "text": "Christian History\nPoster\nIF presentation\nDesign Thinking assignments\nmath (tutoring?)\nData Science is:"
   },
   {
-    "objectID": "Data Science/julia/delete_julia.html#downloding-r",
-    "href": "Data Science/julia/delete_julia.html#downloding-r",
+    "objectID": "data_science/julia/delete_julia.html#downloding-r",
+    "href": "data_science/julia/delete_julia.html#downloding-r",
     "title": "Why Julia?",
     "section": "Downloding R",
     "text": "Downloding R"
   },
   {
-    "objectID": "Data Science/julia/delete_julia.html#installing-packages",
-    "href": "Data Science/julia/delete_julia.html#installing-packages",
+    "objectID": "data_science/julia/delete_julia.html#installing-packages",
+    "href": "data_science/julia/delete_julia.html#installing-packages",
     "title": "Why Julia?",
     "section": "Installing Packages",
     "text": "Installing Packages"
   },
   {
-    "objectID": "Data Science/julia/delete_julia.html#downloading-python",
-    "href": "Data Science/julia/delete_julia.html#downloading-python",
+    "objectID": "data_science/julia/delete_julia.html#downloading-python",
+    "href": "data_science/julia/delete_julia.html#downloading-python",
     "title": "Why Julia?",
     "section": "Downloading Python",
     "text": "Downloading Python"
   },
   {
-    "objectID": "Data Science/julia/delete_julia.html#installing-python",
-    "href": "Data Science/julia/delete_julia.html#installing-python",
+    "objectID": "data_science/julia/delete_julia.html#installing-python",
+    "href": "data_science/julia/delete_julia.html#installing-python",
     "title": "Why Julia?",
     "section": "Installing Python",
     "text": "Installing Python"
   },
   {
-    "objectID": "Data Science/julia/delete_julia.html#downloading-julia",
-    "href": "Data Science/julia/delete_julia.html#downloading-julia",
+    "objectID": "data_science/julia/delete_julia.html#downloading-julia",
+    "href": "data_science/julia/delete_julia.html#downloading-julia",
     "title": "Why Julia?",
     "section": "Downloading Julia",
     "text": "Downloading Julia"
   },
   {
-    "objectID": "Data Science/julia/delete_julia.html#installing-packages-1",
-    "href": "Data Science/julia/delete_julia.html#installing-packages-1",
+    "objectID": "data_science/julia/delete_julia.html#installing-packages-1",
+    "href": "data_science/julia/delete_julia.html#installing-packages-1",
     "title": "Why Julia?",
     "section": "Installing Packages",
     "text": "Installing Packages"
   },
   {
-    "objectID": "Data Science/ml.html",
-    "href": "Data Science/ml.html",
+    "objectID": "data_science/ml.html",
+    "href": "data_science/ml.html",
     "title": "Learning University",
     "section": "",
     "text": "What I’m learning is that machine learning models are the same underlying method and math, but the way they’re implemented are either through r or python??\nsklearn = tidymodels\npytorch = torch"
   },
   {
-    "objectID": "Data Science/ml.html#explanations",
-    "href": "Data Science/ml.html#explanations",
+    "objectID": "data_science/ml.html#explanations",
+    "href": "data_science/ml.html#explanations",
     "title": "Learning University",
     "section": "Explanations",
     "text": "Explanations\nensamble\n\nRandom Forest Model"
   },
   {
-    "objectID": "Data Science/ml.html#sklearn",
-    "href": "Data Science/ml.html#sklearn",
+    "objectID": "data_science/ml.html#sklearn",
+    "href": "data_science/ml.html#sklearn",
     "title": "Learning University",
     "section": "Sklearn",
     "text": "Sklearn\nCode here\n\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split"
   },
   {
-    "objectID": "Data Science/ml.html#tidymodels",
-    "href": "Data Science/ml.html#tidymodels",
+    "objectID": "data_science/ml.html#tidymodels",
+    "href": "data_science/ml.html#tidymodels",
     "title": "Learning University",
     "section": "Tidymodels",
     "text": "Tidymodels\nCode here\n\nlibrary(tidyverse)\nlibrary(tidymodels)"
   },
   {
-    "objectID": "Data Science/ml.html#data-work",
-    "href": "Data Science/ml.html#data-work",
+    "objectID": "data_science/ml.html#data-work",
+    "href": "data_science/ml.html#data-work",
     "title": "Learning University",
     "section": "Data Work",
     "text": "Data Work\n\nreading in data\ntidying/wrangling\n\n“massaging data”\nscale/normalizing\nunder/oversampling\nimputing\n\nsplitting data"
   },
   {
-    "objectID": "Data Science/ml.html#modeling-p1",
-    "href": "Data Science/ml.html#modeling-p1",
+    "objectID": "data_science/ml.html#modeling-p1",
+    "href": "data_science/ml.html#modeling-p1",
     "title": "Learning University",
     "section": "Modeling P1",
     "text": "Modeling P1\n\ninitialize model\npredictions"
   },
   {
-    "objectID": "Data Science/ml.html#modeling-p2",
-    "href": "Data Science/ml.html#modeling-p2",
+    "objectID": "data_science/ml.html#modeling-p2",
+    "href": "data_science/ml.html#modeling-p2",
     "title": "Learning University",
     "section": "Modeling P2",
     "text": "Modeling P2\n\nhypertune model\n\ngrid search\n\nfeature engineering\n\nstat tools\nencoding"
   },
   {
-    "objectID": "Data Science/ml.html#testing",
-    "href": "Data Science/ml.html#testing",
+    "objectID": "data_science/ml.html#testing",
+    "href": "data_science/ml.html#testing",
     "title": "Learning University",
     "section": "Testing",
     "text": "Testing\n\naccuracy\nrecall & precision\nf1 & roc_auc\nhold out set"
   },
   {
-    "objectID": "Data Science/ml.html#plotting",
-    "href": "Data Science/ml.html#plotting",
+    "objectID": "data_science/ml.html#plotting",
+    "href": "data_science/ml.html#plotting",
     "title": "Learning University",
     "section": "Plotting",
     "text": "Plotting\n\nPairs plot\nconfusion matrix\nauc"
   },
   {
-    "objectID": "Data Science/ml.html#others",
-    "href": "Data Science/ml.html#others",
+    "objectID": "data_science/ml.html#others",
+    "href": "data_science/ml.html#others",
     "title": "Learning University",
     "section": "Others",
     "text": "Others\n\nbalancing data\nscaling data\nother transformers\nmetrics\npreprocessing & normalization\nestimators\nwhat about making a loop/function that goes through all the preprocessors/transformers/scalers/estimators\nmake a general wrangling function to apply to test and hold out data"
   },
   {
-    "objectID": "Data Science/ml_py.html",
-    "href": "Data Science/ml_py.html",
+    "objectID": "data_science/ml_py.html",
+    "href": "data_science/ml_py.html",
     "title": "Regression Model",
     "section": "",
     "text": "Libraries\n\nimport numpy as np\nimport pandas as pd\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn import tree\n\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.pipeline import make_pipeline\n\nfrom sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error\n\nimport seaborn as sns\n\n\n\nData & Preprocessing\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/saundersg/Statistics-Notebook/master/Data/CarPrices.csv\")\n\ndat = pd.get_dummies(dat)\n\n\n\nSplitting\n\ny = dat.filter(['Price'], axis = 1)\nX = dat.drop('Price', axis = 1)\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)\n\n\n\nModeling\n\nmodel = tree.DecisionTreeRegressor().fit(X_train, y_train)\ny_pred1 = model.predict(X_test)\n\n\n\nMetrics\n\nr2 = r2_score(y_test, y_pred1).round(3)\nmse = mean_squared_error(y_test, y_pred1, squared=False).round(3)\n\nprint(f'R2 = {r2}\\nMSE = {mse}')\n\n\n\nFeature Examination\n\nfeatures_importances = (\n    pd.DataFrame({'Columns': np.array(X.columns),\n                  'Features': np.array(model.feature_importances_)})\n    .sort_values(by = 'Features', ascending = False)\n                     )\n# features_importances.to_csv(\"feature_importances.csv\")\n\n\nsns.barplot(y = 'Columns', x = 'Features', data = features_importances.head(10), color = \"lightblue\") \n\n\n\n\nCode Graveyard"
   },
   {
-    "objectID": "Data Science/notes.html",
-    "href": "Data Science/notes.html",
+    "objectID": "data_science/notes.html",
+    "href": "data_science/notes.html",
     "title": "Learning University",
     "section": "",
     "text": "Options:\nCan’t enter or color headers using Markdown, must use CSS instead: <h6 align=\"center\"; style=\"color:#808080\"> Base R </h6>"
   },
   {
-    "objectID": "Data Science/notes.html#ideas",
-    "href": "Data Science/notes.html#ideas",
+    "objectID": "data_science/notes.html#ideas",
+    "href": "data_science/notes.html#ideas",
     "title": "Learning University",
     "section": "Ideas",
     "text": "Ideas\n\nHave a notes to instructors page or part of the repo\nhave a page just for the interface of RStudio\n\nhot keys\nshortcuts\nsuch and such\n\nhave a page for R/Python equivalents\nhave a page for other generally useful things\n\nsetting up R in VSCode: https://github.com/REditorSupport/vscode-R or https://marketplace.visualstudio.com/items?itemName=REditorSupport.r or https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows\n\nhow can I use the wiki tab on the github page? What is the proper usage of it?\n\nOthers to sprinkle in lessons or have as a stand alone: - commenting code - assignment operator vs equal sign - pipe operator %>% - filtering operators (==, %in%, |, &, !=) - c(vector) and list conversation - syntax\nUse this for advance select statements: https://dplyr.tidyverse.org/reference/select.html\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\ndat <- read_csv(“https://covid.ourworldindata.org/data/owid-covid-data.csv”) # object_size(dat) view(dat)\ndat <- read_csv(“datasets/insurance.csv”)\nn_distinct(dat\\(region) count(dat\\)region) table(dat$region)\nR Scipts vs. RMDs The data science process (flow chart of start to finish and where most time is spent)\nLesson 1: Introduction - Installation - the RStudio interface - an introduction to Data Science. Give the full scope of data science. - what about sending the newbies to this page during future weeks? Put a video there? Lesson 2: Readr - reading in data from CSV - reading in data from URL - writing data to CSV Lesson 3: Wrangling Data - need another day on this Lesson 4: Grouping, Summarising, Arranging Lesson 5: Graphing 1/2 Lesson 6: Graphing 2/2\nmean(iris)\nOutput messages like in lm()’s “using base 10 in log()” if no other given. Have my prefered syntax of powers using {} syntax. If indeterminant form, prompt the user, what would you like to do from here. Can we get it to show work? Out put in latex?!?!"
   },
   {
-    "objectID": "Data Science/observable_tests.html",
-    "href": "Data Science/observable_tests.html",
+    "objectID": "data_science/observable_tests.html",
+    "href": "data_science/observable_tests.html",
     "title": "Test Plots",
     "section": "",
     "text": "# libraries\nimport altair as alt\nimport pandas as pd\n\n# data import\ndat = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n# set altair defaults\nalt.data_transformers.disable_max_rows()\n#alt.renderers.enable('mimetype')\njohn = dat.query(\"name == 'John'\").filter(['year', 'UT'], axis = 1)\nojs_define(data = john)\n\n\n\n\n\nalt.Chart(john)\\\n    .encode(\n        alt.Y(\"UT\"),\n        alt.X(\"year\", axis = alt.Axis(format = \"d\")))\\\n    .mark_line()\n\nC:\\Users\\Bethany\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\altair\\utils\\core.py:317: FutureWarning:\n\niteritems is deprecated and will be removed in a future version. Use .items instead.\n\n\n\n\n\n\n\n\n\ntranspose(data)\n\n\n\n\n\n\n\nlinechart = Plot.plot({\n  y: {\n    grid: true\n  },\n  x: {\n    tickFormat: d3.format(\".0f\")\n  },\n  width: 900,\n  marks: [\n    Plot.line(transpose(data), {x: \"year\", y: \"UT\"})\n  ]\n})\n\n\n\n\n\n\n\ndotplot2 = Plot.plot({\n  x: {label: \"Names of John in Utah\"},\n  width: 900,\n  marks: [\n    Plot.rectY(transpose(data), Plot.binX({y: \"count\"}, {x: \"UT\"}))\n  ]})\n\n\n\n\n\nFigure 1: Penguin body mass by sex and species\n\n\n\n\nd3Fetch = require('d3-fetch')\n\nresponse = fetch(\"https://raw.githubusercontent.com/byuidatascience/data4births/master/data-raw/basketball_births/basketball_births.json\")\n\ndat2 = response.json()\n\ndat3 = d3Fetch.json(\"https://raw.githubusercontent.com/byuidatascience/data4births/master/data-raw/basketball_births/basketball_births.json\")\n\n\ndotplot = Plot.rectY(dat2, Plot.binX({y: \"count\"}, {x: \"yrs\"})).plot()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndat2"
   },
   {
-    "objectID": "Data Science/py_examples/qmd.html",
-    "href": "Data Science/py_examples/qmd.html",
+    "objectID": "data_science/py_examples/qmd.html",
+    "href": "data_science/py_examples/qmd.html",
     "title": "Untitled",
     "section": "",
     "text": "import pandas as pd\n\ndat = pd.read_csv(\"https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/insurance.csv\")\n\ndat\n\n\n\n\n\n  \n    \n      \n      age\n      sex\n      bmi\n      children\n      smoker\n      region\n      charges\n    \n  \n  \n    \n      0\n      19\n      female\n      27.900\n      0\n      yes\n      southwest\n      16884.92400\n    \n    \n      1\n      18\n      male\n      33.770\n      1\n      no\n      southeast\n      1725.55230\n    \n    \n      2\n      28\n      male\n      33.000\n      3\n      no\n      southeast\n      4449.46200\n    \n    \n      3\n      33\n      male\n      22.705\n      0\n      no\n      northwest\n      21984.47061\n    \n    \n      4\n      32\n      male\n      28.880\n      0\n      no\n      northwest\n      3866.85520\n    \n    \n      ...\n      ...\n      ...\n      ...\n      ...\n      ...\n      ...\n      ...\n    \n    \n      1333\n      50\n      male\n      30.970\n      3\n      no\n      northwest\n      10600.54830\n    \n    \n      1334\n      18\n      female\n      31.920\n      0\n      no\n      northeast\n      2205.98080\n    \n    \n      1335\n      18\n      female\n      36.850\n      0\n      no\n      southeast\n      1629.83350\n    \n    \n      1336\n      21\n      female\n      25.800\n      0\n      no\n      southwest\n      2007.94500\n    \n    \n      1337\n      61\n      female\n      29.070\n      0\n      yes\n      northwest\n      29141.36030\n    \n  \n\n1338 rows × 7 columns\n\n\n\n\nimport plotly.express as px\n\nfig = px.bar(dat, x = 'sex')\n\n\nfig.show(renderer=\"png\")"
   },
   {
-    "objectID": "Data Science/rpackages.html",
-    "href": "Data Science/rpackages.html",
+    "objectID": "data_science/rpackages.html",
+    "href": "data_science/rpackages.html",
     "title": "Developing R Packages",
     "section": "",
     "text": "create(\"packagename\") and dir(\"packagename\")\nCreating a package can include:\n\nfolders to store data\nuser guides (known as vignettes)\ntests\ndemos\nand others\n\nDESCRIPTION and NAMESPACE compulsory directories\n\nlibrary(devtools)\n\n\ncreate('datasummary')\ndir('datasummary') #to see what is in the package\n\n\n“DESCRIPTION”, “NAMESPACE”, “R”, “datasummary.Rproj”\n\nAll the code for your package goes in the R directory\nstop() prints an error message\nOptional Directories:\n\ndata\n\nstored as an rdata file\nuse_data() function\n\nvignettes\n\nuser guide\ndemos\ndo not include spaces in the vignette name\n\ntests\ncompiled code\ntranslations\n\nNo subdirectories allowed\n\n\n\nuse_data() inserts data into the package/library? Creates the data directory too\n\n\n# Add the weather data\nuse_data(weather, pkg = \"datasummary\", overwrite = TRUE)\n\n\nsame for other use_*() functions\n\n\n\n\nI think this is for adding functions to the package/library\n\ndata_summary <- function(x, na.rm = TRUE){\n  num_data <- select_if(x, .predicate = is.numeric) \n  map_df(num_data, .f = numeric_summary, na.rm = TRUE, .id = \"ID\")\n}\n\n# Write the function to the R directory\ndump(\"data_summary\", file = \"datasummary/R/data_summary.R\")"
   },
   {
-    "objectID": "Data Science/rpackages.html#chapter-2-documenting-packages",
-    "href": "Data Science/rpackages.html#chapter-2-documenting-packages",
+    "objectID": "data_science/rpackages.html#chapter-2-documenting-packages",
+    "href": "data_science/rpackages.html#chapter-2-documenting-packages",
     "title": "Developing R Packages",
     "section": "Chapter 2: Documenting Packages",
     "text": "Chapter 2: Documenting Packages\n\nIntroduction to roxygen2\n\nhelp files (documentation)\nallows adding a header to a function containing all the important information about the function\nroxygen headers start with #'\nFirst assumed headers: title, description, details section\n\nit is necessary that you seperate each one of them by a new line\n\nOther headers need special tags like @param, @author…\n\n@param Example:\n\n#' @param data A data frame or matrix from which rows are to be samples\n#' @param size Numeric. Number of rows to return\n\nI think this is the latex-esk style of documentation\n\n@import package_name to use functions from them rather than library(package_name) like in scripts\n\ndoing this makes the namespace and functions available to your package\nyou can also use the importfrom tag to import just a single package\n\n\n\n\nA simple function header: Code Practice\nThe roxygen headers are included in the same script as the function code. You use roxygen comments #’ to identify a line as part of the roxygen header. You can include regular R comments in the header if you wish, using the usual comment character, #.\nThe first three lines of the header have special meaning and you don’t need to use tags to identify them. The first three lines are:\n\ntitle\ndescription\ndetails\n\nSince you don’t mention any tags to identify the first three lines, it is necessary that you seperate each one of them by a new line. For example:\n\n#' Title goes here\n#'\n#' Description goes here\n#'\n#' Details go here\n\n\n# Add a title and description\n#' Numeric Summaries\n#'\n#' Summarises numeric data and returns a data frame containing the minimum value, median, standard deviation, and maximum value\n\nnumeric_summary <- function(x, na.rm){\n\n    if(!is.numeric(x)){\n        stop(\"Data must be numeric\")\n    }\n    \n    data.frame( min = min(x, na.rm = na.rm),\n                median = median(x, na.rm = na.rm),\n                sd = sd(x, na.rm = na.rm),\n                max = max(x, na.rm = na.rm))\n}\n\n\n\nDocumenting function arguments: Code Practice\nOne of the most important aspects of a function to document are the arguments.\nWith roxygen you do this with the @param tag. You follow the tag with the argument name and then any details the user needs to know.\nIf there is a lot of information that you need to provide about an argument you might want to consider putting this in the details section instead.\nNormally you must document every argument of your function, but in this exercise you’ll just document the first argument and come back to the second one later!\n\n#' Numeric Summaries\n#'\n#' Summarises numeric data and returns a data frame containing the minimum value, median, standard deviation, and maximum value.\n#'\n# Add appropriate tag and details to document the first argument\n#' @param x a numeric vector containing the values to summarize.\n\n\nnumeric_summary <- function(x, na.rm){\n\n    if(!is.numeric(x)){\n        stop(\"data must be numeric\")\n    }\n    \n    data.frame( min = min(x, na.rm = na.rm),\n                median = median(x, na.rm = na.rm),\n                sd = sd(x, na.rm = na.rm),\n                max = max(x, na.rm = na.rm))\n}\n\n\n\nImporting other packages: Code Practice\nIf you wish to use functions from other packages, you should import them in your roxygen header. You can use @import to import an entire package, or @importFrom to import a single function. To show you how @importFrom works, we have imported the gather() function from the tidyr package for you (although it’s not needed in this case).\n\n#' Summary of Numeric Columns\n#'\n#' Generate specific summaries of numeric columns in a data frame\n#' \n#' @param x A data frame. Non-numeric columns will be removed\n#' @param na.rm A logical indicating whether missing values should be removed\n#' @import purrr\n#' @import dplyr\n#' @importFrom tidyr gather\ndata_summary <- function(x, na.rm = TRUE){\n  \n  num_data <- select_if(x, .predicate = is.numeric) \n  \n  map_df(num_data, .f = numeric_summary, na.rm = na.rm, .id = \"ID\")\n  \n}\n\n\nso I think these tags are both for reading documentation output and the words actually have actions behind them like @import telling us what other packages is being imported and the actually making it imported too\n\n\n\nHow to export functions?: Video\n\n\n\n\n\n\nTranscript\n\n\n\n\n\n\nHow to export functions? Exported functions are ones which are visible to the end user.\nExported functions That means that when they load your package, they’ll be able to use these functions. Non-exported functions are those which you don’t want to be visible to the end user. So you might have things like utility functions that are called by the other functions in your package, but you don’t actually want people using them directly. You document your exported functions using roxygen headers, and then when you build your package, your exported functions are automatically listed in the NAMESPACE file. Next, you’ll be taking a look at examples of exported and non-exported functions.\nExported and non-exported functions This is a function from the simutils package called sum_na. It counts all the missing values in a vector and returns the total. As you can see, there is no “@export” tag, so this function is not exported. As you’ll see in a moment, it is a utility function to be used by other functions from this package, but not one that you want the end user to access. Now let’s take a look at another function from simutils.\nExported and non-exported functions This function is also from simutils and is called na_counter. It takes a DataFrame or matrix as input, verifies the object input type, and then applies the sum_na function you saw in the last slide to each column of the input DataFrame or matrix. This function does contain an “@export” tag and so is exported and available to the end user. Now let’s take a look at how you can refer to these functions.\nExported and non-exported functions Imagine the simutils package has been built and you’ve now installed it. You can use the library() function to load the package, and then, call na_counter() or any other exported function from the package NAMESPACE to use them. But, what if you try to use the sum_na() function in the same way?\nCalling non-exported functions This time, you get an error, telling you that sum_na() could not be found. This happens because only the exported functions from the simutils package are loaded. So how do you access the sum_na() function then?\nCalling non-exported functions If you want to refer to non-exported functions, you must type the name of a package, then three colons, and then the function name, like in the example here. This calls the function directly, instead of searching for it in the NAMESPACE. OK, so that was an introduction to exported and non-exported functions, and how to call them. Now let’s take a look at how you use the roxygen header to specify if a function should be exported.\nExporting functions with roxygen headers When you use the “@export” tag, this indicates that the function should be exported. You can see that this function has been exported - so the end user of the package will be able to make use of it. If you don’t want to export a function, just don’t include the tag at all in your roxygen header.\nLet’s practice! Now let’s take a look at how exporting functions applies to your dataSummary package!\n\n\n\n\n\nExported functions are ones which are visible to the end user\nthe opposite are utility functions (things that happen in the background of exported functions)\nthis example’s tags are in this order: param, import, return, export, examples\nIf you want to refer to non-exported functions use the ::: call\n\nExample: packagename:::non_exported_function()\n\n\n\n\nExport best practice: Quiz\n\nutility functions (non-exported functions) are low-level functions\nuser functions (exported functions) are high-level functions\n\n\n\nExporting functions: Code Practice\n\n\n\n\n\n\nExercise\n\n\n\nAlthough the NAMESPACE file is used to identify functions that are exported you use roxygen tags to create this file. This makes it really easy to see, right next to the function, if your users will be able to work with it or not.\nWe mark a function for exporting using the tag @export.\n\n\n\n\n\n\n\n\nCode\n\n\n\n\n#' Summary of Numeric Columns\n#'\n#' Generate specific summaries of numeric columns in a data frame\n#' \n#' @param x A data frame. Non-numeric columns will be removed\n#' @param na.rm A logical indicating whether missing values should be removed\n#' @import dplyr\n#' @import purrr\n#' @importFrom tidyr gather\n#' @export\ndata_summary <- function(x, na.rm = TRUE){\n  \n  num_data <- select_if(x, .predicate = is.numeric) \n  \n  map_df(num_data, .f = numeric_summary, na.rm = na.rm, .id = \"ID\")\n  \n}\n\n\n\n\n\nDocumenting other elements: Video\n\n\\dont_run{} for the @examples tag section\n\\code{} for the @return tag section\nThis function’s tags are: param, param, author, import, return, export, examples\nOther tags include: seealso, notes\n\n\n\n\n\n\n\nTranscript\n\n\n\n\n\n\nDocumenting other elements\nDocumenting examples You can include “@examples” in your function documentation to demonstrate how to use it. You should provide at least one example for any function that is exported, and for any functions that have complicated arguments. Examples should ideally be easily reproducible and should not cause an error. If you are going to publish your package to CRAN then there are recommendations of what is considered a reasonable time for your examples to run in, so make sure to check what these are at the time of submission before you do submit. This is how you might include an example of how to run a function in a roxygen header. The examples tag goes next to code examples of running the function.\nNon-running examples Your examples are automatically run during the package checking stage, which we’ll be talking about later. In certain circumstances, you might want to include examples of how to run a function without these examples actually being run. For instance, if your function relies on the user providing an API key or being connected to a database. You can use the “” run markup tag to include an example which will not be run during the checking stage.\nDocumenting function return values You can use the “@return” tag to document the output of the function. This is where you can tell users what they can expect to get from the function, whether that’s data, a graphic or any other output. In the example here, after the “@return” tag, we’ve included a short sentence describing the return object. The use of the “” markup tag here affects the formatting of the word ‘size’ to indicate to the end user that we’re referring to one of the parameters.\nAdditional documentation There are a number of other things you might choose to document. You can use the “@author” tag to tell the end user who wrote the function like we’ve done here. There’re other tags you might also want to use, for example, you can use the “@seealso” tag to include a link to other functions that are in some way closely related to your function. And you might want to use the “@notes” tag to add any other notes relating to the function, for instance, if it’s experimental or likely to change.\nLet’s practice! Now let’s try some examples.\n\n\n\n\n\n\nAdding examples: Code Practice\n\n\n\n\n\n\nExercise\n\n\n\n\n\nExamples are the way that your end users will learn how to work with your code. You should provide at least one example for any function that is exported. If there are any tricky arguments to your function you might also want to consider examples for those.\nExamples should ideally be easily reproducible and should not cause an error. If you are going to publish your package to CRAN then examples should also run in a reasonable time, CRAN sets this to around 15 minutes but it’s worth double checking the recommendations at the time of submission.\nYou add examples using the @examples tag. Examples will typically span multiple lines. This is fine as roxygen will assume that everything is part of the examples until it finds another tag.\n\n\n\n\n\n\n\n\n\nCode\n\n\n\n\n\n\n#' Data Summary for Numeric Columns\n#'\n#' Custom summaries of numeric data in a provided data frame\n#'\n#' @param x A data.frame containing at least one numeric column\n#' @param na.rm A logical indicating whether missing values should be removed\n#' @import dplyr\n#' @import purrr\n#' @importFrom tidyr gather\n#' @export\n#' @examples \n#' data_summary(iris)\n#' data_summary(airquality, na.rm = FALSE)\n\ndata_summary <- function(x, na.rm = TRUE){\n  \n  num_data <- select_if(x, .predicate = is.numeric) \n  \n  map_df(num_data, .f = numeric_summary, na.rm = na.rm, .id = \"ID\")\n  \n}\n\n\n\n\n\n\nDocumenting function return values: Code Practice\n\nI’m not sure if\n\n\n\n\n\n\n\nExercise\n\n\n\n\n\nYou document the return value of a function using the tag @return. This is where you can tell users what they can expect to get from the function, be that data, a graphic or any other output.\nWhen you write documentation you may want to format the text to look like code, link to other functions or, particularly for return objects, format as a bulleted list. You can do this using special formatting:\n\nFor code you use \\code{text to format}\nTo link to other functions you use \\link[packageName]{functionName}, although note the package name is only required if the function is not in your package\nTo include an unordered list you use \\itemize{}. Inside the brackets you mark new items with\nfollowed by the item text.\n\n\n\n\n\n\n\n\n\n\nCode\n\n\n\n\n\n\n#' Data Summary for Numeric Columns\n#'\n#' Custom summaries of numeric data in a provided data frame\n#'\n#' @param x A data.frame containing at least one numeric column\n#' @param na.rm A logical indicating whether missing values should be removed\n#' @import dplyr\n#' @import purrr\n#' @importFrom tidyr gather\n#' @export\n#' @examples\n#' data_summary(iris)\n#' data_summary(airquality, na.rm = FALSE)\n#'\n## Update the details for the return value\n#' @return \n#' This function returns a \\code{data.frame} including columns: \n#' \\itemize{\n#'  \\item ID\n#'  \\item min\n#'  \\item median\n#'  \\item sd\n#'  \\item max\n#' }\n#'\n#' @export\ndata_summary <- function(x, na.rm = TRUE){\n  \n  num_data <- select_if(x, .predicate = is.numeric) \n  \n  map_df(num_data, .f = numeric_summary, na.rm = na.rm, .id = \"ID\")\n  \n}\n\n\n\n\n\n\nAdditional documentation: Code Practice\n\n\n\n\n\n\nExercise\n\n\n\nBeyond the functions arguments and return values there are many additional items that can be provided in function help files. From who wrote that function to other functions that you might be interested in using. We will also see later how we can identify dependencies using the roxygen header.\nOther tags that we can use include:\n\n@author to identify who wrote the function.\n@seealso to list other functions that may be of interest to users.\n@notes to add any other notes relating to the function (e.g. if its experimental, likely to change etc.)\n\n\n\n\n\n\n\n\n\nCode\n\n\n\n\n#' Summary of Numeric Columns\n#' Generate specific summaries of numeric columns in a data frame\n#'\n#' @param x A data frame. Non-numeric columns will be removed\n#' @param na.rm A logical indicating whether missing values should be removed\n#' @import dplyr\n#' @import purrr\n#' @importFrom tidyr gather\n#' @export\n#' @examples\n#' data_summary(iris)\n#' data_summary(airquality, na.rm = FALSE)\n#' \n#' @return This function returns a \\code{data.frame} including columns: \n#' \\itemize{\n#'  \\item ID\n#'  \\item min\n#'  \\item median\n#'  \\item sd\n#'  \\item max\n#' }\n#'\n## Add in the author of the `data_summary()` function\n#' @author \n#' My Name <myemail@example.com>\n## List the `summary()` function (from the `base` package)\n#' @seealso\n#' \\link[base]{summary}\n\ndata_summary <- function(x, na.rm = TRUE){\n  \n  num_data <- select_if(x, .predicate = is.numeric) \n  \n  map_df(num_data, .f = numeric_summary, na.rm = na.rm, .id = \"ID\")\n  \n}\n\n\n\n\n\nMinimum level of documentation: Quiz\n\nWhen producing documentation for a function, they say the function title and documentation of all function arguments are required but documentation of the return value, although it ca be useful to the user\n\n\n\nDocumenting a package: Video\n\nWhereas before we were documenting functions, now we’re on package\nWhat are the similarities and differences of devtools and ryxogen?\n\n\n\n\n\n\n\nTranscript\n\n\n\n\n\n\nDocumenting a package You’ve just learned how to document functions using roxygen headers. Now you’re going to take a look at how you can document other components of your package.\nPackage level documentation You can also generate the documentation for the package itself using roxygen2. For package documentation, you need to include the tags “@docType” and “@name”. The header itself needs to be followed by the package keyword because all roxygen headers need to be followed by some form of R code. Whilst this header can go in any file, a good practice is to create a separate R script which takes the package name that contains this header. This is how this might look in the simutils package. You’d save it in a file called “simutils(dot)R” in the R directory.\nMinimum level of documentation In the previous section of the course, you learned numerous aspects of a function that can be documented, but what is the absolute minimum level of documentation for a function? As a minimum, documentation for each function in your package should include the function title, the function description, the names and descriptions for all of the arguments, and if necessary, an export tag. The other components of documentation aren’t necessarily needed, but you should include them if you think they’re going to be useful to the end user of your package.\nDocumenting data objects Many packages include data that are used in examples or for reference in functions within the package. Data that you want any user of the package to see can be included in the data directory. The data needs to be appropriately compressed and this, as well as the package structure, will be handled for you by the “use_data()” function in devtools. Here’s an example of how you’d take a DataFrame in your current environment, in this case, a DataFrame called “sim_dat”, and then compress it and put the compressed file in the data directory, all with just a single function call.\nDocumenting data objects As with any object that is visible to the end user you need to provide some corresponding documentation for your datasets. You can also do this using roxygen2 but using alternative tags format and source to describe the format of the data and the original source - where you got it from. Here’s an example of how to document the “sim_dat” dataset to be included in the simutils package.\nCreating man files Once you have created function headers and the package help file you can create the “(dot)Rd” files for the package, which go in the man directory, using the document function in devtools. The primary argument to this function is the file path to the top level of the package. This will perform the task of creating or updating all of the “(dot)Rd” files as well as the NAMESPACE file.\nLet’s practice! OK, so now it’s your turn to document your package!\n\n\n\n\n\n\nAdding package documentation: Code Practice\n\n\n\n\n\n\n\n\n\nExercise\n\n\n\nIn addition to the individual functions you can also document the whole package.\nWhen you document a package you can use all of the same tags as for functions but the problem that you have is that there is no R code to document. Instead you put the keyword “_PACKAGE” underneath your package header.\nYou should also use the @docType and @name tags to indicate that this is package level documentation, and specify your package name.\nYou should then save the package documentation in the R directory in a file ending with .R with the same name as the package.\n\n\n\n\n\n\n\n\nCode\n\n\n\n\n#' datasummary: Custom Data Summaries\n#'\n#' Easily generate custom data frame summaries\n#'\n#' @docType package\n#' @name datasummary\n\"_PACKAGE\"\n\n\n\n\n\nDocumenting data objects: Code Exercise\n\n\n\n\n\n\n\n\n\nExercise\n\n\n\nIf you include a data set in your package you must also provide documentation for it. As with package level documentation, you should include a title and description.\nWith a data set, once again, there is no function object to document. You instead give the name of the dataset as a character string, for instance “airquality”. Additionally there are two tags that you need to use:\n\n@format to describe the format of the data. This is often used with the describe format.\n@source to identify where the data came from. You should then save the package documentation in the R directory with a suitable name (in the above case, either airquality.R or data.R).\n\nThe weather dataset is available in your workspace. Run print(weather) to view it.\n\n\n\n\n\n\n\n\nCode\n\n\n\n\n#' Random Weather Data\n#'\n#' A dataset containing randomly generated weather data.\n#'\n#' @format A data frame of 7 rows and 3 columns\n#' \\describe{\n#'  \\item{Day}{Numeric values giving day of the week, 1 = Monday, 7 = Sunday}\n#'  \\item{Temp}{}\n#'  \\item{Weather}{}\n#' }\n#' @source Randomly generated data \n\"weather\"\n\n\n\n\n\nCreating man files: Code Practice\n\ndocument() builds all documentation for a package\nit seems like all the devtools packages take their arguments in quotation marks.\nhelp() is the devtools version of ? and ??\n\n\n\n\n\n\n\nExercise\n\n\n\nOnce you’ve created your documentation using roxygen headers, you need to build your documentation. You can use the document() function from the devtools package to generate your documentation, supplying the path to the package as the first argument. The generated documentation will appear in the man directory. Once you’ve documented your package, you can view the help files just like you can with any of your existing packages.\n\n\n\n\n\n\n\n\nCode\n\n\n\n\n# Generate package documentation\ndocument(\"datasummary\")\n\n# Examine the contents of the man directory\ndir(\"datasummary/man\")\n\n# View the documentation for the data_summary function\nhelp(\"data_summary\")\n\n# View the documentation for the weather dataset\nhelp(\"weather\")"
   },
   {
-    "objectID": "Data Science/rpackages.html#chapter-3-checking-and-building-r-packages",
-    "href": "Data Science/rpackages.html#chapter-3-checking-and-building-r-packages",
+    "objectID": "data_science/rpackages.html#chapter-3-checking-and-building-r-packages",
+    "href": "data_science/rpackages.html#chapter-3-checking-and-building-r-packages",
     "title": "Developing R Packages",
     "section": "Chapter 3: Checking and Building R Packages",
     "text": "Chapter 3: Checking and Building R Packages\n\nWhy check an R package?\n\nChecking a package (package(\".\")) makes sure vignettes can be built, unit tests in the package pass, and all function arguments have been documented.\n\n\n\n\n\n\n\nTranscript\n\n\n\n\n\n\nWhy check an R package? You have now done everything that you need to do, as a minimum, to turn your directory structure into a package that you can share with other people. Hopefully, you have done everything exactly as you should have done but sometimes we miss things, put information in the wrong place or forget to include something really important like documentation. So before you build the package it’s good practice to check it.\nWhat should you check? There is a very long list of checks that should be performed regardless of how you are sharing your code, and in fact, must be performed for submission to CRAN. You can think of this as a basic quality check to make sure that you haven’t forgotten to add documentation for a function and that you have listed all of the dependencies correctly. But you should note that these checks will not check that your code does what you think it is doing. That’s for you to do and unit testing that you will see later can help you out here. If you have included tests, it will ensure that they all pass and if you have included a vignette it will ensure that it can be built. In total there are over 50 checks that need to be performed.\nRunning a check The good news is that you don’t have to do this manually. There is a system level tool that is provided with R that runs all of these checks and to make it even easier, devtools includes a check function that accesses this tool for you. By default, this function will even re-run the document function for you, just in case you forgot after making changes. It will also by default run with the same settings used by CRAN. Whilst you can turn this off you might as well leave it set as it does mean that your package is CRAN compatible should you decide to share it that way. There are a number of other options that you can set and checks that you can turn off but most of the time you will simply run with the defaults.\nErrors, warnings, and notes Once all of the checks have run the output will give you a summary of each of the checks and the status of that check. All being well everything will simply say OK. At some point though you will get an error, warning or note as the result of a check. An error is something that you must fix. It means there is a problem with your package that will cause problems for the end user. A warning is less problematic but you should still try fixing them. They typically highlight something that means it’s likely that the package can be used without issue but may cause a problem. This could relate to dependencies, documentation or elements of the code. Notes are the least problematic. Whilst you don’t have to fix all notes, especially if you are not submitting to CRAN, it is still recommended that you do try. Some notes, such as an unconventional license file, can’t be solved. This is fine, even if submitting to CRAN, but you will be expected to explain why you should be allowed this exception.\nLet’s practice! Let’s practice this by checking the package that you have been creating and trying to resolve some common check issues.\n\n\n\n\n\n\nRunning a check: Quiz\n\n\nErrors, warnings and notes\n\n\n\n\n\n\nTranscript\n\n\n\n\n\n\nErrors, warnings and notes With over 50 checks to be performed, there are a large number of possible errors, warnings and notes that could be returned. The good news is that if you have used devtools, it’s likely that you will only encounter a small number of the most common issues.\nPackage dependencies Some of the most common check issues relate to package dependencies. When you run your check, all of the dependencies of your package must be available. If they are not then the checks can’t be run and you will get an error. In the case of building a package using continuous integration, if you include a package that is not available on the system you are building on, you will also get an error.\nDocumentation You will often find that you see issues in your check relating to documentation, even if you are using roxygen as we saw in the last chapter. Common issues here relate to undocumented function arguments. If you have added an argument to a function or changed its name and not remembered to add the new argument to the function header, then you will see a check issue. The check will also let you know if you have forgotten to document a function entirely.\nDocumentation Another common documentation issue relates to the examples. As we said in the last chapter, your examples must run. Any example that fails for any reason will cause a check error. The most common cause of this is making changes to the function itself but not updating the example. If you want to include an example that deliberately fails then you need to use the “” functionality. The “runExample()” function can be helpful for checking just the examples in your help files, rather than waiting to run the whole check to find out if there is a problem.\nPDF documentation When it comes to the PDF documentation, problems here relate to Latex. The first thing to make sure is that you have Latex installed and that R can find it.\nTests You haven’t seen unit tests yet but once you have included them they all need to pass for your check to pass. You will see more on this later so there is no need to worry about it right now.\nLet’s practice! Time to put this into practice."
+  },
+  {
+    "objectID": "data_science/rvest.html",
+    "href": "data_science/rvest.html",
+    "title": "Uhh",
+    "section": "",
+    "text": "rvest::read_html()\n\nGrabs the HTML code from the link | Creates an HTML document from a URL\n\nrvest::html_nodes()\n\nSelects parts of a document using CSS selectors\n\nrvest::html_text()\n\nExtracts text from selected nodes\n\nrvest::html_text2()\n\nDef\n\nrvest::html_element()\n\nDef\n\nrvest::html_elements()\n\nDef\n\n\n\n\n\n\n\n\n\n\n\nverse_title\ntext\n\n\n\n\nJohn 1:1\nIN the beginning was the Word, and the Word was with God, and the Word was God.\n\n\nJohn 1:2\nThe same was in the beginning with God.\n\n\nJohn 1:3\nAll things were made by him; and without him was not any thing made that was made.\n\n\nJohn 1:4\nIn him was life; and the life was the light of men.\n\n\nJohn 1:5\nAnd the light shineth in darkness; and the darkness comprehended it not.\n\n\nJohn 1:6\nThere was a man sent from God, whose name was John.\n\n\nJohn 1:7\nThe same came for a witness, to bear witness of the Light, that all men through him might believe.\n\n\nJohn 1:8\nHe was not that Light, but was sent to bear witness of that Light.\n\n\nJohn 1:9\nThat was the true Light, which lighteth every man that cometh into the world.\n\n\nJohn 1:10\nHe was in the world, and the world was made by him, and the world knew him not.\n\n\nJohn 1:11\nHe came unto his own, and his own received him not.\n\n\nJohn 1:12\nBut as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:\n\n\nJohn 1:13\nWhich were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.\n\n\nJohn 1:14\nAnd the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth.\n\n\nJohn 1:15\nJohn bare witness of him, and cried, saying, This was he of whom I spake, He that cometh after me is preferred before me: for he was before me.\n\n\nJohn 1:16\nAnd of his fulness have all we received, and grace for grace.\n\n\nJohn 1:17\nFor the law was given by Moses, but grace and truth came by Jesus Christ.\n\n\nJohn 1:18\nNo man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared him.\n\n\nJohn 1:19\nAnd this is the record of John, when the Jews sent priests and Levites from Jerusalem to ask him, Who art thou?\n\n\nJohn 1:20\nAnd he confessed, and denied not; but confessed, I am not the Christ."
+  },
+  {
+    "objectID": "gospel_studies/scripture_study/scripture_annotation.html#old-testament",
+    "href": "gospel_studies/scripture_study/scripture_annotation.html#old-testament",
+    "title": "Testing Scripture Annotating",
+    "section": "Old Testament",
+    "text": "Old Testament"
+  },
+  {
+    "objectID": "gospel_studies/scripture_study/scripture_annotation.html#new-testament",
+    "href": "gospel_studies/scripture_study/scripture_annotation.html#new-testament",
+    "title": "Testing Scripture Annotating",
+    "section": "New Testament",
+    "text": "New Testament"
+  },
+  {
+    "objectID": "gospel_studies/scripture_study/scripture_annotation.html#book-of-mormon",
+    "href": "gospel_studies/scripture_study/scripture_annotation.html#book-of-mormon",
+    "title": "Testing Scripture Annotating",
+    "section": "Book of Mormon",
+    "text": "Book of Mormon"
+  },
+  {
+    "objectID": "gospel_studies/scripture_study/scripture_annotation.html#doctrine-covenants",
+    "href": "gospel_studies/scripture_study/scripture_annotation.html#doctrine-covenants",
+    "title": "Testing Scripture Annotating",
+    "section": "Doctrine & Covenants",
+    "text": "Doctrine & Covenants"
+  },
+  {
+    "objectID": "gospel_studies/scripture_study/scripture_annotation.html#pearl-of-great-price",
+    "href": "gospel_studies/scripture_study/scripture_annotation.html#pearl-of-great-price",
+    "title": "Testing Scripture Annotating",
+    "section": "Pearl of Great Price",
+    "text": "Pearl of Great Price\nAm I going to use markdown, latex, or HTML?\nhttps://www.churchofjesuschrist.org/study/scriptures/ot/gen/3"
+  },
+  {
+    "objectID": "gospel_studies/scripture_study/scripture_annotation.html#example-of-making-a-data-frame",
+    "href": "gospel_studies/scripture_study/scripture_annotation.html#example-of-making-a-data-frame",
+    "title": "Testing Scripture Annotating",
+    "section": "Example of Making a Data Frame",
+    "text": "Example of Making a Data Frame\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvolume_id\nbook_id\nchapter_id\nverse_id\nvolume_title\nbook_title\nvolume_long_title\nbook_long_title\nvolume_subtitle\nbook_subtitle\nvolume_short_title\nbook_short_title\nvolume_lds_url\nbook_lds_url\nchapter_number\nverse_number\ntext\nverse_title\nverse_short_title\nlocations\ngeography\nindividuals\ngroups_of_people\nnumber_of_references_to_Savior\nreferences_to_Savior\ndoctrinal_concepts\npriesthood_lineage_in_play\nspeakers\nwriters\nMormon_commentary\nMoroni_commentary\nplates_origin\nwhowouldhavehadaccesstothisbookinthepast\n\n\n\n\n2\n43\n998\n26046\nNew Testament\nJohn\nThe New Testament\nThe Gospel According to St John\nOf our Lord and Saviour Jesus Christ\nNA\nNT\nJohn\nnt\njohn\n1\n1\nIN the beginning was the Word, and the Word was with God, and the Word was God.\nJohn 1:1\nJohn 1:1\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n2\n43\n998\n26047\nNew Testament\nJohn\nThe New Testament\nThe Gospel According to St John\nOf our Lord and Saviour Jesus Christ\nNA\nNT\nJohn\nnt\njohn\n1\n2\nThe same was in the beginning with God.\nJohn 1:2\nJohn 1:2\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n2\n43\n998\n26048\nNew Testament\nJohn\nThe New Testament\nThe Gospel According to St John\nOf our Lord and Saviour Jesus Christ\nNA\nNT\nJohn\nnt\njohn\n1\n3\nAll things were made by him; and without him was not any thing made that was made.\nJohn 1:3\nJohn 1:3\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n2\n43\n998\n26049\nNew Testament\nJohn\nThe New Testament\nThe Gospel According to St John\nOf our Lord and Saviour Jesus Christ\nNA\nNT\nJohn\nnt\njohn\n1\n4\nIn him was life; and the life was the light of men.\nJohn 1:4\nJohn 1:4\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n2\n43\n998\n26050\nNew Testament\nJohn\nThe New Testament\nThe Gospel According to St John\nOf our Lord and Saviour Jesus Christ\nNA\nNT\nJohn\nnt\njohn\n1\n5\nAnd the light shineth in darkness; and the darkness comprehended it not.\nJohn 1:5\nJohn 1:5\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n2\n43\n998\n26051\nNew Testament\nJohn\nThe New Testament\nThe Gospel According to St John\nOf our Lord and Saviour Jesus Christ\nNA\nNT\nJohn\nnt\njohn\n1\n6\nThere was a man sent from God, whose name was John.\nJohn 1:6\nJohn 1:6\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA"
   },
   {
     "objectID": "index.html",
@@ -490,13 +539,6 @@
     "text": "This may be better refered to as multidimensional calculus\nthree dimentional\ntwo inputs, one output\ntwo inputs, two outputs"
   },
   {
-    "objectID": "Math/Multivariable_Calculus/Master_Notes_Multivariable_Calculus.html#chapter-11-parametric-equations-and-polar-coordiates",
-    "href": "Math/Multivariable_Calculus/Master_Notes_Multivariable_Calculus.html#chapter-11-parametric-equations-and-polar-coordiates",
-    "title": "Master Notes",
-    "section": "Chapter 11 Parametric Equations and Polar Coordiates",
-    "text": "Chapter 11 Parametric Equations and Polar Coordiates\n\nContents11.111.211.3 Polar Coordinates11.411.511.6 Conic Sections\n\n\n\n11.1 Parametric Plane Curves\n11.2 Calculus on Parametric Curves\n11.3 Polar Coordinates\n11.4 Graphing in Polar Coordinates\n11.5 Lengths and Areas in Polar Coordinates\n11.6 Conic Sections\n\n\n\n\nParametric Equations\n\nif there is a supposed function that fails the vertical line test, it is possible that it is legit by being defined by two continuous functions.\nwhen this is the case we also are given the path of the particle \\((x, y) = (f(t), g(t))\\) at any time (\\(t\\))\nI assume this is like linear algebra where this is three dimentions, but maybe they’re visualizing it in two dimentions for some reason.\nWe are learning about parametric curves\n\nIf \\(x\\) and \\(y\\) are given as functions \\(x=f(t)\\) and \\(y=g(t)\\) over an interval \\(I\\) of \\(t\\)-values, then the set of points \\((x, y) = (f(t), g(t))\\) defined my these equations is a parametric curve.\nIf \\(I\\) is a closed interval, \\(a \\le t \\le b\\), the point \\((f(a)), g(a))\\) is the \\(\\textbf{initial point}\\)\n\nWhat are the exact definitions of \\(a\\) and \\(b\\)?\n\n\nI learned from MathisPower4u that paranetric equations are when x and y are defined in terms of t. From what I currently understand, this is not quite three dimentional. A new thing that comes into play with parametric equations is that movement of the particle is implied from one way to another. This means lines to make up the plot are correct, but arrows are more accurate for this situation.\nT is what is made to define x and y, and it often meant as time.\nThis can get into physics concepts but this is not what we will focus on. x y charts are often used to show that y is a result of x. In this new concept, again to emphasise, (we’re in multivariable–multidimentional calculus) x and y are results of t.\n\n\n\nRather than using xy tables like this:\nSay our equation given is \\(y = 2x + 1\\)\n\n\n\n\\(X\\)\n\\(Y\\)\n\n\n\n\n-2\n-3\n\n\n-1\n-1\n\n\n0\n1\n\n\n1\n3\n\n\n2\n5\n\n\n\n\n\n\nWe will be using t-input/xy-output charts:\nNow we have \\(x(t) = 3x\\) and \\(y(t) = x + 1\\)\n\n\n\n\\(T\\)\n\\(X\\)\n\\(Y\\)\n\n\n\n\n-2\n-6\n-1\n\n\n-1\n-3\n0\n\n\n0\n0\n1\n\n\n1\n3\n2\n\n\n2\n6\n3\n\n\n\n\n\n\n~~~~~~~ Now entering multidimentional calculus ~~~~~~~\n\nAs Kang said, “We’ve crossed the threshold.”\nI guess normal xy tables/equations/graphs in single variable calculus are refered to as rectangular equations, whereas now we are at parametric equations.  Also, at least in this beginning stages of calculus, we can turn parametric equations into a rectangular equation. This is refered to as eliminating the parameter.  Example:\n\n\n\n\n\n\nConverting Parametric Equations into a Rectangular Equation\n\n\n\nGeneral How-To Steps:\n\nSolve for \\(t\\) in one of the equations\nSubstitute that into the second equation\nSimplify\n\n\nIf the equation involves trigonometric functions, trig identities may be needed.\nThe domain may need to be adjusted upon the original parametric equation\n\nPrompt: Write the parametric equations as a rectangular equation and state the domain, then graph.  \\(x(t)\\): \\(x = 4t + 4\\)  \\(y(t)\\): \\(y = t + 2\\) \nStep 1. Solve for \\(t\\) in one of the equations\n     \\(x = 4t + 4\\) and \\(y = t + 2\\), let’s solve for \\(y\\) for \\(t\\). We get \\(t = y - 2\\).\nStep 2. Now we’ll substitute this into the other equation we have, the \\(x\\) equation.\n     We get \\(x = 4(y-2) + 4\\).\nStep 3. Simplify\n     If we simplify this for \\(y\\), we get our rectangular equation. That is \\(y = \\frac{1}{4}x + 1\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCycloids\nI think this is just a shape or a path\nChatGPT  A cycloid is a specific type of curve that is generated by a point on the circumference of a circle as it rolls along a straight line. The path traced by the point is called the cycloid curve. The shape of the cycloid curve is determined by the radius of the rolling circle and the distance between the point and the center of the circle. The curve is made up of a series of cusps, or “humps”, with the number and size of the cusps depending on the radius of the circle.  In addition, Cycloids have some interesting geometric properties, such as the length of the cycloid is 3 times the diameter of the circle that generates it and the area enclosed by a cycloid is 3 times the area of the rolling circle. Cycloids are also related to other mathematical objects, such as the epicycloid and the hypocycloid, which are generated by a point on the circumference of a circle that rolls along the inside or outside of another circle, respectively.\n\n\nBrachistochrones and Tautochrones\nSummary: Brachistochrones are the shortest path between two points while Tautochrones are the fastest path between two points, both for an object moving under the influence of gravity and both have cycloids as solutions.\nDeets: The Brachistochrone problem and the Tautochrone problem are related mathematical problems that deal with the shortest time or the fastest time taken by an object sliding without friction to travel between two points.\nBrachistochrone is a curve that is the shortest path between two points for an object. It is a path that minimizes the time for an object to travel from one point to another.\nTautochrone is a curve that is the fastest path between two points for an object. It is a path that minimizes the time for an object to travel from one point to another.\n\n\n\n\n\n\n\nHomework\n\n\n\n\n\nQuestion 1:\n\n\\(t\\) represents time. The third variable (think 3-D)\nSolve for \\(t\\) using either the \\(x\\) or the \\(y\\) equations given. Then pug in \\(t\\) to the other equation to find the graph.\nThat equation we solved for \\(t\\) comes in later when we tell which way the graph goes (left-to-right or right-to-left)\n\nQuestion 2:\n\nSomething like \\(\\array{x=2\\cos{2t}\\\\y=2\\sin{2t}}\\) is a basic formula for a circle\nTo graph this in Desmos, put it like this: \\(\\left(2\\cos\\left(2t\\right),\\ 2\\sin\\left(2t\\right)\\right)\\)\n\nRemember to put the parameter bounds\n\nThis equation will be of use at some time, I think: \\(\\frac{(x-h)^{2}}{a^{2}} + \\frac{(y-2)^{2}}{b^2} = 1\\). If \\(a\\) and \\(b\\) are the same, its a circle, if not, its an elipses.\nThis is an interesting thing! \\(x\\)’s and \\(y\\)’s. Pay attention to them. Plug them in and check uper carefully.\n\n\n\n\n\n\n\nFrom Khan Academy:\n\nWith 3D surfaces, ultimately we get surfaces\n\\(z = f(x, y)\\)\nWith surfaces being such a thing, I can see how integrals will be used to find the AUC.\ncontour plots (where we find contour lines) take three dimentional plots and allow us to visualize them in two dimentional plots\n\nThey can sometimes mark where z is equal to 0\n\nVector definition from Despicable Me:\n\n“A quantity represented by an arrow with both direction and magnitude”\n\nVector definition from ChatGPT:\n\na mathematical object that has both magnitude (size) and direction\nCommon notation for vector is a letter with an arrow above it like \\(\\vec{u}\\)\n\nThey can also be used to represent geometric shapes, such as points and lines, in a mathematical form.\n\nA donut shape is known as a torus in mathematics\n3D vectors are a thing insert mind-blown emoji here\nAre vectors \\(\\left[ \\matrix{y \\\\ x \\\\ z} \\right]\\) or \\(\\left[ \\matrix{x \\\\ y \\\\ z} \\right]\\)\nWhy would we go beyond the third dimention? I’m thinking in terms of Saunders linear regression and we represent them as on/off switches, right?\nAre multivariable functions and parametric functions the same?\nMultiple outputs \\(\\sim\\) “vector-valued functions”\nFormer (less correct) Way of thinking: Functions take in a number and spit out a number\nCurrent (more comprehensive) way of thinking: In multivariable calculus, functions can take in any thing and spit out any thing. That thing can be a list of numbers (meaning a vector?? c())\n\n\n\n Example of different types of functions \n\n\n\n\n\n\n\n\n\n\n\n\nSingle-number input\nMultiple-number inputs\nVisualization Method\n\n\n\n\nSingle-number output\n\\(f(x)=x^{2}\\)\n\\(f(x, y) = x^{2} + y^{3}\\)\nNumber line\n\n\nMultiple-number output\n\\(f(t)=(\\cos{t}, \\sin{t})\\)\n\\(f(u, v) = (u^{2}-v, v^{2}+u)\\)\n2-D XY plane\n\n\nThree Dimentional\n\n\n3-D XYZ Plane\n\n\n\n\nA multivariable function is just a function whose input and/or output is made up of multiple numbers.\nIn contrast, a function with single-number inputs and single-number outputs is called a single-variable function\n\\(\\left[ \\matrix{2 \\\\ 5} \\right] \\text{ is the same as } 2\\hat{\\textbf{j}} + 5\\hat{\\textbf{j}}\\)\nVectors are more so arrows rather than lines\nFunctions whose output is a vector are called vector-valued functions\nFunctions with a single number as their output are called either scalar-valued or real-valued\nthanks to that chart I just saw about time and location, I now see y+ as north, y- as south, x+ as east, and x- as west, and now I understand why z+ is elevation upwards and z- is elevation downwards.\nDerivatives are the study of the rate of change of a function as you tweak its input\nIntegrals are the study of how to add together infinitely many infinitesimal quantities that make up a function’s output\n\n\nTangents and Areas\nDifferentiation Refresher:\n\nthe rate of change of a function at a given point\nthe instantaneous rate of change\nthis section is finding derivatives of composite functions (or polar functions?)\n\n\n\nLength of a Parametrically Defined Curve\n\nI think this is a bogus way of finding the length, similar to using n rectangles to find the area under the curve\n\n\n\n\nLength of a Curve \\(y=f(x)\\)\n\n\nThe Arc Length Differential\n\n\nAreas of Surfaces of Revolution\nFinding the AUC of 3D surfaces?\n\n\n\n\nDefinition of Polar Coordinates\n\n\nPolar Equations and Graphs\nPolar coordinates are often represented by the ordered pair \\((r, \\theta)\\), where \\(r\\) is the distance from the origin to the point, and θ is the angle measured in radians, counterclockwise from the positive x-axis.\n\n\nRelating Polar and Cartesian Coordinates\n\n\n\n\n\n\n\n\n\n\nParabolas\n\ntextbook\nopenstaxs\nchatgpt\nkhan academy\njosh tutor\nEmail INL\nInsurance and car\nJosh tutor\n\n\n\nSolution\n\n\nEllipses\n\n\nHyperbola"
-  },
-  {
     "objectID": "Math/Multivariable_Calculus/Master_Notes_Multivariable_Calculus.html#parametric-equations",
     "href": "Math/Multivariable_Calculus/Master_Notes_Multivariable_Calculus.html#parametric-equations",
     "title": "Master Notes",
@@ -602,13 +644,6 @@
     "text": "Hyperbola"
   },
   {
-    "objectID": "Math/Multivariable_Calculus/Master_Notes_Multivariable_Calculus.html#chapter-12-vectors-and-the-geometry-of-space",
-    "href": "Math/Multivariable_Calculus/Master_Notes_Multivariable_Calculus.html#chapter-12-vectors-and-the-geometry-of-space",
-    "title": "Master Notes",
-    "section": "Chapter 12 Vectors and the Geometry of Space",
-    "text": "Chapter 12 Vectors and the Geometry of Space\n\n\n12.1 3D Coodinate Systems12.2 Vectors12.3 The Dot Product12.4 The Cross Product12.5 Vector Applications12.6 Cylinders and Quadric Surfaces"
-  },
-  {
     "objectID": "Math/OpenStax_Calculus_Books.html",
     "href": "Math/OpenStax_Calculus_Books.html",
     "title": "Learning University",
@@ -628,6 +663,20 @@
     "title": "Learning University",
     "section": "",
     "text": "uniquely qualified\nunderstand the comany culture\n\nPrompt: Tell me a little about yourself - 2 years of experience in analytics as: - Data Analyst on campus - TA for 460 Big Data Programming - Volunteer Analytics Teacher - RBDC Consultant - Senior; bachelors of science in Data Science - Passionate about renuable energy & education - Work Experience & Education consists of: - SQL - Query data - R & Python & PowerBI - Machine Learning - Data Wrangling & Visualization - Audience of College Deans, University Vice-Presidents, Institutional Research Team, & School District Superintendent\nINL - impressed with your work and goals\nID 91: KPIs like test scores, attendance, building progress, school libraries, among other things"
+  },
+  {
+    "objectID": "other_subjects/Adv_Writing_in_Pro_Contexts/NoRedInk.html",
+    "href": "other_subjects/Adv_Writing_in_Pro_Contexts/NoRedInk.html",
+    "title": "No Red Ink",
+    "section": "",
+    "text": "Capitalize names of places\n\nCities, states, countries, and bodies of water have their own names (Paris, Michigan, Japan, Lake Superior). Words that name specific people, places, things, or ideas are capitalized. We call these proper nouns\nExamples:\n\n“Alonso saw a boat with apurple sail in the middle of the Pacific Ocean.”\n“David had a hard time finding New York City on a map.”\n“Dave’s family will visit Lake Michigan this winter.”\n\nThe words “city”, “ocean”, “lake”, and “sea” are not capitalized on their own because they are general words, not specific names. We call general words common nouns.\nExamples:\n\nMiriam went fishing in a lake during her vacation, but she didn’t catch anything.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPeople\nPlaces\nThings\nIdeas\n\n\n\n\nProper nouns  (specific names)\nEric\nMaple Street\nOreo\nChistianity\n\n\nCommon nouns  (general words)\nfriend\nstreet\ncookie\nreligion"
+  },
+  {
+    "objectID": "other_subjects/Adv_Writing_in_Pro_Contexts/NoRedInk.html#w03-commonly-confused-words-practice",
+    "href": "other_subjects/Adv_Writing_in_Pro_Contexts/NoRedInk.html#w03-commonly-confused-words-practice",
+    "title": "No Red Ink",
+    "section": "W03 Commonly Confused Words Practice",
+    "text": "W03 Commonly Confused Words Practice\n\n‘It’s’ vs. ‘Its’\n\n\\(\\colorbox{lightgreen}{It's}\\) means “it is.”\n\\(\\colorbox{lightgreen}{Its}\\) shows ownership or belongingness\n\n\n\n‘A’ vs. ‘An’\n\n\\(\\colorbox{lightblue}{A}\\) comes before words that begin with a consonant sound.\n\\(\\colorbox{lightblue}{An}\\) comes before words that begin with a vowel sound.\n\n\n\n‘To’ vs. ‘Too’ vs. ‘Two’\n\n\\(\\colorbox{lightyellow}{To}\\) is a preposition that usually expresses motion or direction.\n\\(\\colorbox{lightpink}{Too}\\) is an adverb that means “in addition,” “in excess,” “more than should be,” or “also.”\n\\(\\colorbox{lightblue}{Two}\\) is the number between one and three.\n\n\n\n‘Know’ vs. ‘No’\n\n\\(\\colorbox{lightyellow}{Know}\\) means “to understand.”\n\\(\\colorbox{lightblue}{No}\\) means the opposite of yes.\n\n\n\n‘A lot’ vs. ‘Alot’\n\n\\(\\colorbox{lightyellow}{A lot}\\) is two words, not one.\nSo does that mean alot isn’t a word?\n\n\n\n“Their” vs. “There” vs. ‘They're’\n\n\\(\\colorbox{lightyellow}{Their}\\) is a possessive pronoun; it shows that something belongs to multiple people.\n\\(\\colorbox{lightpink}{There}\\) refers to a particular place or specific instance.\n\\(\\colorbox{lightblue}{They’re}\\) is a contraction for “they are.” The apostrophe replaces the “a” in “are.”\nWhat about there are?\n\n\nIs there a difference between an apostrophe and a single single quotation mark? Is there a difference between when I should use single quotation marks versus double quotation marks??\n\n\n\n‘Knot’ vs. “Not”\n\n\\(\\colorbox{lightyellow}{Knot}\\) refers to a fastening made by tying a piece of string or rope.\n\\(\\colorbox{lightblue}{Not}\\) expresses negation, denial, or refusal.\n\n\n\n‘Who's’ vs. ‘Whose’\n\n\\(\\color{#4783B8}{\\text{Who's}}\\) means “who is.”\n\\(\\color{#B87C47}{\\text{Whose}}\\) shows ownership or belongingness.\n\n\n\n“Into” vs. “In to”\n\n\\(\\color{#fee798}{\\text{Into}}\\) is a preposition that indicates movement toward the inside of a place.\n\\(\\color{#9bfff4}{\\text{In to}}\\) is just the combination of the individual words “in” and “to” and does not indicate movement inside.\n\n\n\n“Principal” vs. “Principle”\n\n\\(\\colorbox{#fee798}{Principal}\\)\n\\(\\colorbox{#9bfff4}{Principle}\\)\n\n\n\n“Who’s” vs. “Whom”\n\n\\(\\color{#4783B8}{\\text{Who's}}\\) means “who is.”\n\\(\\color{#B87C47}{\\text{Whom}}\\)\n\n\n\n“Good” vs. “Well”\n\n\\(\\color{#4783B8}{\\text{Good}}\\)\n\\(\\color{#B87C47}{\\text{Well}}\\)\n\n\n\n“Everyone” vs. “Every one”\n\n\\(\\color{#4783B8}{\\text{Everyone}}\\)\n\\(\\color{#B87C47}{\\text{Every one}}\\)\n\n\n\n“Anyone” vs. “Any one”\n\n\\(\\color{#4783B8}{\\text{Anyone}}\\)\n\\(\\color{#B87C47}{\\text{Any one}}\\)\n\n\n\n“Affect” vs. “Effect”\n\n\\(\\color{#4783B8}{\\text{Affect}}\\)\n\\(\\color{#B87C47}{\\text{Effect}}\\)\n\n\n\n“Accept” vs. “Except”\n\n\\(\\color{#4783B8}{\\text{Accept}}\\)\n\\(\\color{#B87C47}{\\text{Except}}\\)\n\n\n\n“Farther” vs. “Further”\n\n\\(\\color{#4783B8}{\\text{Farther}}\\)\n\\(\\color{#B87C47}{\\text{Further}}\\)\n\n\n\n“Anyway” vs. “Anyways”\n\n\\(\\color{#4783B8}{\\text{Anyway}}\\)\n\\(\\color{#B87C47}{\\text{Anyways}}\\)\n\n\n\n“Altogether” vs. “All together”\n\n\\(\\color{#4783B8}{\\text{Altogether}}\\)\n\\(\\color{#B87C47}{\\text{All together}}\\)\n\n\n\n“Prejudice” vs. “Prejudiced”\n\n\\(\\color{#4783B8}{\\text{Prejudice}}\\)\n\\(\\color{#B87C47}{\\text{Prejudiced}}\\)\n\n\n\n“Later” vs. “Latter”\n\n\\(\\color{#4783B8}{\\text{Later}}\\)\n\\(\\color{#B87C47}{\\text{Latter}}\\)\n\n\n\n“Biased” vs. “Bais”\n\n\\(\\color{#4783B8}{\\text{Biased}}\\)\n\\(\\color{#B87C47}{\\text{Bais}}\\)\n\n\n\n“Altar” vs. “Alter”\n\n\\(\\color{#4783B8}{\\text{Altar}}\\)\n\\(\\color{#B87C47}{\\text{Alter}}\\)"
   },
   {
     "objectID": "other_subjects/Christan_History/rel_presentation_notes.html",
