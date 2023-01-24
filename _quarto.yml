@@ -43,6 +43,9 @@ website:
         - text: RPackages 
           href: data_science/rpackages.qmd
 
+    - text: Latex 
+      href: other/latex_notes.qmd
+
 format:
   html:
     theme: cosmo

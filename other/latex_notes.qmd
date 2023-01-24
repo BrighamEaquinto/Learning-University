@@ -1,0 +1,25 @@
+---
+title: Latex Notes
+format: html
+---
+
+## For Linear Algebra Problems
+
+```{md}
+<!-- Q1 Solution -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Solution:} 
+$$
+:::
+::: {.column width="80%"}
+$$
+\begin{array}{}
+    x = -8 \\
+    x = 3
+\end{array}
+$$
+:::
+:::
+```
