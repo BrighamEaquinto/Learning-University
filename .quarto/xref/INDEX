@@ -321,5 +321,74 @@
   },
   "data_science/rpackages.qmd": {
     "rpackages.html": "5b6c9fc0"
+  },
+  "Math/Linear_Algebra/1.9.qmd": {
+    "1.9.html": "a1722d62"
+  },
+  "Math/Linear_Algebra/hw1.9.qmd": {
+    "hw1.9.html": "bf7af89d"
+  },
+  "Math/Linear_Algebra/notes1.1.qmd": {
+    "notes1.1.html": "8b75949b"
+  },
+  "Math/Linear_Algebra/notes1.2.qmd": {
+    "notes1.2.html": "37d9819d"
+  },
+  "Math/Linear_Algebra/notes1.3.qmd": {
+    "notes1.3.html": "2d68b1e4"
+  },
+  "Math/Linear_Algebra/notes1.4.qmd": {
+    "notes1.4.html": "c09d2a2f"
+  },
+  "Math/Linear_Algebra/notes1.7.qmd": {
+    "notes1.7.html": "b6aff59d"
+  },
+  "Math/Linear_Algebra/notes1.8.qmd": {
+    "notes1.8.html": "6f04a83a"
+  },
+  "Math/Linear_Algebra/notes1.9.qmd": {
+    "notes1.9.html": "04a40581"
+  },
+  "Math/Linear_Algebra/hw1.5.qmd": {
+    "hw1.5.html": "230dff6c"
+  },
+  "Math/Linear_Algebra/hw1.6.qmd": {
+    "hw1.6.html": "8d771062"
+  },
+  "Math/Linear_Algebra/notes1.5.qmd": {
+    "notes1.5.html": "00fef6fc"
+  },
+  "Math/Linear_Algebra/notes1.6.qmd": {
+    "notes1.6.html": "7b4e2794"
+  },
+  "Math/Linear_Algebra/hw2.1.qmd": {
+    "hw2.1.html": "a79d2020"
+  },
+  "Math/Linear_Algebra/hw2.2.qmd": {
+    "hw2.2.html": "250bff9b"
+  },
+  "Math/Linear_Algebra/hw2.3.qmd": {
+    "hw2.3.html": "5a29a6b2"
+  },
+  "Math/Linear_Algebra/hw2.4.qmd": {
+    "hw2.4.html": "30b4e39c"
+  },
+  "Math/Linear_Algebra/hw2.7.qmd": {
+    "hw2.7.html": "3a45ad9d"
+  },
+  "Math/Linear_Algebra/notes2.1.qmd": {
+    "notes2.1.html": "5d38e7e6"
+  },
+  "Math/Linear_Algebra/notes2.2.qmd": {
+    "notes2.2.html": "a849d53f"
+  },
+  "Math/Linear_Algebra/notes2.3.qmd": {
+    "notes2.3.html": "59d43e79"
+  },
+  "Math/Linear_Algebra/notes2.4.qmd": {
+    "notes2.4.html": "4345a44d"
+  },
+  "Math/Linear_Algebra/notes2.7.qmd": {
+    "notes2.7.html": "4be301ad"
   }
 }

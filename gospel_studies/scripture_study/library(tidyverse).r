@@ -53,3 +53,14 @@ lds_scriptures() |>
     # select(locations, individuals, verse_title, text) |> 
     head() |> 
     knitr::kable()
+
+
+
+# https://jtr13.github.io/cc19/web-scraping-using-rvest.html
+# https://rvest.tidyverse.org/
+# https://rvest.tidyverse.org/reference/index.html
+# https://glue.tidyverse.org/
+# https://cran.r-project.org/web/packages/scriptuRs/scriptuRs.pdf
+# https://github.com/andrewheiss/scriptuRs
+# https://github.com/beandog/lds-scriptures
+# https://scriptures.nephi.org/

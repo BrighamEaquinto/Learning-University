@@ -1,0 +1,4 @@
+---
+title: Homework 2.7
+format: html
+---

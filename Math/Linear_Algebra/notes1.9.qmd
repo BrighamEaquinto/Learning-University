@@ -1,0 +1,60 @@
+---
+title: 1.9 The Matrix of a Linear Transformation 
+format: html
+---
+
+## Class Notes
+
+- What is the definition of *image*? 
+- He talked about operations by *inspection*
+- We're talking about linear transformations
+- Entire (or multiple vectors) as function inputs
+- All matrix transformation are linear, but not all linear transformation is a matrix transformation (something like but from rn to rm it it) (think differentiation and integration)
+- $\left[ \matrix{x_{1} \\ x_{2} \\ x_{3}} \right] = \left[ \matrix{1 \\ 2 \\ 3} \right] = \left[ \matrix{1 \\ 0 \\ 0} \right] + \left[ \matrix{0 \\ 2 \\ 0} \right] + \left[ \matrix{0 \\ 0 \\ 3} \right] \rightarrow 1 \left[ \matrix{1 \\ 0 \\ 0} \right] + 2 \left[ \matrix{0 \\ 1 \\ 0} \right] + 3 \left[ \matrix{0 \\ 0 \\ 1} \right]$
+- Guess vectors are commonly referred to as $\vec{e}_{1}$ and a linear (I think, at least *a*) transformation is written as $T(\vec{e}_{1})$
+    - psych. it means put a 1 in this position ($\vec{e}_{2}$, $\vec{e}_{3}$, $\vec{e}_{4}$...) 
+- 1 to 1 means injective
+- onto $\mathbb{R}^{2}$ means surjective
+- permutation matrix changes the order
+
+## Theorem 10 
+
+
+
+## Geometric Linear Transformations of $\mathbb{R}^{2}$
+
+
+
+## Existence and Uniqueness Questions 
+
+
+
+## Definition 
+
+
+
+## Definition 
+
+
+
+## Theorem 11
+
+
+
+## Theorem 12 
+
+
+
+
+
+# Matrix Operations 
+
+## Sum & Difference 
+
+## "Finding Scalar Multiples of a Matrix"
+
+- 
+
+## Finding the Product of Two Matrices
+
+## 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Learning University - 1.1 Systems of Linear Equations</title>
+<title>Learning University - 1.3 Vector Equations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,69 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -199,11 +136,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-data-science">    
         <li>
-    <a class="dropdown-item" href="../../Data Science/dax/dax.qmd">
+    <a class="dropdown-item" href="../../data_science/dax/dax.html">
  <span class="dropdown-text">DAX</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../Data Science/rpackages.qmd">
+    <a class="dropdown-item" href="../../data_science/rpackages.html">
  <span class="dropdown-text">RPackages</span></a>
   </li>  
     </ul>
@@ -223,9 +160,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section-1.1-systems-of-linear-equations" id="toc-section-1.1-systems-of-linear-equations" class="nav-link active" data-scroll-target="#section-1.1-systems-of-linear-equations">Section 1.1 Systems of Linear Equations</a>
+  <li><a href="#section-1.3-vector-equations" id="toc-section-1.3-vector-equations" class="nav-link active" data-scroll-target="#section-1.3-vector-equations">Section 1.3 Vector Equations</a>
   <ul class="collapse">
-  <li><a href="#solving-outcome-possibiblities" id="toc-solving-outcome-possibiblities" class="nav-link" data-scroll-target="#solving-outcome-possibiblities">Solving Outcome Possibiblities</a></li>
+  <li><a href="#vectors-in-mathbbr2" id="toc-vectors-in-mathbbr2" class="nav-link" data-scroll-target="#vectors-in-mathbbr2">Vectors in <span class="math inline">\(\mathbb{R}^{2}\)</span></a></li>
+  <li><a href="#geometric-descriptions-of-mathbbr2" id="toc-geometric-descriptions-of-mathbbr2" class="nav-link" data-scroll-target="#geometric-descriptions-of-mathbbr2">Geometric Descriptions of <span class="math inline">\(\mathbb{R}^{2}\)</span></a></li>
+  <li><a href="#vectors-in-mathbbr3" id="toc-vectors-in-mathbbr3" class="nav-link" data-scroll-target="#vectors-in-mathbbr3">Vectors in <span class="math inline">\(\mathbb{R}^{3}\)</span></a></li>
+  <li><a href="#vectors-in-mathbbrn" id="toc-vectors-in-mathbbrn" class="nav-link" data-scroll-target="#vectors-in-mathbbrn">Vectors in <span class="math inline">\(\mathbb{R}^{n}\)</span></a></li>
+  <li><a href="#linear-combinations" id="toc-linear-combinations" class="nav-link" data-scroll-target="#linear-combinations">Linear Combinations</a></li>
+  <li><a href="#a-geometric-description-of-span-v-and-span-u-v" id="toc-a-geometric-description-of-span-v-and-span-u-v" class="nav-link" data-scroll-target="#a-geometric-description-of-span-v-and-span-u-v">A Geometric Description of Span <span class="math inline">\({v}\)</span> and Span <span class="math inline">\({u, v}\)</span></a></li>
+  <li><a href="#linear-combinations-in-applications" id="toc-linear-combinations-in-applications" class="nav-link" data-scroll-target="#linear-combinations-in-applications">Linear Combinations in Applications</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -235,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">1.1 Systems of Linear Equations</h1>
+<h1 class="title">1.3 Vector Equations</h1>
 </div>
 
 
@@ -251,150 +194,107 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <center>
-<section id="section-1.1-systems-of-linear-equations" class="level2">
-<h2 class="anchored" data-anchor-id="section-1.1-systems-of-linear-equations">Section 1.1 Systems of Linear Equations</h2>
+<section id="section-1.3-vector-equations" class="level2">
+<h2 class="anchored" data-anchor-id="section-1.3-vector-equations">Section 1.3 Vector Equations</h2>
 </section></center>
-<!-- ### 1/4/23 Week 1 Monday Notes -->
+<section id="vectors-in-mathbbr2" class="level3">
+<h3 class="anchored" data-anchor-id="vectors-in-mathbbr2">Vectors in <span class="math inline">\(\mathbb{R}^{2}\)</span></h3>
 <ul>
-<li><p>Systems of linear equations</p></li>
-<li><p>Is_Linear when Scalar <span class="math inline">\(\times\)</span> variable <span class="math inline">\(=\)</span> variable</p></li>
-<li><p>Linear: <span class="math inline">\(2x_{1}-3x_{2}+5x_{3}=9\)</span></p></li>
-<li><p>Non-Linear: <span class="math inline">\(2\sqrt{x_{1}}+3x_{2}=5\)</span></p></li>
-<li><p>Non-Linear: <span class="math inline">\(x_{1}^{2}+x_{2}^{2}=3\)</span></p></li>
-<li><p>Linear: <span class="math inline">\(ex_{1}+\pi{}x_{2}=\sqrt{2}\)</span></p></li>
-</ul>
-<p>Linear when scalar times variable only. Not variable times variable.</p>
+<li>matrices with only one column is called a <strong>vector</strong>. Examples:
 <ul>
-<li><p>Linear. System of equations:</p>
-<ul>
-<li><span class="math inline">\(x_{1}+x_{2}+x_{3}=1\)</span></li>
-<li><span class="math inline">\(2x_{1}-3x_{2}+2\)</span></li>
+<li><span class="math inline">\(u = \left[ \matrix{3 \\ -1} \right]\)</span></li>
+<li><span class="math inline">\(v = \left[ \matrix{.2 \\ .3} \right]\)</span></li>
+<li><span class="math inline">\(w = \left[ \matrix{w_{2} \\ w_{3}} \right]\)</span> where <span class="math inline">\(w_{2}\)</span> and <span class="math inline">\(w_{3}\)</span> are any real numbers</li>
 </ul></li>
+<li>The set of al vectors wih two entries is denoted by <span class="math inline">\(\mathbb{R}^{2}\)</span> (read as “r-two”).</li>
+<li>Summing vectors is done horizontally (adding row-wise):</li>
 </ul>
-<p>Augmented means it has a solution? An equal sign? an | ?</p>
-<p><br></p>
-<section id="solving-outcome-possibiblities" class="level3">
-<h3 class="anchored" data-anchor-id="solving-outcome-possibiblities">Solving Outcome Possibiblities</h3>
-<p>Options are either: <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, or <span class="math inline">\(\inf{}\)</span></p>
-<p><strong>Existence</strong>: Does there exist a solution?</p>
-<p><strong>Uniqueness</strong>: Is there only one solution?</p>
-<p>Remember those rules we learned in Pre-Algebra? Those are coming into play right now.</p>
-<ul>
-<li><strong>Replacement</strong>: Replace one row by the sum of itself and a multiple of another row
-<ul>
-<li>Example: <span class="math inline">\(R_{2} \rightarrow R_{2}+-2R_{1}\)</span></li>
-</ul></li>
-<li><strong>Interchange</strong>: Interchange two rows</li>
-<li><strong>Scaling</strong>: Multiply all the entries in arow by a nonzero constant
-<ul>
-<li>Example: <span class="math inline">\(R_{2} \rightarrow \frac{-1}{5}R_{2}\)</span></li>
-</ul></li>
-</ul>
-<p><br></p>
-<p>Vocab:</p>
-<ul>
-<li>Reduced Row Echelon Form</li>
-</ul>
-<hr>
-<dl>
-<dt>Echelon Form</dt>
-<dd>
-steplike
-</dd>
-<dt>Reduced Row Echelon Form</dt>
-<dd>
-steplike and only 1’s and 0’s left of the answers
-</dd>
-<dt>Theorem 1: Uniqueness of the Reduced Echelon Form</dt>
-<dd>
-Each matrix is row equivalent to one and only one reduced echelon matrix
-</dd>
-<dt>Pivot Positions</dt>
-<dd>
-in a matrix <em>A</em> is a location in <em>A</em> that corresponds to a leading 1 in the reduced echelon form of <em>A</em>.
-</dd>
-<dt>Pivot Column</dt>
-<dd>
-is a column of <em>A</em> that contains leading 1’s in the reduced echelon form
-</dd>
-<dt>Theorem 2: Existence and Uniqueness Theorem</dt>
-<dd>
-A linear system is consistent if and only if the rightmost column of the augmented matrix is <em>not</em> a pivot column-that is, if and only if an echelon form of the augmented matrix has <em>no</em> row of the form <span class="math inline">\(___stuff here___\)</span>. If a linear system is consistent, then the solution set contains either (i) a unique solution, when there are no free variables, or (ii) infinitely many solutions, when there is at least one free variable.
-</dd>
-</dl>
-<!-- ### 1/6/23 Friday Week 1 -->
-<p><code>~</code> is used to say the rows are equivalent</p>
-<ul>
-<li>Only way it’s inconsistent is if one of the rows is like this <span class="math inline">\(\matrix{0 &amp; 0 &amp; 0 &amp;\bigm| &amp; 3 \\ 0 &amp; 0 &amp; 0 &amp;\bigm| &amp; 4}\)</span></li>
-</ul>
-<p>Look at this matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 &amp; | &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; | &amp; 5 \\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; | &amp; -4 \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; | &amp; -2 \end{bmatrix}\)</span>. I think this is cool.</p>
-<ul>
-<li>Augmented means the right most column is an answer</li>
-<li>Pivots are used to eliminate variables and get 0’s. The left most non zero entry in rref
-<ul>
-<li>if less rows then columns, will there always be a free variable?:</li>
-<li>maximum nuber of pivots is the min of the number of row and columns</li>
-<li>columns without a pivot are free variables</li>
-</ul></li>
-</ul>
-<span class="math display">\[\begin{bmatrix}
-  a &amp; b &amp; 1  &amp;  4 \\
-  c &amp; d &amp; -2 &amp; -3
-\end{bmatrix}\]</span>
 <p><span class="math display">\[
-\left[
-\matrix{
-  1 &amp; 2 &amp; 1 &amp;\bigm| &amp; 4 \\
-  1 &amp; 2 &amp; -2 &amp;\bigm| &amp;-3}
-\right]
+\left[ \matrix{1 \\ 2} \right] + \left[ \matrix{2 \\ 5} \right] = \left[ \matrix{1 + 2 \\ -2 + 5} \right] = \left[ \matrix{3 \\ 3} \right]
+\]</span></p>
+<p>Given a vector u and a real number c, the scalar multiple of u by c is the vector cu obtained by multiplying each entry in u by c.&nbsp;Example: <span class="math display">\[
+\text{if} u = \left[ \matrix{3 \\ -1} \right] \text{and } c = 5, \text{then } cu = 5\left[\matrix{3 \\ -1} \right] = \left[ \matrix{15 \\ -5 } \right]
+\]</span></p>
+</section>
+<section id="geometric-descriptions-of-mathbbr2" class="level3">
+<h3 class="anchored" data-anchor-id="geometric-descriptions-of-mathbbr2">Geometric Descriptions of <span class="math inline">\(\mathbb{R}^{2}\)</span></h3>
+<ul>
+<li>Some graphical depictions I am not 100% confortble with yet</li>
+</ul>
+</section>
+<section id="vectors-in-mathbbr3" class="level3">
+<h3 class="anchored" data-anchor-id="vectors-in-mathbbr3">Vectors in <span class="math inline">\(\mathbb{R}^{3}\)</span></h3>
+<p><span class="math inline">\(\mathbb{R}^{3}\)</span> means <span class="math inline">\(3 \times{} 1\)</span> column matrices with three entries.</p>
+<p><strong>This means 3D coordinate space!</strong></p>
+</section>
+<section id="vectors-in-mathbbrn" class="level3">
+<h3 class="anchored" data-anchor-id="vectors-in-mathbbrn">Vectors in <span class="math inline">\(\mathbb{R}^{n}\)</span></h3>
+<p>I assume this means <em>n-dementional</em> space</p>
+<p>This is the collection of all lists (or ordered n-tuples) of n real numbers</p>
+<p><span class="math inline">\(\mathbb{R}^{n}\)</span> means the vector is <span class="math inline">\(n \times{} 1\)</span></p>
+<blockquote class="blockquote">
+<p>Remember X means rows and Y means column(s)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>row(s) <span class="math inline">\(\times{}\)</span> column(s)</p>
+</blockquote>
+<p><span class="math display">\[
+u = \left[ \matrix{u_{1} \\ u_{2} \\ . \\ . \\ . \\ u_{n}} \right]
+\]</span></p>
+</section>
+<section id="linear-combinations" class="level3">
+<h3 class="anchored" data-anchor-id="linear-combinations">Linear Combinations</h3>
+<ul>
+<li>Vectors are represented as <strong>v</strong> in <span class="math inline">\(\mathbb{R}^{n}\)</span></li>
+<li>Scalers are represented as <span class="math inline">\(c_{1}, c_{2}, ..., c_{p}\)</span>, often called <strong>weights</strong></li>
+<li>putting this together, we get an <strong>linear combination</strong>: <span class="math inline">\(y=c_{1}v_{1} + \dots{} + c_{p}v_{p}\)</span></li>
+<li>Here is an application of the linear combination formula: <span class="math inline">\(\sqrt{3}v_{1} + v_{2} \text{, } \frac{1}{2}v_{1}(=\frac{1}{2}v_{1}+0v_{2}) \text{, and } 0(-0v_{1}+0v_{2})\)</span></li>
+<li>some things I’m unfamiliar with are: parallelogram rule, linear combinations to the fundamental existance question (from 1.1)</li>
+</ul>
+<p>Scalar multiplication and vector addition example using <span class="math inline">\(\textbf{a}_{1} = \left[ \matrix{1\\-2\\-5} \right], \textbf{a}_{2} = \left[\matrix{2\\5\\6} \right], \textbf{b} = \left[ \matrix{7\\4\\-3} \right]\)</span>.</p>
+<p>Our equation is <span class="math inline">\(x_{1}\textbf{a}_{1} + x_{2}\textbf{a}_{2} = \textbf{b}\)</span></p>
+<p>We are going to find out the weights that make this true using #linearalgebra</p>
+<p><span class="math display">\[
+x_{1} \left[ \matrix{1\\-2\\-5} \right] + x_{2}\left[ \matrix{2\\5\\6} \right] = \left[ \matrix{7\\4\\-3} \right]
 \]</span></p>
 <p><span class="math display">\[
-\left[
-\matrix{
-  1 &amp; 2 &amp; 1 &amp; | &amp; 4 \\
-  1 &amp; 2 &amp; -2 &amp; | &amp;-3}
-\right]
+\left[ \matrix{ x_{1} \\ -2x_{1} \\ -5x_{1} } \right] + \left[ \matrix{ 2x_{2} \\ 5x_{2} \\ 6x_{2} } \right] = \left[ \matrix{7 \\ 4 \\ -3} \right]
 \]</span></p>
 <p><span class="math display">\[
-\left[
-\matrix{
-  1 &amp; 2 &amp; 1  |  4 \\
-  1 &amp; 2 &amp; -2  | -3}
-\right]
+\left[ \matrix{ x_{1} + 2x_{2} \\ -2x_{2} + 5x_{2} \\ -5x_{1} + 6x_{2} } \right] = \left[ \matrix{7 \\ 4 \\ -3} \right]
 \]</span></p>
+<p><span class="math display">\[
+\matrix{ x_{1} &amp;+ 2x_{2} &amp;= 7 \\ -2x_{1} &amp;+ 5x_{2} &amp;= 4 \\ -5x_{1} &amp;+ 6x_{2} &amp;= -3}
+\]</span></p>
+<p>Now row reduce until it is fully simplified</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(\sim{}\)</span> means “is similar to” according to LaTex. According to the textbook it means “row equivalence”</p>
+</blockquote>
+<p><span class="math display">\[
+\left[ \matrix{1 &amp; 2 &amp; 7 \\ -2 &amp; 5 &amp; 4 \\ -5 &amp; 6 &amp; -3} \right] \sim{} \left[ \matrix{1 &amp; 2 &amp; 7 \\ 0 &amp; 9 &amp; 18 \\ 0 &amp; 16 &amp; 32 \\} \right] \sim{} \left[ \matrix{1 &amp; 2 &amp; 7 \\ 0 &amp; 1 &amp; 2 \\ 0 &amp; 16 &amp; 32} \right] \sim{} \left[ \matrix{1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 2 \\ 0 &amp; 0 &amp; 0} \right]
+\]</span></p>
+<p>This means <span class="math inline">\(x_{1} = 3\)</span> and <span class="math inline">\(x_{2} = 2\)</span>. Take a look below:</p>
+<p><span class="math display">\[
+3\left[ \matrix{1 \\ -2 \\ -5} \right] + 2\left[ \matrix{2 \\ 5 \\ 6} \right] = \left[ \matrix{7 \\ 4 \\ -3} \right]
+\]</span></p>
+<p>There are a small amount of more things that I’m close to understanding but not quite yet:</p>
 <ul>
-<li>coefficient matrix is just</li>
-<li>pivots are non-zeros</li>
+<li>span</li>
+<li>difference between <span class="math inline">\(c_{p}\)</span> and <span class="math inline">\(v_{p}\)</span></li>
+<li>what does <span class="math inline">\(\textbf{b}\)</span> exactly mean?</li>
 </ul>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> randMatrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>A<span class="op">=</span>sp.Matrix([</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">4</span>],</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>], </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">4</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">2</span>]</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>sp.pprint(A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>⎡1  1   1  4⎤
-⎢           ⎥
-⎢5  1   2  3⎥
-⎢           ⎥
-⎣4  -1  6  2⎦</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>A.rref()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>(Matrix([
- [1, 0, 0, -13/23],
- [0, 1, 0,  76/23],
- [0, 0, 1,  29/23]]),
- (0, 1, 2))</code></pre>
-</div>
-</div>
+</section>
+<section id="a-geometric-description-of-span-v-and-span-u-v" class="level3">
+<h3 class="anchored" data-anchor-id="a-geometric-description-of-span-v-and-span-u-v">A Geometric Description of Span <span class="math inline">\({v}\)</span> and Span <span class="math inline">\({u, v}\)</span></h3>
+<p>I’m having a difficult time understanding the concept of <em>scalar multiples</em></p>
+<ul>
+<li>chatgpt says “In linear algebra, a scalar multiple is a product of a scalar (a real or complex number) and a vector. A scalar multiple of a vector can be thought of as a vector that has been multiplied by a scalar.”</li>
+</ul>
+<p>Span is something like when refering to <span class="math inline">\(\textbf{b}\)</span> (the x value that causes the solution to exist), is it in the values of the vectors given.</p>
+</section>
+<section id="linear-combinations-in-applications" class="level3">
+<h3 class="anchored" data-anchor-id="linear-combinations-in-applications">Linear Combinations in Applications</h3>
+<p>This gives a very simple <span class="math inline">\(x * y = z\)</span> ( number of units times cost per unit = total cost).</p>
 
 
 </section>

@@ -39,9 +39,9 @@ website:
     - text: Data Science
       menu: 
         - text: DAX 
-          href: Data Science/dax/dax.qmd
+          href: data_science/dax/dax.qmd
         - text: RPackages 
-          href: Data Science/rpackages.qmd
+          href: data_science/rpackages.qmd
 
 format:
   html:

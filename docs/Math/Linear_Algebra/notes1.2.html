@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Learning University - 1.7 Linear Independence</title>
+<title>Learning University - 1.2 Row Reduction and Echelon Forms</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -136,11 +136,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-data-science">    
         <li>
-    <a class="dropdown-item" href="../../Data Science/dax/dax.qmd">
+    <a class="dropdown-item" href="../../data_science/dax/dax.html">
  <span class="dropdown-text">DAX</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../Data Science/rpackages.qmd">
+    <a class="dropdown-item" href="../../data_science/rpackages.html">
  <span class="dropdown-text">RPackages</span></a>
   </li>  
     </ul>
@@ -160,12 +160,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#linear-independence-of-matrix-columns" id="toc-linear-independence-of-matrix-columns" class="nav-link active" data-scroll-target="#linear-independence-of-matrix-columns">Linear Independence of Matrix Columns</a></li>
-  <li><a href="#sets-of-one-or-two-vectors" id="toc-sets-of-one-or-two-vectors" class="nav-link" data-scroll-target="#sets-of-one-or-two-vectors">Sets of One or Two Vectors</a></li>
-  <li><a href="#sets-of-two-or-more-vectors" id="toc-sets-of-two-or-more-vectors" class="nav-link" data-scroll-target="#sets-of-two-or-more-vectors">Sets of Two or More Vectors</a></li>
-  <li><a href="#theorem-7" id="toc-theorem-7" class="nav-link" data-scroll-target="#theorem-7">Theorem 7</a></li>
-  <li><a href="#theorem-8" id="toc-theorem-8" class="nav-link" data-scroll-target="#theorem-8">Theorem 8</a></li>
-  <li><a href="#theorem-9" id="toc-theorem-9" class="nav-link" data-scroll-target="#theorem-9">Theorem 9</a></li>
+  <li><a href="#section-1.2-reduced-row-echelon-form" id="toc-section-1.2-reduced-row-echelon-form" class="nav-link active" data-scroll-target="#section-1.2-reduced-row-echelon-form">Section 1.2 Reduced Row Echelon Form</a></li>
   </ul>
 </nav>
     </div>
@@ -174,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">1.7 Linear Independence</h1>
+<h1 class="title">1.2 Row Reduction and Echelon Forms</h1>
 </div>
 
 
@@ -190,50 +185,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <center>
-<h2 class="anchored">
-Section 1.7 Linear Independence
-</h2>
-</center>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Definition
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>An index set of vectors <span class="math inline">\(\{ v_{1} , \cdots, v_{p} \}\)</span> in <span class="math inline">\(\mathbb{R}^{n}\)</span> is said to be <strong>linearly independent</strong> if the vector equation <span class="math display">\[
-x_{1} v_{1} + x_{2} v_{2} + \cdots + x_{p} v_{p} = 0
-\]</span> has only the trivial solution. The set <span class="math display">\[
-\{ v_{1} , \cdots, v_{p} \}
-\]</span> is said to be <strong>linearly dependent</strong> if there exist weights <span class="math inline">\(c_{1}, \cdots, c_{p},\)</span> not all zero, such that <span class="math inline">\(c_{1} v_{1} + c_{2} v_{2} + \cdots + c_{p} v_{p} = 0\)</span></p>
-</div>
-</div>
-<p><strong>In English</strong>: They are trying to say that there are two ways we can end up getting zero; one where it is <strong>linearly independent</strong> and one where it is <strong>linearly dependent</strong>… so don’t mess up. They made the scalers (weights) <span class="math inline">\(x_{1,2,...p}\)</span> and <span class="math inline">\(c_{1,2,...p}\)</span> to emphasize the scalers are different in these scenarios but they <em>both</em> render us zero.</p>
-<p><span class="math inline">\(x\)</span>’s and <span class="math inline">\(c\)</span>’s are scalers <br> <span class="math inline">\(v\)</span>’s are vectors</p>
-<p>This is also called a <b>linear dependence relation</b> among <span class="math inline">\(v_{1}, \cdots, v_{p}\)</span> when the weights are not all zero.</p>
-<section id="linear-independence-of-matrix-columns" class="level3">
-<h3 class="anchored" data-anchor-id="linear-independence-of-matrix-columns">Linear Independence of Matrix Columns</h3>
-</section>
-<section id="sets-of-one-or-two-vectors" class="level3">
-<h3 class="anchored" data-anchor-id="sets-of-one-or-two-vectors">Sets of One or Two Vectors</h3>
-</section>
-<section id="sets-of-two-or-more-vectors" class="level3">
-<h3 class="anchored" data-anchor-id="sets-of-two-or-more-vectors">Sets of Two or More Vectors</h3>
-</section>
-<section id="theorem-7" class="level3">
-<h3 class="anchored" data-anchor-id="theorem-7">Theorem 7</h3>
-</section>
-<section id="theorem-8" class="level3">
-<h3 class="anchored" data-anchor-id="theorem-8">Theorem 8</h3>
-</section>
-<section id="theorem-9" class="level3">
-<h3 class="anchored" data-anchor-id="theorem-9">Theorem 9</h3>
+<section id="section-1.2-reduced-row-echelon-form" class="level2">
+<h2 class="anchored" data-anchor-id="section-1.2-reduced-row-echelon-form">Section 1.2 Reduced Row Echelon Form</h2>
+</section></center>
+<!-- 1/9/23 Monday -->
+<dl>
+<dt>Linear Combination</dt>
+<dd>
+Scale vectors and add them together
+</dd>
+</dl>
+<ul>
+<li>adding and scaling vectors</li>
+<li>weights or scalers are about the same. the <span class="math inline">\(x_{1}\)</span> and <span class="math inline">\(x_{2}\)</span></li>
+<li>vector addition is associative</li>
+<li>a vector equation is a system of linear equations</li>
+<li>what is the <em>Span</em> of a linear vector?
+<ul>
+<li>the set of all linear combinations of that vector?</li>
+<li>the span if all linear combinations of the vector. Scaling here lengthens or shortens the line</li>
+</ul></li>
+</ul>
+<p>Two Vectors</p>
+<ul>
+<li><span class="math inline">\(\text{Span}\left( \left[ \matrix{1 \\ 0 \\ 1} \right], \left[ \matrix{1 \\ 1 \\ 2} \right] \right)\)</span>
+<ul>
+<li>finding scalers. Finding x that makes this true</li>
+<li>has to stay in the plane. Think 3D.</li>
+<li>the span geometrically, it is a plane as long as neither vector is a multiple (scale multiple) of the other
+<ul>
+<li>if not, we learn that is called <em>linear independence</em></li>
+</ul></li>
+<li>A question could be: “Is <span class="math inline">\(\left[ \matrix{1 \\ 1 \\ 1} \right]\)</span> in the span of that matrix?”
+<ul>
+<li>as we saw on geogebra, it is not. Its outside of the plane.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>[ ] Look at theorem 4</p>
+<ul>
+<li>how does everyone know how many pivots there are?!</li>
+</ul>
 
 
-</section>
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
