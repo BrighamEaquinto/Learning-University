@@ -32,3 +32,9 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 
 Terminal, shell, bash, console, curl, pip, powershell, CMD prompt,
+
+- [ ] I wonder if there were a way to do RMD and QMD things
+
+$$
+\ln{x}
+$$
