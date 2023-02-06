@@ -38,3 +38,5 @@ Terminal, shell, bash, console, curl, pip, powershell, CMD prompt,
 $$
 \ln{x}
 $$
+
+$\ln{x}$
