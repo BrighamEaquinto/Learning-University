@@ -1,0 +1,120 @@
+---
+title: "Chapter 12: Vectors and the Geometry of Space"
+format: html
+--- 
+
+
+## Take Aways
+
+- I know now that I've been lied to regarding multiplication symbols. I'm now loyal to $(a)(b)$ instead of $a \times b$ or $a \cdot b$
+- Also, careful about $| \text{absolute values} |$ and $| \text{vector determinants} |$
+
+## 12.1 Three-Dimensional Coordinate Systems
+
+Easy
+
+## 12.2 Vectors
+
+Vectors are easy, just think one column in terms of dataframes
+
+## 12.3 The Dot Product
+
+- there are two ways to multiply a vector by a vector, the *dot product* and the *cross product* 
+    - Notation examples: 
+        - $\vec{u}$ = $\left< 2, -4, 5 \right>$ = $\begin{bmatrix} 2 \\ -4 \\ 5 \end{bmatrix}$
+        - $\vec{v}$ = $\left< 1, 3, -2 \right>$ = $\begin{bmatrix} 1 \\ 3 \\ -2 \end{bmatrix}$
+    - Transpose: switch the rows and columns. 
+    - Transposed is notated by:
+        - $\vec{u}^{T} = \begin{bmatrix} 1 & 3 & -3 \end{bmatrix}$
+        - $\vec{v}^{T} = \begin{bmatrix} 2 & -4 & 5 \end{bmatrix}$
+    - the result of the dot product is a number, we call this the *scaler dot product*
+        - Also, I guess that the *dot product* $u \times v$ implies the first vector is transposed, then multiplied by the next (non-transposed) vector. 
+
+::: columns
+::: {.column width="35%"}
+**Step 1**: Notation
+:::
+::: {.column width="3%"}
+:::
+::: {.column width="62%"}
+$$
+\overbrace{u \cdot v}^{\textbf{scalar dot product}} \text{means } u^{T}v 
+$$
+:::
+:::
+
+::: columns
+::: {.column width="35%"}
+**Step 2**: Set up
+:::
+::: {.column width="3%"}
+:::
+::: {.column width="62%"}
+$$
+\begin{bmatrix} 2 & -4 & 5 \end{bmatrix} 
+\times
+\begin{bmatrix} 1 \\ 3 \\ -2 \end{bmatrix} 
+$$
+:::
+:::
+ 
+::: columns
+::: {.column width="35%"}
+**Step 3**: Simplify
+:::
+::: {.column width="3%"}
+:::
+::: {.column width="62%"}
+$$
+(2 \times 1) - (4 \times 3) - (5 \times 2) 
+$$
+$$
+2 - 12 - 10 
+$$
+$$
+-20
+$$
+:::
+:::
+
+<br>
+
+DotProduct{$\vec{u}$, $\vec{v}$} = $\vec{u}^{T} \times \vec{v}$
+<br>
+
+- the *scalar dot product* is not just the multiplication of two vectors, but rather vector 1 transposed times vector 2 non-transposed
+    - Dot Product of $\vec{u}$ and $\vec{v}$ is: $\vec{u}^{\text{Transposed}} \times \vec{v}^{\text{Non-Transposed}}$ 
+    - The dot product is commutative, meaning $\vec{u}^{T}\vec{v} = \vec{v}^{T}\vec{u}$  
+    - vectors required to have the same number of entries
+
+---- 
+
+- **Important matrix multiplication rule (non-dot product realm)**: 
+    - $\text{Dimension of Columns}_{\text{First Vector}} \times \text{Dimension of Rows}_{\text{Second Vector}}$
+    - Note this is a matrix rule, but it also applies to vectors. This way all those numbers aren't wasted!
+- As long as the two vectors have the same number of entries, we can compute the dot product.  
+    - then what about three vectors multiplied?
+- $\vec{u} \times \vec{u} = \vec{u}^{2}$ 
+- The dot product allows us to verify if two vectors are perpendicular (orthogonal) (when the dot product is zero)
+
+
+## 12.4 The Cross Product
+
+- Cross products: $\vec{u} \times \vec{v}$
+    - can only do determinants of matrices, not numbers or vectors
+    - purpose is to find the line vector perpendicular to the other two vectors
+    - result gives us a vector
+- Dot product: $\vec{u} \cdot \vec{v}$
+    - dots gives us single values
+    - i() -j() +k()
+    - Pretty easy
+- I have been betrayed by math notation
+
+## 12.5 Lines and Planes in Space
+
+
+
+## 12.6 Cylinders and Quadric Surfaces
+
+$\frac{x}^{2}{r}^{2}$
+

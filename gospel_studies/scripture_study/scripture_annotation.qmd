@@ -48,7 +48,6 @@ episode
 #| eval: false
 john1 <- read_html("https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng")
 
-
 standard_work <- john1 |> html_nodes(".bookTitle-XO2nM") |> html_text()
 standard_work
 
@@ -61,13 +60,13 @@ chapter
 verses <- john1 |> html_nodes(".verse") |> html_text()
 verses[[1]]
 
-
 john1 |> html_nodes("p") |> html_text() %>% .[1:10]
-
-
 
 # print(paste0("Standard Work is ", standard_work, ". Book is ", book, ". Chapter is ", chapter, ". Verses are: ", verses[[1]]))
 ```
+
+
+
 
 ## Book of Mormon
 

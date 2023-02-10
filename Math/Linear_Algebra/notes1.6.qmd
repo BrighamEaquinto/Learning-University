@@ -1,0 +1,28 @@
+---
+title: 1.6 Applications of Linear Systems 
+format: html
+---
+
+- Testing Center Exam:
+    - 15 T/F 
+    - 10 mult. choice
+    - 6 "Free Response"
+    - No time limit; only the Testing Center operating hours
+    - Retakes available :D 
+    - Exam 1 covers 1.1-1.5 & 1.7-1.8
+    - We may use a non-graphing calculator and a 3$\times$5 card, both sides
+    - Due 31st
+- Take Home Exam: 
+    - Open book; no Google
+    - Use technology (for row reduce for example)
+    - Geogebra, Sympy, other tech approved (Geogrbra will probably will not be help ful though be)
+    - 8 questions, some have multiple parts
+    - It's open right now and we work on it whenever
+    - Due 31st
+    - Submit a PDF
+        - Approved to do it all in mathematica and then move it to the PDF viritually, for example (sounds like I can LaTeX)
+    - Don't have to show our work on this portion of the text
+- Brother Nelson will be here on Friday (section 1.6 covered) instead of Brother Sincovik
+- How to prepare for this test?
+    - There is a review guide for review 1 one in the modules (and the future exams, including a theorem list)
+    - Check out the modules for maaaannyy resources. 

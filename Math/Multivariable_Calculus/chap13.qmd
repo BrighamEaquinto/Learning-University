@@ -1,0 +1,238 @@
+---
+title: Chapter 13
+format: html
+---
+
+<center>
+## Contents 
+</center>
+
+- 13.1 Curves in Space and Their Tangents 
+- 13.2 Parametric Curves from Velocity/Acceleration/ Projectile Motion 
+- 13.3 Arc Length 
+- 13.4 Curvature and the Unit Normal 
+- 13.5 Tangential and Normal Acceleration, Binormal and Torsion 
+
+
+
+
+
+:::{.panel-tabset}
+## 13.2 Integrals of Vector Functions; Projectile Motion
+
+### Homework: 13.2 Parametric Curves from Velocity/Acceleration/Projectile Motion
+
+- Taking a derivative goes back to the limit definition 
+$$
+f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+$$
+- When we take the derivative of a vector, we apply this to each number in the vector. Take a look at the example below:
+$$
+\vec{u} = \begin{bmatrix} x \\ y \\ z \end{bmatrix}
+$$
+$$
+f'(\vec{u}) = 
+\begin{bmatrix}
+    \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \\ 
+    \lim_{h \to 0} \frac{f(y+h) - f(y)}{h} \\
+    \lim_{h \to 0} \frac{f(z+h) - f(z)}{h} 
+\end{bmatrix}
+$$
+
+
+- Vocab to Understand
+    - velocity: change in position?
+    - acceleration: 
+    - speed: 
+
+- Projectile motion (simplified to understand the basic rule) only needs two coordinates
+
+$$
+force = \frac{force}{mass}
+$$
+
+
+
+$$
+velocity = \frac
+    { \overbrace{ \triangle{x} }^{ \text{the change in position (displacement)} } } 
+    { \underbrace{ \triangle{t} }_{ \text{change in time} } } 
+$$
+
+$$
+acceleration = \frac{force}{mass} = \text{ the second derivative of position* }
+$$
+- * what-the-what is position?
+
+- "The acceleration is the second derivative of position, so if we have the acceleration, we can integrate to find the velocity and eventually get to the position. 
+$$
+acceleration = \frac{\triangle{v}}{\triangle{t}}
+$$
+$$
+velocity = \frac
+                {\triangle{position}}
+                {}
+$$
+
+
+:::{.callout-tip}
+# ChatGPT
+
+Q. In mathematics, is saying, "the rate of change", "the change in", and "the derivative" all mean the same concept?
+
+A. Yes, "the rate of change," "the change in," and "the derivative" are all equivalent ways to describe the concept of the rate at which a function changes with respect to another variable. The derivative of a function represents how much the function changes as its input changes, which is often used to describe the rate of change of physical quantities such as velocity, acceleration, or position.
+
+:::
+
+- *position vector of a particle*
+- $r$ = position
+- $i$ = $x$
+- $j$ = $y$
+- differentiate = find the derivative
+
+:::{.callout-tip}
+# ChatGPT
+
+The term "differentiate" refers to finding the derivative of a function, which is a mathematical concept that measures the rate of change of the function with respect to one of its variables. The derivative of a function provides information about the slope of the function at a particular point. 
+
+:::
+
+:::{.callout-tip}
+
+Velocity is a measure of the rate of change of an object's position over time. It is often described as the speed of an object in a specific direction. 
+
+Position, on the other hand, refers to the location of an object in space. It can be described by coordinates, such as (x,y,z) in 3D space or (x,y) in 2D space. (Brigham: What about described as (x(t), y(t)) ) 
+
+In simpler terms, velocity is the object's speed and direction, while position is where the object is located.
+
+:::
+
+This is talking about finding the position of a particle w/ respect to time
+
+**General Steps**:
+
+- **Instruction 1**: Find an equation in $x$ and $y$ whose graph is the path of the particle
+    - To find an equation in $x$ and $y$ for the path of the particle, eliminate $t$ between the equations for $x$ and $y$. One approach is to solve both equations for $t$ and set the results equal to each other. 
+    - I think what this means is find $x(t), y(t)$... but we will end up with 
+    - Basically when we eliminate $t$, only having $x$ and $y$.
+- **Instruction 2**: The find the particle's velocity and acceleration at t=#
+    - $v(t) = \frac{dr}{dt} = \frac{df}{dt}i+\frac{dg}{dt}j$
+    - $a(t)=\frac{dv}{dt}$
+- The velocity vector $\textbf{v}$(t) is the derivative of the position vector $\textbf{r}$(t). The derivative of a vector function $r(t) = f(t)i + g(t)j$ can be computed component by component. 
+- The acceleration vector $a(t)$ is the derivative of the velocity vector $v(t)$ 
+- Differentiate the velocity vector to get the acceleration vector. 
+
+$$
+\left( \textbf{v}(t) \right) =
+\left( \frac{d\textbf{r}}{dt} \right) = 
+\left( \frac{df}{dt}i + \frac{dg}{dt}j + \overbrace{ \left( \frac{dh}{dt}k \right) }^{\text{when we're dealing in 3D}}  \right)
+$$
+I don't know why $f$ and $g$ are used instead of $x$ and $y$ for which we we previously solved. Remember this!  
+
+- Acceleration vector: $a(t)=v'(t)j$
+
+----
+
+- Particle path: $r(t) \to y=\dots$ When you set $x$ and $y$ equal to each other
+- Velocity: $r'(t)$
+- Aceleration: $r''(t)$
+
+
+<br></br>
+
+### P.S. 
+
+- ** derivative of a constant = 0
+- ** **anything to the zero power is one**
+- $(e^{t})^{2} = e^{2t}$ Multiplication of exponents
+- $f'(e^{u}) = e^{u}u'$ Chain rule
+
+----
+
+- Logarithm Rules
+    - Product: $\ln{(xy)} = \ln{(x)} + \ln{(y)}$ 
+        - $e^{a} e^{b} = e^{a+b}$ 
+    - Quotient: $\ln{\left( \frac{x}{y} \right)} = \ln{(x)} - \ln{(y)}$ 
+    - Power: $\ln{(x^{y})} = y \ln{(x)}$
+    - e: $\ln{(e)} = 1$
+    - Other?: $e^{\ln{(xy)}} = xy$
+        - Also, $e^{\ln{(x)}} e^{\ln{(y)}}$
+
+----
+
+- magnitude of velocity = speed
+- magnitude of a force
+- position
+- force
+- speed
+- gravity
+- velocity vector
+- acceleration vector
+- projectile path
+- force and magnitude of a force are the same thing?!
+
+
+:::{.callout-tip}
+
+**Q**. I see force is commonly referred to as "mg". Do you know what "mg" stands for?
+
+**A**. Yes, "mg" is a commonly used abbreviation in physics that stands for the force of gravity acting on an object. The "m" represents the mass of the object and "g" represents the acceleration due to gravity.
+
+The force of gravity acting on an object is proportional to its mass and the acceleration due to gravity. The acceleration due to gravity is a constant value that is approximately 9.8 m/s^2 at the surface of the Earth.
+
+So, if an object has a mass of m kilograms, then the force of gravity acting on it can be represented by the expression "mg", where "g" is the acceleration due to gravity. This equation represents the weight of an object, which is the force of gravity acting on it.
+
+:::
+
+
+
+
+$$
+\frac{10}{9} e^{2t} \text{ where } t = \ln{(3)}  
+$$
+$$
+\frac{10}{9} e^{2\ln{(3)}}
+$$
+$$
+\frac{10}{9} \ln{(3^{2})}
+$$
+$$
+\frac{10}{9} \times 3^{2}
+$$
+$$
+\frac{10}{9} \times 9 
+$$
+$$
+10
+$$
+
+$$
+e^{\ln{5}} = 5
+$$
+
+----
+
+## 13.3 Arc  Length in Space
+
+- The **unit tangent vector** of a smooth curve $r(t)$ is $T = \frac{dr}{ds} = \frac{dr/dt}{ds/dt} = \frac{v}{|v|}$
+- $v$ is $r'(t)$. Meaning, if you have $r'(t)$, take the derivative of that and we'll have $v$.
+- The general formula for the length of a vector $v = xi + yj + zk$ is $\sqrt{ x^{2} + y^{2} + z^{2} }$. Or is this $|v|$?
+
+
+<!-- 
+
+<iframe scrolling="no" title="Untitled1" src="https://www.geogebra.org/material/iframe/id/fff7ugsf/width/1536/height/738/border/888888/sfsb/true/smb/true/stb/true/stbh/true/ai/false/asb/true/sri/true/rc/false/ld/true/sdz/true/ctl/false" width="100%" height="600" style="border:0px;"> </iframe>
+
+<iframe src="https://www.geogebra.org/calculator/yqdtwxhh?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+<iframe src="https://www.geogebra.org/calculator/fff7ugsf?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> 
+
+-->
+
+
+## 13.4 Curvature and Normal Vectors of a Curve
+## 13.5 Tangential and Normal Components of Acceleration
+## 13.6 Velocity and Acceleration in Polar Coordinates
+
+
+:::

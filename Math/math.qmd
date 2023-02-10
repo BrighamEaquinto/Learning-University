@@ -1,0 +1,42 @@
+---
+title: Math
+format: html
+---
+
+- Product: The result of multiplying two or more numbers together.
+- Quotient: The result of dividing one number by another.
+    - The quotient is the number that results from dividing the dividend (the number being divided) by the divisor (the number it is being divided by). For example, the quotient of 6 divided by 3 is 2 (6 / 3 = 2).
+
+<br> 
+
+| Operations | Properties |
+|------------|------------|
+| Addition   | Commutative, Associative |
+| Subtraction| Non-Commutative, Associative |
+| Multiplication | Commutative, Associative, Distributive |
+| Division   | Non-Commutative, Not Associative |
+
+
+| Operation | Commutative | Associative | Distributive | Multiplicative |
+| :---: | :---: | :---: | :---: | :---: |
+| **Addition** | Yes | Yes | Yes | No |
+| **Subtraction** | No | No | Yes |	No |
+| **Multiplication** | Yes | Yes | Yes | Yes |
+| **Division** | No | No | Yes (division distributes over multiplication) |	No |
+
+
+$$
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Operation & Commutative & Associative & Distributive & Multiplicative\\
+\hline
+Addition & Yes & Yes & Yes & No \\
+\hline
+Subtraction & No & No & Yes & No \\
+\hline
+Multiplication & Yes & Yes & Yes & Yes \\
+\hline
+Division & No & No & Yes (division distributes over multiplication) & No \\
+\hline
+\end{tabular}
+$$

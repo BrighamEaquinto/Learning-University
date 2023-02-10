@@ -1,0 +1,29 @@
+---
+title: "Presentation"
+format:
+  revealjs: 
+    theme: blood
+    navigation-mode: vertical
+    controls-layout: bottom-right
+    controls-tutorial: true
+---
+
+## Testing 
+
+Does this work?
+
+## Key 
+
+Remember this students 
+
+::: {.notes}
+Speaker notes go here.
+
+Please, do they show up on the speaker view?
+:::
+
+## Yo 
+
+ho ho
+
+<iframe src="https://www.geogebra.org/calculator/yqdtwxhh?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>

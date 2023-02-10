@@ -1,6 +1,7 @@
 ---
 title: Homework 1.1
 format: html
+toc: false
 ---
 
 Assigned Problems: 1, 5, 9, 19, 23, 24, 31
@@ -15,22 +16,217 @@ Solve each system in Exercises 1–4 by using elementary row operations on the e
 ### Q1
 
 $$
-x_{1} + 5x_{2} = 7
+\textbf{Question: }
+\begin{array}{}
+    x_{1} + 5x_{2} = 7 \\ 
+    -2x_{1} - 7x_{2} = -5 
+\end{array}
 $$
 
-$$
--2x_{1} - 7x_{2} = -5
-$$
+:::{.callout-note collapse="true"}
+# Steps
 
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 1: }
+$$
+$$
+\text{Turn system of equations} 
+$$
+$$
+\text{ into augmented matrix}
+$$
+:::
+::: {.column width="80%"}
+$$
+\begin{bmatrix}
+     1 &  5 & | &  7 \\ 
+    -2 & -7 & | & -5
+\end{bmatrix}
+$$
+:::
+:::
 
+<!-- Q1 Step 2 -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 2: } R_{2} \rightarrow 2R_{1} + R_{2} 
+$$
+:::
+::: {.column width="80%"}
+$$
+\begin{bmatrix}
+    1 & 5 & | & 7 \\
+    0 & 3 & | & 9
+\end{bmatrix}
+$$
+:::
+:::
+
+<!-- Q1 Step 3 -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 3: } R_{2} \rightarrow \frac{1}{3} R_{2}
+$$
+:::
+::: {.column width="80%"}
+$$
+\begin{bmatrix}
+    1 & 5 &|& 7 \\
+    0 & 1 &|& 3
+\end{bmatrix}
+$$
+:::
+:::
+
+<!-- Q1 Step 4 -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 4: } R_{1} \rightarrow R_{1} + (R_{2} \times -5) 
+$$
+:::
+::: {.column width="80%"}
+$$
+\begin{bmatrix}
+    1 & 0 &|& -8 \\
+    0 & 1 &|&  3
+\end{bmatrix}
+$$
+:::
+:::
+
+<!-- ending callout-note -->
+::: 
+<!-- ending callout-note -->
+
+<!-- Q1 Solution -->
+$$
+\textbf{Solution: } 
+\begin{array}{}
+    x_{1} = -8 \\
+    x_{2} = 3
+\end{array}
+$$
 
 ### Q2: Optional
 
 $$
-\array{
-    2x_{1} + 4x_{2} &= -4 \\
-    -2x_{1} - 7x_{2} &= -5
-}
+\textbf{Question: }
+\begin{array}{}
+    2x_{1} + 4x_{2} = -4 \\
+    5x_{1} + 7x_{2} = 11
+\end{array}
+$$
+
+:::{.callout-note collapse="true"}
+# Steps 
+
+<!-- Q2 Step 1 -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 1: } 
+$$
+$$
+\text{Turn system of equations} 
+$$
+$$
+\text{ into augmented matrix}
+$$
+:::
+::: {.column width="80%"}
+$$
+\begin{bmatrix}
+    2 & 4 &|& -4 \\ 
+    5 & 7 &|& 11
+\end{bmatrix}
+$$
+:::
+:::
+
+<!-- Q2 Step 2 -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 2: } R_{2} \rightarrow \frac{1}{2} R_{2} 
+$$
+:::
+::: {.column width="80%"} 
+$$
+\begin{bmatrix}
+    1 & 2 &|& -2 \\ 
+    5 & 7 &|& 11
+\end{bmatrix}
+$$
+:::
+:::
+
+<!-- Q2 Step 2 -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 2: } R_{2} \rightarrow R_{1} \times -5 + R_{2}
+$$
+:::
+::: {.column width="80%"}
+$$
+\begin{bmatrix}
+    1 &  2 & | & -2 \\ 
+    0 & -3 & | & 21
+\end{bmatrix}
+$$
+:::
+:::
+
+<!-- Q2 Step 3 -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 3: } R_{2} \rightarrow \frac{-1}{3} R_{2} 
+$$
+:::
+::: {.column width="80%"}
+$$
+\begin{bmatrix}
+    1 & 2 & | & -2 \\ 
+    0 & 1 & | & -7
+\end{bmatrix}
+$$
+:::
+:::
+
+<!-- Q2 Step 4 -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 4: } R_{2} \rightarrow R_{2} \times -2 + R_{1}
+$$
+::: 
+::: {.column width="80%"}
+$$
+\begin{bmatrix}
+    1 & 0 & | & 12 \\ 
+    0 & 1 & | & -7
+\end{bmatrix}
+$$
+:::
+:::
+
+<!-- ending callout note -->
+:::
+<!-- ending callout note -->
+
+<!-- Q2 Solution -->
+$$
+\textbf{Solution: } 
+\begin{array}{}
+    x_{1} = 12 \\
+    x_{2} = -7
+\end{array}
 $$
 
 ----
@@ -40,13 +236,78 @@ Consider each matrix in Exercises 5 & 6 as the augmented matrix of a linear syst
 ### Q5
 
 $$
-\left[
-    \matrix{1 & -4 & 5 & 0 & | & 7 \\ 
-            0 & 1 & -3 & 0 & | & 6 \\ 
-            0 & 0 & 1 & 0 & | & 2 \\
-            0 & 0 & 0 & 1 & | & -5}
-\right]
+\begin{bmatrix} 
+    1 & -4 &  5 & 0 &|&  7 \\ 
+    0 &  1 & -3 & 0 &|&  6 \\ 
+    0 &  0 &  1 & 0 &|&  2 \\
+    0 &  0 &  0 & 1 &|& -5
+\end{bmatrix}
 $$
+
+
+:::{.callout-note collapse="true"}
+# Steps
+
+<!-- Q5 Step 1 -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 1: } R_{1} \rightarrow R_{1} + (4 \times R_{2})
+$$
+:::
+::: {.column width="80%"}
+$$
+\begin{bmatrix}
+    1 & 0 & -2 & 0 &|&  31 \\ 
+    0 & 1 & -3 & 0 &|&  6 \\ 
+    0 & 0 &  1 & 0 &|&  2 \\
+    0 & 0 &  0 & 1 &|& -5
+\end{bmatrix}
+$$
+:::
+:::
+
+<!-- Q4 Step 2 -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 2: } R_{2} \rightarrow (R_{3} \times 3) + R_{2} 
+$$
+:::
+::: {.column width="80%"}
+$$
+\begin{bmatrix}
+    1 & 0 & -2 & 0 &|&  49 \\ 
+    0 & 1 &  0 & 0 &|&  6 \\ 
+    0 & 0 &  1 & 0 &|&  2 \\
+    0 & 0 &  0 & 1 &|& -5
+\end{bmatrix}
+$$
+:::
+:::
+
+<!-- Q5 Step 3 -->
+::: columns
+::: {.column width="20%"}
+$$
+\textbf{Step 3: } R_{1} \rightarrow (R_{3} \times 2) + R_{1}
+$$
+:::
+::: {.column width="80%"}
+$$
+\begin{bmatrix}
+    1 & 0 &  0 & 0 &|& 53 \\ 
+    0 & 1 &  0 & 0 &|&  6 \\ 
+    0 & 0 &  1 & 0 &|&  2 \\
+    0 & 0 &  0 & 1 &|& -5
+\end{bmatrix}
+$$
+:::
+:::
+
+<!-- ending callout note -->
+:::
+<!-- ending callout note -->
 
 ----
 

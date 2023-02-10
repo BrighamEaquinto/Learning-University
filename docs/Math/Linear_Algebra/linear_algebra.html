@@ -187,6 +187,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="dropdown-item" href="../../Math/Multivariable_Calculus/Master_Notes_Multivariable_Calculus.html">
  <span class="dropdown-text">Master Notes</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../Math/Multivariable_Calculus/chap12.html">
+ <span class="dropdown-text">Chapter 12</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Math/Multivariable_Calculus/chap13.html">
+ <span class="dropdown-text">Chapter 13</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -208,6 +216,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../other/latex_notes.html">
+ <span class="menu-text">Latex</span></a>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -291,7 +303,7 @@ Sections
 <p>Augmented means it has a solution? An equal sign? an | ?</p>
 <p><br></p>
 <section id="solving-outcome-possibiblities" class="level3">
-<h3 class="anchored">Solving Outcome Possibiblities</h3>
+<h3 class="anchored" data-anchor-id="solving-outcome-possibiblities">Solving Outcome Possibiblities</h3>
 <p>Options are either: <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, or <span class="math inline">\(\inf{}\)</span></p>
 <p><strong>Existence</strong>: Does there exist a solution?</p>
 <p><strong>Uniqueness</strong>: Is there only one solution?</p>
@@ -353,36 +365,25 @@ A linear system is consistent if and only if the rightmost column of the augment
 <li>maximum nuber of pivots is the min of the number of row and columns</li>
 <li>columns without a pivot are free variables</li>
 </ul></li>
-</ul>
-<span class="math display">\[\begin{bmatrix}
-  a &amp; b &amp; 1  &amp;  4 \\
-  c &amp; d &amp; -2 &amp; -3
-\end{bmatrix}\]</span>
-<p><span class="math display">\[
-\left[
-\matrix{
-  1 &amp; 2 &amp; 1 &amp;\bigm| &amp; 4 \\
-  1 &amp; 2 &amp; -2 &amp;\bigm| &amp;-3}
-\right]
-\]</span></p>
-<p><span class="math display">\[
-\left[
-\matrix{
-  1 &amp; 2 &amp; 1 &amp; | &amp; 4 \\
-  1 &amp; 2 &amp; -2 &amp; | &amp;-3}
-\right]
-\]</span></p>
-<p><span class="math display">\[
-\left[
-\matrix{
-  1 &amp; 2 &amp; 1  |  4 \\
-  1 &amp; 2 &amp; -2  | -3}
-\right]
-\]</span></p>
-<ul>
 <li>coefficient matrix is just</li>
 <li>pivots are non-zeros</li>
 </ul>
+</section>
+
+<section id="code-examples" class="level2">
+<h2 class="anchored" data-anchor-id="code-examples">Code Examples</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+See Here
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> randMatrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -398,17 +399,41 @@ A linear system is consistent if and only if the rightmost column of the augment
 <div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>A.rref()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+</div>
+</div>
+</section>
+<section id="reviewing-1.1" class="level2">
+<h2 class="anchored" data-anchor-id="reviewing-1.1">Reviewing 1.1</h2>
+<ul>
+<li>In systems of linear equations, “coefficients” are the “scalars” I’m familiar with</li>
+<li><strong>Consistentness</strong>:
+<ul>
+<li>if it has <em>at least</em> one soultion for x (at least one set of values for the variables that will satisfy all of the equations in the system)</li>
+<li>A consistent system of equations has at least one solution.</li>
+</ul></li>
+<li><strong>Uniqueness</strong> refers to: a solution to a system of linear equations is said to be “unique” if there is only one set of values for the variables that will satisfy all of the equations in the system.</li>
+</ul>
+<center>
+<img src="independent_inconsistent_dependent.png" title="Independent, Inconsistent, and Dependent Systems" alt="From OpenStaxs" width="90%">
+</center>
+<ul>
+<li>Other Thoughts:
+<ul>
+<li>Side note: AX = B, where A is the coefficient matrix, X is the variable matrix, and B is the constant matrix. And augmented matrix?</li>
+</ul></li>
+</ul>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-HW 1.2
+HW 1.1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Assigned Problems: 1, 5, 9, 19, 23, 24, 31</p>
 <p>Optional Problems: 2, 7, 13, 17</p>
@@ -418,19 +443,213 @@ HW 1.2
 <section id="q1" class="level3">
 <h3 class="anchored" data-anchor-id="q1">Q1</h3>
 <p><span class="math display">\[
-x_{1} + 5x_{2} = 7
+\textbf{Question: }
+\begin{array}{}
+    x_{1} + 5x_{2} = 7 \\
+    -2x_{1} - 7x_{2} = -5
+\end{array}
 \]</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Steps
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="columns">
+<div class="column" style="width:20%;">
 <p><span class="math display">\[
--2x_{1} - 7x_{2} = -5
+\textbf{Step 1: }
+\]</span> <span class="math display">\[
+\text{Turn system of equations}
+\]</span> <span class="math display">\[
+\text{ into augmented matrix}
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+     1 &amp;  5 &amp; | &amp;  7 \\
+    -2 &amp; -7 &amp; | &amp; -5
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- Q1 Step 2 -->
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\textbf{Step 2: } R_{2} \rightarrow 2R_{1} + R_{2}
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+    1 &amp; 5 &amp; | &amp; 7 \\
+    0 &amp; 3 &amp; | &amp; 9
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- Q1 Step 3 -->
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\textbf{Step 3: } R_{2} \rightarrow \frac{1}{3} R_{2}
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+    1 &amp; 5 &amp;|&amp; 7 \\
+    0 &amp; 1 &amp;|&amp; 3
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- Q1 Step 4 -->
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\textbf{Step 4: } R_{1} \rightarrow R_{1} + (R_{2} \times -5)
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+    1 &amp; 0 &amp;|&amp; -8 \\
+    0 &amp; 1 &amp;|&amp;  3
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- ending callout-note -->
+</div>
+</div>
+</div>
+<!-- ending callout-note -->
+<!-- Q1 Solution -->
+<p><span class="math display">\[
+\textbf{Solution: }
+\begin{array}{}
+    x_{1} = -8 \\
+    x_{2} = 3
+\end{array}
 \]</span></p>
 </section>
 <section id="q2-optional" class="level3">
 <h3 class="anchored" data-anchor-id="q2-optional">Q2: Optional</h3>
 <p><span class="math display">\[
-\array{
-    2x_{1} + 4x_{2} &amp;= -4 \\
-    -2x_{1} - 7x_{2} &amp;= -5
-}
+\textbf{Question: }
+\begin{array}{}
+    2x_{1} + 4x_{2} = -4 \\
+    5x_{1} + 7x_{2} = 11
+\end{array}
+\]</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Steps
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<!-- Q2 Step 1 -->
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\textbf{Step 1: }
+\]</span> <span class="math display">\[
+\text{Turn system of equations}
+\]</span> <span class="math display">\[
+\text{ into augmented matrix}
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+    2 &amp; 4 &amp;|&amp; -4 \\
+    5 &amp; 7 &amp;|&amp; 11
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- Q2 Step 2 -->
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\textbf{Step 2: } R_{2} \rightarrow \frac{1}{2} R_{2}
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+    1 &amp; 2 &amp;|&amp; -2 \\
+    5 &amp; 7 &amp;|&amp; 11
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- Q2 Step 2 -->
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\textbf{Step 2: } R_{2} \rightarrow R_{1} \times -5 + R_{2}
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+    1 &amp;  2 &amp; | &amp; -2 \\
+    0 &amp; -3 &amp; | &amp; 21
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- Q2 Step 3 -->
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\textbf{Step 3: } R_{2} \rightarrow \frac{-1}{3} R_{2}
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+    1 &amp; 2 &amp; | &amp; -2 \\
+    0 &amp; 1 &amp; | &amp; -7
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- Q2 Step 4 -->
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\textbf{Step 4: } R_{2} \rightarrow R_{2} \times -2 + R_{1}
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+    1 &amp; 0 &amp; | &amp; 12 \\
+    0 &amp; 1 &amp; | &amp; -7
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- ending callout note -->
+</div>
+</div>
+</div>
+<!-- ending callout note -->
+<!-- Q2 Solution -->
+<p><span class="math display">\[
+\textbf{Solution: }
+\begin{array}{}
+    x_{1} = 12 \\
+    x_{2} = -7
+\end{array}
 \]</span></p>
 <hr>
 <p>Consider each matrix in Exercises 5 &amp; 6 as the augmented matrix of a linear system. State in words the next two elementry row operations that should be preformed in the process of solving the system.</p>
@@ -438,13 +657,81 @@ x_{1} + 5x_{2} = 7
 <section id="q5" class="level3">
 <h3 class="anchored" data-anchor-id="q5">Q5</h3>
 <p><span class="math display">\[
-\left[
-    \matrix{1 &amp; -4 &amp; 5 &amp; 0 &amp; | &amp; 7 \\
-            0 &amp; 1 &amp; -3 &amp; 0 &amp; | &amp; 6 \\
-            0 &amp; 0 &amp; 1 &amp; 0 &amp; | &amp; 2 \\
-            0 &amp; 0 &amp; 0 &amp; 1 &amp; | &amp; -5}
-\right]
+\begin{bmatrix}
+    1 &amp; -4 &amp;  5 &amp; 0 &amp;|&amp;  7 \\
+    0 &amp;  1 &amp; -3 &amp; 0 &amp;|&amp;  6 \\
+    0 &amp;  0 &amp;  1 &amp; 0 &amp;|&amp;  2 \\
+    0 &amp;  0 &amp;  0 &amp; 1 &amp;|&amp; -5
+\end{bmatrix}
 \]</span></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Steps
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<!-- Q5 Step 1 -->
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\textbf{Step 1: } R_{1} \rightarrow R_{1} + (4 \times R_{2})
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+    1 &amp; 0 &amp; -2 &amp; 0 &amp;|&amp;  31 \\
+    0 &amp; 1 &amp; -3 &amp; 0 &amp;|&amp;  6 \\
+    0 &amp; 0 &amp;  1 &amp; 0 &amp;|&amp;  2 \\
+    0 &amp; 0 &amp;  0 &amp; 1 &amp;|&amp; -5
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- Q4 Step 2 -->
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\textbf{Step 2: } R_{2} \rightarrow (R_{3} \times 3) + R_{2}
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+    1 &amp; 0 &amp; -2 &amp; 0 &amp;|&amp;  49 \\
+    0 &amp; 1 &amp;  0 &amp; 0 &amp;|&amp;  6 \\
+    0 &amp; 0 &amp;  1 &amp; 0 &amp;|&amp;  2 \\
+    0 &amp; 0 &amp;  0 &amp; 1 &amp;|&amp; -5
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- Q5 Step 3 -->
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\textbf{Step 3: } R_{1} \rightarrow (R_{3} \times 2) + R_{1}
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<p><span class="math display">\[
+\begin{bmatrix}
+    1 &amp; 0 &amp;  0 &amp; 0 &amp;|&amp; 53 \\
+    0 &amp; 1 &amp;  0 &amp; 0 &amp;|&amp;  6 \\
+    0 &amp; 0 &amp;  1 &amp; 0 &amp;|&amp;  2 \\
+    0 &amp; 0 &amp;  0 &amp; 1 &amp;|&amp; -5
+\end{bmatrix}
+\]</span></p>
+</div>
+</div>
+<!-- ending callout note -->
+</div>
+</div>
+</div>
+<!-- ending callout note -->
 <hr>
 <p>In Exercises 7–10, the augmented matrix of a linear system has been reduced by row operations to the form shown. In each case, continue the appropriate row operations and describe the solution set of the original system.</p>
 </section>
@@ -546,7 +833,6 @@ x_{1} + 5x_{2} = 7
 </div>
 </div>
 </section>
-
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <center>
@@ -592,7 +878,7 @@ Scale vectors and add them together
 <li>how does everyone know how many pivots there are?!</li>
 </ul>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -601,7 +887,7 @@ HW 1.2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Assigned Problems: 1, 3, 4, 5, 8, 14, 16, 17, 21, 22, 24, 25, 29</p>
 <p>Optional Problems: 4, 7, 12</p>
@@ -714,7 +1000,7 @@ x_{1} \left[ \matrix{1\\-2\\-5} \right] + x_{2}\left[ \matrix{2\\5\\6} \right] =
 <h3 class="anchored">Linear Combinations in Applications</h3>
 <p>This gives a very simple <span class="math inline">\(x * y = z\)</span> ( number of units times cost per unit = total cost).</p>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -723,7 +1009,7 @@ HW 1.3
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Assigned Problems: 3, 5, 8, 9, 12, 13, 17, 19, 23, 24, 25</p>
 <p>Optional Problems: 7, 15, 32</p>
@@ -800,7 +1086,7 @@ HW 1.3
 <section id="section-2" class="level3">
 <h3 class="anchored" data-anchor-id="section-2"></h3>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -809,7 +1095,7 @@ HW 1.4
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -843,7 +1129,7 @@ HW 1.4
 <h2 class="anchored" data-anchor-id="section-1.5-solution-sets-of-linear-systems">Section 1.5 Solution Sets of Linear Systems</h2>
 </section></center>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -852,7 +1138,7 @@ HW 1.5
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
@@ -865,8 +1151,41 @@ HW 1.5
 <section id="section-1.6-applications-of-linear-systems" class="level2">
 <h2 class="anchored" data-anchor-id="section-1.6-applications-of-linear-systems">Section 1.6 Applications of Linear Systems</h2>
 </section></center>
+<ul>
+<li>Testing Center Exam:
+<ul>
+<li>15 T/F</li>
+<li>10 mult. choice</li>
+<li>6 “Free Response”</li>
+<li>No time limit; only the Testing Center operating hours</li>
+<li>Retakes available :D</li>
+<li>Exam 1 covers 1.1-1.5 &amp; 1.7-1.8</li>
+<li>We may use a non-graphing calculator and a 3$$5 card, both sides</li>
+<li>Due 31st</li>
+</ul></li>
+<li>Take Home Exam:
+<ul>
+<li>Open book; no Google</li>
+<li>Use technology (for row reduce for example)</li>
+<li>Geogebra, Sympy, other tech approved (Geogrbra will probably will not be help ful though be)</li>
+<li>8 questions, some have multiple parts</li>
+<li>It’s open right now and we work on it whenever</li>
+<li>Due 31st</li>
+<li>Submit a PDF
+<ul>
+<li>Approved to do it all in mathematica and then move it to the PDF viritually, for example (sounds like I can LaTeX)</li>
+</ul></li>
+<li>Don’t have to show our work on this portion of the text</li>
+</ul></li>
+<li>Brother Nelson will be here on Friday (section 1.6 covered) instead of Brother Sincovik</li>
+<li>How to prepare for this test?
+<ul>
+<li>There is a review guide for review 1 one in the modules (and the future exams, including a theorem list)</li>
+<li>Check out the modules for maaaannyy resources.</li>
+</ul></li>
+</ul>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -875,7 +1194,7 @@ HW 1.6
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
@@ -927,7 +1246,7 @@ x_{1} v_{1} + x_{2} v_{2} + \cdots + x_{p} v_{p} = 0
 <section id="theorem-9" class="level3">
 <h3 class="anchored" data-anchor-id="theorem-9">Theorem 9</h3>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -936,7 +1255,7 @@ HW 1.7
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Assigned Problems: 1, 3, 6, 7, 16, 18, 20, 21, 26, 36</p>
 <p>Optional Problems: 4, 33</p>
@@ -1051,7 +1370,7 @@ HW 1.7
 </ul>
 <p>This is the last section that will be on our first exam.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1060,7 +1379,7 @@ HW 1.8
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
@@ -1130,7 +1449,7 @@ HW 1.8
 <section id="section-6" class="level2">
 <h2 class="anchored" data-anchor-id="section-6"></h2>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1139,7 +1458,7 @@ HW 1.9
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
@@ -1173,7 +1492,7 @@ HW 1.9
 <h2 class="anchored" data-anchor-id="section-2.1-matrix-operations">Section 2.1 Matrix Operations</h2>
 </section></center>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1182,7 +1501,7 @@ HW 2.1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
@@ -1196,7 +1515,7 @@ HW 2.1
 <h2 class="anchored" data-anchor-id="section-2.2-the-inverse-of-a-matrix">Section 2.2 The Inverse of a Matrix</h2>
 </section></center>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1205,7 +1524,7 @@ HW 2.2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
@@ -1219,7 +1538,7 @@ HW 2.2
 <h2 class="anchored" data-anchor-id="section-2.3-characterizations-of-inversible-matrices">Section 2.3 Characterizations of Inversible Matrices</h2>
 </section></center>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1228,7 +1547,7 @@ HW 2.3
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
@@ -1242,7 +1561,7 @@ HW 2.3
 <h2 class="anchored" data-anchor-id="section-2.4-partitioned-matrices">Section 2.4 Partitioned Matrices</h2>
 </section></center>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1251,7 +1570,7 @@ HW 2.4
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
@@ -1265,7 +1584,7 @@ HW 2.4
 <h2 class="anchored" data-anchor-id="section-2.7-applications-to-computer-graphics">Section 2.7 Applications to Computer Graphics</h2>
 </section></center>
 <div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1274,7 +1593,7 @@ HW 2.7
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>

@@ -187,6 +187,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="dropdown-item" href="../../Math/Multivariable_Calculus/Master_Notes_Multivariable_Calculus.html">
  <span class="dropdown-text">Master Notes</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../Math/Multivariable_Calculus/chap12.html">
+ <span class="dropdown-text">Chapter 12</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Math/Multivariable_Calculus/chap13.html">
+ <span class="dropdown-text">Chapter 13</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -208,6 +216,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../other/latex_notes.html">
+ <span class="menu-text">Latex</span></a>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -227,6 +239,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#solving-outcome-possibiblities" id="toc-solving-outcome-possibiblities" class="nav-link" data-scroll-target="#solving-outcome-possibiblities">Solving Outcome Possibiblities</a></li>
   </ul></li>
+  <li><a href="#code-examples" id="toc-code-examples" class="nav-link" data-scroll-target="#code-examples">Code Examples</a></li>
+  <li><a href="#reviewing-1.1" id="toc-reviewing-1.1" class="nav-link" data-scroll-target="#reviewing-1.1">Reviewing 1.1</a></li>
   </ul>
 </nav>
     </div>
@@ -336,36 +350,25 @@ A linear system is consistent if and only if the rightmost column of the augment
 <li>maximum nuber of pivots is the min of the number of row and columns</li>
 <li>columns without a pivot are free variables</li>
 </ul></li>
-</ul>
-<span class="math display">\[\begin{bmatrix}
-  a &amp; b &amp; 1  &amp;  4 \\
-  c &amp; d &amp; -2 &amp; -3
-\end{bmatrix}\]</span>
-<p><span class="math display">\[
-\left[
-\matrix{
-  1 &amp; 2 &amp; 1 &amp;\bigm| &amp; 4 \\
-  1 &amp; 2 &amp; -2 &amp;\bigm| &amp;-3}
-\right]
-\]</span></p>
-<p><span class="math display">\[
-\left[
-\matrix{
-  1 &amp; 2 &amp; 1 &amp; | &amp; 4 \\
-  1 &amp; 2 &amp; -2 &amp; | &amp;-3}
-\right]
-\]</span></p>
-<p><span class="math display">\[
-\left[
-\matrix{
-  1 &amp; 2 &amp; 1  |  4 \\
-  1 &amp; 2 &amp; -2  | -3}
-\right]
-\]</span></p>
-<ul>
 <li>coefficient matrix is just</li>
 <li>pivots are non-zeros</li>
 </ul>
+</section>
+
+<section id="code-examples" class="level2">
+<h2 class="anchored" data-anchor-id="code-examples">Code Examples</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+See Here
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> randMatrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -377,28 +380,37 @@ A linear system is consistent if and only if the rightmost column of the augment
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">4</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">2</span>]</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>])</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>sp.pprint(A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>⎡1  1   1  4⎤
-⎢           ⎥
-⎢5  1   2  3⎥
-⎢           ⎥
-⎣4  -1  6  2⎦</code></pre>
-</div>
 </div>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>A.rref()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>(Matrix([
- [1, 0, 0, -13/23],
- [0, 1, 0,  76/23],
- [0, 0, 1,  29/23]]),
- (0, 1, 2))</code></pre>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>A.rref()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+</div>
+</div>
+</section>
+<section id="reviewing-1.1" class="level2">
+<h2 class="anchored" data-anchor-id="reviewing-1.1">Reviewing 1.1</h2>
+<ul>
+<li>In systems of linear equations, “coefficients” are the “scalars” I’m familiar with</li>
+<li><strong>Consistentness</strong>:
+<ul>
+<li>if it has <em>at least</em> one soultion for x (at least one set of values for the variables that will satisfy all of the equations in the system)</li>
+<li>A consistent system of equations has at least one solution.</li>
+</ul></li>
+<li><strong>Uniqueness</strong> refers to: a solution to a system of linear equations is said to be “unique” if there is only one set of values for the variables that will satisfy all of the equations in the system.</li>
+</ul>
+<center>
+<img src="independent_inconsistent_dependent.png" title="Independent, Inconsistent, and Dependent Systems" alt="From OpenStaxs" width="90%">
+</center>
+<ul>
+<li>Other Thoughts:
+<ul>
+<li>Side note: AX = B, where A is the coefficient matrix, X is the variable matrix, and B is the constant matrix. And augmented matrix?</li>
+</ul></li>
+</ul>
 
 
 </section>
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

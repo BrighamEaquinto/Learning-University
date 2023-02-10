@@ -64,3 +64,9 @@ lds_scriptures() |>
 # https://github.com/andrewheiss/scriptuRs
 # https://github.com/beandog/lds-scriptures
 # https://scriptures.nephi.org/
+
+
+
+
+'//*[contains(concat( " ", @class, " " ), concat( " ", "style__navLogoImage_zBWSx", " " ))]'
+

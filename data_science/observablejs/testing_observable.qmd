@@ -1,0 +1,63 @@
+---
+title: "Untitled"
+format: html
+---
+
+
+Does this work?
+
+```{ojs}
+//| echo: false
+
+import { aq, op } from '@uwdata/arquero'
+
+student_dat = d3.csv("https://raw.githubusercontent.com/BrighamEaquinto/brighameaquinto.github.io/master/datasets/StudentsPerformance.csv")
+```
+
+
+```{ojs}
+Plot.plot({
+  x: {reverse: true},
+  marks: [
+    Plot.dot(student_dat, 
+         {x: "math score",
+          y: "reading score",
+          fill: "gender"})
+    ]
+})
+```
+
+
+```{ojs}
+Plot.plot({
+  facet: {data: student_dat, x: "gender"},
+  marks: [
+    Plot.rectY(penguins, 
+               Plot.binX(  
+                 {y: count()}, 
+                 {x: "math score",
+                 thresholds: 12}) 
+              )
+         ]              
+})
+```
+
+
+
+
+
+
+
+
+
+```{ojs}
+dt = aq.table({
+  u: ['a', 'a', 'b', 'b'],
+  x: Int32Array.of(1, 2, 3, 4),
+  y: Float64Array.of(5, 6, 7, 8)
+})
+
+dt.view()
+
+dt.columnNames()
+```

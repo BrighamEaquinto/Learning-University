@@ -11,7 +11,7 @@ Definition: A function $F$ is an antiderivative of the function $f$ if $F'(x) = 
 | **Quotient** <br> $\frac{f(x)}{g(x)}$ | $\frac{\text{d}}{\text{dx}} \left(\frac{f(x)}{g(x)}\right)$ <br> $\frac{f'(x)g(x)-g'(x)f(x)}{(g(x))^{2}}$ |  | 
 | **Product** <br> $f(x) \times g(x)$ | <br> $\frac{\text{d}}{dx}(f(x)g(x))$ <br><br> $f'(x)g(x) + g'(x)f(x)$ |  |
 | **Power Rule** <br> $x^{n}$ | $\frac{d}{dx}x^{n} = nx^{n-1}$ | $\int{x^{n}dx} = \frac{x^{n+1}}{n+1}+C$ |
-| **Composite Function** <br> $f(g(x))$ or $f \circ g$ <br> | <br> $\frac{d}{dx}(f(g(x))$ <br> $f'(g(x))g'(x)$ | u-substutition or foil |
+| **Composite Function** <br> $f(g(x))$ or $f \circ g$ <br> | Chain Rule <br> $\frac{d}{dx}(f(g(x))$ <br> $f'(g(x))g'(x)$ | u-substutition or foil |
 | $e$ | **Derivative of $e$** <br> $\frac{d}{dx}e^{u} = e^{u}u'$ | **Integral of $e$** <br> $\int{e^{u}}dx = \frac{e^{u}}{u'}$ |
 
 

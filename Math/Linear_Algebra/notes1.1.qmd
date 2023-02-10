@@ -101,47 +101,25 @@ Look at this matrix $\begin{bmatrix} 1 & 0 & 0 & 0 & | & 0 \\ 0 & 1 & 0 & 0 & | 
     - maximum nuber of pivots is the min of the number of row and columns
     - columns without a pivot are free variables
 
-\begin{bmatrix}
-  a & b & 1  &  4 \\
-  c & d & -2 & -3
-\end{bmatrix}
 
-
-$$
-\left[
-\matrix{
-  1 & 2 & 1 &\bigm| & 4 \\ 
-  1 & 2 & -2 &\bigm| &-3}
-\right]
-$$
-
-$$
-\left[
-\matrix{
-  1 & 2 & 1 & | & 4 \\ 
-  1 & 2 & -2 & | &-3}
-\right]
-$$
-
-$$
-\left[
-\matrix{
-  1 & 2 & 1  |  4 \\ 
-  1 & 2 & -2  | -3}
-\right]
-$$
 
 
 - coefficient matrix is just
 - pivots are non-zeros
 
+## Code Examples
+
+:::{.callout-note collapse="true"}
+# See Here
 ```{python}
+#| eval: false
 import sympy as sp
 from sympy import randMatrix
 ```
 
 
 ```{python}
+#| eval: false
 A=sp.Matrix([
     [1,1,1,4],
     [5,1,2,3], 
@@ -151,5 +129,23 @@ sp.pprint(A)
 ```
 
 ```{python}
+#| eval: false
 A.rref()
 ```
+:::
+
+
+## Reviewing 1.1
+
+- In systems of linear equations, "coefficients" are the "scalars" I'm familiar with
+- **Consistentness**: 
+  - if it has *at least* one soultion for x (at least one set of values for the variables that will satisfy all of the equations in the system)
+  - A consistent system of equations has at least one solution.
+- **Uniqueness** refers to: a solution to a system of linear equations is said to be "unique" if there is only one set of values for the variables that will satisfy all of the equations in the system. 
+
+<center>
+<img src="independent_inconsistent_dependent.png" title="Independent, Inconsistent, and Dependent Systems" alt="From OpenStaxs" width = "90%">
+</center>
+
+- Other Thoughts:
+  - Side note: AX = B, where A is the coefficient matrix, X is the variable matrix, and B is the constant matrix. And augmented matrix?  

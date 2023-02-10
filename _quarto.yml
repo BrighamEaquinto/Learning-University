@@ -32,6 +32,10 @@ website:
         #   href: Math\Multivariable_Calculus\OpenStax_Calculus_Books.qmd
         - text: Master Notes
           href: Math/Multivariable_Calculus/Master_Notes_Multivariable_Calculus.qmd
+        - text: Chapter 12
+          href: Math/Multivariable_Calculus/chap12.qmd
+        - text: Chapter 13
+          href: Math/Multivariable_Calculus/chap13.qmd
 
     - text: Linear Algebra 
       href: Math\Linear_Algebra\linear_algebra.qmd
