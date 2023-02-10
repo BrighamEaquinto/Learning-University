@@ -1,0 +1,6 @@
+- Dot product gives us a number
+  - Determinant method (ijk and the - at the end)
+- Cross Product gives a vector
+  - Fish method ( don't forget I, j, k )
+- Magnitude is the length of a vector, which gives us a number
+- Determinant is the length of a matrix, which gives us a number
