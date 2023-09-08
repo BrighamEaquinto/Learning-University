@@ -1,0 +1,5 @@
+
+
+## Shorter If Trees
+
+Write a dictionary with the key as the criteria to meet and the value as the function to run
